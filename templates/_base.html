@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- META -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Django-React</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="static/mdb/img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'mdb/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mdb/css/mdb.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mdb/css/style.css' %}">
+{#    <link rel="stylesheet" href="{% static 'locomotive-scroll/locomotive-scroll.min.css' %}">#}
+{#    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>#}
+{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>#}
+{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js"></script>#}
+{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>#}
+{#    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>#}
+{#    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>#}
+{#    <script src="{% static 'locomotive-scroll/locomotive-scroll.min.js' %}"></script>#}
+
+  </head>
+
+
+  <body data-scroll-container class="sc">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" style="background-color: orangered;">
+
+{#                LOGO#}
+				<a class="" href="/"><img src="" alt="" class="navbar-logo" /></a>
+
+{#                HAMBURGUER#}
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+{#                NAVLINKS#}
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto mr-auto">
+						<li class="nav-item">
+							<a class="nav-link " href="/">Django <span class="sr-only">(current)</span></a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link " href="/app">React <span class="sr-only">(current)</span></a>
+						</li>
+					</ul>
+                    <ul class="navbar-nav position-absolute pr-2" style="right: 0;">
+                        {% if user.is_authenticated %}
+                            <li class="nav-item">
+							    <a class="nav-link " href="/accounts/logout">Log Out <span class="sr-only">(current)</span></a>
+                            </li>
+                        {% else %}
+						    <li class="nav-item">
+							    <a class="nav-link " href="/accounts/login">Log In <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="/accounts/signup">Sign Up <span class="sr-only">(current)</span></a>
+                            </li>
+                        {% endif %}
+					</ul>
+				</div>
+			</nav>
+
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer">
+
+    </footer>
+
+    <script type="text/javascript" src="{% static 'mdb/js/jquery.js' %}"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{% static 'mdb/js/popper.js' %}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{% static 'mdb/js/bootstrap.js' %}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{% static 'mdb/js/mdb.js' %}"></script>
+
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript">
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+                }, false);
+        })();
+    </script>
+
+    {% block javascript %} {% endblock %}
+  </body>
+</html>

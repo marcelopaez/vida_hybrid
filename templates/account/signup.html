@@ -1,0 +1,48 @@
+{% extends '_base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div style="height: 64px; "></div>
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center" style="height: calc(80vh - 64px);">
+
+            <div class="col-md-4 ">
+                <h1 class="pb-2">Sign Up</h1>
+                <form class="signup needs-validation" method="POST" action="{% url 'account_signup' %}" novalidate>
+                    {% csrf_token %}
+
+                    {% for error in form.non_field_errors %}
+                        <p class="text-danger text-left py-0 my-0">{{ error|escape }}</p>
+                    {% endfor %}
+
+                    <input class="form-control my-4" type="email" name="email" id="id_email" autocomplete="email" placeholder="Email" required>
+                    {% if form.email.errors %}
+                        {% for error in form.email.errors %}
+                            <p class="text-danger  py-0 my-0" style="font-size: 12px;">{{ error|escape }}</p>
+                        {% endfor %}
+                    {% endif %}
+                    <input class="form-control my-4" type="password" name="password1" id="id_password1" autocomplete="new-password" placeholder="Password" required>
+                    {% if form.password1.errors %}
+                        {% for error in form.password1.errors %}
+                            <p class="text-danger  py-0 my-0">{{ error|escape }}</p>
+                        {% endfor %}
+                    {% endif %}
+                    <input class="form-control my-4" type="password" name="password2" id="id_password2" placeholder="Password (again)" required>
+                    {% if form.password2.errors %}
+                        {% for error in form.password2.errors %}
+                            <p class="text-danger  py-0 my-0">{{ error|escape }}</p>
+                        {% endfor %}
+                    {% endif %}
+                    {% if redirect_field_value %}
+                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
+                    <button class="btn btn-info w-100 mx-0 mb-4" type="submit">Sign Up</button>
+                </form>
+            </div>
+
+
+    </div>
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
