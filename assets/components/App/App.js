@@ -2,16 +2,16 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import Sidemenu from '../SideMenu';
+import Home from '../../pages/Home';
+import NotFound from '../../components/NotFound';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route exact path="/" component={Sidemenu} />
-        {/* <Route path="/404" component={NotFound} /> */}
-        <Redirect to="/404" />
+        <Route exact path="/app" component={Home} />
+        <Redirect to="/404" component={NotFound} />
       </Switch>
       <Footer />
     </BrowserRouter>

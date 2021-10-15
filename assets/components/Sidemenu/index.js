@@ -1,3 +1,3 @@
-import Sidemenu from './Sidemenu';
+import SideMenu from './SideMenu';
 
-export default Sidemenu;
+export default SideMenu;

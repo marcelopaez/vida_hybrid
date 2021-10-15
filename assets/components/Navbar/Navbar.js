@@ -5,7 +5,7 @@ import Notifications from '../../images/Notifications.svg';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-nav navbar-nav-scroll">
+    <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar">
       <a className="navbar-brand" href="/" className="m-0 p-0">
         <img src={Logo} height="30" alt="Vida Cowork" className="navbarLogo" />
       </a>
