@@ -1,0 +1,121 @@
+.primaryColorDarkerRow {
+  background-color: $primaryDarker;
+}
+
+.rowHover {
+  text-align: center;
+}
+
+.cancelButton {
+  background-color: transparent;
+  border: none;
+}
+
+.rowHover:hover .cancelButton {
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  color: #000;
+}
+
+.rowHover:hover {
+  background-color: $primary;
+  color: #fff;
+}
+
+.roomType {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  max-width: 175px;
+  margin: 0 0.5rem;
+
+  .roomTypeTitle {
+    font-size: 1.5rem;
+  }
+
+  .roomTypeContent {
+    font-size: 1rem;
+  }
+}
+
+.reservationContainer {
+  background-color: $primaryDarker;
+  border-radius: 15px;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3rem 0;
+}
+
+.currentPlanContainer {
+  @extend .reservationContainer;
+  background-color: $primary;
+  position: relative;
+}
+
+.planIcon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.currentPlanContent {
+  padding: 1rem 2rem 0 2rem;
+  width: 100%;
+}
+
+.buttonContainer {
+  color: $primaryDarker;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+}
+
+.roomTypesSection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 300px) {
+  .roomTypesSection {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttonContainer {
+    padding: 0.5rem 2rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .buttonContainer {
+    padding: 0.5rem 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .roomTypesSection {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 992px) {
+  .buttonContainer {
+    padding: 0.5rem 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .buttonContainer {
+    padding: 0.5rem 4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+}

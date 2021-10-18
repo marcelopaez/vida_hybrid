@@ -1,13 +1,25 @@
 .sidebarItem {
   list-style-type: none;
   padding: 20px;
-  color: #000;
+  cursor: pointer;
+
+  a > p {
+    color: #000;
+  }
 }
 
 .sidebarItem:hover {
-  color: #fff;
-  border-left: 5px #0e4327 solid;
-  background-color: #1b783f;
+  border-left: 5px $primaryDarker solid;
+  background-color: $primary;
+
+  a > p {
+    color: #fff;
+  }
+}
+
+.categoryTitle {
+  margin: 0 1rem;
+  color: #000;
 }
 
 @media (min-width: 300px) {

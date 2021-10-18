@@ -1,3 +1,10 @@
+@import './color';
+@import './general.scss';
+
+// Components
 @import './components/navbar.scss';
 @import './components/footer.scss';
 @import './components/sideMenu.scss';
+@import './components/bookings.scss';
+@import './components/plans.scss';
+@import './components/contract.scss';

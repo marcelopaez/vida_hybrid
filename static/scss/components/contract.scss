@@ -1,0 +1,48 @@
+.contract {
+  background-color: $primary;
+  border-radius: 15px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.contractContent {
+  display: flex;
+  align-items: space-around;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 2rem 0 2rem;
+}
+
+.buttonContainer {
+  color: $primaryDarker;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.textIndentation {
+  text-indent: 4rem;
+}
+
+@media (min-width: 300px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
