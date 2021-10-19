@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../images/Logo.svg';
-import Profile from '../../images/Profile.svg';
-import Notifications from '../../images/Notifications.svg';
+import Profile from '../../images/ProfileIcon.svg';
+import Notifications from '../../images/NotificationsIcon.svg';
 
 const Navbar = () => {
   return (

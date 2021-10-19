@@ -19,6 +19,37 @@ body {
   margin-top: 10px;
 }
 
+.filtersSection {
+  display: flex;
+  margin: 3rem 0;
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primaryDarker;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 15px;
+  margin: 1rem;
+}
+
+.dropdownButton,
+.normalButton {
+  background-color: $primaryDarker;
+  border: none;
+  color: #fff;
+}
+
+.pagination.pg-blue .page-item.active .page-link {
+  background-color: $primaryDarker !important;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: $primaryDarker !important;
+}
+
 @media (min-width: 300px) {
   .marginNavbar {
     margin: 16.5rem 0 0 0;
@@ -33,6 +64,12 @@ body {
   .generalContentBody {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .filtersSection {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -67,6 +104,13 @@ body {
     flex-direction: row;
     justify-content: flex-start;
   }
+
+  .filtersSection {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 @media (min-width: 992px) {
@@ -76,4 +120,7 @@ body {
 }
 
 @media (min-width: 1400px) {
+  .filtersSection {
+    justify-content: flex-start;
+  }
 }

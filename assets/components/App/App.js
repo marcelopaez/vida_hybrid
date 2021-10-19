@@ -12,9 +12,9 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        {/* <Route exact path="/app" component={Reservas} /> */}
+        <Route exact path="/app" component={Reservas} />
         {/* <Route exact path="/app" component={Planes} /> */}
-        <Route exact path="/app" component={Contrato} />
+        {/* <Route exact path="/app" component={Contrato} /> */}
         <Redirect to="/404" component={NotFound} />
       </Switch>
       <Footer />
