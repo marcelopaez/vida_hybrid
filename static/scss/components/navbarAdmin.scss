@@ -1,0 +1,96 @@
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 3px #cecece;
+}
+
+.userBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddf3e7;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.profileName {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (min-width: 300px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbarLogo {
+    margin: 1.5rem 0;
+  }
+
+  .userBar {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .profileName {
+    align-items: center;
+  }
+
+  .profileIcon,
+  .notificationsIcon {
+    margin: 0.5rem 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .navbar {
+    flex-direction: row;
+  }
+
+  .navbarLogo {
+    margin: 1rem;
+  }
+
+  .userBar {
+    flex-direction: row;
+    margin: 0 1rem;
+  }
+
+  .profileName {
+    align-items: flex-start;
+  }
+
+  .profileIcon {
+    margin: 0.5rem 1.5rem;
+  }
+
+  .notificationsIcon {
+    margin: 0.5rem 1.5rem 0.5rem 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbarLogo {
+    margin: 2rem !important;
+    transform: scale(1.5);
+  }
+
+  .navbarLogo,
+  .userBar {
+    margin: 0.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbarLogo {
+    margin: 2rem 4rem !important;
+    transform: scale(2);
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

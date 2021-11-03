@@ -1,0 +1,60 @@
+.planContainerIndex {
+  border: 2px solid #fff;
+  background-color: transparent;
+  border-radius: 20px;
+  color: #fff;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 270px;
+  transition: all 0.5s ease;
+  height: 400px;
+  margin: 1rem 3.1rem;
+}
+
+.planContainerIndex:hover {
+  background-color: $secondary;
+  border: 2px solid $secondary;
+}
+
+.planContainerImage {
+  position: absolute;
+  top: -5%;
+}
+
+.planContainerTitle {
+  font-size: 2rem;
+}
+
+.planContainerDescription {
+  font-size: 1rem;
+}
+
+.planContainerButton {
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 20px;
+  background-color: transparent;
+  padding: 1rem 3rem;
+}
+
+@media (min-width: 300px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

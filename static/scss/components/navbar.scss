@@ -1,96 +1,176 @@
-.navbar {
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 1px 1px 3px #cecece;
+.background {
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: 100vh;
 }
 
-.userBar {
+.backgroundMobile {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ddf3e7;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.profileName {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
 }
 
+.navbarMobile {
+  background-color: $primary;
+  text-align: center;
+}
+
+.leftSVGNavbar,
+.rightSVGNavbar {
+  position: absolute;
+}
+
+.leftSVGNavbar {
+  z-index: 50;
+}
+
+.rightSVGNavbar {
+  right: 0;
+}
+
+.logo {
+  margin: 1.85rem;
+  position: absolute;
+  z-index: 100;
+  left: 1.85rem;
+}
+
+.navbar {
+  box-shadow: none !important;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+ul {
+  li {
+    a {
+      margin: 1.85rem 1.55rem 0 1.55rem;
+      color: #fff;
+    }
+  }
+}
+
+.greenBackground {
+  padding: 0.5rem;
+  background-color: $primaryDarker;
+  border-radius: 1.25rem;
+}
+
+.orangeBackground {
+  padding: 0.5rem;
+  background-color: $secondary;
+  border-radius: 1.25rem;
+  width: 100%;
+}
+
+.welcomeTitle1,
+.welcomeTitle2,
+.welcomeSubtitle,
+.welcomeText,
+.welcomeButton {
+  position: absolute;
+  z-index: 100;
+  color: #fff;
+}
+
+.welcomeTitle1 {
+  top: 13%;
+  margin: 1.85rem 0 0 6.55rem;
+  font-size: 4rem;
+}
+
+.welcomeTitle2 {
+  top: 20%;
+  margin: 1.85rem 0 0 6.55rem;
+  font-size: 4rem;
+}
+
+.welcomeSubtitle {
+  top: calc(20% + 100px);
+  margin: 3.8rem 0 0 6.55rem;
+  width: 65%;
+}
+
+.welcomeText {
+  top: calc(30% + 170px);
+  margin-left: 6.55rem;
+  width: 65%;
+}
+
+.welcomeButton {
+  background-color: #fff;
+  color: $primaryDarker;
+  padding: 1rem 3rem;
+  top: 60%;
+  left: calc(0% + 6.55rem);
+  border: none;
+  border-radius: 1.25rem;
+}
+
+.top-nav-collapse {
+  background-color: $secondary !important;
+}
+
+.scrolling-navbar {
+  transition: all 1s ease !important;
+}
+
+.nav-link {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 @media (min-width: 300px) {
-  .navbar {
-    flex-direction: column;
+  .navbarMobile,
+  .buttonSmallDown {
+    display: block;
   }
 
-  .navbarLogo {
-    margin: 1.5rem 0;
+  .navbarLarger,
+  .buttonSmallUp {
+    display: none;
   }
 
-  .userBar {
-    flex-direction: column;
-    margin: 0;
-  }
-
-  .profileName {
-    align-items: center;
-  }
-
-  .profileIcon,
-  .notificationsIcon {
-    margin: 0.5rem 0;
+  .loginButtonMobile {
+    a {
+      width: 100%;
+    }
   }
 }
 
 @media (min-width: 576px) {
-  .navbar {
-    flex-direction: row;
+  .loginButtonMobile {
+    a {
+      width: 50%;
+    }
   }
 
-  .navbarLogo {
-    margin: 1rem;
+  .buttonSmallUp {
+    display: block;
   }
 
-  .userBar {
-    flex-direction: row;
-    margin: 0 1rem;
-  }
-
-  .profileName {
-    align-items: flex-start;
-  }
-
-  .profileIcon {
-    margin: 0.5rem 1.5rem;
-  }
-
-  .notificationsIcon {
-    margin: 0.5rem 1.5rem 0.5rem 4rem;
+  .buttonSmallDown {
+    display: none;
   }
 }
 
 @media (min-width: 768px) {
-  .navbarLogo {
-    margin: 2rem !important;
-    transform: scale(1.5);
-  }
-
-  .navbarLogo,
-  .userBar {
-    margin: 0.5rem 1.5rem;
-  }
 }
 
 @media (min-width: 992px) {
-  .navbarLogo {
-    margin: 2rem 4rem !important;
-    transform: scale(2);
-  }
 }
 
 @media (min-width: 1200px) {
 }
 
 @media (min-width: 1400px) {
+  .navbarMobile {
+    display: none;
+  }
+
+  .navbarLarger {
+    display: block;
+  }
 }

@@ -3,8 +3,14 @@
 
 // Components
 @import './components/navbar.scss';
+@import './components/navbarAdmin.scss';
 @import './components/footer.scss';
 @import './components/sideMenu.scss';
 @import './components/bookings.scss';
 @import './components/plans.scss';
 @import './components/contract.scss';
+@import './components/planIndex.scss';
+@import './components/service.scss';
+
+// Pages
+@import './pages/home.scss';
