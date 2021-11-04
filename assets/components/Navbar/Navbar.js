@@ -33,7 +33,7 @@ const Navbar = () => {
             <svg width="1325" height="179" viewBox="0 0 1325 179" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 1.90735e-06C130.5 89.8996 593.185 179 1325 179V1.90735e-06H0Z" fill="#FF972F" />
             </svg>
-            <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar w-100 py-5">
+            <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar py-3">
               {windowScroll !== 0 && <img src={GreenLogo} className="logo" alt="Vida" />}
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav">
@@ -76,21 +76,21 @@ const Navbar = () => {
       <div className="navbarMobile">
         <div className="backgroundMobile">
           <div className="rightSVGNavbar">
-            <nav class="navbar navbar-expand-lg navbarMobile fixed-top navbar-dark d-flex">
+            <nav className="navbar navbar-expand-lg navbarMobile fixed-top navbar-dark d-flex">
               <div className="buttonSmallUp">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span className="navbar-toggler-icon"></span>
                 </button>
               </div>
-              <a class="navbar-brand" href="/">
+              <a className="navbar-brand" href="/">
                 <img src={OrangeLogo} alt="Vida" loading="lazy" />
               </a>
               <div className="buttonSmallDown">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span className="navbar-toggler-icon"></span>
                 </button>
               </div>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav">
                   <li className="nav-item align-middle">
                     <a className="nav-link" href="/planes">

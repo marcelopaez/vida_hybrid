@@ -2,6 +2,11 @@
   list-style-type: none;
   padding: 20px;
   cursor: pointer;
+  display: flex;
+
+  a {
+    margin: 0;
+  }
 
   a > p {
     color: #000;

@@ -5,8 +5,7 @@
   flex-wrap: wrap;
 }
 
-.planContainer,
-.currentPlanContainer {
+.planContainer {
   background-color: $primary;
   border-radius: 15px;
   color: #fff;
@@ -14,16 +13,8 @@
   align-items: flex-start;
   flex-direction: column;
   margin: 1rem;
-  height: 500px;
   position: relative;
-}
-
-.planContainer {
   justify-content: space-evenly;
-}
-
-.currentPlanContainer {
-  justify-content: center;
 }
 
 .planIcon {
@@ -51,7 +42,7 @@
 
 @media (min-width: 300px) {
   .planContainer {
-    max-width: 200px;
+    height: 300px;
   }
 
   .currentPlanContainer {

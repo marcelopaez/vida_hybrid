@@ -16,12 +16,12 @@ const Contract = () => {
             <path
               d="M29.25 28.5L22.8752 22.1138L29.25 28.5ZM26.4079 13.5789C26.4079 16.7825 25.1353 19.8548 22.8701 22.1201C20.6048 24.3853 17.5325 25.6579 14.3289 25.6579C11.1254 25.6579 8.05308 24.3853 5.78784 22.1201C3.5226 19.8548 2.25 16.7825 2.25 13.5789C2.25 10.3754 3.5226 7.30308 5.78784 5.03784C8.05308 2.7726 11.1254 1.5 14.3289 1.5C17.5325 1.5 20.6048 2.7726 22.8701 5.03784C25.1353 7.30308 26.4079 10.3754 26.4079 13.5789V13.5789Z"
               stroke="white"
-              stroke-width="2.84211"
-              stroke-linecap="round"
+              strokeWidth="2.84211"
+              strokeLinecap="round"
             />
           </svg>
 
-          <button class="normalButton mr-4" type="button">
+          <button className="normalButton mr-4" type="button">
             Buscar
           </button>
         </div>
@@ -32,33 +32,33 @@ const Contract = () => {
               fill="#fff"
             />
           </svg>
-          <button class="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Tipo de plan
           </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">
+          <div className="dropdown-menu">
+            <a className="dropdown-item" href="#">
               Eter
             </a>
-            <a class="dropdown-item" href="#">
+            <a className="dropdown-item" href="#">
               Aire
             </a>
-            <a class="dropdown-item" href="#">
+            <a className="dropdown-item" href="#">
               Agua
             </a>
-            <a class="dropdown-item" href="#">
+            <a className="dropdown-item" href="#">
               Fuego
             </a>
-            <a class="dropdown-item" href="#">
+            <a className="dropdown-item" href="#">
               Tierra
             </a>
           </div>
         </div>
         <div className="filterButton">
-          <button class="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             A-Z
           </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">
+          <div className="dropdown-menu">
+            <a className="dropdown-item" href="#">
               1
             </a>
           </div>
@@ -87,7 +87,7 @@ const Contract = () => {
               </th>
               <th scope="col" className="text-center">
                 <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="1.35157" y="1.35157" width="33.2969" height="21.2969" rx="1.64843" stroke="white" stroke-width="2.70314" />
+                  <rect x="1.35157" y="1.35157" width="33.2969" height="21.2969" rx="1.64843" stroke="white" strokeWidth="2.70314" />
                   <rect x="21" y="6.59991" width="10.2" height="1.8" rx="0.9" fill="white" />
                   <rect x="21" y="10.2" width="10.2" height="1.8" rx="0.9" fill="white" />
                   <g clip-path="url(#clip0_97:3444)">
@@ -113,22 +113,22 @@ const Contract = () => {
               </th>
               <th scope="col" className="text-center">
                 <svg width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.25 3.14282H3.08333C2.5308 3.14282 2.0009 3.36859 1.61019 3.77045C1.21949 4.17231 1 4.71736 1 5.28568V28.8571C1 29.4254 1.21949 29.9705 1.61019 30.3723C2.0009 30.7742 2.5308 31 3.08333 31H23.9167C24.4692 31 24.9991 30.7742 25.3898 30.3723C25.7805 29.9705 26 29.4254 26 28.8571V5.28568C26 4.71736 25.7805 4.17231 25.3898 3.77045C24.9991 3.36859 24.4692 3.14282 23.9167 3.14282H19.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M7.25 3.14282H3.08333C2.5308 3.14282 2.0009 3.36859 1.61019 3.77045C1.21949 4.17231 1 4.71736 1 5.28568V28.8571C1 29.4254 1.21949 29.9705 1.61019 30.3723C2.0009 30.7742 2.5308 31 3.08333 31H23.9167C24.4692 31 24.9991 30.7742 25.3898 30.3723C25.7805 29.9705 26 29.4254 26 28.8571V5.28568C26 4.71736 25.7805 4.17231 25.3898 3.77045C24.9991 3.36859 24.4692 3.14282 23.9167 3.14282H19.75" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M9.33333 1H17.6667C18.2192 1 18.7491 1.22576 19.1398 1.62763C19.5305 2.02949 19.75 2.57454 19.75 3.14286C19.75 3.71118 19.5305 4.25622 19.1398 4.65809C18.7491 5.05995 18.2192 5.28571 17.6667 5.28571H9.33333C8.7808 5.28571 8.2509 5.05995 7.86019 4.65809C7.46949 4.25622 7.25 3.71118 7.25 3.14286C7.25 2.57454 7.46949 2.02949 7.86019 1.62763C8.2509 1.22576 8.7808 1 9.33333 1Z"
                     stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
-                  <path d="M11.4165 11.7142H21.8332" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M11.4165 18.1428H21.8332" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M11.4165 24.5714H21.8332" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M5.1665 11.7142H7.24984" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M5.1665 18.1428H7.24984" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M5.1665 24.5714H7.24984" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M11.4165 11.7142H21.8332" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M11.4165 18.1428H21.8332" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M11.4165 24.5714H21.8332" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M5.1665 11.7142H7.24984" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M5.1665 18.1428H7.24984" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M5.1665 24.5714H7.24984" stroke="white" stroke-width="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </th>
               <th scope="col" className="text-center">
@@ -145,7 +145,7 @@ const Contract = () => {
                     d="M29.25 28.5L22.8752 22.1138L29.25 28.5ZM26.4079 13.5789C26.4079 16.7825 25.1353 19.8548 22.8701 22.1201C20.6048 24.3853 17.5325 25.6579 14.3289 25.6579C11.1254 25.6579 8.05308 24.3853 5.78784 22.1201C3.5226 19.8548 2.25 16.7825 2.25 13.5789C2.25 10.3754 3.5226 7.30308 5.78784 5.03784C8.05308 2.7726 11.1254 1.5 14.3289 1.5C17.5325 1.5 20.6048 2.7726 22.8701 5.03784C25.1353 7.30308 26.4079 10.3754 26.4079 13.5789V13.5789Z"
                     stroke="white"
                     stroke-width="2.84211"
-                    stroke-linecap="round"
+                    strokeLinecap="round"
                   />
                 </svg>
               </th>
@@ -193,25 +193,25 @@ const Contract = () => {
       </div>
       <div className="d-flex justify-content-center align-items-center">
         <nav aria-label="Page navigation example">
-          <ul class="pagination pg-blue">
-            <li class="page-item ">
-              <a class="page-link" tabindex="-1">
+          <ul className="pagination pg-blue">
+            <li className="page-item ">
+              <a className="page-link" tabindex="-1">
                 Anterior
               </a>
             </li>
-            <li class="page-item">
-              <a class="page-link">1</a>
+            <li className="page-item">
+              <a className="page-link">1</a>
             </li>
-            <li class="page-item active">
-              <a class="page-link">
-                2 <span class="sr-only">(current)</span>
+            <li className="page-item active">
+              <a className="page-link">
+                2 <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="page-item">
-              <a class="page-link">3</a>
+            <li className="page-item">
+              <a className="page-link">3</a>
             </li>
-            <li class="page-item ">
-              <a class="page-link">Siguiente</a>
+            <li className="page-item ">
+              <a className="page-link">Siguiente</a>
             </li>
           </ul>
         </nav>

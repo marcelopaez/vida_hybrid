@@ -24,44 +24,44 @@ const Bookings = () => {
                 fill="white"
               />
             </svg>
-            <button class="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Mes
             </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">
+            <div className="dropdown-menu">
+              <a className="dropdown-item" href="#">
                 Enero
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Febrero
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Marzo
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Abril
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Mayo
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Junio
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Julio
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Agosto
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Septiembre
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Octubre
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Noviembre
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Diciembre
               </a>
             </div>
@@ -77,109 +77,109 @@ const Bookings = () => {
                 fill="white"
               />
             </svg>
-            <button class="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Día
             </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">
+            <div className="dropdown-menu">
+              <a className="dropdown-item" href="#">
                 1
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 2
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 3
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 4
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 5
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 6
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 7
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 8
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 9
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 10
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 11
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 12
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 13
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 14
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 15
               </a>
             </div>
           </div>
           <div className="filterButton">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" className="mx-2" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15.9998 29.3334C23.3636 29.3334 29.3332 23.3639 29.3332 16.0001C29.3332 8.63629 23.3636 2.66675 15.9998 2.66675C8.63604 2.66675 2.6665 8.63629 2.6665 16.0001C2.6665 23.3639 8.63604 29.3334 15.9998 29.3334Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M20 21.3333L16.7813 18.1147C16.2812 17.6147 16.0002 16.9365 16 16.2293V8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M15.9998 29.3334C23.3636 29.3334 29.3332 23.3639 29.3332 16.0001C29.3332 8.63629 23.3636 2.66675 15.9998 2.66675C8.63604 2.66675 2.6665 8.63629 2.6665 16.0001C2.6665 23.3639 8.63604 29.3334 15.9998 29.3334Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M20 21.3333L16.7813 18.1147C16.2812 17.6147 16.0002 16.9365 16 16.2293V8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <button class="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Hora
             </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">
+            <div className="dropdown-menu">
+              <a className="dropdown-item" href="#">
                 1
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 2
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 3
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 4
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 5
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 6
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 7
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 8
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 9
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 10
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 11
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 12
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 13
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 14
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 15
               </a>
             </div>
@@ -191,32 +191,32 @@ const Bookings = () => {
                 fill="white"
               />
             </svg>
-            <button class="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Tipo de sala
             </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">
+            <div className="dropdown-menu">
+              <a className="dropdown-item" href="#">
                 Mesa Rusa
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Herradura
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Taller
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Escuela
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Imperial
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Auditorio
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Libre
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Outdoor
               </a>
             </div>
@@ -248,8 +248,8 @@ const Bookings = () => {
                 </th>
                 <th scope="col" className="text-center">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.9998 29.3334C23.3636 29.3334 29.3332 23.3639 29.3332 16.0001C29.3332 8.63629 23.3636 2.66675 15.9998 2.66675C8.63604 2.66675 2.6665 8.63629 2.6665 16.0001C2.6665 23.3639 8.63604 29.3334 15.9998 29.3334Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M20 21.3333L16.7813 18.1147C16.2812 17.6147 16.0002 16.9365 16 16.2293V8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M15.9998 29.3334C23.3636 29.3334 29.3332 23.3639 29.3332 16.0001C29.3332 8.63629 23.3636 2.66675 15.9998 2.66675C8.63604 2.66675 2.6665 8.63629 2.6665 16.0001C2.6665 23.3639 8.63604 29.3334 15.9998 29.3334Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M20 21.3333L16.7813 18.1147C16.2812 17.6147 16.0002 16.9365 16 16.2293V8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </th>
                 <th scope="col" className="text-center">
@@ -320,25 +320,25 @@ const Bookings = () => {
         </div>
         <div className="d-flex justify-content-center align-items-center">
           <nav aria-label="Page navigation example">
-            <ul class="pagination pg-blue">
-              <li class="page-item ">
-                <a class="page-link" tabindex="-1">
+            <ul className="pagination pg-blue">
+              <li className="page-item ">
+                <a className="page-link" tabindex="-1">
                   Anterior
                 </a>
               </li>
-              <li class="page-item">
-                <a class="page-link">1</a>
+              <li className="page-item">
+                <a className="page-link">1</a>
               </li>
-              <li class="page-item active">
-                <a class="page-link">
-                  2 <span class="sr-only">(current)</span>
+              <li className="page-item active">
+                <a className="page-link">
+                  2 <span className="sr-only">(current)</span>
                 </a>
               </li>
-              <li class="page-item">
-                <a class="page-link">3</a>
+              <li className="page-item">
+                <a className="page-link">3</a>
               </li>
-              <li class="page-item ">
-                <a class="page-link">Siguiente</a>
+              <li className="page-item ">
+                <a className="page-link">Siguiente</a>
               </li>
             </ul>
           </nav>
@@ -395,7 +395,7 @@ const Bookings = () => {
           <hr className="whiteSeparator" />
           <div className="reservationContent mb-3">
             <label>Fecha</label>
-            <div class="md-form m-0">
+            <div className="md-form m-0">
               <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M11.6816 21.1845V11.5166H10.5342C9.71254 11.9546 8.91839 12.4425 8.15625 12.9775V14.2372C8.83594 13.7714 9.91256 13.1134 10.4364 12.8289H10.4581V21.1845H11.6816ZM13.8348 18.8192C13.92 19.9792 14.9114 21.3676 16.9215 21.3676C19.2016 21.3676 20.5465 19.4354 20.5465 16.1639C20.5465 12.6585 19.1309 11.3281 17.0067 11.3281C15.3283 11.3281 13.7496 12.5461 13.7496 14.6069C13.7496 16.7094 15.2431 17.8151 16.7874 17.8151C18.1395 17.8151 19.0168 17.1336 19.2941 16.3832H19.343C19.3357 18.7684 18.5074 20.3054 16.9777 20.3054C15.7742 20.3054 15.1507 19.4898 15.0746 18.8192H13.8348ZM19.1871 14.6196C19.1871 15.8811 18.1739 16.7584 17.0411 16.7584C15.9518 16.7584 14.9676 16.0642 14.9676 14.5834C14.9676 13.0917 16.0225 12.3902 17.0846 12.3902C18.2319 12.3902 19.1871 13.1116 19.1871 14.6196Z"
@@ -406,25 +406,25 @@ const Bookings = () => {
                   fill="white"
                 />
               </svg>
-              <input type="text" class="form-control" />
+              <input type="text" className="form-control" />
             </div>
             <label>Hora</label>
-            <div class="md-form m-0">
+            <div className="md-form m-0">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.9998 29.3334C23.3636 29.3334 29.3332 23.3639 29.3332 16.0001C29.3332 8.63629 23.3636 2.66675 15.9998 2.66675C8.63604 2.66675 2.6665 8.63629 2.6665 16.0001C2.6665 23.3639 8.63604 29.3334 15.9998 29.3334Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M20 21.3333L16.7813 18.1147C16.2812 17.6147 16.0002 16.9365 16 16.2293V8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M15.9998 29.3334C23.3636 29.3334 29.3332 23.3639 29.3332 16.0001C29.3332 8.63629 23.3636 2.66675 15.9998 2.66675C8.63604 2.66675 2.6665 8.63629 2.6665 16.0001C2.6665 23.3639 8.63604 29.3334 15.9998 29.3334Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M20 21.3333L16.7813 18.1147C16.2812 17.6147 16.0002 16.9365 16 16.2293V8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              <input type="text" class="form-control" />
+              <input type="text" className="form-control" />
             </div>
             <label>Tipo de sala</label>
-            <div class="md-form m-0">
+            <div className="md-form m-0">
               <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M18.31 0.1522C18.8769 0.000337948 19.4681 -0.0383722 20.05 0.0382799C20.6318 0.114932 21.1929 0.305445 21.7011 0.59894C22.2093 0.892435 22.6548 1.28316 23.012 1.74881C23.3692 2.21447 23.6312 2.74592 23.783 3.31282L28.1997 19.7936C28.3516 20.3605 28.3903 20.9517 28.3136 21.5336C28.237 22.1154 28.0465 22.6765 27.753 23.1847C27.4595 23.6929 27.0688 24.1384 26.6031 24.4956C26.1375 24.8528 25.606 25.1148 25.0391 25.2666L14.839 28.0014C14.2719 28.1538 13.6803 28.1929 13.0981 28.1165C12.5159 28.04 11.9544 27.8496 11.4458 27.5561C10.9372 27.2626 10.4915 26.8717 10.134 26.4058C9.77662 25.9399 9.51451 25.4081 9.36273 24.8408L4.9476 8.36007C4.79574 7.79318 4.75703 7.20193 4.83368 6.62007C4.91034 6.03822 5.10085 5.47717 5.39434 4.96894C5.68784 4.46072 6.07857 4.01529 6.54422 3.65808C7.00987 3.30087 7.54132 3.03888 8.10823 2.88707L18.31 0.1522ZM4.93135 14.5838L7.7946 25.2601C8.07591 26.3185 8.63857 27.281 9.42285 28.0453L8.70298 28.0063C7.51955 27.9442 6.40927 27.4145 5.61634 26.5338C4.82341 25.6531 4.41277 24.4935 4.47473 23.3101L4.93135 14.5838ZM18.9405 2.50682L8.73873 5.24332C8.21867 5.38273 7.77523 5.72292 7.50587 6.18912C7.23651 6.65532 7.16326 7.20939 7.30223 7.72957L11.7174 24.2119C11.7864 24.4696 11.9055 24.7112 12.0679 24.9229C12.2302 25.1345 12.4327 25.3121 12.6638 25.4455C12.8948 25.5789 13.1498 25.6655 13.4143 25.7003C13.6788 25.7351 13.9475 25.7175 14.2052 25.6484L24.4086 22.9136C24.9287 22.7742 25.3721 22.434 25.6415 21.9678C25.9108 21.5016 25.9841 20.9475 25.8451 20.4273L21.4284 3.94333C21.2889 3.42326 20.9488 2.97982 20.4826 2.71046C20.0164 2.4411 19.4623 2.36786 18.9421 2.50682H18.9405ZM3.42823 12.1821L2.85135 23.2256C2.79123 24.3598 3.04635 25.4388 3.54035 26.3781L2.8676 26.1164C2.31969 25.9062 1.81856 25.59 1.39283 25.1861C0.967096 24.7821 0.625107 24.2982 0.386387 23.7621C0.147668 23.226 0.0168933 22.648 0.00153128 22.0614C-0.0138308 21.4747 0.0865204 20.8907 0.296855 20.3428L3.42823 12.1821ZM11.3306 7.06982C11.5367 7.01455 11.7518 7.00043 11.9634 7.02825C12.175 7.05608 12.379 7.12531 12.5639 7.23199C12.7487 7.33867 12.9107 7.48072 13.0407 7.65002C13.1706 7.81932 13.266 8.01256 13.3212 8.2187C13.3765 8.42484 13.3906 8.63985 13.3628 8.85145C13.335 9.06306 13.2657 9.26711 13.1591 9.45195C13.0524 9.6368 12.9103 9.79882 12.741 9.92877C12.5717 10.0587 12.3785 10.1541 12.1724 10.2093C11.9662 10.2646 11.7512 10.2787 11.5396 10.2509C11.328 10.2231 11.1239 10.1538 10.9391 10.0472C10.5658 9.8317 10.2934 9.47677 10.1817 9.06045C10.0701 8.64412 10.1284 8.20051 10.3439 7.8272C10.5593 7.45388 10.9143 7.18145 11.3306 7.06982Z"
                   fill="white"
                 />
               </svg>
-              <input type="text" class="form-control" />
+              <input type="text" className="form-control" />
             </div>
             <div className="d-flex justify-content-center">
               <button className="buttonContainer">Siguiente</button>

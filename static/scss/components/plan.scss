@@ -1,4 +1,4 @@
-.planContainerIndex {
+.planContainer {
   border: 2px solid #fff;
   background-color: transparent;
   border-radius: 20px;
@@ -15,9 +15,14 @@
   margin: 1rem 3.1rem;
 }
 
-.planContainerIndex:hover {
+.planContainer:hover {
   background-color: $secondary;
   border: 2px solid $secondary;
+}
+
+.planContainerWithBackground {
+  @extend .planContainer;
+  background-color: $primary;
 }
 
 .planContainerImage {
