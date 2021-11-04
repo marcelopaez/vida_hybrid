@@ -5,18 +5,6 @@
   flex-wrap: wrap;
 }
 
-.planContainer {
-  background-color: $primary;
-  border-radius: 15px;
-  color: #fff;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  margin: 1rem;
-  position: relative;
-  justify-content: space-evenly;
-}
-
 .planIcon {
   position: absolute;
   top: 0;
@@ -41,10 +29,6 @@
 }
 
 @media (min-width: 300px) {
-  .planContainer {
-    height: 300px;
-  }
-
   .currentPlanContainer {
     max-width: 280px;
   }
@@ -55,10 +39,6 @@
 }
 
 @media (min-width: 576px) {
-  .planContainer {
-    max-width: 250px;
-  }
-
   .currentPlanContainer {
     max-width: 400px;
   }
