@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 from graphene_django.views import GraphQLView
 from django.views.decorators.csrf import csrf_exempt
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,5 +33,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html')),
 
     # React Views
-    path('app', TemplateView.as_view(template_name='react-app.html')),
+    # path('app', TemplateView.as_view(template_name='react-app.html')),
+    path(r'app/', views.react_view, name='react_app'),  
+    path(r'app/<path:path>', views.react_view, name='react_app_with_path'),
 ]

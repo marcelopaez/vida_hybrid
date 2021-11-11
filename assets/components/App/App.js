@@ -11,7 +11,7 @@ import NotFound from '../../components/NotFound';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/app/'>
       {/* <NavbarAdmin /> */}
       <Navbar />
       <Switch>
