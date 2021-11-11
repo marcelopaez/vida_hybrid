@@ -33,7 +33,6 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html')),
 
     # React Views
-    # path('app', TemplateView.as_view(template_name='react-app.html')),
-    path(r'app/', views.react_view, name='react_app'),  
-    path(r'app/<path:path>', views.react_view, name='react_app_with_path'),
+    path(r'app/', views.MyReactView.as_view(), name='react_app'),  
+    path(r'app/<path:path>', views.MyReactView.as_view(), name='react_app_with_path'),    
 ]

@@ -35,6 +35,12 @@
   left: 1.85rem;
 }
 
+.logoScroll {
+  margin: -1.85rem 0 -1.85rem 1.85rem;
+  position: absolute;
+  z-index: 100;
+}
+
 .navbar {
   box-shadow: none !important;
 }

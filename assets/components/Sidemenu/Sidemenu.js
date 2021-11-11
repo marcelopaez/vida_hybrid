@@ -49,7 +49,7 @@ const SideMenu = () => {
             />
           </svg>
         }
-        link={'/contratos'}
+        link={'/contrato'}
         title={'Contratos'}
       />
     </ul>

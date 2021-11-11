@@ -15,7 +15,7 @@ const App = () => {
       {/* <NavbarAdmin /> */}
       <Navbar />
       <Switch>
-        <Route exact path="/app" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/reservas" component={Reservas} />
         <Route exact path="/planes" component={Planes} />
         <Route exact path="/contrato" component={Contrato} />
