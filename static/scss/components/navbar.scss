@@ -29,7 +29,7 @@
 }
 
 .logo {
-  margin: 1.85rem;
+  margin: 1.1rem;
   position: absolute;
   z-index: 100;
   left: 1.85rem;
@@ -43,6 +43,10 @@
 
 .navbar {
   box-shadow: none !important;
+}
+
+.nav-item-login {
+  padding: 1rem;
 }
 
 .navbar-collapse {
@@ -94,13 +98,13 @@ ul {
 }
 
 .welcomeSubtitle {
-  top: calc(20% + 100px);
-  margin: 3.8rem 0 0 6.55rem;
+  top: calc(285px + 66px);
+  margin: 0 0 0 6.55rem;
   width: 65%;
 }
 
 .welcomeText {
-  top: calc(30% + 170px);
+  top: calc(410px + 33px);
   margin-left: 6.55rem;
   width: 65%;
 }
@@ -109,7 +113,7 @@ ul {
   background-color: #fff;
   color: $primaryDarker;
   padding: 1rem 3rem;
-  top: 60%;
+  top: calc(533px + 66px);
   left: calc(0% + 6.55rem);
   border: none;
   border-radius: 1.25rem;
@@ -144,6 +148,22 @@ ul {
       width: 100%;
     }
   }
+
+  .nav-item {
+    padding: 0 !important;
+  }
+
+  .nav-item-login {
+    margin: 0 !important;
+  }
+
+  ul {
+  li {
+    a {
+      margin: 1.85rem 0.5rem 0 0.5rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 576px) {
@@ -169,6 +189,21 @@ ul {
 }
 
 @media (min-width: 1200px) {
+  .nav-item {
+    padding: 0.5rem !important;
+  }
+
+  .nav-item-login {
+    margin: 0 15px !important;
+  }
+
+  ul {
+  li {
+    a {
+      margin: 1.85rem 1.55rem 0 1.55rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 1400px) {

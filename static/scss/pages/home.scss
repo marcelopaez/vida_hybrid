@@ -5,7 +5,7 @@
 
 .plansTitle {
   text-align: center;
-  padding: 11.25rem 0 1.85rem 0;
+  padding: 7.5rem 0 1.85rem 0;
   margin: 0;
 }
 
@@ -23,7 +23,225 @@
   flex-wrap: wrap;
 }
 
+.servicesTitle,
+.strategicPlaceContainer {
+  color: #fff;
+  text-align: left;
+  padding-top: 10.8rem;
+  // margin-bottom: 3rem !important;
+}
+
+.communityTitle {
+  color: $primaryDarker;
+  text-align: left;
+  padding-top: 10.8rem;
+  margin-bottom: 3rem !important;
+}
+
+.plansContainer {
+  padding-bottom: 10.8rem;
+}
+
+.servicesContainer {
+  position: relative;
+  top: -100px;
+}
+
+.sectionSeparatorLeft {
+  position: relative;
+  top: -50px;
+  z-index: 2;
+  width: 100%;
+  height: 75vh;
+}
+
+.sectionSeparatorLeftContent {
+  position: absolute;
+  color: #fff;
+
+  &.title {
+    top: 80px;
+    left: 100px;
+  }
+}
+
+.sectionSeparatorRight {
+  position: relative;
+  top: -50px;
+  z-index: 2;
+  width: 100%;
+  height: 75vh;
+}
+
+.sectionSeparatorRightContent {
+  position: absolute;
+  color: #fff;
+
+  &.title {
+    top: 80px;
+    right: 100px;
+  }
+}
+
+.rightSeparator {
+  position: absolute;
+  right: 0;
+  top: -100px;
+}
+
+.strategicPlaceContainer {
+  position: relative;
+  top: -200px;
+  width: 100%;
+  background-color: $primaryDarker;
+}
+
+.strategicPlaceLogoContainer {
+  margin-bottom: 5.4rem;
+  color: #fff;
+}
+
+.locationTitle {
+  margin-bottom: 0.6rem !important;
+}
+
+.strategicPlaceLogo {
+  margin-right: 1.9rem;
+}
+
+.fakeMap {
+  width: 100%;
+  height: 100%;
+  background-color: #cecece;
+}
+
+.ratingContainer {
+  position: relative;
+  top: -200px;
+  width: 100%;
+  height: 500px;
+  background-color: $secondary;
+  color: #fff;
+}
+
+.opinionContainer {
+  background-color: #fff;
+  color: #000;
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.fakePicture {
+  width: 80px;
+  height: 80px;
+  background-color: #cecece;
+  border-radius: 10px;
+}
+
+.opinionName {
+  margin: 20px 0 10px 0 !important;
+}
+
+.opinionCalification {
+  margin: 10px 0 !important;
+}
+
+.opinionDetail {
+  margin: 10px 0 20px 0 !important;
+}
+
+.communityContainer {
+  position: relative;
+  top: -200px;
+}
+
+.verticalArticle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e4e3e3;
+  margin: 0 2.5rem;
+
+  p {
+    padding: 1rem;
+  }
+}
+
+.verticalArticleImage {
+  height: 485px;
+  width: 340px;
+  flex: 0.4;
+}
+
+.verticalArticleDetail {
+  flex: 0.6;
+}
+
+.horizontalArticle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e4e3e3;
+  margin: 0 3rem;
+
+  p {
+    padding: 1rem;
+  }
+}
+
+.horizontalArticleImage {
+  height: 340px;
+  width: 340px;
+}
+
+.fakeVerticalArticleImage {
+  height: 340px;
+  width: 340px;
+  background-color: #cecece;
+}
+
+.fakeHorizontalArticleImage {
+  height: 485px;
+  width: 340px;
+  background-color: #cecece;
+}
+
+.horizontalArticleDetail {
+}
+
+.partnersContainer {
+  background-color: #cecece;
+}
+
+.partnersTitle {
+  color: $primaryDarker;
+  padding-top: 3.1rem;
+  padding-bottom: 2rem;
+  // text-align: left;
+  // padding-top: 10.8rem;
+  // margin-bottom: 3rem !important;
+}
+
+.partnersDetail {
+  margin: 0;
+  padding-bottom: 4.7rem;
+}
+
 @media (min-width: 300px) {
+  .ratingContent {
+    margin-left: 0;
+  }
+
+  .opinionInformation {
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 576px) {
@@ -33,6 +251,13 @@
 }
 
 @media (min-width: 992px) {
+  .ratingContent {
+    margin-left: 260px;
+  }
+
+  .opinionInformation {
+    margin-left: 2rem;
+  }
 }
 
 @media (min-width: 1200px) {

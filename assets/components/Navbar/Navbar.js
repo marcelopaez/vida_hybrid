@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import OrangeLogo from '../../images/OrangeLogo.svg';
+import OrangeLogoSmall from '../../images/OrangeLogoSmall.svg';
 import GreenLogo from '../../images/GreenLogo.svg';
 
 const Navbar = () => {
@@ -70,7 +71,7 @@ const Navbar = () => {
                     </a>
                   </li>
                   <li className="nav-item align-middle">
-                    <a className="nav-link boldFont greenBackground" href="/login">
+                    <a className="nav-link boldFont greenBackground nav-item-login" href="/login">
                       Iniciar Sesión
                     </a>
                   </li>
@@ -91,7 +92,7 @@ const Navbar = () => {
               </div>
               <Link to="/">
                 <a className="navbar-brand" href="/">
-                  <img src={OrangeLogo} alt="Vida" loading="lazy" />
+                  <img src={OrangeLogoSmall} alt="Vida" loading="lazy" />
                 </a>
               </Link>
               <div className="buttonSmallDown">
@@ -127,7 +128,7 @@ const Navbar = () => {
                     </a>
                   </li>
                   <li className="nav-item align-middle d-flex justify-content-center loginButtonMobile">
-                    <a className="nav-link boldFont orangeBackground" href="/login">
+                    <a className="nav-link boldFont orangeBackground nav-item-login" href="/login">
                       Iniciar Sesión
                     </a>
                   </li>

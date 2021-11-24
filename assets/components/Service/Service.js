@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Service = ({ svg, title, subtitle }) => {
+const Service = ({ svg, title, subtitle, small }) => {
   return (
-    <div className="serviceContainer">
+    <div className={!small ? 'serviceContainer' : 'smallServiceContainer'}>
       <div className="serviceContainerImage">{svg}</div>
       <div className="serviceContainerInformation">
-        <p className="boldFont">{title}</p>
+        <p className="boldFont serviceTitle">{title}</p>
         <p>{subtitle}</p>
       </div>
     </div>

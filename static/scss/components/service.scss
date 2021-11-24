@@ -1,13 +1,20 @@
 .serviceContainer {
   display: flex;
   color: #fff;
-  margin: 2rem;
-  flex: 1;
-  height: 475px;
+  flex: 0.33;
+  height: 250px;
+  margin: 1.5rem;
+}
+
+.smallServiceContainer {
+  display: flex;
+  color: #fff;
+  margin-bottom: 2.2rem;
 }
 
 .serviceContainerImage {
   width: 30%;
+  text-align: center;
 }
 
 .serviceContainerInformation {
@@ -22,10 +29,14 @@
   }
 }
 
+.serviceTitle {
+  margin-bottom: 1.3rem !important;
+}
+
 @media (min-width: 300px) {
   .serviceContainer {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
   }
 
@@ -40,12 +51,12 @@
 @media (min-width: 768px) {
   .serviceContainer {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
 
   .serviceContainerInformation {
-    margin-left: 2rem;
+    margin-left: 2.5rem;
   }
 }
 
