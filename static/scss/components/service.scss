@@ -1,8 +1,7 @@
 .serviceContainer {
   display: flex;
   color: #fff;
-  flex: 0.33;
-  height: 250px;
+  flex: 1;
   margin: 1.5rem;
 }
 
@@ -36,8 +35,9 @@
 @media (min-width: 300px) {
   .serviceContainer {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
+    height: 500px;
   }
 
   .serviceContainerInformation {
@@ -53,6 +53,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
+    height: 450px;
   }
 
   .serviceContainerInformation {
@@ -64,6 +65,9 @@
 }
 
 @media (min-width: 1200px) {
+  .serviceContainer {
+    height: 350px;
+  }
 }
 
 @media (min-width: 1400px) {

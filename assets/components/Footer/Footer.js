@@ -5,8 +5,8 @@ import Logo from '../../images/OrangeLogo.svg';
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="row">
-        <div className="col-lg-3 col-md-6 col-sm-12 footerColumn footerColumnLeft">
+      <div className="d-flex justify-content-center flex-wrap">
+        <div className="footerColumn footerColumnLeft">
           <div className="d-flex strategicPlaceLocationContainer">
             <img src={FooterLogo} alt="Vida" className="footerLogo" />
             <div className="flex-column">
@@ -14,11 +14,11 @@ const Footer = () => {
               <p className="m-0">Cerro de las Rosas | Córdoba</p>
             </div>
           </div>
-          <p>El trabajo es parte de nuestra vida. Te invitamos a disfrutarlo en un espacio relajado, flexible y rodeado de naturaleza.</p>
+          <p style={{ marginTop: '3rem' }}>El trabajo es parte de nuestra vida. Te invitamos a disfrutarlo en un espacio relajado, flexible y rodeado de naturaleza.</p>
         </div>
-        <div className="col-lg-3 col-md-6 col-sm-12 footerColumn">
-          <div className="row">
-            <div className="col lg-2 col-md-6 col-sm-12 footerSubColumn">
+        <div className="footerColumn" style={{ marginLeft: '4.7rem', marginRight: '4.7rem' }}>
+          <div className="d-flex flex-wrap">
+            <div className="footerSubColumn">
               <div className="footerDescriptionTitle">Disposición</div>
               <div className="footerDescriptionContent">
                 <ul>
@@ -29,11 +29,11 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col lg-2 col-md-6 col-sm-12 footerSubColumn">
+            <div className="footerSubColumn">
               <div className="footerDescriptionTitle">Servicios</div>
               <div className="footerDescriptionContent">Contamos con una gran variedad de servicios para brindarte la mayor comodidad</div>
             </div>
-            <div className="col lg-2 col-md-6 col-sm-12 footerSubColumn">
+            <div className="footerSubColumn">
               <div className="footerDescriptionTitle">Formato de salas</div>
               <div className="footerDescriptionContent">
                 <ul>
@@ -47,7 +47,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col lg-2 col-md-6 col-sm-12 footerSubColumn">
+            <div className="footerSubColumn">
               <div className="footerDescriptionTitle">Planes</div>
               <div className="footerDescriptionContent">
                 <ul>
@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-6 col-sm-12 footerColumn footerColumnRight">
+        <div className="footerColumn footerColumnRight">
           <div className="footerDescriptionTitle">Seguinos en redes</div>
           <img src={Logo} alt="Vida" />
         </div>

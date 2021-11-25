@@ -80,6 +80,9 @@ const Home = () => {
         <img src={SectionSeparatorLeft} alt="Salas de Reunión" />
         <h1 className="sectionSeparatorLeftContent title">SALAS DE REUNIÓN</h1>
       </div>
+      <div className="sectionSeparatorLeftMobile">
+        <h1 className="sectionSeparatorLeftContent title">SALAS DE REUNIÓN</h1>
+      </div>
       <div className="darkGreenBackground servicesContainer">
         <div className="container">
           <h1 className="servicesTitle">SERVICIOS</h1>
@@ -417,6 +420,9 @@ const Home = () => {
         <img src={SectionSeparatorRight} alt="Salas de Reunión" className="rightSeparator" />
         <h1 className="sectionSeparatorRightContent title">EVENTOS</h1>
       </div>
+      <div className="sectionSeparatorRightMobile">
+        <h1 className="sectionSeparatorRightContent title">EVENTOS</h1>
+      </div>
       <div className="strategicPlaceContainer">
         <div className="container">
           <h1 className="strategicPlaceTitle m-0">LUGAR ESTRATÉGICO</h1>
@@ -554,8 +560,10 @@ const Home = () => {
           <div className="col-lg-3 col-md-5 col-sm-12 mx-2">
             <div className="horizontalArticle">
               <div className="fakeHorizontalArticleImage"></div>
-              <p>Título noticia, artículo, evento</p>
-              <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <div className="flex-column">
+                <p>Título noticia, artículo, evento</p>
+                <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              </div>
             </div>
           </div>
           <div className="col-lg-3 col-md-5 col-sm-12 mx-2">
