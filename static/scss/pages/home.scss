@@ -11,6 +11,80 @@
 .plansSubtitle {
   text-align: center;
   padding-bottom: 3.1rem;
+  font-size: 1.5rem;
+}
+
+.roomsContainer,
+.eventsContainer {
+  position: relative;
+  color: #fff;
+}
+
+.roomsTitle {
+  font-size: 4.5rem;
+  width: 45%;
+  // padding: 80px 0 50px 100px;
+  padding: 60px 0 50px 100px;
+}
+
+.roomsTitleMobile {
+  top: 80px;
+  left: 100px;
+  margin-bottom: 0;
+  width: 100%;
+  padding-top: 80px;
+}
+
+.roomsSubtitle {
+  font-size: 1.5rem;
+  width: 45%;
+  padding: 0 0 25px 100px;
+}
+
+.roomsSubtitleMobile {
+  @extend .roomsSubtitle;
+  width: 100%;
+  padding: 0 0 25px 0;
+}
+
+.roomsContent1 {
+  font-size: 1.1rem;
+  width: 45%;
+  padding: 0 0 25px 100px;
+}
+
+.roomsContent1Mobile {
+  @extend .roomsContent1;
+  width: 100%;
+  padding: 0 0 25px 0;
+}
+
+.roomsContent2 {
+  font-size: 1.1rem;
+  width: 45%;
+  padding: 0 0 40px 100px;
+}
+
+.roomsContent2Mobile {
+  @extend .roomsContent2;
+  width: 100%;
+  padding: 0 0 40px 0;
+}
+
+.roomsButton {
+  border: 2px solid #fff;
+  background: none;
+  border-radius: 15px;
+  margin-left: 100px;
+  padding: 0 100px;
+  color: #fff;
+}
+
+.roomsButtonMobile {
+  @extend .roomsButton;
+  padding: 1rem 15rem;
+  margin-left: 0;
+  left: unset;
 }
 
 .sectionSeparatorLeftMobile,
@@ -27,12 +101,70 @@
   flex-wrap: wrap;
 }
 
-.servicesTitle,
-.strategicPlaceContainer {
+.servicesTitle {
   color: #fff;
   text-align: left;
-  padding-top: 10.8rem;
-  // margin-bottom: 3rem !important;
+  padding-top: 172px;
+  margin-bottom: 70px;
+}
+
+.eventsTitle {
+  font-size: 4.5rem;
+  padding: 0 0 50px 0;
+  margin: 0;
+}
+
+.eventsTitleMobile {
+  margin-bottom: 0;
+  width: 100%;
+  padding: 148px 0 50px 0;
+}
+
+.eventsSubtitle {
+  font-size: 1.5rem;
+  padding: 0 0 25px 0;
+  margin: 0;
+}
+
+.eventsSubtitleMobile {
+  @extend .eventsSubtitle;
+  width: 100%;
+  padding: 0 0 25px 0;
+}
+
+.eventsContent1 {
+  font-size: 1.1rem;
+  padding: 0 0 40px 0;
+  margin: 0;
+}
+
+.eventsContent1Mobile {
+  @extend .eventsContent1;
+  padding: 0 0 40px 0;
+  width: 100%;
+}
+
+.eventsButton {
+  border: 2px solid #fff;
+  background: none;
+  border-radius: 15px;
+  margin-left: 100px;
+  padding: 0 100px;
+  color: #fff;
+}
+
+.eventsButtonMobile {
+  @extend .eventsButton;
+  padding: 1rem 15rem;
+  margin-left: 0;
+  left: unset;
+}
+
+.strategicPlaceTitle {
+  color: #fff;
+  text-align: left;
+  padding-top: 90px;
+  margin-bottom: 50px;
 }
 
 .communityTitle {
@@ -48,11 +180,12 @@
 
 .servicesContainer {
   position: relative;
-  top: -100px;
+  top: -75px;
 }
 
 .sectionSeparatorLeft,
 .sectionSeparatorLeftMobile {
+  color: #fff;
   position: relative;
   top: -50px;
   z-index: 2;
@@ -63,15 +196,11 @@
 .sectionSeparatorLeftContent {
   position: absolute;
   color: #fff;
-
-  &.title {
-    top: 80px;
-    left: 100px;
-  }
 }
 
 .sectionSeparatorRight,
 .sectionSeparatorRightMobile {
+  color: #fff;
   position: relative;
   top: -50px;
   z-index: 2;
@@ -85,34 +214,39 @@
 
   &.title {
     top: 80px;
-    right: 100px;
+    right: 50px;
   }
 }
 
 .rightSeparator {
   position: absolute;
   right: 0;
-  top: -100px;
+  top: -50px;
+}
+
+.rightSeparatorGreen {
+  position: absolute;
+  left: 50px;
 }
 
 .strategicPlaceContainer {
   position: relative;
-  top: -200px;
+  top: -100px;
   width: 100%;
   background-color: $primaryDarker;
 }
 
 .strategicPlaceLogoContainer {
-  margin-bottom: 5.4rem;
+  margin-bottom: 86px;
   color: #fff;
 }
 
 .locationTitle {
-  margin-bottom: 0.6rem !important;
+  margin-bottom: 10px !important;
 }
 
 .strategicPlaceLogo {
-  margin-right: 1.9rem;
+  margin-right: 30px;
 }
 
 .fakeMap {
@@ -160,6 +294,19 @@
 
 .opinionDetail {
   margin: 10px 0 20px 0 !important;
+}
+
+.consultContainer {
+  position: relative;
+  color: #fff;
+}
+
+.consultTitle {
+  font-size: 2.25rem;
+}
+
+.consultTitleMobile {
+  @extend .consultTitle;
 }
 
 .communityContainer {
@@ -245,6 +392,11 @@
     padding: 8rem 0 1.85rem 0;
   }
 
+  .roomsTitleMobile,
+  .eventsTitleMobile {
+    font-size: 2.75rem;
+  }
+
   .sectionSeparatorLeft,
   .sectionSeparatorRight {
     display: none;
@@ -267,13 +419,34 @@
 @media (min-width: 576px) {
   .plansTitle {
     padding: 7.5rem 0 1.85rem 0;
+    font-size: 2.75rem;
+  }
+
+  .roomsTitleMobile,
+  .eventsTitleMobile,
+  .servicesTitle {
+    font-size: 4.5rem;
   }
 }
 
 @media (min-width: 768px) {
+  .plansTitle,
+  .servicesTitle {
+    font-size: 4.5rem;
+  }
 }
 
 @media (min-width: 992px) {
+  .eventsTitle,
+  .eventsSubtitle,
+  .eventsContent1 {
+    width: 50%;
+  }
+
+  .eventsButton {
+    padding: 1rem 10rem;
+  }
+
   .sectionSeparatorLeft,
   .sectionSeparatorRight {
     display: block;
@@ -291,10 +464,30 @@
   .opinionInformation {
     margin-left: 2rem;
   }
+
+  .eventsContainer {
+    left: calc(100vw - (100vw - 40%));
+  }
 }
 
 @media (min-width: 1200px) {
+  .eventsContainer {
+    left: calc(100vw - (100vw - 50%));
+  }
+
+  .eventsButton {
+    padding: 1rem 15rem;
+  }
 }
 
 @media (min-width: 1400px) {
+  .eventsTitle,
+  .eventsSubtitle,
+  .eventsContent1 {
+    width: 35%;
+  }
+
+  .eventsContainer {
+    left: calc(100vw - (100vw - 60%));
+  }
 }
