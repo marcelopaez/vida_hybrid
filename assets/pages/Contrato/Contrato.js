@@ -134,7 +134,7 @@ const Contrato = () => {
                       <path d="M11.4165 24.5714H21.8332" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       <path d="M5.1665 11.7142H7.24984" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       <path d="M5.1665 18.1428H7.24984" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M5.1665 24.5714H7.24984" stroke="white" stroke-width="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M5.1665 24.5714H7.24984" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </th>
                   <th scope="col" className="text-center">
@@ -150,7 +150,7 @@ const Contrato = () => {
                       <path
                         d="M29.25 28.5L22.8752 22.1138L29.25 28.5ZM26.4079 13.5789C26.4079 16.7825 25.1353 19.8548 22.8701 22.1201C20.6048 24.3853 17.5325 25.6579 14.3289 25.6579C11.1254 25.6579 8.05308 24.3853 5.78784 22.1201C3.5226 19.8548 2.25 16.7825 2.25 13.5789C2.25 10.3754 3.5226 7.30308 5.78784 5.03784C8.05308 2.7726 11.1254 1.5 14.3289 1.5C17.5325 1.5 20.6048 2.7726 22.8701 5.03784C25.1353 7.30308 26.4079 10.3754 26.4079 13.5789V13.5789Z"
                         stroke="white"
-                        stroke-width="2.84211"
+                        strokeWidth="2.84211"
                         strokeLinecap="round"
                       />
                     </svg>

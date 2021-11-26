@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import OrangeLogo from '../../images/OrangeLogo.svg';
 import OrangeLogoSmall from '../../images/OrangeLogoSmall.svg';
 import GreenLogo from '../../images/GreenLogo.svg';
+import BackgroundImage from '../../images/HomeBackground.jpg';
 
 const Navbar = () => {
   const [windowScroll, setWindowScroll] = useState(0);
@@ -19,7 +20,7 @@ const Navbar = () => {
   return (
     <main>
       <div className="navbarLarger">
-        <div className="background">
+        <div className="background" style={{ backgroundImage: `url(${BackgroundImage})` }}>
           <div className="leftSVGNavbar">
             <svg width="707" height="1037" viewBox="0 0 707 1037" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M707 0C707 572.749 390.485 1037 0 1037V0H707Z" fill="#004B2A" />

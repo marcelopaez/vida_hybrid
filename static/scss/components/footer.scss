@@ -1,6 +1,13 @@
 .footer {
   color: #fff;
   background-color: $primary;
+  position: relative;
+  top: -65px;
+}
+
+.footerMobile {
+  @extend .footer;
+  top: 0;
 }
 
 .footer > h1 {
@@ -63,6 +70,14 @@
 }
 
 @media (min-width: 300px) {
+  .footer {
+    display: none;
+  }
+
+  .footerMobile {
+    display: block;
+  }
+
   .footerColumnLeft {
     margin-left: 0;
   }
@@ -83,6 +98,14 @@
 @media (min-width: 768px) {
   .footerSubColumn {
     margin: 0 2rem;
+  }
+
+  .footer {
+    display: block;
+  }
+
+  .footerMobile {
+    display: none;
   }
 }
 

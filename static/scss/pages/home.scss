@@ -14,16 +14,41 @@
   font-size: 1.5rem;
 }
 
-.roomsContainer,
-.eventsContainer {
+.plansContainer {
+  padding-bottom: 10.8rem;
+}
+
+.meetingsContainer {
+  color: #fff;
+  position: relative;
+  top: -50px;
+  z-index: 2;
+  width: 100%;
+  background-position: center;
+  height: 70vh;
+  background-repeat: no-repeat;
+}
+
+.meetingsContainerMobile {
+  @extend .meetingsContainer;
+  top: 0;
+  height: 75vh;
+}
+
+.meetingsContainerMobile,
+.eventsContainerMobile {
+  background-color: $secondary;
+}
+
+.roomsContainer {
   position: relative;
   color: #fff;
+  top: -80px;
 }
 
 .roomsTitle {
   font-size: 4.5rem;
   width: 45%;
-  // padding: 80px 0 50px 100px;
   padding: 60px 0 50px 100px;
 }
 
@@ -71,7 +96,8 @@
   padding: 0 0 40px 0;
 }
 
-.roomsButton {
+.roomsButton,
+.eventsButton {
   border: 2px solid #fff;
   background: none;
   border-radius: 15px;
@@ -80,16 +106,23 @@
   color: #fff;
 }
 
-.roomsButtonMobile {
+.roomsButtonMobile,
+.eventsButtonMobile {
   @extend .roomsButton;
   padding: 1rem 15rem;
   margin-left: 0;
   left: unset;
 }
 
-.sectionSeparatorLeftMobile,
-.sectionSeparatorRightMobile {
-  background-color: $secondary;
+.servicesContainer {
+  position: relative;
+  top: -65px;
+  background: $primaryDarker;
+}
+
+.servicesContainerMobile {
+  position: relative;
+  background: $primaryDarker;
 }
 
 .servicesSection {
@@ -106,6 +139,32 @@
   text-align: left;
   padding-top: 172px;
   margin-bottom: 70px;
+}
+
+.eventsContainer {
+  position: relative;
+  color: #fff;
+  top: -65px;
+  z-index: 2;
+  width: 100%;
+  height: 65vh;
+}
+
+.eventsContainerMobile {
+  @extend .eventsContainer;
+  top: 0;
+  height: 75vh;
+}
+
+.eventsSVGContainer {
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+
+.eventsContainerContent {
+  position: absolute;
+  color: #fff;
 }
 
 .eventsTitle {
@@ -145,95 +204,19 @@
 }
 
 .eventsButton {
-  border: 2px solid #fff;
-  background: none;
-  border-radius: 15px;
-  margin-left: 100px;
-  padding: 0 100px;
-  color: #fff;
-}
-
-.eventsButtonMobile {
-  @extend .eventsButton;
-  padding: 1rem 15rem;
   margin-left: 0;
-  left: unset;
-}
-
-.strategicPlaceTitle {
-  color: #fff;
-  text-align: left;
-  padding-top: 90px;
-  margin-bottom: 50px;
-}
-
-.communityTitle {
-  color: $primaryDarker;
-  text-align: left;
-  padding-top: 10.8rem;
-  margin-bottom: 3rem !important;
-}
-
-.plansContainer {
-  padding-bottom: 10.8rem;
-}
-
-.servicesContainer {
-  position: relative;
-  top: -75px;
-}
-
-.sectionSeparatorLeft,
-.sectionSeparatorLeftMobile {
-  color: #fff;
-  position: relative;
-  top: -50px;
-  z-index: 2;
-  width: 100%;
-  height: 75vh;
-}
-
-.sectionSeparatorLeftContent {
-  position: absolute;
-  color: #fff;
-}
-
-.sectionSeparatorRight,
-.sectionSeparatorRightMobile {
-  color: #fff;
-  position: relative;
-  top: -50px;
-  z-index: 2;
-  width: 100%;
-  height: 75vh;
-}
-
-.sectionSeparatorRightContent {
-  position: absolute;
-  color: #fff;
-
-  &.title {
-    top: 80px;
-    right: 50px;
-  }
-}
-
-.rightSeparator {
-  position: absolute;
-  right: 0;
-  top: -50px;
-}
-
-.rightSeparatorGreen {
-  position: absolute;
-  left: 50px;
 }
 
 .strategicPlaceContainer {
   position: relative;
-  top: -100px;
+  top: -65px;
   width: 100%;
   background-color: $primaryDarker;
+}
+
+.strategicPlaceContainerMobile {
+  @extend .strategicPlaceContainer;
+  top: 0;
 }
 
 .strategicPlaceLogoContainer {
@@ -257,11 +240,19 @@
 
 .ratingContainer {
   position: relative;
-  top: -200px;
+  top: -65px;
   width: 100%;
-  height: 500px;
   background-color: $secondary;
   color: #fff;
+}
+
+.ratingContainerMobile {
+  @extend .ratingContainer;
+  top: 0;
+}
+
+.ratingContent {
+  padding: 100px 0;
 }
 
 .opinionContainer {
@@ -277,15 +268,14 @@
   }
 }
 
-.fakePicture {
-  width: 80px;
-  height: 80px;
-  background-color: #cecece;
-  border-radius: 10px;
+.ratingUserPhoto {
+  width: 100px;
 }
 
 .opinionName {
   margin: 20px 0 10px 0 !important;
+  color: #9f9d9b;
+  font-size: 1rem;
 }
 
 .opinionCalification {
@@ -294,47 +284,137 @@
 
 .opinionDetail {
   margin: 10px 0 20px 0 !important;
+  color: #9f9d9b;
+  font-size: 1rem;
 }
 
-.consultContainer {
+.strategicPlaceTitle {
+  color: #fff;
+  text-align: left;
+  padding-top: 90px;
+  margin-bottom: 50px;
+}
+
+.consultSVGContainer {
+  position: absolute;
+  left: 50px;
+  top: -50px;
+  z-index: 2;
+}
+
+.consultContainer,
+.consultContainerMobile {
   position: relative;
   color: #fff;
+  z-index: 3;
+  top: -20px;
+}
+
+.consultContainerMobile {
+  background: $primaryDarker;
 }
 
 .consultTitle {
   font-size: 2.25rem;
+  // padding: 10px 0 40px 0;
+  padding-bottom: 40px;
+  margin: 0;
 }
 
 .consultTitleMobile {
   @extend .consultTitle;
+  padding: 50px 0 40px 0;
+}
+
+.consultSeparator {
+  border-top: 1px solid #e5e5e5;
+  width: 50%;
+  position: absolute;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.input-prefix {
+  left: 0 !important;
+}
+
+.consultEmail {
+  margin-bottom: 30px !important;
+}
+
+.consultEmail,
+#consultContent {
+  width: 50%;
+}
+
+.consultEmailMobile {
+  width: 100% !important;
+}
+
+.consultSelect {
+  margin-bottom: 30px !important;
+}
+
+.consultLabel {
+  margin-bottom: 15px;
+}
+
+.consultInput {
+  // margin-bottom: 40px;
+}
+
+.consultImputMobile {
+  width: 100% !important;
+}
+
+.mdb-select {
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+.consultButton {
+  background: #fff;
+  color: $primaryDarker;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 50%;
+}
+
+.consultButtonMobile {
+  @extend .consultButton;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.communityTitle {
+  color: $primaryDarker;
+  text-align: left;
+  padding-top: 10.8rem;
+  margin-bottom: 3rem !important;
+  font-size: 3rem;
 }
 
 .communityContainer {
   position: relative;
-  top: -200px;
+  top: -65px;
+  margin-bottom: 100px;
 }
 
-.verticalArticle {
+.communityContainerMobile {
+  @extend .communityContainer;
+  top: 0;
+}
+
+.card {
+  margin: 15px;
+}
+
+.cardHorizontal {
+  @extend .card;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #e4e3e3;
-  margin: 1rem 2.5rem;
-
-  p {
-    padding: 1rem;
-  }
-}
-
-.verticalArticleImage {
-  height: 485px;
-  width: 340px;
-  flex: 0.4;
-}
-
-.verticalArticleDetail {
-  flex: 0.6;
+  flex-direction: row !important;
 }
 
 .horizontalArticle {
@@ -354,37 +434,57 @@
   width: 340px;
 }
 
-.fakeVerticalArticleImage {
-  width: 100%;
-  height: 100px;
-  background-color: #cecece;
-}
-
-.fakeHorizontalArticleImage {
-  width: 100%;
-  height: 300px;
-  background-color: #cecece;
-}
-
-.horizontalArticleDetail {
-}
-
 .partnersContainer {
   background-color: #cecece;
+  position: relative;
+  top: -65px;
+}
+
+.partnersContainerMobile {
+  @extend .partnersContainer;
+  top: 0;
 }
 
 .partnersTitle {
   color: $primaryDarker;
   padding-top: 3.1rem;
   padding-bottom: 2rem;
-  // text-align: left;
-  // padding-top: 10.8rem;
-  // margin-bottom: 3rem !important;
 }
 
 .partnersDetail {
   margin: 0;
   padding-bottom: 4.7rem;
+}
+
+.md-form input:not([type]):focus:not([readonly]),
+.md-form input[type='text']:not(.browser-default):focus:not([readonly]),
+.md-form input[type='password']:not(.browser-default):focus:not([readonly]),
+.md-form input[type='email']:not(.browser-default):focus:not([readonly]),
+.md-form input[type='url']:not(.browser-default):focus:not([readonly]),
+.md-form input[type='time']:not(.browser-default):focus:not([readonly]),
+.md-form input[type='date']:not(.browser-default):focus:not([readonly]),
+.md-form input[type='datetime']:not(.browser-default):focus:not([readonly]),
+.md-form input[type='datetime-local']:not(.browser-default):focus:not([readonly]),
+.md-form input[type='tel']:not(.browser-default):focus:not([readonly]),
+.md-form input[type='number']:not(.browser-default):focus:not([readonly]),
+.md-form input[type='search']:not(.browser-default):focus:not([readonly]),
+.md-form input[type='phone']:not(.browser-default):focus:not([readonly]),
+.md-form input[type='search-md']:focus:not([readonly]),
+.md-form textarea.md-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 1px 0 0 #fff;
+}
+
+.input-prefix {
+  color: #fff !important;
+
+  &.active {
+    color: $secondary !important;
+  }
+}
+
+.consultEmailLabel {
+  color: #fff !important;
 }
 
 @media (min-width: 300px) {
@@ -397,18 +497,37 @@
     font-size: 2.75rem;
   }
 
-  .sectionSeparatorLeft,
-  .sectionSeparatorRight {
+  .meetingsContainer,
+  .eventsContainer,
+  .servicesContainer,
+  .strategicPlaceContainer,
+  .ratingContainer,
+  .consultContainer,
+  .consultSVGContainer,
+  .partnersContainer {
     display: none;
   }
 
-  .sectionSeparatorLeftMobile,
-  .sectionSeparatorRightMobile {
+  .meetingsContainerMobile,
+  .eventsContainerMobile,
+  .servicesContainerMobile,
+  .strategicPlaceContainerMobile,
+  .ratingContainerMobile,
+  .consultContainerMobile,
+  .partnersContainerMobile {
     display: block;
   }
 
   .ratingContent {
     margin-left: 0;
+  }
+
+  .opinionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 270px;
   }
 
   .opinionInformation {
@@ -427,12 +546,26 @@
   .servicesTitle {
     font-size: 4.5rem;
   }
+
+  .opinionContainer {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 540px;
+  }
+
+  .opinionInformation {
+    margin-left: 2rem;
+  }
 }
 
 @media (min-width: 768px) {
   .plansTitle,
   .servicesTitle {
     font-size: 4.5rem;
+  }
+
+  .opinionContainer {
+    width: 730px;
   }
 }
 
@@ -443,40 +576,60 @@
     width: 50%;
   }
 
-  .eventsButton {
-    padding: 1rem 10rem;
-  }
-
-  .sectionSeparatorLeft,
-  .sectionSeparatorRight {
+  .meetingsContainer,
+  .eventsContainer,
+  .servicesContainer,
+  .strategicPlaceContainer,
+  .consultContainer,
+  .consultSVGContainer,
+  .partnersContainer {
     display: block;
   }
 
-  .sectionSeparatorLeftMobile,
-  .sectionSeparatorRightMobile {
+  .meetingsContainerMobile,
+  .eventsContainerMobile,
+  .servicesContainerMobile,
+  .strategicPlaceContainerMobile,
+  .partnersContainerMobile {
     display: none;
   }
 
-  .ratingContent {
-    margin-left: 260px;
-  }
-
-  .opinionInformation {
-    margin-left: 2rem;
-  }
-
-  .eventsContainer {
+  .eventsContainerContent {
     left: calc(100vw - (100vw - 40%));
+  }
+
+  .consultContainer {
+    left: calc(100vw - (100vw - 30%));
+  }
+
+  .consultSVGContainer {
+    left: -50px;
   }
 }
 
 @media (min-width: 1200px) {
-  .eventsContainer {
+  .ratingContainer {
+    display: block;
+  }
+
+  .ratingContainerMobile {
+    display: none;
+  }
+
+  .consultContainerMobile {
+    display: none;
+  }
+
+  .ratingContent {
+    margin-left: 50px;
+  }
+
+  .eventsContainerContent {
     left: calc(100vw - (100vw - 50%));
   }
 
-  .eventsButton {
-    padding: 1rem 15rem;
+  .consultContainer {
+    left: calc(100vw - (100vw - 30%));
   }
 }
 
@@ -484,10 +637,18 @@
   .eventsTitle,
   .eventsSubtitle,
   .eventsContent1 {
-    width: 35%;
+    width: 100%;
   }
 
-  .eventsContainer {
+  .eventsContainerContent {
     left: calc(100vw - (100vw - 60%));
+  }
+
+  .consultContainer {
+    left: calc(100vw - (100vw - 30%));
+  }
+
+  .consultSVGContainer {
+    left: 50px;
   }
 }
