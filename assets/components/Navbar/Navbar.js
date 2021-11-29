@@ -28,10 +28,10 @@ const Navbar = () => {
             <Link to="/">
               <img src={OrangeLogo} className="logo" alt="Vida" />
             </Link>
-            <h1 className="welcomeTitle1 boldFont">Bienvenide a</h1>
+            <h1 className="welcomeTitle1 extraBoldFont">Bienvenide a</h1>
             <h1 className="welcomeTitle2 boldFont">Vida Cowork</h1>
             <p className="welcomeSubtitle boldFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-            <p className="welcomeText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <p className="welcomeText lightFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             <button className="welcomeButton">Quiero ser parte de Vida</button>
           </div>
           <div className="rightSVGNavbar">
@@ -52,29 +52,29 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li className="nav-item align-middle">
-                    <a className="nav-link" href="/salasDeReunion">
+                    <Link to="/salasDeReunion" className="nav-link">
                       Salas de Reunión
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item align-middle">
-                    <a className="nav-link" href="/oficinas">
+                    <Link to="/oficinas" className="nav-link">
                       Oficinas
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item align-middle">
-                    <a className="nav-link" href="/eventos">
+                    <Link to="/eventos" className="nav-link">
                       Eventos
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item align-middle">
-                    <a className="nav-link" href="/comunidad">
+                    <Link to="/comunidad" className="nav-link">
                       Comunidad
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item align-middle">
-                    <a className="nav-link boldFont greenBackground nav-item-login" href="/login">
+                    <Link to="/login" className="nav-link boldFont greenBackground nav-item-login">
                       Iniciar Sesión
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -92,9 +92,7 @@ const Navbar = () => {
                 </button>
               </div>
               <Link to="/">
-                <a className="navbar-brand" href="/">
-                  <img src={OrangeLogoSmall} alt="Vida" loading="lazy" />
-                </a>
+                <img src={OrangeLogoSmall} alt="Vida" loading="lazy" />
               </Link>
               <div className="buttonSmallDown">
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,29 +107,29 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li className="nav-item align-middle">
-                    <a className="nav-link" href="/salasDeReunion">
+                    <Link to="/salasDeReunion" className="nav-link">
                       Salas de Reunión
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item align-middle">
-                    <a className="nav-link" href="/oficinas">
+                    <Link to="/oficinas" className="nav-link">
                       Oficinas
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item align-middle">
-                    <a className="nav-link" href="/eventos">
+                    <Link to="/eventos" className="nav-link">
                       Eventos
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item align-middle">
-                    <a className="nav-link" href="/comunidad">
+                    <Link to="/comunidad" className="nav-link">
                       Comunidad
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item align-middle d-flex justify-content-center loginButtonMobile">
-                    <a className="nav-link boldFont orangeBackground nav-item-login" href="/login">
+                    <Link to="/login" className="nav-link boldFont orangeBackground nav-item-login">
                       Iniciar Sesión
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

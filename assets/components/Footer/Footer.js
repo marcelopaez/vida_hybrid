@@ -11,16 +11,16 @@ const Footer = () => {
             <div className="d-flex strategicPlaceLocationContainer">
               <img src={FooterLogo} alt="Vida" className="footerLogo" />
               <div className="flex-column">
-                <p className="fw-bold m-0">Fernando Fader 3971</p>
-                <p className="m-0">Cerro de las Rosas | Córdoba</p>
+                <p className="locationText boldFont">Fernando Fader 3971</p>
+                <p className="locationText boldFont">Cerro de las Rosas | Córdoba</p>
               </div>
             </div>
-            <p style={{ marginTop: '3rem' }}>El trabajo es parte de nuestra vida. Te invitamos a disfrutarlo en un espacio relajado, flexible y rodeado de naturaleza.</p>
+            <p className="locationSubText lightFont">El trabajo es parte de nuestra vida. Te invitamos a disfrutarlo en un espacio relajado, flexible y rodeado de naturaleza.</p>
           </div>
           <div className="footerColumn" style={{ marginLeft: '4.7rem', marginRight: '4.7rem' }}>
             <div className="d-flex flex-wrap">
               <div className="footerSubColumn">
-                <div className="footerDescriptionTitle">Disposición</div>
+                <div className="footerDescriptionTitle boldFont">Disposición</div>
                 <div className="footerDescriptionContent">
                   <ul>
                     <li>Salas de reunión</li>
@@ -31,11 +31,11 @@ const Footer = () => {
                 </div>
               </div>
               <div className="footerSubColumn">
-                <div className="footerDescriptionTitle">Servicios</div>
+                <div className="footerDescriptionTitle boldFont">Servicios</div>
                 <div className="footerDescriptionContent">Contamos con una gran variedad de servicios para brindarte la mayor comodidad</div>
               </div>
               <div className="footerSubColumn">
-                <div className="footerDescriptionTitle">Formato de salas</div>
+                <div className="footerDescriptionTitle boldFont">Formato de salas</div>
                 <div className="footerDescriptionContent">
                   <ul>
                     <li>Mesa rusa</li>
@@ -49,7 +49,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="footerSubColumn">
-                <div className="footerDescriptionTitle">Planes</div>
+                <div className="footerDescriptionTitle boldFont">Planes</div>
                 <div className="footerDescriptionContent">
                   <ul>
                     <li>Eter</li>
@@ -63,11 +63,11 @@ const Footer = () => {
             </div>
           </div>
           <div className="footerColumn footerColumnRight">
-            <div className="footerDescriptionTitle">Seguinos en redes</div>
             <img src={Logo} alt="Vida" />
+            <div className="footerDescriptionTitle boldFont">Seguinos en redes</div>
           </div>
         </div>
-        <div className="rights">
+        <div className="rights lightText">
           <p>Todos los derechos reservados. 2021</p>
         </div>
       </div>
@@ -77,16 +77,16 @@ const Footer = () => {
             <div className="d-flex strategicPlaceLocationContainer">
               <img src={FooterLogo} alt="Vida" className="footerLogo" />
               <div className="flex-column">
-                <p className="fw-bold m-0">Fernando Fader 3971</p>
-                <p className="m-0">Cerro de las Rosas | Córdoba</p>
+                <p className="locationText boldFont">Fernando Fader 3971</p>
+                <p className="locationText boldFont">Cerro de las Rosas | Córdoba</p>
               </div>
             </div>
-            <p style={{ marginTop: '3rem' }}>El trabajo es parte de nuestra vida. Te invitamos a disfrutarlo en un espacio relajado, flexible y rodeado de naturaleza.</p>
+            <p className="locationSubText lightFont">El trabajo es parte de nuestra vida. Te invitamos a disfrutarlo en un espacio relajado, flexible y rodeado de naturaleza.</p>
           </div>
           <div className="footerColumn" style={{ marginLeft: '4.7rem', marginRight: '4.7rem' }}>
             <div className="d-flex flex-wrap">
               <div className="footerSubColumn">
-                <div className="footerDescriptionTitle">Disposición</div>
+                <div className="footerDescriptionTitle boldFont">Disposición</div>
                 <div className="footerDescriptionContent">
                   <ul>
                     <li>Salas de reunión</li>
@@ -97,11 +97,11 @@ const Footer = () => {
                 </div>
               </div>
               <div className="footerSubColumn">
-                <div className="footerDescriptionTitle">Servicios</div>
+                <div className="footerDescriptionTitle boldFont">Servicios</div>
                 <div className="footerDescriptionContent">Contamos con una gran variedad de servicios para brindarte la mayor comodidad</div>
               </div>
               <div className="footerSubColumn">
-                <div className="footerDescriptionTitle">Formato de salas</div>
+                <div className="footerDescriptionTitle boldFont">Formato de salas</div>
                 <div className="footerDescriptionContent">
                   <ul>
                     <li>Mesa rusa</li>
@@ -115,7 +115,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="footerSubColumn">
-                <div className="footerDescriptionTitle">Planes</div>
+                <div className="footerDescriptionTitle boldFont">Planes</div>
                 <div className="footerDescriptionContent">
                   <ul>
                     <li>Eter</li>
@@ -129,11 +129,11 @@ const Footer = () => {
             </div>
           </div>
           <div className="footerColumn footerColumnRight">
-            <div className="footerDescriptionTitle">Seguinos en redes</div>
             <img src={Logo} alt="Vida" />
+            <div className="footerDescriptionTitle boldFont">Seguinos en redes</div>
           </div>
         </div>
-        <div className="rights">
+        <div className="rights lightText">
           <p>Todos los derechos reservados. 2021</p>
         </div>
       </div>
