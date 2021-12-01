@@ -1,0 +1,171 @@
+.roomHeaderContent {
+  position: relative;
+  z-index: 100;
+  color: #fff;
+  top: 20%;
+  margin-left: 6.55rem;
+  width: 500px;
+}
+
+.roomTitle {
+  z-index: 100;
+  color: #fff;
+  font-size: 4rem;
+}
+
+.roomButton {
+  background-color: #ffe3c7;
+  color: $secondary;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 1.25rem;
+  width: 400px;
+}
+
+.choosePlan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.choosePlanTitle {
+  color: $secondary;
+  font-size: 2.25rem;
+}
+
+.choosePlanImage {
+  width: 125px;
+  height: 125px;
+  margin: 1rem;
+}
+
+.hourPlansContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 200px 0 192px 0;
+}
+
+.hourPlansTitle {
+  font-size: 1.5rem;
+  color: $secondary;
+}
+
+.hourPlansSubtitle {
+  font-size: 1.1rem;
+  margin: 40px 0 45px 0;
+}
+
+.hourPlansTable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #7d7c7a;
+}
+
+.priceRoomRowTable {
+  width: 150px;
+}
+
+.roomsRowTable {
+  td {
+    width: 50px;
+  }
+}
+
+.roomsRowTable:hover {
+  background: #fff5ec;
+
+  .priceRoomRowTable {
+    background: $secondary;
+    color: #fff;
+  }
+}
+
+.hourPlansButton {
+  background: $secondary;
+  color: #fff;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 24px;
+}
+
+.roomsFooter {
+  position: relative;
+  background: $secondary;
+  height: 40vh;
+}
+
+.roomsFooterSVGContainer {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  top: -25px;
+}
+
+.roomsFooterSVGContent {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  font-size: 2.25rem;
+  margin: 4rem 0 0 2rem;
+
+  p {
+    width: 50%;
+  }
+}
+
+.roomsFooterContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5rem;
+}
+
+.roomsFooterPlanContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 4rem 1rem 0 1rem;
+  color: #fff;
+}
+
+.roomsFooterSVGSquare {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.roomsFooterPlanTitle {
+  font-size: 1.5rem;
+  margin-top: 35px;
+}
+
+@media (min-width: 300px) {
+  .choosePlan {
+    margin-top: 10rem;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .choosePlan {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

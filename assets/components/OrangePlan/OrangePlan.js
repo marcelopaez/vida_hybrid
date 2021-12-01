@@ -4,7 +4,7 @@ import PlanOrangeSVG from '../../images/PlanOrangeSVG.svg';
 const OrangePlan = ({ svg, title, price, time }) => {
   return (
     <div className="orangePlan">
-      <img src={PlanOrangeSVG} alt="Vida" class="orangePlanSVG" />
+      <img src={PlanOrangeSVG} alt="Vida" className="orangePlanSVG" />
       <div className="orangePlanInformation">
         <div className="d-flex justify-content-center align-items-center">
           {svg}

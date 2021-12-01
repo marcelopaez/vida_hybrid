@@ -868,9 +868,9 @@ const Home = () => {
             </div>
           </Slider>
         </div>
-        <a class="carousel-control-prev" href="#carouselEventos" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Anterior</span>
+        <a className="carousel-control-prev" href="#carouselEventos" role="button" data-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="sr-only">Anterior</span>
         </a>
       </div>
       <div className="eventsContainerMobile">

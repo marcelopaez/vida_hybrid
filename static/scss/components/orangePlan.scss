@@ -1,0 +1,86 @@
+.orangePlan {
+  margin: 2rem 1rem;
+  box-shadow: 2px 2px 2px #cecece;
+  background: #fff;
+  height: 500px;
+  width: 340px;
+  border-radius: 5px;
+  filter: grayscale(0.4);
+  transition: all 0.5s ease-in-out;
+}
+
+.orangePlan:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+.orangePlanSVG {
+  position: absolute;
+}
+
+.orangePlanInformation {
+  position: absolute;
+  color: #fff;
+
+  div {
+    position: relative;
+    top: 20px;
+
+    svg {
+      margin: 0 2rem;
+    }
+  }
+}
+
+.orangePlanPrice {
+  font-size: 3rem;
+}
+
+.orangePlanPrice {
+  position: absolute;
+  top: 80px;
+  margin: 0 2rem;
+}
+
+.orangePlanSelect {
+  position: relative;
+  top: 200px;
+  background: #fafafa;
+  color: #afafaf;
+  width: 300px;
+}
+
+.orangePlanTime {
+  position: relative;
+  top: 210px;
+  color: #000 !important;
+  font-size: 1.1rem;
+}
+
+.orangePlanButton {
+  position: relative;
+  top: 250px;
+  border: none;
+  border-radius: 10px;
+  background: $secondary;
+  padding: 20px 15px;
+  color: #fff;
+}
+
+@media (min-width: 300px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
