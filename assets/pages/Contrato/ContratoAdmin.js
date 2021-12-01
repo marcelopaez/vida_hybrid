@@ -6,7 +6,7 @@ import CalendarIcon from '../../images/CalendarIcon.svg';
 import MoreOptionsIcon from '../../images/MoreOptionsIcon.svg';
 import Profile from '../../images/ProfileIcon.svg';
 
-const Contrato = () => {
+const ContratoAdmin = () => {
   return (
     <div className="row marginNavbar generalContent">
       <div className="col-lg-2 col-md-3 col-sm-12 p-0">
@@ -279,4 +279,4 @@ const Contrato = () => {
   );
 };
 
-export default Contrato;
+export default ContratoAdmin;

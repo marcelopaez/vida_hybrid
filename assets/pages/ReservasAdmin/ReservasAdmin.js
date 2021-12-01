@@ -11,7 +11,7 @@ import RoomType7 from '../../images/RoomType7.svg';
 import RoomType8 from '../../images/RoomType8.svg';
 import EterLogo from '../../images/EterLogo.svg';
 
-const Reservas = () => {
+const ReservasAdmin = () => {
   return (
     <div className="row marginNavbar generalContent">
       <div className="col-lg-2 col-md-3 col-sm-12 p-0">
@@ -458,4 +458,4 @@ const Reservas = () => {
   );
 };
 
-export default Reservas;
+export default ReservasAdmin;

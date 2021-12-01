@@ -1,3 +1,3 @@
-import Contrato from './Contrato';
+import ContratoAdmin from './ContratoAdmin';
 
-export default Contrato;
+export default ContratoAdmin;

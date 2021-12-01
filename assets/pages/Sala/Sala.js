@@ -8,7 +8,7 @@ import BackgroundImage from '../../images/PlanesBackground.jpg';
 import Service from '../../components/Service';
 import ChoosePlan from '../../images/ChoosePlan.jpg';
 
-const Planes = () => {
+const Sala = () => {
   return (
     <main>
       <div className="navbarLarger">
@@ -138,4 +138,4 @@ const Planes = () => {
   );
 };
 
-export default Planes;
+export default Sala;

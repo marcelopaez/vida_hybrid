@@ -1,0 +1,67 @@
+.plansContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.planIcon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: $primaryDarker;
+}
+
+.currentPlanContent {
+  display: flex;
+  align-items: space-around;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.buttonContainer {
+  color: $primaryDarker;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+}
+
+@media (min-width: 300px) {
+  .currentPlanContainer {
+    max-width: 280px;
+  }
+
+  .buttonContainer {
+    padding: 0.5rem 2rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .currentPlanContainer {
+    max-width: 400px;
+  }
+
+  .buttonContainer {
+    padding: 0.5rem 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .buttonContainer {
+    padding: 0.5rem 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .buttonContainer {
+    padding: 0.5rem 4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+}

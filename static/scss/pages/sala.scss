@@ -1,0 +1,65 @@
+.roomHeaderContent {
+  position: relative;
+  z-index: 100;
+  color: #fff;
+  top: 20%;
+  margin-left: 6.55rem;
+  width: 500px;
+}
+
+.roomTitle,
+.actualPlanText,
+.actualPlanPrice,
+.actualPlanButton {
+  z-index: 100;
+  color: #fff;
+}
+
+.roomTitle {
+  font-size: 4rem;
+}
+
+.roomButton {
+  background-color: #ffe3c7;
+  color: $secondary;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 1.25rem;
+  width: 400px;
+}
+
+.choosePlan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.choosePlanTitle {
+  color: $secondary;
+  font-size: 2.25rem;
+}
+
+.choosePlanImage {
+  width: 125px;
+  height: 125px;
+  margin: 0 1rem;
+}
+
+@media (min-width: 300px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

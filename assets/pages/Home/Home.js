@@ -1,6 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Navbar from '../../components/Navbar';
+import NavbarMobile from '../../components/NavbarMobile';
 import Plan from '../../components/Plan';
 import Service from '../../components/Service';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import OrangeLogo from '../../images/OrangeLogo.svg';
+import BackgroundImage from '../../images/HomeBackground.jpg';
 import SectionSeparatorLeft from '../../images/SectionSeparatorLeft.svg';
 import SectionSeparatorRight from '../../images/SectionSeparatorRight.svg';
 import StrategicPlaceLogo from '../../images/FooterLogo.svg';
@@ -19,8 +27,51 @@ import Partner5 from '../../images/Partner5.svg';
 import Partner6 from '../../images/Partner6.svg';
 
 const Home = () => {
+  const carouselSettings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    autoplay: true,
+    arrows: false,
+  };
+
   return (
     <div>
+      <div className="navbarLarger">
+        <div className="background" style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover' }}>
+          <div className="leftSVGNavbar">
+            <svg width="707" height="1037" viewBox="0 0 707 1037" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute' }}>
+              <path d="M707 0C707 572.749 390.485 1037 0 1037V0H707Z" fill="#004B2A" />
+            </svg>
+            <Link to="/">
+              <img src={OrangeLogo} className="logo" alt="Vida" />
+            </Link>
+            <div className="homeHeaderContent">
+              <h1 className="welcomeTitle extraBoldFont">Bienvenide a Vida Cowork</h1>
+              <p className="welcomeSubtitle boldFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              <p className="welcomeText lightFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <button className="welcomeButton">Quiero ser parte de Vida</button>
+            </div>
+          </div>
+          <div className="rightSVGNavbar">
+            <svg width="1325" height="179" viewBox="0 0 1325 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 1.90735e-06C130.5 89.8996 593.185 179 1325 179V1.90735e-06H0Z" fill="#FF972F" />
+            </svg>
+            <Navbar />
+          </div>
+        </div>
+      </div>
+
+      <div className="navbarMobile">
+        <div className="backgroundMobile">
+          <div className="rightSVGNavbar">
+            <NavbarMobile />
+          </div>
+        </div>
+      </div>
+
       <div className="plansSection">
         <h1 className="plansTitle extraBoldFont">PLANES EN ESPACIO COMPARTIDO</h1>
         <p className="plansSubtitle">Contamos con planes ideales para freelancers y profesionales independientes</p>
@@ -83,15 +134,38 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="meetingsContainer" style={{ backgroundImage: `url(${SalasBackground})` }}>
+      <div id="carouselSalas" className=" meetingsContainer carousel slide" data-ride="carousel" style={{ position: 'relative' }}>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img src={SalasBackground} alt="First slide" />
+          </div>
+          <div className="carousel-item">
+            <img src={EventosBackground} alt="Second slide" />
+          </div>
+        </div>
         <img src={SectionSeparatorLeft} alt="Salas de Reunión" style={{ position: 'absolute', top: '-50px' }} />
         <div className="roomsContainer">
-          <h1 className="roomsTitle extraBoldFont">SALAS DE REUNIÓN</h1>
-          <p className="roomsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
-          <p className="roomsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
-          <p className="roomsContent2">Podes reservar de manera eventual o contratar un pack mensual.</p>
-          <button className="roomsButton">Ver más</button>
+          <Slider {...carouselSettings}>
+            <div>
+              <h1 className="roomsTitle extraBoldFont">SALAS DE REUNIÓN</h1>
+              <p className="roomsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
+              <p className="roomsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
+              <p className="roomsContent2">Podes reservar de manera eventual o contratar un pack mensual.</p>
+              <button className="roomsButton">Ver más</button>
+            </div>
+            <div>
+              <h1 className="roomsTitle extraBoldFont">PRUEBA</h1>
+              <p className="roomsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
+              <p className="roomsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
+              <p className="roomsContent2">Podes reservar de manera eventual o contratar un pack mensual.</p>
+              <button className="roomsButton">Ver más</button>
+            </div>
+          </Slider>
         </div>
+        <a className="carousel-control-next" href="#carouselSalas" role="button" data-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="sr-only">Siguiente</span>
+        </a>
       </div>
       <div className="meetingsContainerMobile">
         <div className="container">
@@ -768,14 +842,36 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="eventsContainer" style={{ backgroundImage: `url(${EventosBackground})` }}>
-        <img src={SectionSeparatorRight} alt="Eventos" className="eventsSVGContainer" />
-        <div className="eventsContainerContent">
-          <h1 className="eventsTitle extraBoldFont">EVENTOS</h1>
-          <p className="eventsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
-          <p className="eventsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
-          <button className="eventsButton">Ver más</button>
+      <div id="carouselEventos" className=" meetingsContainer carousel slide" data-ride="carousel" style={{ position: 'relative', marginTop: '-20px' }}>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img src={SalasBackground} alt="First slide" />
+          </div>
+          <div className="carousel-item">
+            <img src={EventosBackground} alt="Second slide" />
+          </div>
         </div>
+        <img src={SectionSeparatorRight} alt="Eventos" className="eventsSVGContainer" />
+        <div className="eventsContainer">
+          <Slider {...carouselSettings}>
+            <div>
+              <h1 className="eventsTitle extraBoldFont">EVENTOS</h1>
+              <p className="eventsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
+              <p className="eventsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
+              <button className="eventsButton">Ver más</button>
+            </div>
+            <div>
+              <h1 className="eventsTitle extraBoldFont">EVENTOS2</h1>
+              <p className="eventsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
+              <p className="eventsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
+              <button className="eventsButton">Ver más</button>
+            </div>
+          </Slider>
+        </div>
+        <a class="carousel-control-prev" href="#carouselEventos" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
       </div>
       <div className="eventsContainerMobile">
         <div className="container">
@@ -788,66 +884,60 @@ const Home = () => {
       <div className="communityContainer">
         <div className="container">
           <h1 className="communityTitle extraBoldFont">COMUNIDAD</h1>
-          <div className="row d-flex justify-content-center">
-            <div className="col-lg-3 col-md-5 col-sm-12 mx-2">
-              {/* <div className="cardHorizontal"> */}
-              <div className="card">
-                <img src={Comunidad1} alt="Vida" />
-                <div className="card-body">
-                  <p>Título noticia, artículo, evento</p>
-                  <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-              </div>
+        </div>
+        <div className="d-flex justify-content-center flex-wrap">
+          <div className="card-vida-horizontal">
+            <img className="card-vida-img-horizontal" src={Comunidad1} alt="Vida" />
+            <div className="card-vida-body">
+              <p>Título noticia, artículo, evento</p>
+              <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
-            <div className="col-lg-3 col-md-5 col-sm-12 mx-2">
-              <div className="card">
-                <img className="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap" />
-                <div className="card-body">
-                  <p>Título noticia, artículo, evento</p>
-                  <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-              </div>
+          </div>
+          <div className="card-vida-vertical">
+            <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
+            <div className="card-vida-body">
+              <p>Título noticia, artículo, evento</p>
+              <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
-            <div className="col-lg-3 col-md-5 col-sm-12 mx-2">
-              <div className="card">
-                <img className="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap" />
-                <div className="card-body">
-                  <p>Título noticia, artículo, evento</p>
-                  <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-              </div>
+          </div>
+          <div className="card-vida-vertical">
+            <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
+            <div className="card-vida-body">
+              <p>Título noticia, artículo, evento</p>
+              <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
           </div>
         </div>
         <div className="container">
           <h1 className="communityTitle extraBoldFont">Beneficios</h1>
-          <div className="row d-flex justify-content-center">
-            <div className="col-lg-3 col-md-5 col-sm-12 mx-2">
-              <div className="card">
-                <img className="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap" />
-                <div className="card-body">
-                  <p>Beneficio 1</p>
-                  <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-              </div>
+        </div>
+        <div className="d-flex justify-content-center flex-wrap">
+          <div className="card-vida-vertical">
+            <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
+            <div className="card-vida-body">
+              <p>Título noticia, artículo, evento</p>
+              <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
-            <div className="col-lg-3 col-md-5 col-sm-12 mx-2">
-              <div className="card">
-                <img className="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap" />
-                <div className="card-body">
-                  <p>Beneficio 2</p>
-                  <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-              </div>
+          </div>
+          <div className="card-vida-vertical">
+            <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
+            <div className="card-vida-body">
+              <p>Título noticia, artículo, evento</p>
+              <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
-            <div className="col-lg-3 col-md-5 col-sm-12 mx-2">
-              <div className="card">
-                <img className="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap" />
-                <div className="card-body">
-                  <p>Beneficio 3</p>
-                  <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-              </div>
+          </div>
+          <div className="card-vida-vertical">
+            <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
+            <div className="card-vida-body">
+              <p>Título noticia, artículo, evento</p>
+              <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+          </div>
+          <div className="card-vida-vertical">
+            <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
+            <div className="card-vida-body">
+              <p>Título noticia, artículo, evento</p>
+              <p>Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
           </div>
         </div>
@@ -1163,7 +1253,7 @@ const Home = () => {
         </div>
       </div>
       <div className="ratingContainer">
-        <div className="row">
+        <div className="row w-100">
           <div className="col-lg-7 col-md-7 col-sm-12">
             <div className="ratingContent">
               <p className="opinionTitle">
@@ -1188,7 +1278,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-5 col-md-5-col-sm-12 p-0" style={{ paddingRight: '0 !important' }}>
+          <div className="col-lg-5 col-md-5-col-sm-12">
             <img src={GreenSectionSeparatorRight} alt="Vida" className="consultSVGContainer" style={{ position: 'absolute' }} />
             <div className="consultContainer">
               <h1 className="consultTitle extraBoldFont">Envía tu consulta</h1>
@@ -1294,7 +1384,7 @@ const Home = () => {
       <div className="partnersContainer">
         <div className="container">
           <h1 className="partnersTitle extraBoldFont">NUESTROS PARTNERS</h1>
-          <div className="d-flex justify-content-center align-items-center">
+          <div className="partnersLogos">
             <img src={Partner1} alt="AnkaLoo" />
             <img src={Partner2} alt="Argentis" />
             <img src={Partner3} alt="Awla" />
@@ -1307,7 +1397,7 @@ const Home = () => {
       <div className="partnersContainerMobile">
         <div className="container">
           <h1 className="partnersTitle extraBoldFont">NUESTROS PARTNERS</h1>
-          <div className="d-flex justify-content-center align-items-center">
+          <div className="partnersLogos">
             <img src={Partner1} alt="AnkaLoo" />
             <img src={Partner2} alt="Argentis" />
             <img src={Partner3} alt="Awla" />
