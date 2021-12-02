@@ -3,16 +3,18 @@ import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import NavbarMobile from '../../components/NavbarMobile';
 import Plan from '../../components/Plan';
+import PlanHorizontal from '../../components/PlanHorizontal';
 import Service from '../../components/Service';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import OrangeLogo from '../../images/OrangeLogo.svg';
 import BackgroundImage from '../../images/HomeBackground.jpg';
-import SectionSeparatorLeft from '../../images/SectionSeparatorLeft.svg';
-import SectionSeparatorRight from '../../images/SectionSeparatorRight.svg';
+import LeftSVGOrangeSection from '../../images/LeftSVGOrangeSection.svg';
+import RightSVGOrangeSection from '../../images/RightSVGOrangeSection.svg';
 import StrategicPlaceLogo from '../../images/FooterLogo.svg';
-import GreenSectionSeparatorRight from '../../images/GreenSectionSeparatorRight.svg';
+import RightSVGGreenSection from '../../images/RightSVGGreenSection.svg';
+import LeftSVGOrangeSectionSmall from '../../images/LeftSVGOrangeSectionSmall.svg';
 import EventosBackground from '../../images/EventosBackground.jpg';
 import SalasBackground from '../../images/SalasBackground.jpg';
 import Comunidad1 from '../../images/Comunidad1.jpg';
@@ -49,9 +51,9 @@ const Home = () => {
               <img src={OrangeLogo} className="logo" alt="Vida" />
             </Link>
             <div className="homeHeaderContent">
-              <h1 className="welcomeTitle extraBoldFont">Bienvenide a Vida Cowork</h1>
+              <p className="welcomeTitle extraBoldFont">Bienvenide a Vida Cowork</p>
               <p className="welcomeSubtitle boldFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-              <p className="welcomeText lightFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p className="welcomeText lightFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <button className="welcomeButton">Quiero ser parte de Vida</button>
             </div>
           </div>
@@ -66,16 +68,23 @@ const Home = () => {
 
       <div className="navbarMobile">
         <div className="backgroundMobile">
-          <div className="rightSVGNavbar">
-            <NavbarMobile />
+          <NavbarMobile />
+        </div>
+        <img src={BackgroundImage} alt="Vida" height="auto" width="100%" style={{ minHeight: '300px' }} />
+        <div className="welcomeContainerMobile">
+          <img src={LeftSVGOrangeSectionSmall} alt="Bienvenide" className="welcomeContainerMobileSVG" />
+          <div className="welcomeContainerMobileContent">
+            <p className="welcomeTitle extraBoldFont">Bienvenide a Vida Cowork</p>
+            <p className="welcomeSubtitle boldFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <p className="welcomeText lightFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
       </div>
 
-      <div className="plansSection">
-        <h1 className="plansTitle extraBoldFont">PLANES EN ESPACIO COMPARTIDO</h1>
+      <div className="plansContainerHome">
+        <p className="plansTitle extraBoldFont">PLANES EN ESPACIO COMPARTIDO</p>
         <p className="plansSubtitle">Contamos con planes ideales para freelancers y profesionales independientes</p>
-        <div className="d-flex justify-content-center align-items-center flex-wrap plansContainer">
+        <div className="d-flex justify-content-center align-items-center flex-wrap">
           <Plan
             svg={
               <svg className="planContainerImage" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +143,76 @@ const Home = () => {
           />
         </div>
       </div>
-      <div id="carouselSalas" className=" meetingsContainer carousel slide" data-ride="carousel" style={{ position: 'relative' }}>
+
+      <div className="plansContainerMobile">
+        <div className="container">
+          <p className="plansTitleMobile extraBoldFont">Planes</p>
+          <p className="plansSubtitleMobile">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <PlanHorizontal
+            svg={
+              <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#ff972f" />
+                <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#ff972f" />
+                <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#ff972f" />
+                <path d="M46.8663 46.6618H62.0001C62.0001 38.4274 55.1655 31.6461 46.8663 31.6461H31.7324C31.7324 40.042 38.5671 46.6618 46.8663 46.6618Z" fill="#ff972f" />
+              </svg>
+            }
+            title={'Plan Eter'}
+            description={'Vení 1 día a la semana'}
+            full={'Incluye 5 Hs. en salas de reunión'}
+            part={'Incluye 3 Hs. en salas de reunión'}
+          />
+          <PlanHorizontal
+            svg={
+              <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.0501 4.32912L1.77159 0C-0.620814 6.1519 2.45514 13.1013 8.72097 15.4937L19.8855 19.8228C22.2779 13.6709 19.202 6.72152 13.0501 4.32912Z" fill="#ff972f" />
+                <path d="M40.3921 23.0125L29.2276 18.6834C26.8352 24.8353 29.9111 31.8986 36.063 34.1771L47.2276 38.5062C49.62 32.3543 46.544 25.4049 40.3921 23.0125Z" fill="#ff972f" />
+                <path d="M23.6447 33.0382L12.4801 28.7091C10.0877 34.861 13.1636 41.8104 19.4295 44.2028L30.594 48.5319C32.9864 42.38 29.9105 35.3167 23.6447 33.0382Z" fill="#ff972f" />
+              </svg>
+            }
+            title={'Plan Aire'}
+            description={'Enfocate 2 días a la semana'}
+            full={'Incluye 5 Hs. en salas de reunión'}
+            part={'Incluye 3 Hs. en salas de reunión'}
+          />
+          <PlanHorizontal
+            svg={
+              <svg width="41" height="49" viewBox="0 0 41 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.3514 0C25.9561 5.94293 30.6 10.6009 34.9236 15.5801C42.45 24.093 41.9696 35.3363 34.2831 43.0461C26.7568 50.4346 14.4264 50.4346 6.73988 43.0461C-0.946598 35.497 -1.427 24.093 5.93921 15.5801C10.1027 10.6009 14.9068 5.94293 20.3514 0Z" fill="#ff972f" />
+              </svg>
+            }
+            title={'Plan Agua'}
+            description={'Trabajá 3 veces por semana, descansá 2'}
+            full={'Incluye 5 Hs. en salas de reunión'}
+            part={'Incluye 3 Hs. en salas de reunión'}
+          />
+          <PlanHorizontal
+            svg={
+              <svg width="45" height="49" viewBox="0 0 45 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.6396 24.4194V48.8387C33.175 48.8387 44.059 37.9547 44.059 24.4194V0C30.5237 0 19.6396 10.8841 19.6396 24.4194Z" fill="#ff972f" />
+                <path d="M16.0116 33.7684V48.8386C7.63929 48.8386 0.941406 42.1408 0.941406 33.7684V18.8377C9.17422 18.8377 16.0116 25.5356 16.0116 33.7684Z" fill="#ff972f" />
+              </svg>
+            }
+            title={'Plan Fuego'}
+            description={'Un día de franco! 4 veces a la semana'}
+            full={'Incluye 5 Hs. en salas de reunión'}
+            part={'Incluye 3 Hs. en salas de reunión'}
+          />
+          <PlanHorizontal
+            svg={
+              <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.955566 24.4862C1.42645 37.0432 11.786 47.0888 24.5 47.0888C37.5279 47.0888 48.0444 36.7293 48.0444 23.7014V0.156963C48.0444 0.156963 48.0444 0.156963 47.8874 0.156963C34.8595 0.156963 24.343 10.6735 24.343 23.7014V23.8583C24.343 23.8583 24.343 23.8583 24.343 23.7014C24.343 10.6735 13.9835 0 0.955566 0V24.4862Z" fill="#ff972f" />
+              </svg>
+            }
+            title={'Plan Tierra'}
+            description={'Vení 5 días a la semana'}
+            full={'Incluye 5 Hs. en salas de reunión'}
+            part={'Incluye 3 Hs. en salas de reunión'}
+          />
+        </div>
+      </div>
+
+      <div id="carouselSalas" className="meetingsContainer carousel slide" data-ride="carousel" style={{ position: 'relative' }}>
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src={SalasBackground} alt="First slide" />
@@ -143,18 +221,18 @@ const Home = () => {
             <img src={EventosBackground} alt="Second slide" />
           </div>
         </div>
-        <img src={SectionSeparatorLeft} alt="Salas de Reunión" style={{ position: 'absolute', top: '-50px' }} />
+        <img src={LeftSVGOrangeSection} alt="Salas de Reunión" style={{ position: 'absolute', top: '-50px' }} />
         <div className="roomsContainer">
           <Slider {...carouselSettings}>
             <div>
-              <h1 className="roomsTitle extraBoldFont">SALAS DE REUNIÓN</h1>
+              <p className="roomsTitle extraBoldFont">SALAS DE REUNIÓN</p>
               <p className="roomsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
               <p className="roomsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
               <p className="roomsContent2">Podes reservar de manera eventual o contratar un pack mensual.</p>
               <button className="roomsButton">Ver más</button>
             </div>
             <div>
-              <h1 className="roomsTitle extraBoldFont">PRUEBA</h1>
+              <p className="roomsTitle extraBoldFont">PRUEBA</p>
               <p className="roomsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
               <p className="roomsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
               <p className="roomsContent2">Podes reservar de manera eventual o contratar un pack mensual.</p>
@@ -167,25 +245,32 @@ const Home = () => {
           <span className="sr-only">Siguiente</span>
         </a>
       </div>
+
       <div className="meetingsContainerMobile">
+        <img src={SalasBackground} alt="Vida" height="auto" width="100%" style={{ minHeight: '300px' }} />
         <div className="container">
-          <h1 className="roomsTitleMobile extraBoldFont">SALAS DE REUNIÓN</h1>
+          <p className="roomsTitleMobile extraBoldFont">SALAS DE REUNIÓN</p>
           <p className="roomsSubtitleMobile">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
           <p className="roomsContent1Mobile">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
-          <p className="roomsContent2Mobile">Podes reservar de manera eventual o contratar un pack mensual.</p>
-          <button className="roomsButtonMobile">Ver más</button>
+        </div>
+        <img src={SalasBackground} alt="Vida" height="auto" width="100%" style={{ minHeight: '300px' }} />
+        <div className="container">
+          <p className="roomsTitleMobile extraBoldFont">Oficinas privadas</p>
+          <p className="roomsSubtitleMobile">Si buscás privacidad, tenemos espacios con capacidad para 4 hasta 26 personas.</p>
+          <p className="roomsContent1Mobile">Adaptamos nuestras oficinas a equipos numerosos</p>
         </div>
       </div>
+
       <div className="servicesContainer">
         <div className="container">
-          <h1 className="servicesTitle extraBoldFont">SERVICIOS</h1>
+          <p className="servicesTitle extraBoldFont">SERVICIOS</p>
           <div className="d-flex justify-content-center align-items-start flex-wrap servicesSection">
             <Service
               svg={
                 <svg width="44" height="59" viewBox="0 0 44 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M44 59.0001C44 34.8261 24.3026 15.2331 0 15.2331V59.0001H44Z" fill="#FF972F" />
                   <path d="M22.2498 14.0739C26.1893 14.0739 29.3519 10.928 29.3519 7.00936C29.3519 3.14593 26.1338 0 22.2498 0C18.3103 0 15.1476 3.14593 15.1476 7.06455C15.1476 10.928 18.3103 14.0739 22.2498 14.0739Z" fill="white" />
-                  <path d="M38.6735 11.1492C37.5638 9.935 35.6773 9.87981 34.4566 10.9836L27.7983 17.1099H16.9787L10.3204 10.9836C9.09972 9.87981 7.21321 9.935 6.1035 11.1492C4.99379 12.3634 5.04928 14.24 6.26996 15.3438L13.816 22.2428V43.7676H13.8715V51.7152C18.3103 51.7152 21.8614 48.1277 21.8614 43.7676C21.8614 48.1277 25.4124 51.7152 29.8513 51.7152V43.7676V43.4364V23.3466L38.507 15.3438C39.7277 14.24 39.7832 12.3634 38.6735 11.1492Z" fill="white" />
+                  <path d="M38.6735 11.1492C37.5638 9.935 35.6773 9.87981 34.4566 10.9836L27.7983 17.1099p6.9787L10.3204 10.9836C9.09972 9.87981 7.21321 9.935 6.1035 11.1492C4.99379 12.3634 5.04928 14.24 6.26996 15.3438L13.816 22.2428V43.7676p3.8715V51.7152C18.3103 51.7152 21.8614 48.1277 21.8614 43.7676C21.8614 48.1277 25.4124 51.7152 29.8513 51.7152V43.7676V43.4364V23.3466L38.507 15.3438C39.7277 14.24 39.7832 12.3634 38.6735 11.1492Z" fill="white" />
                 </svg>
               }
               title={'Espacio libre de stress'}
@@ -203,11 +288,11 @@ const Home = () => {
                   <path d="M50.916 10.937V15.1727C53.2709 15.1727 55.1802 13.2761 55.1802 10.937V6.70142C52.8254 6.70142 50.916 8.59797 50.916 10.937Z" fill="white" />
                   <path d="M56.5803 15.1724V19.408C58.9352 19.408 60.8445 17.5115 60.8445 15.1724V10.9368C58.4897 10.9368 56.5803 12.8333 56.5803 15.1724Z" fill="white" />
                   <path
-                    d="M32.2046 22.7586H17.8208C16.8025 22.7586 15.8478 22.3161 15.1477 21.6207C14.4476 20.9253 14.1294 19.9138 14.193 18.9023L15.4659 3.35057C15.5932 1.45402 17.1843 0 19.0937 0H30.9317C32.841 0 34.3685 1.45402 34.5595 3.28736L35.8324 18.8391C35.896 19.8506 35.5778 20.8621 34.8777 21.5575C34.1776 22.3793 33.1593 22.7586 32.2046 22.7586ZM30.868 1.45402H19.0937C17.9481 1.45402 17.057 2.27586 16.9298 3.41379L15.6569 18.9655C15.5932 19.5345 15.7841 20.1667 16.2297 20.6092C16.6115 21.0517 17.1843 21.3046 17.8208 21.3046H32.2046C32.7774 21.3046 33.3502 21.0517 33.7957 20.6092C34.1776 20.1667 34.4322 19.5977 34.3685 18.9655L33.0956 3.41379C32.9047 2.33908 32.0137 1.51724 30.868 1.45402Z"
+                    d="M32.2046 22.7586p7.8208C16.8025 22.7586 15.8478 22.3161 15.1477 21.6207C14.4476 20.9253 14.1294 19.9138 14.193 18.9023L15.4659 3.35057C15.5932 1.45402 17.1843 0 19.0937 0H30.9317C32.841 0 34.3685 1.45402 34.5595 3.28736L35.8324 18.8391C35.896 19.8506 35.5778 20.8621 34.8777 21.5575C34.1776 22.3793 33.1593 22.7586 32.2046 22.7586ZM30.868 1.45402p9.0937C17.9481 1.45402 17.057 2.27586 16.9298 3.41379L15.6569 18.9655C15.5932 19.5345 15.7841 20.1667 16.2297 20.6092C16.6115 21.0517 17.1843 21.3046 17.8208 21.3046H32.2046C32.7774 21.3046 33.3502 21.0517 33.7957 20.6092C34.1776 20.1667 34.4322 19.5977 34.3685 18.9655L33.0956 3.41379C32.9047 2.33908 32.0137 1.51724 30.868 1.45402Z"
                     fill="white"
                   />
                   <path
-                    d="M34.8775 31.7353H15.0839C13.6837 31.7353 12.6017 30.787 12.5381 29.5859V26.1089C12.5381 24.9077 13.6837 23.9595 15.0202 23.8962H34.8775C36.2777 23.8962 37.3597 24.9077 37.4233 26.0457V29.5227C37.4233 30.787 36.2777 31.7353 34.8775 31.7353ZM15.0839 25.4135C14.5111 25.4135 14.0656 25.7296 14.0656 26.1089V29.5859C14.0656 29.9652 14.5111 30.2813 15.0839 30.2813H34.9412C35.514 30.2813 35.9595 29.9652 35.9595 29.5859V26.1089C35.9595 25.7296 35.514 25.4135 34.9412 25.4135H15.0839Z"
+                    d="M34.8775 31.7353p5.0839C13.6837 31.7353 12.6017 30.787 12.5381 29.5859V26.1089C12.5381 24.9077 13.6837 23.9595 15.0202 23.8962H34.8775C36.2777 23.8962 37.3597 24.9077 37.4233 26.0457V29.5227C37.4233 30.787 36.2777 31.7353 34.8775 31.7353ZM15.0839 25.4135C14.5111 25.4135 14.0656 25.7296 14.0656 26.1089V29.5859C14.0656 29.9652 14.5111 30.2813 15.0839 30.2813H34.9412C35.514 30.2813 35.9595 29.9652 35.9595 29.5859V26.1089C35.9595 25.7296 35.514 25.4135 34.9412 25.4135p5.0839Z"
                     fill="white"
                   />
                   <path d="M36.8508 28.5117H36.0234V27.2473H36.8508C37.9964 27.2473 38.8875 26.3623 38.8875 25.2243V22.822H40.1604V25.2243C40.224 27.0577 38.6965 28.5117 36.8508 28.5117Z" fill="white" />
@@ -215,7 +300,7 @@ const Home = () => {
                     d="M39.5873 23.4541C38.5053 23.4541 37.487 22.822 37.0415 21.7472C36.596 20.7357 36.8506 19.5346 37.6143 18.776C38.378 18.0174 39.5873 17.7645 40.6056 18.207C41.6239 18.6495 42.324 19.5978 42.324 20.7357C42.324 22.253 41.0511 23.4541 39.5873 23.4541ZM39.5873 19.2817C39.0145 19.2817 38.4417 19.5978 38.2507 20.1668C37.9962 20.6725 38.1235 21.3047 38.569 21.7472C38.9508 22.1898 39.5873 22.3162 40.1601 22.0633C40.7329 21.8737 41.0511 21.3047 41.0511 20.7357C40.9875 19.9139 40.351 19.2817 39.5873 19.2817Z"
                     fill="white"
                   />
-                  <path d="M13.9384 28.5117H13.111C11.2653 28.5117 9.80144 27.0577 9.73779 25.2243V22.822H11.0107V25.2243C11.0107 26.3623 11.9017 27.2473 13.0473 27.2473H13.8747V28.5117H13.9384Z" fill="white" />
+                  <path d="M13.9384 28.5117p3.111C11.2653 28.5117 9.80144 27.0577 9.73779 25.2243V22.822p1.0107V25.2243C11.0107 26.3623 11.9017 27.2473 13.0473 27.2473p3.8747V28.5117p3.9384Z" fill="white" />
                   <path
                     d="M10.4376 23.4541C9.35567 23.4541 8.33735 22.7587 7.89183 21.7472C7.44631 20.7357 7.70089 19.5346 8.46464 18.776C9.22838 18.0174 10.4376 17.7645 11.456 18.207C12.4743 18.6495 13.1744 19.5978 13.1744 20.7357C13.1744 21.4311 12.8561 22.1266 12.347 22.6955C11.8378 23.2013 11.1377 23.4541 10.4376 23.4541ZM10.4376 19.2817C9.86483 19.2817 9.35567 19.661 9.10109 20.1668C8.84651 20.6725 8.9738 21.3047 9.41931 21.7472C9.80118 22.1266 10.4376 22.253 11.0104 22.0633C11.5196 21.8737 11.9015 21.3047 11.9015 20.7357C11.9015 20.3564 11.7742 19.9771 11.456 19.7243C11.1377 19.4082 10.8195 19.2817 10.4376 19.2817Z"
                     fill="white"
@@ -223,7 +308,7 @@ const Home = () => {
                   <path d="M28.195 21.3674H26.9221V24.5916H28.195V21.3674Z" fill="white" />
                   <path d="M23.0395 21.3674H21.7666V24.5916H23.0395V21.3674Z" fill="white" />
                   <path d="M25.649 34.9597H24.3761C22.9122 34.9597 21.7666 33.8218 21.7666 32.3677V30.408H28.2584V32.3677C28.2584 33.7585 27.0491 34.9597 25.649 34.9597ZM23.0395 31.7355V32.3677C23.0395 33.0631 23.6123 33.6321 24.3124 33.6321H25.5853C26.2854 33.6321 26.8582 33.0631 26.8582 32.3677V31.7355H23.0395Z" fill="white" />
-                  <path d="M35.2594 42.1664H33.9865V41.5342C33.9865 40.3962 33.0318 39.448 31.8862 39.448H18.2025C17.0569 39.448 16.1022 40.3962 16.1022 41.5342V42.1664H14.8293V41.5342C14.8293 39.7008 16.3568 38.1836 18.2025 38.1836H31.8862C33.7319 38.1836 35.2594 39.7008 35.2594 41.5342V42.1664Z" fill="white" />
+                  <path d="M35.2594 42.1664H33.9865V41.5342C33.9865 40.3962 33.0318 39.448 31.8862 39.448p8.2025C17.0569 39.448 16.1022 40.3962 16.1022 41.5342V42.1664p4.8293V41.5342C14.8293 39.7008 16.3568 38.1836 18.2025 38.1836H31.8862C33.7319 38.1836 35.2594 39.7008 35.2594 41.5342V42.1664Z" fill="white" />
                   <path
                     d="M34.6231 45.8973C33.732 45.8973 32.9046 45.3916 32.5864 44.5697C32.2682 43.7479 32.4591 42.7996 33.0319 42.1674C33.6684 41.5352 34.623 41.3456 35.4504 41.7249C36.2778 42.041 36.787 42.8628 36.787 43.7479C36.8506 44.949 35.8323 45.8973 34.6231 45.8973ZM34.6231 42.7996C34.2412 42.7996 33.923 42.9893 33.7957 43.3686C33.6684 43.6847 33.732 44.064 33.9866 44.3168C34.2412 44.5697 34.6231 44.6329 34.9413 44.5065C35.2595 44.3801 35.5141 44.064 35.5141 43.6847C35.5141 43.2421 35.1322 42.7996 34.6231 42.7996Z"
                     fill="white"
@@ -351,7 +436,7 @@ const Home = () => {
                 <svg width="60" height="68" viewBox="0 0 60 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M59.5 59.5747C59.5 27.0457 33.0797 0.666504 0.5 0.666504V59.5747H59.5Z" fill="#FF972F" />
                   <path
-                    d="M26.5961 67.6662C17.3571 67.6662 9.82005 60.4645 9.65796 51.6445V51.5636V36.9174C9.65796 36.0273 10.3874 35.2991 11.2788 35.2991H41.6703C46.7761 35.2991 50.9904 39.345 50.9904 44.2C50.9904 48.5696 47.6676 52.2109 43.3722 53.0201C42.5618 61.031 35.592 67.3426 27.0824 67.5853C26.9203 67.5853 26.7582 67.6662 26.5961 67.6662ZM12.9808 51.4017V51.4826C12.9808 58.4416 18.897 64.1868 26.1099 64.3486C26.272 64.3486 26.353 64.2677 26.5151 64.2677C33.8901 64.2677 39.9684 58.5225 40.0494 51.4017C40.0494 50.5116 40.7788 49.7834 41.6703 49.7834C44.9121 49.7834 47.5865 47.194 47.5865 44.1191C47.5865 40.9633 44.9121 38.4549 41.5893 38.4549H12.9808V51.4017Z"
+                    d="M26.5961 67.6662C17.3571 67.6662 9.82005 60.4645 9.65796 51.6445V51.5636V36.9174C9.65796 36.0273 10.3874 35.2991 11.2788 35.2991H41.6703C46.7761 35.2991 50.9904 39.345 50.9904 44.2C50.9904 48.5696 47.6676 52.2109 43.3722 53.0201C42.5618 61.031 35.592 67.3426 27.0824 67.5853C26.9203 67.5853 26.7582 67.6662 26.5961 67.6662ZM12.9808 51.4017V51.4826C12.9808 58.4416 18.897 64.1868 26.1099 64.3486C26.272 64.3486 26.353 64.2677 26.5151 64.2677C33.8901 64.2677 39.9684 58.5225 40.0494 51.4017C40.0494 50.5116 40.7788 49.7834 41.6703 49.7834C44.9121 49.7834 47.5865 47.194 47.5865 44.1191C47.5865 40.9633 44.9121 38.4549 41.5893 38.4549p2.9808V51.4017Z"
                     fill="white"
                   />
                   <path d="M19.5454 25.0228V32.3054C23.7597 32.3054 27.1635 29.0687 27.1635 25.0228V17.7402C23.0303 17.6593 19.5454 20.9769 19.5454 25.0228Z" fill="white" />
@@ -369,7 +454,7 @@ const Home = () => {
                 <svg width="56" height="49" viewBox="0 0 56 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0.5 44.9836C25.4831 44.9836 45.7429 24.8398 45.7429 0H0.5V44.9836Z" fill="#FF972F" />
                   <path d="M12.1216 40.2875C12.1216 41.894 10.8165 43.1916 9.20069 43.1916C7.58487 43.1916 6.27979 41.894 6.27979 40.2875C6.27979 38.6809 7.58487 37.3833 9.20069 37.3833C10.8165 37.3833 12.1216 38.6809 12.1216 40.2875Z" fill="white" />
-                  <path d="M9.26277 44.613C6.83904 44.613 4.91249 46.5285 4.85034 48.9384H13.6131C13.6131 46.5903 11.6865 44.613 9.26277 44.613Z" fill="white" />
+                  <path d="M9.26277 44.613C6.83904 44.613 4.91249 46.5285 4.85034 48.9384p3.6131C13.6131 46.5903 11.6865 44.613 9.26277 44.613Z" fill="white" />
                   <path d="M22.5623 40.2875C22.5623 41.894 21.2572 43.1916 19.6414 43.1916C18.0255 43.1916 16.7205 41.894 16.7205 40.2875C16.7205 38.6809 18.0255 37.3833 19.6414 37.3833C21.2572 37.3833 22.5623 38.6809 22.5623 40.2875Z" fill="white" />
                   <path d="M19.6412 44.613C17.2175 44.613 15.2909 46.5285 15.2288 48.9384H23.9915C23.9915 46.5903 22.0649 44.613 19.6412 44.613Z" fill="white" />
                   <path d="M32.9407 40.2875C32.9407 41.894 31.6356 43.1916 30.0198 43.1916C28.404 43.1916 27.0989 41.894 27.0989 40.2875C27.0989 38.6809 28.404 37.3833 30.0198 37.3833C31.6356 37.3833 32.9407 38.6809 32.9407 40.2875Z" fill="white" />
@@ -379,7 +464,7 @@ const Home = () => {
                   <path d="M53.76 40.2875C53.76 41.894 52.4549 43.1916 50.8391 43.1916C49.2233 43.1916 47.9182 41.894 47.9182 40.2875C47.9182 38.6809 49.2233 37.3833 50.8391 37.3833C52.4549 37.3833 53.76 38.6809 53.76 40.2875Z" fill="white" />
                   <path d="M50.8389 44.613C48.4152 44.613 46.4887 46.5285 46.4265 48.9384H55.1892C55.2514 46.5903 53.2627 44.613 50.8389 44.613Z" fill="white" />
                   <path d="M16.9067 37.6307C16.9067 38.8665 15.8502 39.917 14.6073 39.917C13.3644 39.917 12.3079 38.8665 12.3079 37.6307C12.3079 36.3949 13.3644 35.3445 14.6073 35.3445C15.8502 35.3445 16.9067 36.3331 16.9067 37.6307Z" fill="white" />
-                  <path d="M14.6074 41.0908C12.6809 41.0908 11.1272 42.6356 11.1272 44.5511H18.0876C18.0876 42.6356 16.534 41.0908 14.6074 41.0908Z" fill="white" />
+                  <path d="M14.6074 41.0908C12.6809 41.0908 11.1272 42.6356 11.1272 44.5511p8.0876C18.0876 42.6356 16.534 41.0908 14.6074 41.0908Z" fill="white" />
                   <path d="M27.2854 37.6307C27.2854 38.8665 26.2289 39.917 24.986 39.917C23.743 39.917 22.6865 38.8665 22.6865 37.6307C22.6865 36.3949 23.743 35.3445 24.986 35.3445C26.2289 35.3445 27.2854 36.3331 27.2854 37.6307Z" fill="white" />
                   <path d="M24.9861 41.0908C23.0595 41.0908 21.5059 42.6356 21.5059 44.5511H28.4663C28.4663 42.6356 26.9126 41.0908 24.9861 41.0908Z" fill="white" />
                   <path d="M37.6018 37.6307C37.6018 38.8665 36.5453 39.917 35.3024 39.917C34.0594 39.917 33.0029 38.8665 33.0029 37.6307C33.0029 36.3949 34.0594 35.3445 35.3024 35.3445C36.5453 35.3445 37.6018 36.3331 37.6018 37.6307Z" fill="white" />
@@ -387,7 +472,7 @@ const Home = () => {
                   <path d="M47.9802 37.6307C47.9802 38.8665 46.9237 39.917 45.6808 39.917C44.4378 39.917 43.3813 38.8665 43.3813 37.6307C43.3813 36.3949 44.4378 35.3445 45.6808 35.3445C46.9237 35.3445 47.9802 36.3331 47.9802 37.6307Z" fill="white" />
                   <path d="M45.6809 41.0908C43.7544 41.0908 42.2007 42.6356 42.2007 44.5511H49.1611C49.1611 42.6356 47.6075 41.0908 45.6809 41.0908Z" fill="white" />
                   <path d="M17.0931 7.66202C17.0931 9.33037 15.7258 10.6898 14.0479 10.6898C12.3699 10.6898 11.0027 9.33037 11.0027 7.66202C11.0027 5.99367 12.3699 4.63428 14.0479 4.63428C15.6637 4.63428 17.0931 5.99367 17.0931 7.66202Z" fill="white" />
-                  <path d="M13.9857 12.2961C11.4377 12.2961 9.38685 14.3352 9.32471 16.8687H18.5846C18.6467 14.3352 16.5337 12.2961 13.9857 12.2961Z" fill="white" />
+                  <path d="M13.9857 12.2961C11.4377 12.2961 9.38685 14.3352 9.32471 16.8687p8.5846C18.6467 14.3352 16.5337 12.2961 13.9857 12.2961Z" fill="white" />
                   <path
                     d="M21.3816 30.4629H6.65278C5.96917 30.4629 5.40985 29.9068 5.40985 29.2271V22.7391H5.22341C4.53979 22.7391 3.98047 22.183 3.98047 21.5033V19.217C3.98047 18.5373 4.53979 17.9812 5.22341 17.9812H22.811C23.4946 17.9812 24.0539 18.5373 24.0539 19.217V21.5033C24.0539 22.183 23.4946 22.7391 22.811 22.7391H22.6245V29.2889C22.6245 29.9686 22.0652 30.4629 21.3816 30.4629ZM7.21211 28.7328H20.8223V21.874C20.8223 21.3797 21.1952 21.0089 21.6923 21.0089H22.2517V19.7731H5.78273V21.0089H6.34205C6.83923 21.0089 7.21211 21.3797 7.21211 21.874V28.7328Z"
                     fill="white"
@@ -511,18 +596,25 @@ const Home = () => {
       </div>
       <div className="servicesContainerMobile">
         <div className="container">
-          <h1 className="servicesTitle extraBoldFont">SERVICIOS</h1>
-          <div className="d-flex justify-content-center align-items-start flex-wrap servicesSection">
+          <p className="servicesTitleMobile extraBoldFont">Servicios</p>
+          <select className="mdb-select md-form" id="servicesMobile" defaultValue="Tipo de Consulta">
+            <option value="">Tipo de consulta</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <div className="d-flex justify-content-center align-items-start flex-wrap servicesSectionMobile">
             <Service
               svg={
                 <svg width="44" height="59" viewBox="0 0 44 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M44 59.0001C44 34.8261 24.3026 15.2331 0 15.2331V59.0001H44Z" fill="#FF972F" />
                   <path d="M22.2498 14.0739C26.1893 14.0739 29.3519 10.928 29.3519 7.00936C29.3519 3.14593 26.1338 0 22.2498 0C18.3103 0 15.1476 3.14593 15.1476 7.06455C15.1476 10.928 18.3103 14.0739 22.2498 14.0739Z" fill="white" />
-                  <path d="M38.6735 11.1492C37.5638 9.935 35.6773 9.87981 34.4566 10.9836L27.7983 17.1099H16.9787L10.3204 10.9836C9.09972 9.87981 7.21321 9.935 6.1035 11.1492C4.99379 12.3634 5.04928 14.24 6.26996 15.3438L13.816 22.2428V43.7676H13.8715V51.7152C18.3103 51.7152 21.8614 48.1277 21.8614 43.7676C21.8614 48.1277 25.4124 51.7152 29.8513 51.7152V43.7676V43.4364V23.3466L38.507 15.3438C39.7277 14.24 39.7832 12.3634 38.6735 11.1492Z" fill="white" />
+                  <path d="M38.6735 11.1492C37.5638 9.935 35.6773 9.87981 34.4566 10.9836L27.7983 17.1099p6.9787L10.3204 10.9836C9.09972 9.87981 7.21321 9.935 6.1035 11.1492C4.99379 12.3634 5.04928 14.24 6.26996 15.3438L13.816 22.2428V43.7676p3.8715V51.7152C18.3103 51.7152 21.8614 48.1277 21.8614 43.7676C21.8614 48.1277 25.4124 51.7152 29.8513 51.7152V43.7676V43.4364V23.3466L38.507 15.3438C39.7277 14.24 39.7832 12.3634 38.6735 11.1492Z" fill="white" />
                 </svg>
               }
               title={'Espacio libre de stress'}
               subtitle={'Todos los gastos están incluidos.'}
+              darkText={true}
             />
             <Service
               svg={
@@ -536,11 +628,11 @@ const Home = () => {
                   <path d="M50.916 10.937V15.1727C53.2709 15.1727 55.1802 13.2761 55.1802 10.937V6.70142C52.8254 6.70142 50.916 8.59797 50.916 10.937Z" fill="white" />
                   <path d="M56.5803 15.1724V19.408C58.9352 19.408 60.8445 17.5115 60.8445 15.1724V10.9368C58.4897 10.9368 56.5803 12.8333 56.5803 15.1724Z" fill="white" />
                   <path
-                    d="M32.2046 22.7586H17.8208C16.8025 22.7586 15.8478 22.3161 15.1477 21.6207C14.4476 20.9253 14.1294 19.9138 14.193 18.9023L15.4659 3.35057C15.5932 1.45402 17.1843 0 19.0937 0H30.9317C32.841 0 34.3685 1.45402 34.5595 3.28736L35.8324 18.8391C35.896 19.8506 35.5778 20.8621 34.8777 21.5575C34.1776 22.3793 33.1593 22.7586 32.2046 22.7586ZM30.868 1.45402H19.0937C17.9481 1.45402 17.057 2.27586 16.9298 3.41379L15.6569 18.9655C15.5932 19.5345 15.7841 20.1667 16.2297 20.6092C16.6115 21.0517 17.1843 21.3046 17.8208 21.3046H32.2046C32.7774 21.3046 33.3502 21.0517 33.7957 20.6092C34.1776 20.1667 34.4322 19.5977 34.3685 18.9655L33.0956 3.41379C32.9047 2.33908 32.0137 1.51724 30.868 1.45402Z"
+                    d="M32.2046 22.7586p7.8208C16.8025 22.7586 15.8478 22.3161 15.1477 21.6207C14.4476 20.9253 14.1294 19.9138 14.193 18.9023L15.4659 3.35057C15.5932 1.45402 17.1843 0 19.0937 0H30.9317C32.841 0 34.3685 1.45402 34.5595 3.28736L35.8324 18.8391C35.896 19.8506 35.5778 20.8621 34.8777 21.5575C34.1776 22.3793 33.1593 22.7586 32.2046 22.7586ZM30.868 1.45402p9.0937C17.9481 1.45402 17.057 2.27586 16.9298 3.41379L15.6569 18.9655C15.5932 19.5345 15.7841 20.1667 16.2297 20.6092C16.6115 21.0517 17.1843 21.3046 17.8208 21.3046H32.2046C32.7774 21.3046 33.3502 21.0517 33.7957 20.6092C34.1776 20.1667 34.4322 19.5977 34.3685 18.9655L33.0956 3.41379C32.9047 2.33908 32.0137 1.51724 30.868 1.45402Z"
                     fill="white"
                   />
                   <path
-                    d="M34.8775 31.7353H15.0839C13.6837 31.7353 12.6017 30.787 12.5381 29.5859V26.1089C12.5381 24.9077 13.6837 23.9595 15.0202 23.8962H34.8775C36.2777 23.8962 37.3597 24.9077 37.4233 26.0457V29.5227C37.4233 30.787 36.2777 31.7353 34.8775 31.7353ZM15.0839 25.4135C14.5111 25.4135 14.0656 25.7296 14.0656 26.1089V29.5859C14.0656 29.9652 14.5111 30.2813 15.0839 30.2813H34.9412C35.514 30.2813 35.9595 29.9652 35.9595 29.5859V26.1089C35.9595 25.7296 35.514 25.4135 34.9412 25.4135H15.0839Z"
+                    d="M34.8775 31.7353p5.0839C13.6837 31.7353 12.6017 30.787 12.5381 29.5859V26.1089C12.5381 24.9077 13.6837 23.9595 15.0202 23.8962H34.8775C36.2777 23.8962 37.3597 24.9077 37.4233 26.0457V29.5227C37.4233 30.787 36.2777 31.7353 34.8775 31.7353ZM15.0839 25.4135C14.5111 25.4135 14.0656 25.7296 14.0656 26.1089V29.5859C14.0656 29.9652 14.5111 30.2813 15.0839 30.2813H34.9412C35.514 30.2813 35.9595 29.9652 35.9595 29.5859V26.1089C35.9595 25.7296 35.514 25.4135 34.9412 25.4135p5.0839Z"
                     fill="white"
                   />
                   <path d="M36.8508 28.5117H36.0234V27.2473H36.8508C37.9964 27.2473 38.8875 26.3623 38.8875 25.2243V22.822H40.1604V25.2243C40.224 27.0577 38.6965 28.5117 36.8508 28.5117Z" fill="white" />
@@ -548,7 +640,7 @@ const Home = () => {
                     d="M39.5873 23.4541C38.5053 23.4541 37.487 22.822 37.0415 21.7472C36.596 20.7357 36.8506 19.5346 37.6143 18.776C38.378 18.0174 39.5873 17.7645 40.6056 18.207C41.6239 18.6495 42.324 19.5978 42.324 20.7357C42.324 22.253 41.0511 23.4541 39.5873 23.4541ZM39.5873 19.2817C39.0145 19.2817 38.4417 19.5978 38.2507 20.1668C37.9962 20.6725 38.1235 21.3047 38.569 21.7472C38.9508 22.1898 39.5873 22.3162 40.1601 22.0633C40.7329 21.8737 41.0511 21.3047 41.0511 20.7357C40.9875 19.9139 40.351 19.2817 39.5873 19.2817Z"
                     fill="white"
                   />
-                  <path d="M13.9384 28.5117H13.111C11.2653 28.5117 9.80144 27.0577 9.73779 25.2243V22.822H11.0107V25.2243C11.0107 26.3623 11.9017 27.2473 13.0473 27.2473H13.8747V28.5117H13.9384Z" fill="white" />
+                  <path d="M13.9384 28.5117p3.111C11.2653 28.5117 9.80144 27.0577 9.73779 25.2243V22.822p1.0107V25.2243C11.0107 26.3623 11.9017 27.2473 13.0473 27.2473p3.8747V28.5117p3.9384Z" fill="white" />
                   <path
                     d="M10.4376 23.4541C9.35567 23.4541 8.33735 22.7587 7.89183 21.7472C7.44631 20.7357 7.70089 19.5346 8.46464 18.776C9.22838 18.0174 10.4376 17.7645 11.456 18.207C12.4743 18.6495 13.1744 19.5978 13.1744 20.7357C13.1744 21.4311 12.8561 22.1266 12.347 22.6955C11.8378 23.2013 11.1377 23.4541 10.4376 23.4541ZM10.4376 19.2817C9.86483 19.2817 9.35567 19.661 9.10109 20.1668C8.84651 20.6725 8.9738 21.3047 9.41931 21.7472C9.80118 22.1266 10.4376 22.253 11.0104 22.0633C11.5196 21.8737 11.9015 21.3047 11.9015 20.7357C11.9015 20.3564 11.7742 19.9771 11.456 19.7243C11.1377 19.4082 10.8195 19.2817 10.4376 19.2817Z"
                     fill="white"
@@ -556,7 +648,7 @@ const Home = () => {
                   <path d="M28.195 21.3674H26.9221V24.5916H28.195V21.3674Z" fill="white" />
                   <path d="M23.0395 21.3674H21.7666V24.5916H23.0395V21.3674Z" fill="white" />
                   <path d="M25.649 34.9597H24.3761C22.9122 34.9597 21.7666 33.8218 21.7666 32.3677V30.408H28.2584V32.3677C28.2584 33.7585 27.0491 34.9597 25.649 34.9597ZM23.0395 31.7355V32.3677C23.0395 33.0631 23.6123 33.6321 24.3124 33.6321H25.5853C26.2854 33.6321 26.8582 33.0631 26.8582 32.3677V31.7355H23.0395Z" fill="white" />
-                  <path d="M35.2594 42.1664H33.9865V41.5342C33.9865 40.3962 33.0318 39.448 31.8862 39.448H18.2025C17.0569 39.448 16.1022 40.3962 16.1022 41.5342V42.1664H14.8293V41.5342C14.8293 39.7008 16.3568 38.1836 18.2025 38.1836H31.8862C33.7319 38.1836 35.2594 39.7008 35.2594 41.5342V42.1664Z" fill="white" />
+                  <path d="M35.2594 42.1664H33.9865V41.5342C33.9865 40.3962 33.0318 39.448 31.8862 39.448p8.2025C17.0569 39.448 16.1022 40.3962 16.1022 41.5342V42.1664p4.8293V41.5342C14.8293 39.7008 16.3568 38.1836 18.2025 38.1836H31.8862C33.7319 38.1836 35.2594 39.7008 35.2594 41.5342V42.1664Z" fill="white" />
                   <path
                     d="M34.6231 45.8973C33.732 45.8973 32.9046 45.3916 32.5864 44.5697C32.2682 43.7479 32.4591 42.7996 33.0319 42.1674C33.6684 41.5352 34.623 41.3456 35.4504 41.7249C36.2778 42.041 36.787 42.8628 36.787 43.7479C36.8506 44.949 35.8323 45.8973 34.6231 45.8973ZM34.6231 42.7996C34.2412 42.7996 33.923 42.9893 33.7957 43.3686C33.6684 43.6847 33.732 44.064 33.9866 44.3168C34.2412 44.5697 34.6231 44.6329 34.9413 44.5065C35.2595 44.3801 35.5141 44.064 35.5141 43.6847C35.5141 43.2421 35.1322 42.7996 34.6231 42.7996Z"
                     fill="white"
@@ -579,6 +671,7 @@ const Home = () => {
               }
               title={'Equipamiento'}
               subtitle={'Sillas ergométricas. Proyector y Tv. Lockers numerados. Cocinas e infusiones.'}
+              darkText={true}
             />
             <Service
               svg={
@@ -622,9 +715,8 @@ const Home = () => {
               }
               title={'Market Vida'}
               subtitle={'Tenemos todo lo que necesitas para acompañarte en tu día como en casa. Sector autogestionable, elegís el producto y dejas el pago en su frasco.'}
+              darkText={true}
             />
-          </div>
-          <div className="d-flex justify-content-center align-items-start flex-wrap servicesSection">
             <Service
               svg={
                 <svg width="58" height="51" viewBox="0 0 58 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -643,6 +735,7 @@ const Home = () => {
               }
               title={'Salas de reunión y videocall'}
               subtitle={'Espacios equipados para reunirse y realizar videollamadas.'}
+              darkText={true}
             />
             <Service
               svg={
@@ -678,13 +771,14 @@ const Home = () => {
               }
               title={'Comunidad Vida'}
               subtitle={'Brindamos experiencias y propuestas mensuales a nuestros coworkers. Contamos con una red de beneficios de la mano de reconocidos emprendedores de la zona.'}
+              darkText={true}
             />
             <Service
               svg={
                 <svg width="60" height="68" viewBox="0 0 60 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M59.5 59.5747C59.5 27.0457 33.0797 0.666504 0.5 0.666504V59.5747H59.5Z" fill="#FF972F" />
                   <path
-                    d="M26.5961 67.6662C17.3571 67.6662 9.82005 60.4645 9.65796 51.6445V51.5636V36.9174C9.65796 36.0273 10.3874 35.2991 11.2788 35.2991H41.6703C46.7761 35.2991 50.9904 39.345 50.9904 44.2C50.9904 48.5696 47.6676 52.2109 43.3722 53.0201C42.5618 61.031 35.592 67.3426 27.0824 67.5853C26.9203 67.5853 26.7582 67.6662 26.5961 67.6662ZM12.9808 51.4017V51.4826C12.9808 58.4416 18.897 64.1868 26.1099 64.3486C26.272 64.3486 26.353 64.2677 26.5151 64.2677C33.8901 64.2677 39.9684 58.5225 40.0494 51.4017C40.0494 50.5116 40.7788 49.7834 41.6703 49.7834C44.9121 49.7834 47.5865 47.194 47.5865 44.1191C47.5865 40.9633 44.9121 38.4549 41.5893 38.4549H12.9808V51.4017Z"
+                    d="M26.5961 67.6662C17.3571 67.6662 9.82005 60.4645 9.65796 51.6445V51.5636V36.9174C9.65796 36.0273 10.3874 35.2991 11.2788 35.2991H41.6703C46.7761 35.2991 50.9904 39.345 50.9904 44.2C50.9904 48.5696 47.6676 52.2109 43.3722 53.0201C42.5618 61.031 35.592 67.3426 27.0824 67.5853C26.9203 67.5853 26.7582 67.6662 26.5961 67.6662ZM12.9808 51.4017V51.4826C12.9808 58.4416 18.897 64.1868 26.1099 64.3486C26.272 64.3486 26.353 64.2677 26.5151 64.2677C33.8901 64.2677 39.9684 58.5225 40.0494 51.4017C40.0494 50.5116 40.7788 49.7834 41.6703 49.7834C44.9121 49.7834 47.5865 47.194 47.5865 44.1191C47.5865 40.9633 44.9121 38.4549 41.5893 38.4549p2.9808V51.4017Z"
                     fill="white"
                   />
                   <path d="M19.5454 25.0228V32.3054C23.7597 32.3054 27.1635 29.0687 27.1635 25.0228V17.7402C23.0303 17.6593 19.5454 20.9769 19.5454 25.0228Z" fill="white" />
@@ -694,15 +788,14 @@ const Home = () => {
               }
               title={'Catering'}
               subtitle={'Lo armamos en base a lo que necesites.'}
+              darkText={true}
             />
-          </div>
-          <div className="d-flex justify-content-center align-items-start flex-wrap servicesSection">
             <Service
               svg={
                 <svg width="56" height="49" viewBox="0 0 56 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0.5 44.9836C25.4831 44.9836 45.7429 24.8398 45.7429 0H0.5V44.9836Z" fill="#FF972F" />
                   <path d="M12.1216 40.2875C12.1216 41.894 10.8165 43.1916 9.20069 43.1916C7.58487 43.1916 6.27979 41.894 6.27979 40.2875C6.27979 38.6809 7.58487 37.3833 9.20069 37.3833C10.8165 37.3833 12.1216 38.6809 12.1216 40.2875Z" fill="white" />
-                  <path d="M9.26277 44.613C6.83904 44.613 4.91249 46.5285 4.85034 48.9384H13.6131C13.6131 46.5903 11.6865 44.613 9.26277 44.613Z" fill="white" />
+                  <path d="M9.26277 44.613C6.83904 44.613 4.91249 46.5285 4.85034 48.9384p3.6131C13.6131 46.5903 11.6865 44.613 9.26277 44.613Z" fill="white" />
                   <path d="M22.5623 40.2875C22.5623 41.894 21.2572 43.1916 19.6414 43.1916C18.0255 43.1916 16.7205 41.894 16.7205 40.2875C16.7205 38.6809 18.0255 37.3833 19.6414 37.3833C21.2572 37.3833 22.5623 38.6809 22.5623 40.2875Z" fill="white" />
                   <path d="M19.6412 44.613C17.2175 44.613 15.2909 46.5285 15.2288 48.9384H23.9915C23.9915 46.5903 22.0649 44.613 19.6412 44.613Z" fill="white" />
                   <path d="M32.9407 40.2875C32.9407 41.894 31.6356 43.1916 30.0198 43.1916C28.404 43.1916 27.0989 41.894 27.0989 40.2875C27.0989 38.6809 28.404 37.3833 30.0198 37.3833C31.6356 37.3833 32.9407 38.6809 32.9407 40.2875Z" fill="white" />
@@ -712,7 +805,7 @@ const Home = () => {
                   <path d="M53.76 40.2875C53.76 41.894 52.4549 43.1916 50.8391 43.1916C49.2233 43.1916 47.9182 41.894 47.9182 40.2875C47.9182 38.6809 49.2233 37.3833 50.8391 37.3833C52.4549 37.3833 53.76 38.6809 53.76 40.2875Z" fill="white" />
                   <path d="M50.8389 44.613C48.4152 44.613 46.4887 46.5285 46.4265 48.9384H55.1892C55.2514 46.5903 53.2627 44.613 50.8389 44.613Z" fill="white" />
                   <path d="M16.9067 37.6307C16.9067 38.8665 15.8502 39.917 14.6073 39.917C13.3644 39.917 12.3079 38.8665 12.3079 37.6307C12.3079 36.3949 13.3644 35.3445 14.6073 35.3445C15.8502 35.3445 16.9067 36.3331 16.9067 37.6307Z" fill="white" />
-                  <path d="M14.6074 41.0908C12.6809 41.0908 11.1272 42.6356 11.1272 44.5511H18.0876C18.0876 42.6356 16.534 41.0908 14.6074 41.0908Z" fill="white" />
+                  <path d="M14.6074 41.0908C12.6809 41.0908 11.1272 42.6356 11.1272 44.5511p8.0876C18.0876 42.6356 16.534 41.0908 14.6074 41.0908Z" fill="white" />
                   <path d="M27.2854 37.6307C27.2854 38.8665 26.2289 39.917 24.986 39.917C23.743 39.917 22.6865 38.8665 22.6865 37.6307C22.6865 36.3949 23.743 35.3445 24.986 35.3445C26.2289 35.3445 27.2854 36.3331 27.2854 37.6307Z" fill="white" />
                   <path d="M24.9861 41.0908C23.0595 41.0908 21.5059 42.6356 21.5059 44.5511H28.4663C28.4663 42.6356 26.9126 41.0908 24.9861 41.0908Z" fill="white" />
                   <path d="M37.6018 37.6307C37.6018 38.8665 36.5453 39.917 35.3024 39.917C34.0594 39.917 33.0029 38.8665 33.0029 37.6307C33.0029 36.3949 34.0594 35.3445 35.3024 35.3445C36.5453 35.3445 37.6018 36.3331 37.6018 37.6307Z" fill="white" />
@@ -720,7 +813,7 @@ const Home = () => {
                   <path d="M47.9802 37.6307C47.9802 38.8665 46.9237 39.917 45.6808 39.917C44.4378 39.917 43.3813 38.8665 43.3813 37.6307C43.3813 36.3949 44.4378 35.3445 45.6808 35.3445C46.9237 35.3445 47.9802 36.3331 47.9802 37.6307Z" fill="white" />
                   <path d="M45.6809 41.0908C43.7544 41.0908 42.2007 42.6356 42.2007 44.5511H49.1611C49.1611 42.6356 47.6075 41.0908 45.6809 41.0908Z" fill="white" />
                   <path d="M17.0931 7.66202C17.0931 9.33037 15.7258 10.6898 14.0479 10.6898C12.3699 10.6898 11.0027 9.33037 11.0027 7.66202C11.0027 5.99367 12.3699 4.63428 14.0479 4.63428C15.6637 4.63428 17.0931 5.99367 17.0931 7.66202Z" fill="white" />
-                  <path d="M13.9857 12.2961C11.4377 12.2961 9.38685 14.3352 9.32471 16.8687H18.5846C18.6467 14.3352 16.5337 12.2961 13.9857 12.2961Z" fill="white" />
+                  <path d="M13.9857 12.2961C11.4377 12.2961 9.38685 14.3352 9.32471 16.8687p8.5846C18.6467 14.3352 16.5337 12.2961 13.9857 12.2961Z" fill="white" />
                   <path
                     d="M21.3816 30.4629H6.65278C5.96917 30.4629 5.40985 29.9068 5.40985 29.2271V22.7391H5.22341C4.53979 22.7391 3.98047 22.183 3.98047 21.5033V19.217C3.98047 18.5373 4.53979 17.9812 5.22341 17.9812H22.811C23.4946 17.9812 24.0539 18.5373 24.0539 19.217V21.5033C24.0539 22.183 23.4946 22.7391 22.811 22.7391H22.6245V29.2889C22.6245 29.9686 22.0652 30.4629 21.3816 30.4629ZM7.21211 28.7328H20.8223V21.874C20.8223 21.3797 21.1952 21.0089 21.6923 21.0089H22.2517V19.7731H5.78273V21.0089H6.34205C6.83923 21.0089 7.21211 21.3797 7.21211 21.874V28.7328Z"
                     fill="white"
@@ -730,6 +823,7 @@ const Home = () => {
               }
               title={'SUM'}
               subtitle={'Salón de usos múltiples adaptable para cursos, workshops, eventos, desde 10 a 150 personas.'}
+              darkText={true}
             />
             <Service
               svg={
@@ -760,6 +854,7 @@ const Home = () => {
               }
               title={'Espacio verde'}
               subtitle={'Patio de 500 mt2 rodeado de naturaleza. Quincho con parrilla y ducha.'}
+              darkText={true}
             />
             <Service
               svg={
@@ -774,9 +869,8 @@ const Home = () => {
               }
               title={'Seguridad'}
               subtitle={'Lo armamos en base a lo que necesites.'}
+              darkText={true}
             />
-          </div>
-          <div className="d-flex justify-content-center align-items-start flex-wrap servicesSection">
             <Service
               svg={
                 <svg width="56" height="52" viewBox="0 0 56 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -792,6 +886,7 @@ const Home = () => {
               }
               title={'Tecnología'}
               subtitle={'WiFi de alta velocidad + Back Up'}
+              darkText={true}
             />
             <Service
               svg={
@@ -814,6 +909,7 @@ const Home = () => {
               }
               title={'Eco'}
               subtitle={'Hábitos y tips para cuidar el planeta'}
+              darkText={true}
             />
             <Service
               svg={
@@ -838,11 +934,13 @@ const Home = () => {
               }
               title={'Asesoramiento personalizado'}
               subtitle={'Nos adaptamos a las necesidades de cada jornada.'}
+              darkText={true}
             />
           </div>
         </div>
       </div>
-      <div id="carouselEventos" className=" meetingsContainer carousel slide" data-ride="carousel" style={{ position: 'relative', marginTop: '-20px' }}>
+
+      <div id="carouselEventos" className="meetingsContainer carousel slide" data-ride="carousel" style={{ position: 'relative', marginTop: '-65px' }}>
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src={SalasBackground} alt="First slide" />
@@ -851,17 +949,17 @@ const Home = () => {
             <img src={EventosBackground} alt="Second slide" />
           </div>
         </div>
-        <img src={SectionSeparatorRight} alt="Eventos" className="eventsSVGContainer" />
+        <img src={RightSVGOrangeSection} alt="Eventos" className="eventsSVGContainer" />
         <div className="eventsContainer">
           <Slider {...carouselSettings}>
             <div>
-              <h1 className="eventsTitle extraBoldFont">EVENTOS</h1>
+              <p className="eventsTitle extraBoldFont">EVENTOS</p>
               <p className="eventsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
               <p className="eventsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
               <button className="eventsButton">Ver más</button>
             </div>
             <div>
-              <h1 className="eventsTitle extraBoldFont">EVENTOS2</h1>
+              <p className="eventsTitle extraBoldFont">EVENTOS2</p>
               <p className="eventsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
               <p className="eventsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
               <button className="eventsButton">Ver más</button>
@@ -873,17 +971,18 @@ const Home = () => {
           <span className="sr-only">Anterior</span>
         </a>
       </div>
+
       <div className="eventsContainerMobile">
+        <img src={SalasBackground} alt="Vida" height="auto" width="100%" style={{ minHeight: '300px' }} />
         <div className="container">
-          <h1 className="eventsTitleMobile extraBoldFont">EVENTOS</h1>
-          <p className="eventsSubtitleMobile">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
-          <p className="eventsContent1Mobile">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
-          <button className="eventsButtonMobile">Ver más</button>
+          <p className="eventsTitleMobile extraBoldFont">EVENTOS</p>
+          <p className="eventsSubtitleMobile">Nuestros espacios son ideales para que puedas brindar cursos, workshops, clases personalizadas y eventos de todo tipo</p>
+          <p className="eventsContent1Mobile">Contamos con diferentes formatos para que puedas visualizar cuál se adapta mejor a tu necesidad</p>
         </div>
       </div>
       <div className="communityContainer">
         <div className="container">
-          <h1 className="communityTitle extraBoldFont">COMUNIDAD</h1>
+          <p className="communityTitle extraBoldFont">COMUNIDAD</p>
         </div>
         <div className="d-flex justify-content-center flex-wrap">
           <div className="card-vida-horizontal">
@@ -909,7 +1008,7 @@ const Home = () => {
           </div>
         </div>
         <div className="container">
-          <h1 className="communityTitle extraBoldFont">Beneficios</h1>
+          <p className="communityTitle extraBoldFont">Beneficios</p>
         </div>
         <div className="d-flex justify-content-center flex-wrap">
           <div className="card-vida-vertical">
@@ -946,7 +1045,7 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-md-4 col-sm-6">
-              <h1 className="strategicPlaceTitle extraBoldFont">LUGAR ESTRATÉGICO</h1>
+              <p className="strategicPlaceTitle extraBoldFont">LUGAR ESTRATÉGICO</p>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-6">
               <div className="d-flex strategicPlaceLogoContainer">
@@ -984,7 +1083,7 @@ const Home = () => {
                       d="M0.0493755 6.71293C0.243519 7.394 0.534733 8.02643 1.02009 8.51291C1.50545 9.04803 2.03935 9.58316 2.57324 10.1183C2.91299 10.4588 3.30128 10.7507 3.64103 11.0426C4.36907 11.6264 5.09711 12.2101 5.87368 12.7939C6.65025 13.3777 7.42683 13.9128 8.2034 14.3993C9.65948 15.3723 11.2612 16.1993 12.8628 16.8803C14.0277 17.4155 15.2411 17.9019 16.406 18.3884C16.9399 18.583 17.4738 18.7776 18.0076 18.9722C18.2989 19.0695 18.5415 19.0208 18.7842 18.7776C19.3667 18.2425 19.9491 17.6587 20.483 17.1236C21.1139 16.5398 21.7934 15.9074 22.4244 15.3236C22.57 15.1777 22.6671 14.9831 22.7642 14.8371V14.5452C22.7156 14.4479 22.6671 14.302 22.57 14.2047C22.3273 13.9128 22.0847 13.6696 21.842 13.4263C21.6964 13.2804 21.4537 13.1831 21.3081 13.2317C20.7257 13.2804 20.1432 13.4263 19.6093 13.475C19.1725 13.5236 18.7842 13.7669 18.3474 13.5723C18.1047 13.475 17.8135 13.329 17.5708 13.2317C16.9884 12.9399 16.406 12.6966 15.775 12.4047C15.9691 12.3561 16.0662 12.3074 16.1633 12.2588C16.9884 11.9183 17.8135 11.5777 18.6386 11.1885C19.2696 10.8967 19.9005 10.6534 20.5315 10.3615C21.0654 10.1183 21.1625 9.53451 20.7742 9.14533C20.2403 8.6102 19.7549 8.07507 19.221 7.5886C19.0754 7.44265 18.7842 7.34536 18.5901 7.34536C17.9591 7.34536 17.3281 7.44265 16.6972 7.4913C15.8721 7.53995 15.047 7.63724 14.2218 7.68589C13.5423 7.73454 12.8143 7.78319 12.1348 7.83184C11.7951 7.88048 11.4068 7.92913 11.067 7.92913C10.7758 7.92913 10.4361 7.97778 10.1934 7.83184C9.80509 7.63724 9.46533 7.29671 9.07705 7.05347C7.86365 6.12916 6.50465 5.49674 5.04857 5.1562C4.66028 5.05891 4.272 5.01026 3.88371 4.91296H2.23349C2.03934 4.96161 1.79667 4.96161 1.60253 5.01026C1.02009 5.1562 0.437664 5.30215 0.146448 5.93457V6.71293H0.0493755ZM20.8227 14.7398C20.8227 14.7885 20.8227 14.7885 20.8227 14.7885C20.6286 14.9344 20.483 15.0804 20.2888 15.2263C19.5608 15.9074 18.8813 16.5884 18.1533 17.3182C18.1047 17.3668 17.9106 17.4155 17.862 17.3668C17.2796 17.1236 16.6972 16.929 16.1147 16.6857C15.1926 16.2966 14.2704 15.9074 13.3967 15.5182C12.2319 14.9831 11.1156 14.4479 9.99923 13.7669C8.93144 13.1345 7.91219 12.4047 6.89293 11.675C5.87368 10.9453 4.9515 10.1183 3.98078 9.33992C3.64103 9.09668 3.34982 8.80479 3.0586 8.51291C2.42764 7.92913 1.79667 7.29671 1.55399 6.42105C2.18495 6.32375 2.76739 6.22646 3.34982 6.2751C4.36907 6.3724 5.29125 6.61564 6.21343 7.05347C7.32976 7.53995 8.25194 8.26967 9.22265 8.99938C9.4168 9.14533 9.70801 9.33992 9.95069 9.33992C10.4846 9.38857 11.0185 9.29127 11.5038 9.24262C11.7951 9.24262 12.0863 9.19397 12.329 9.19397C13.2511 9.09668 14.2218 9.04803 15.144 8.95074C15.8235 8.90209 16.503 8.85344 17.1825 8.80479C17.4738 8.80479 17.7164 8.75614 18.0076 8.75614C18.1047 8.75614 18.2503 8.65885 18.2989 8.7075C18.493 8.90209 18.6871 9.09668 18.9298 9.33992C18.7842 9.38857 18.7842 9.38857 18.7357 9.38857C17.134 10.0696 15.4838 10.7994 13.8821 11.4804C13.5423 11.6264 13.2511 12.1128 13.5909 12.5507C13.7365 12.7453 13.9792 12.9399 14.1733 13.0858C15.2411 13.6209 16.3089 14.1561 17.3281 14.6912C18.0076 15.0804 18.7357 15.129 19.5123 14.9344C19.9491 14.8858 20.3859 14.7885 20.8227 14.7398Z"
                       fill="white"
                     />
-                    <path d="M2.86527 23.2534H19.9014V24.7129H2.86527V23.2534Z" fill="white" />
+                    <path d="M2.86527 23.2534p9.9014V24.7129H2.86527V23.2534Z" fill="white" />
                     <path
                       d="M9.4165 16.881C8.97968 16.6378 8.59139 16.3945 8.10604 16.1513C7.86336 16.6378 7.66921 17.0756 7.42653 17.6107C7.23239 17.4161 7.03825 17.2702 6.94117 17.027C6.8441 16.8324 6.8441 16.5891 6.8441 16.3459C6.8441 16.054 6.94117 15.8108 6.94117 15.5189C6.94117 15.4216 6.89264 15.2756 6.8441 15.227C6.45582 14.9351 6.01899 14.6432 5.58217 14.3513C5.53363 14.5946 5.53363 14.8378 5.4851 15.081C5.43656 15.7621 5.38803 16.4432 5.29096 17.1242C5.24242 17.4161 5.38803 17.6594 5.58217 17.854C6.11606 18.3404 6.60142 18.8269 7.08678 19.362C7.42653 19.7999 8.15457 19.6539 8.34871 19.1188C8.68847 18.3891 9.07675 17.6594 9.4165 16.881Z"
                       fill="white"
@@ -1012,9 +1111,9 @@ const Home = () => {
               <Service
                 svg={
                   <svg width="40" height="34" viewBox="0 0 40 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3372 33.2234C26.1908 33.2234 39.0498 20.3571 39.0498 4.49451H10.3372V33.2234Z" fill="#FF972F" />
+                    <path d="M10.3372 33.2234C26.1908 33.2234 39.0498 20.3571 39.0498 4.49451p0.3372V33.2234Z" fill="#FF972F" />
                     <path
-                      d="M13.3755 0C13.3315 0 13.2875 0.0440627 13.2434 0.0440627C11.8783 0.0440627 10.6452 0.440627 9.45619 1.0575C8.31121 1.67438 7.34237 2.46751 6.54969 3.48095C5.88913 4.3622 5.36068 5.28752 5.05241 6.34502C4.87626 6.91784 4.78819 7.53471 4.70011 8.15159C4.65607 8.68034 4.61204 9.2091 4.65607 9.69378C4.70011 10.7072 4.96434 11.7207 5.36068 12.646C5.88913 13.8797 6.68181 14.9372 7.69468 15.8626C8.44332 16.5235 9.28004 17.0522 10.2048 17.4488C10.8654 17.7572 11.57 17.9335 12.3186 18.0657C12.5388 18.1098 12.759 18.1098 12.9792 18.1098C13.0673 18.1098 13.1554 18.1538 13.1994 18.1538H14.2563C14.3444 18.1538 14.4325 18.1098 14.4765 18.1098C14.6967 18.0657 14.9169 18.0657 15.1371 18.0657C15.8417 17.9335 16.5463 17.7572 17.2509 17.4488C18.1757 17.0522 19.0124 16.5235 19.761 15.8626C20.7739 14.9372 21.5225 13.8797 22.095 12.646C22.4914 11.6766 22.7116 10.7072 22.7996 9.69378C22.8437 9.16503 22.7996 8.63628 22.7556 8.15159C22.6675 7.53471 22.5794 6.91784 22.4033 6.34502C22.095 5.28752 21.5666 4.3622 20.906 3.48095C20.1133 2.46751 19.1445 1.63032 17.9995 1.0575C16.8105 0.440627 15.5334 0.0440627 14.2123 0.0440627C13.9921 0.0440627 13.948 0 13.904 0H13.3755ZM13.6398 16.9641C9.28004 17.0082 5.80105 13.395 5.75702 9.29722C5.66894 4.7147 9.28004 1.41 13.1994 1.23375C18.0436 1.01344 21.4345 4.84689 21.5225 8.90066C21.6106 13.395 17.9114 17.0082 13.6398 16.9641Z"
+                      d="M13.3755 0C13.3315 0 13.2875 0.0440627 13.2434 0.0440627C11.8783 0.0440627 10.6452 0.440627 9.45619 1.0575C8.31121 1.67438 7.34237 2.46751 6.54969 3.48095C5.88913 4.3622 5.36068 5.28752 5.05241 6.34502C4.87626 6.91784 4.78819 7.53471 4.70011 8.15159C4.65607 8.68034 4.61204 9.2091 4.65607 9.69378C4.70011 10.7072 4.96434 11.7207 5.36068 12.646C5.88913 13.8797 6.68181 14.9372 7.69468 15.8626C8.44332 16.5235 9.28004 17.0522 10.2048 17.4488C10.8654 17.7572 11.57 17.9335 12.3186 18.0657C12.5388 18.1098 12.759 18.1098 12.9792 18.1098C13.0673 18.1098 13.1554 18.1538 13.1994 18.1538p4.2563C14.3444 18.1538 14.4325 18.1098 14.4765 18.1098C14.6967 18.0657 14.9169 18.0657 15.1371 18.0657C15.8417 17.9335 16.5463 17.7572 17.2509 17.4488C18.1757 17.0522 19.0124 16.5235 19.761 15.8626C20.7739 14.9372 21.5225 13.8797 22.095 12.646C22.4914 11.6766 22.7116 10.7072 22.7996 9.69378C22.8437 9.16503 22.7996 8.63628 22.7556 8.15159C22.6675 7.53471 22.5794 6.91784 22.4033 6.34502C22.095 5.28752 21.5666 4.3622 20.906 3.48095C20.1133 2.46751 19.1445 1.63032 17.9995 1.0575C16.8105 0.440627 15.5334 0.0440627 14.2123 0.0440627C13.9921 0.0440627 13.948 0 13.904 0p3.3755ZM13.6398 16.9641C9.28004 17.0082 5.80105 13.395 5.75702 9.29722C5.66894 4.7147 9.28004 1.41 13.1994 1.23375C18.0436 1.01344 21.4345 4.84689 21.5225 8.90066C21.6106 13.395 17.9114 17.0082 13.6398 16.9641Z"
                       fill="white"
                     />
                     <path
@@ -1060,7 +1159,7 @@ const Home = () => {
               <Service
                 svg={
                   <svg width="43" height="34" viewBox="0 0 43 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.8192 33.7508C28.0631 33.7508 42.0498 19.6707 42.0498 2.31165H10.8192V33.7508Z" fill="#FF972F" />
+                    <path d="M10.8192 33.7508C28.0631 33.7508 42.0498 19.6707 42.0498 2.31165p0.8192V33.7508Z" fill="#FF972F" />
                     <path d="M6.7951 15.0894C6.7951 15.0894 9.42958 17.1147 12.4473 15.0894C15.4649 13.0642 18.0994 15.0894 18.0994 15.0894C18.0994 15.0894 21.4524 17.838 23.7516 15.0894C23.7516 15.0894 26.2424 12.2445 29.4517 15.4752" stroke="white" strokeWidth="1.27782" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M3.29865 21.2135C3.29865 21.2135 6.31633 23.2387 9.76511 21.2135C13.2139 19.1882 16.2316 21.2135 16.2316 21.2135C16.2316 21.2135 20.1115 23.962 22.698 21.2135C22.698 21.2135 25.572 18.3685 29.2124 21.5992" stroke="white" strokeWidth="1.27782" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M27.5833 7.23014C27.4875 7.23014 27.3917 7.32658 27.3917 7.42302C27.3917 7.51946 27.4875 7.61589 27.5833 7.61589C27.6791 7.61589 27.7749 7.51946 27.7749 7.42302C27.7749 7.32658 27.6791 7.23014 27.5833 7.23014ZM27.5833 6.26575C28.206 6.26575 28.7329 6.79616 28.7329 7.42302C28.7329 8.04987 28.206 8.58028 27.5833 8.58028C26.9606 8.58028 26.4337 8.04987 26.4337 7.42302C26.4337 6.79616 26.9606 6.26575 27.5833 6.26575Z" fill="white" />
@@ -1077,7 +1176,7 @@ const Home = () => {
                   <svg width="41" height="37" viewBox="0 0 41 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.437092 5.17493C0.437092 22.4255 14.5774 36.4176 32.0107 36.4176V5.17493H0.437092Z" fill="#FF972F" />
                     <path
-                      d="M40.0498 11.5962V10.7337L40.0014 10.6857C39.9045 10.1586 39.614 9.67946 39.1297 9.39196C38.4033 8.96069 37.6285 8.52943 36.8537 8.09817C35.6431 7.42731 34.4808 6.70854 33.2702 6.03769C32.2048 5.41475 31.1395 4.83973 30.0741 4.2168C28.8634 3.54594 27.7012 2.82717 26.4906 2.15632C25.7158 1.72505 24.9409 1.24587 24.1661 0.814608C23.7787 0.575018 23.3429 0.383345 22.9071 0.143754C22.8102 0.0479181 22.6165 0.0479181 22.3744 0H22.1322C22.0838 0 22.0354 0.0479181 21.987 0.0479181C21.309 0.143754 20.7763 0.431263 20.4373 1.00628C20.1468 1.53338 19.8562 2.06048 19.5172 2.58758C18.6456 4.07304 17.8223 5.51059 16.9507 6.99605C16.757 7.33148 16.5633 7.47523 16.1759 7.47523C15.4979 7.47523 15.0136 7.81066 14.6262 8.33776C14.4325 8.62527 14.3357 8.96069 14.1904 9.29612V21.5632C14.1904 21.6111 14.2388 21.6111 14.2388 21.659C14.2873 22.234 14.6262 22.7132 15.0621 23.0486C15.3526 23.2882 15.74 23.3361 16.079 23.4799H34.9167L34.9651 23.432C35.982 23.3841 36.8537 22.3299 36.8537 21.3236C36.8053 20.0777 36.8537 18.8318 36.8537 17.6339C36.8537 17.4901 36.9021 17.2984 36.999 17.1547C37.1443 16.8672 37.338 16.5797 37.5317 16.2922C37.9191 15.6692 38.258 15.0463 38.6455 14.3754C39.0813 13.4171 39.7108 12.6025 40.0498 11.5962ZM35.7399 12.7462V18.1131C34.6261 18.2568 33.706 18.6881 32.8828 19.4548C32.108 20.2215 31.6237 21.1798 31.4784 22.2819H31.43C27.5559 22.2819 23.6819 22.2819 19.8078 22.2819C19.6625 22.2819 19.6141 22.234 19.6141 22.0903C19.6141 22.0423 19.6141 21.9465 19.6141 21.8986C19.372 20.7006 18.7424 19.7423 17.7739 19.0235C17.1444 18.5922 16.4664 18.2568 15.74 18.161C15.5463 18.1131 15.4495 18.0651 15.4979 17.8735C15.4979 16.2442 15.4979 14.5671 15.4979 12.9379C15.4979 12.89 15.4979 12.7941 15.4979 12.7941C15.8853 12.6983 16.2243 12.6025 16.5633 12.5066C17.3865 12.2191 18.1129 11.7399 18.694 11.0212C19.2267 10.3982 19.5172 9.67946 19.6625 8.86486C19.711 8.62527 19.7594 8.57735 20.0015 8.57735C23.7787 8.57735 27.5559 8.57735 31.3332 8.57735H31.5753C31.7206 10.8295 33.5607 12.5546 35.7399 12.7462ZM25.6673 2.97092C28.2339 4.45639 30.8489 5.94185 33.4639 7.47523H18.016C18.5972 6.46895 19.1783 5.46267 19.7594 4.45639C22.0838 5.271 24.0209 4.83973 25.6673 2.97092ZM20.3405 3.40219C20.631 2.87509 20.97 2.39591 21.2606 1.82089C21.648 1.10212 22.2775 0.958363 22.8586 1.29379C23.4397 1.62922 24.0693 2.01256 24.6504 2.34799C23.7787 3.59386 21.7933 4.12096 20.3405 3.40219ZM36.8537 9.39196C37.3864 9.67946 37.8706 9.96697 38.4033 10.2545C38.8392 10.4941 39.1781 11.0691 38.8392 11.6441C38.3549 12.5066 37.8706 13.3212 37.3864 14.1838C37.2411 14.4713 37.0474 14.7109 36.9021 15.0463V9.39196H36.8537ZM32.5922 8.57735C33.3186 8.57735 34.045 8.57735 34.723 8.57735C35.1104 8.57735 35.5946 8.96069 35.6431 9.34404C35.6915 9.82322 35.6915 10.2545 35.6915 10.7337C35.6915 11.0212 35.6915 11.3566 35.6915 11.6441C33.9966 11.2608 32.9796 10.2545 32.5922 8.57735ZM35.7399 19.2631C35.7399 19.9819 35.7883 20.6527 35.7399 21.3715C35.6915 21.9465 35.1104 22.3778 34.6745 22.3299C34.384 22.2819 34.0934 22.3299 33.8029 22.3299H32.6407C32.9312 20.4131 34.5777 19.3589 35.7399 19.2631ZM18.4519 8.57735C18.3066 9.87114 17.1928 11.3566 15.4011 11.6441C15.4011 10.9733 15.4495 10.3024 15.4011 9.63155C15.4011 9.20028 15.7885 8.57735 16.3696 8.57735C17.0475 8.52943 17.7255 8.57735 18.4519 8.57735ZM18.4519 22.2819C17.7255 22.2819 17.0475 22.2819 16.3696 22.2819C15.8369 22.2819 15.4011 21.8507 15.4011 21.3236C15.4011 20.7486 15.4011 20.2215 15.4011 19.6464V19.2152C16.9023 19.4548 18.3066 20.8444 18.4519 22.2819Z"
+                      d="M40.0498 11.5962V10.7337L40.0014 10.6857C39.9045 10.1586 39.614 9.67946 39.1297 9.39196C38.4033 8.96069 37.6285 8.52943 36.8537 8.09817C35.6431 7.42731 34.4808 6.70854 33.2702 6.03769C32.2048 5.41475 31.1395 4.83973 30.0741 4.2168C28.8634 3.54594 27.7012 2.82717 26.4906 2.15632C25.7158 1.72505 24.9409 1.24587 24.1661 0.814608C23.7787 0.575018 23.3429 0.383345 22.9071 0.143754C22.8102 0.0479181 22.6165 0.0479181 22.3744 0H22.1322C22.0838 0 22.0354 0.0479181 21.987 0.0479181C21.309 0.143754 20.7763 0.431263 20.4373 1.00628C20.1468 1.53338 19.8562 2.06048 19.5172 2.58758C18.6456 4.07304 17.8223 5.51059 16.9507 6.99605C16.757 7.33148 16.5633 7.47523 16.1759 7.47523C15.4979 7.47523 15.0136 7.81066 14.6262 8.33776C14.4325 8.62527 14.3357 8.96069 14.1904 9.29612V21.5632C14.1904 21.6111 14.2388 21.6111 14.2388 21.659C14.2873 22.234 14.6262 22.7132 15.0621 23.0486C15.3526 23.2882 15.74 23.3361 16.079 23.4799H34.9167L34.9651 23.432C35.982 23.3841 36.8537 22.3299 36.8537 21.3236C36.8053 20.0777 36.8537 18.8318 36.8537 17.6339C36.8537 17.4901 36.9021 17.2984 36.999 17.1547C37.1443 16.8672 37.338 16.5797 37.5317 16.2922C37.9191 15.6692 38.258 15.0463 38.6455 14.3754C39.0813 13.4171 39.7108 12.6025 40.0498 11.5962ZM35.7399 12.7462V18.1131C34.6261 18.2568 33.706 18.6881 32.8828 19.4548C32.108 20.2215 31.6237 21.1798 31.4784 22.2819H31.43C27.5559 22.2819 23.6819 22.2819 19.8078 22.2819C19.6625 22.2819 19.6141 22.234 19.6141 22.0903C19.6141 22.0423 19.6141 21.9465 19.6141 21.8986C19.372 20.7006 18.7424 19.7423 17.7739 19.0235C17.1444 18.5922 16.4664 18.2568 15.74 18.161C15.5463 18.1131 15.4495 18.0651 15.4979 17.8735C15.4979 16.2442 15.4979 14.5671 15.4979 12.9379C15.4979 12.89 15.4979 12.7941 15.4979 12.7941C15.8853 12.6983 16.2243 12.6025 16.5633 12.5066C17.3865 12.2191 18.1129 11.7399 18.694 11.0212C19.2267 10.3982 19.5172 9.67946 19.6625 8.86486C19.711 8.62527 19.7594 8.57735 20.0015 8.57735C23.7787 8.57735 27.5559 8.57735 31.3332 8.57735H31.5753C31.7206 10.8295 33.5607 12.5546 35.7399 12.7462ZM25.6673 2.97092C28.2339 4.45639 30.8489 5.94185 33.4639 7.47523p8.016C18.5972 6.46895 19.1783 5.46267 19.7594 4.45639C22.0838 5.271 24.0209 4.83973 25.6673 2.97092ZM20.3405 3.40219C20.631 2.87509 20.97 2.39591 21.2606 1.82089C21.648 1.10212 22.2775 0.958363 22.8586 1.29379C23.4397 1.62922 24.0693 2.01256 24.6504 2.34799C23.7787 3.59386 21.7933 4.12096 20.3405 3.40219ZM36.8537 9.39196C37.3864 9.67946 37.8706 9.96697 38.4033 10.2545C38.8392 10.4941 39.1781 11.0691 38.8392 11.6441C38.3549 12.5066 37.8706 13.3212 37.3864 14.1838C37.2411 14.4713 37.0474 14.7109 36.9021 15.0463V9.39196H36.8537ZM32.5922 8.57735C33.3186 8.57735 34.045 8.57735 34.723 8.57735C35.1104 8.57735 35.5946 8.96069 35.6431 9.34404C35.6915 9.82322 35.6915 10.2545 35.6915 10.7337C35.6915 11.0212 35.6915 11.3566 35.6915 11.6441C33.9966 11.2608 32.9796 10.2545 32.5922 8.57735ZM35.7399 19.2631C35.7399 19.9819 35.7883 20.6527 35.7399 21.3715C35.6915 21.9465 35.1104 22.3778 34.6745 22.3299C34.384 22.2819 34.0934 22.3299 33.8029 22.3299H32.6407C32.9312 20.4131 34.5777 19.3589 35.7399 19.2631ZM18.4519 8.57735C18.3066 9.87114 17.1928 11.3566 15.4011 11.6441C15.4011 10.9733 15.4495 10.3024 15.4011 9.63155C15.4011 9.20028 15.7885 8.57735 16.3696 8.57735C17.0475 8.52943 17.7255 8.57735 18.4519 8.57735ZM18.4519 22.2819C17.7255 22.2819 17.0475 22.2819 16.3696 22.2819C15.8369 22.2819 15.4011 21.8507 15.4011 21.3236C15.4011 20.7486 15.4011 20.2215 15.4011 19.6464V19.2152C16.9023 19.4548 18.3066 20.8444 18.4519 22.2819Z"
                       fill="white"
                     />
                     <path
@@ -1100,20 +1199,14 @@ const Home = () => {
       <div className="strategicPlaceContainerMobile">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4 col-md-4 col-sm-6">
-              <h1 className="strategicPlaceTitle extraBoldFont">LUGAR ESTRATÉGICO</h1>
+            <div className="col-lg-6 col-md-6 col-sm-12">
+              <p className="strategicPlaceTitle extraBoldFont">LUGAR ESTRATÉGICO</p>
             </div>
-            <div className="col-lg-4 col-md-4 col-sm-6">
-              <div className="d-flex strategicPlaceLogoContainer">
-                <img src={StrategicPlaceLogo} alt="Vida" className="strategicPlaceLogo" />
-                <div className="flex-column">
-                  <p className="locationText boldFont">Fernando Fader 3971</p>
-                  <p className="locationText">Cerro de las Rosas | Córdoba</p>
-                </div>
-              </div>
+            <div className="col-lg-6 col-md-6 col-sm-12">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.434882088902!2d-64.2347723843618!3d-31.37457028141809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299b7ceb33413%3A0x89c5c3a779773b97!2sVida%20Cowork!5e0!3m2!1ses-419!2sar!4v1638208913348!5m2!1ses-419!2sar" width="100%" height="450" style={{ border: '0' }} allowFullScreen="true" loading="lazy"></iframe>
             </div>
           </div>
-          <div className="row" style={{ paddingBottom: '11.3rem' }}>
+          <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-12">
               <Service
                 svg={
@@ -1139,7 +1232,7 @@ const Home = () => {
                       d="M0.0493755 6.71293C0.243519 7.394 0.534733 8.02643 1.02009 8.51291C1.50545 9.04803 2.03935 9.58316 2.57324 10.1183C2.91299 10.4588 3.30128 10.7507 3.64103 11.0426C4.36907 11.6264 5.09711 12.2101 5.87368 12.7939C6.65025 13.3777 7.42683 13.9128 8.2034 14.3993C9.65948 15.3723 11.2612 16.1993 12.8628 16.8803C14.0277 17.4155 15.2411 17.9019 16.406 18.3884C16.9399 18.583 17.4738 18.7776 18.0076 18.9722C18.2989 19.0695 18.5415 19.0208 18.7842 18.7776C19.3667 18.2425 19.9491 17.6587 20.483 17.1236C21.1139 16.5398 21.7934 15.9074 22.4244 15.3236C22.57 15.1777 22.6671 14.9831 22.7642 14.8371V14.5452C22.7156 14.4479 22.6671 14.302 22.57 14.2047C22.3273 13.9128 22.0847 13.6696 21.842 13.4263C21.6964 13.2804 21.4537 13.1831 21.3081 13.2317C20.7257 13.2804 20.1432 13.4263 19.6093 13.475C19.1725 13.5236 18.7842 13.7669 18.3474 13.5723C18.1047 13.475 17.8135 13.329 17.5708 13.2317C16.9884 12.9399 16.406 12.6966 15.775 12.4047C15.9691 12.3561 16.0662 12.3074 16.1633 12.2588C16.9884 11.9183 17.8135 11.5777 18.6386 11.1885C19.2696 10.8967 19.9005 10.6534 20.5315 10.3615C21.0654 10.1183 21.1625 9.53451 20.7742 9.14533C20.2403 8.6102 19.7549 8.07507 19.221 7.5886C19.0754 7.44265 18.7842 7.34536 18.5901 7.34536C17.9591 7.34536 17.3281 7.44265 16.6972 7.4913C15.8721 7.53995 15.047 7.63724 14.2218 7.68589C13.5423 7.73454 12.8143 7.78319 12.1348 7.83184C11.7951 7.88048 11.4068 7.92913 11.067 7.92913C10.7758 7.92913 10.4361 7.97778 10.1934 7.83184C9.80509 7.63724 9.46533 7.29671 9.07705 7.05347C7.86365 6.12916 6.50465 5.49674 5.04857 5.1562C4.66028 5.05891 4.272 5.01026 3.88371 4.91296H2.23349C2.03934 4.96161 1.79667 4.96161 1.60253 5.01026C1.02009 5.1562 0.437664 5.30215 0.146448 5.93457V6.71293H0.0493755ZM20.8227 14.7398C20.8227 14.7885 20.8227 14.7885 20.8227 14.7885C20.6286 14.9344 20.483 15.0804 20.2888 15.2263C19.5608 15.9074 18.8813 16.5884 18.1533 17.3182C18.1047 17.3668 17.9106 17.4155 17.862 17.3668C17.2796 17.1236 16.6972 16.929 16.1147 16.6857C15.1926 16.2966 14.2704 15.9074 13.3967 15.5182C12.2319 14.9831 11.1156 14.4479 9.99923 13.7669C8.93144 13.1345 7.91219 12.4047 6.89293 11.675C5.87368 10.9453 4.9515 10.1183 3.98078 9.33992C3.64103 9.09668 3.34982 8.80479 3.0586 8.51291C2.42764 7.92913 1.79667 7.29671 1.55399 6.42105C2.18495 6.32375 2.76739 6.22646 3.34982 6.2751C4.36907 6.3724 5.29125 6.61564 6.21343 7.05347C7.32976 7.53995 8.25194 8.26967 9.22265 8.99938C9.4168 9.14533 9.70801 9.33992 9.95069 9.33992C10.4846 9.38857 11.0185 9.29127 11.5038 9.24262C11.7951 9.24262 12.0863 9.19397 12.329 9.19397C13.2511 9.09668 14.2218 9.04803 15.144 8.95074C15.8235 8.90209 16.503 8.85344 17.1825 8.80479C17.4738 8.80479 17.7164 8.75614 18.0076 8.75614C18.1047 8.75614 18.2503 8.65885 18.2989 8.7075C18.493 8.90209 18.6871 9.09668 18.9298 9.33992C18.7842 9.38857 18.7842 9.38857 18.7357 9.38857C17.134 10.0696 15.4838 10.7994 13.8821 11.4804C13.5423 11.6264 13.2511 12.1128 13.5909 12.5507C13.7365 12.7453 13.9792 12.9399 14.1733 13.0858C15.2411 13.6209 16.3089 14.1561 17.3281 14.6912C18.0076 15.0804 18.7357 15.129 19.5123 14.9344C19.9491 14.8858 20.3859 14.7885 20.8227 14.7398Z"
                       fill="white"
                     />
-                    <path d="M2.86527 23.2534H19.9014V24.7129H2.86527V23.2534Z" fill="white" />
+                    <path d="M2.86527 23.2534p9.9014V24.7129H2.86527V23.2534Z" fill="white" />
                     <path
                       d="M9.4165 16.881C8.97968 16.6378 8.59139 16.3945 8.10604 16.1513C7.86336 16.6378 7.66921 17.0756 7.42653 17.6107C7.23239 17.4161 7.03825 17.2702 6.94117 17.027C6.8441 16.8324 6.8441 16.5891 6.8441 16.3459C6.8441 16.054 6.94117 15.8108 6.94117 15.5189C6.94117 15.4216 6.89264 15.2756 6.8441 15.227C6.45582 14.9351 6.01899 14.6432 5.58217 14.3513C5.53363 14.5946 5.53363 14.8378 5.4851 15.081C5.43656 15.7621 5.38803 16.4432 5.29096 17.1242C5.24242 17.4161 5.38803 17.6594 5.58217 17.854C6.11606 18.3404 6.60142 18.8269 7.08678 19.362C7.42653 19.7999 8.15457 19.6539 8.34871 19.1188C8.68847 18.3891 9.07675 17.6594 9.4165 16.881Z"
                       fill="white"
@@ -1167,9 +1260,9 @@ const Home = () => {
               <Service
                 svg={
                   <svg width="40" height="34" viewBox="0 0 40 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3372 33.2234C26.1908 33.2234 39.0498 20.3571 39.0498 4.49451H10.3372V33.2234Z" fill="#FF972F" />
+                    <path d="M10.3372 33.2234C26.1908 33.2234 39.0498 20.3571 39.0498 4.49451p0.3372V33.2234Z" fill="#FF972F" />
                     <path
-                      d="M13.3755 0C13.3315 0 13.2875 0.0440627 13.2434 0.0440627C11.8783 0.0440627 10.6452 0.440627 9.45619 1.0575C8.31121 1.67438 7.34237 2.46751 6.54969 3.48095C5.88913 4.3622 5.36068 5.28752 5.05241 6.34502C4.87626 6.91784 4.78819 7.53471 4.70011 8.15159C4.65607 8.68034 4.61204 9.2091 4.65607 9.69378C4.70011 10.7072 4.96434 11.7207 5.36068 12.646C5.88913 13.8797 6.68181 14.9372 7.69468 15.8626C8.44332 16.5235 9.28004 17.0522 10.2048 17.4488C10.8654 17.7572 11.57 17.9335 12.3186 18.0657C12.5388 18.1098 12.759 18.1098 12.9792 18.1098C13.0673 18.1098 13.1554 18.1538 13.1994 18.1538H14.2563C14.3444 18.1538 14.4325 18.1098 14.4765 18.1098C14.6967 18.0657 14.9169 18.0657 15.1371 18.0657C15.8417 17.9335 16.5463 17.7572 17.2509 17.4488C18.1757 17.0522 19.0124 16.5235 19.761 15.8626C20.7739 14.9372 21.5225 13.8797 22.095 12.646C22.4914 11.6766 22.7116 10.7072 22.7996 9.69378C22.8437 9.16503 22.7996 8.63628 22.7556 8.15159C22.6675 7.53471 22.5794 6.91784 22.4033 6.34502C22.095 5.28752 21.5666 4.3622 20.906 3.48095C20.1133 2.46751 19.1445 1.63032 17.9995 1.0575C16.8105 0.440627 15.5334 0.0440627 14.2123 0.0440627C13.9921 0.0440627 13.948 0 13.904 0H13.3755ZM13.6398 16.9641C9.28004 17.0082 5.80105 13.395 5.75702 9.29722C5.66894 4.7147 9.28004 1.41 13.1994 1.23375C18.0436 1.01344 21.4345 4.84689 21.5225 8.90066C21.6106 13.395 17.9114 17.0082 13.6398 16.9641Z"
+                      d="M13.3755 0C13.3315 0 13.2875 0.0440627 13.2434 0.0440627C11.8783 0.0440627 10.6452 0.440627 9.45619 1.0575C8.31121 1.67438 7.34237 2.46751 6.54969 3.48095C5.88913 4.3622 5.36068 5.28752 5.05241 6.34502C4.87626 6.91784 4.78819 7.53471 4.70011 8.15159C4.65607 8.68034 4.61204 9.2091 4.65607 9.69378C4.70011 10.7072 4.96434 11.7207 5.36068 12.646C5.88913 13.8797 6.68181 14.9372 7.69468 15.8626C8.44332 16.5235 9.28004 17.0522 10.2048 17.4488C10.8654 17.7572 11.57 17.9335 12.3186 18.0657C12.5388 18.1098 12.759 18.1098 12.9792 18.1098C13.0673 18.1098 13.1554 18.1538 13.1994 18.1538p4.2563C14.3444 18.1538 14.4325 18.1098 14.4765 18.1098C14.6967 18.0657 14.9169 18.0657 15.1371 18.0657C15.8417 17.9335 16.5463 17.7572 17.2509 17.4488C18.1757 17.0522 19.0124 16.5235 19.761 15.8626C20.7739 14.9372 21.5225 13.8797 22.095 12.646C22.4914 11.6766 22.7116 10.7072 22.7996 9.69378C22.8437 9.16503 22.7996 8.63628 22.7556 8.15159C22.6675 7.53471 22.5794 6.91784 22.4033 6.34502C22.095 5.28752 21.5666 4.3622 20.906 3.48095C20.1133 2.46751 19.1445 1.63032 17.9995 1.0575C16.8105 0.440627 15.5334 0.0440627 14.2123 0.0440627C13.9921 0.0440627 13.948 0 13.904 0p3.3755ZM13.6398 16.9641C9.28004 17.0082 5.80105 13.395 5.75702 9.29722C5.66894 4.7147 9.28004 1.41 13.1994 1.23375C18.0436 1.01344 21.4345 4.84689 21.5225 8.90066C21.6106 13.395 17.9114 17.0082 13.6398 16.9641Z"
                       fill="white"
                     />
                     <path
@@ -1215,7 +1308,7 @@ const Home = () => {
               <Service
                 svg={
                   <svg width="43" height="34" viewBox="0 0 43 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.8192 33.7508C28.0631 33.7508 42.0498 19.6707 42.0498 2.31165H10.8192V33.7508Z" fill="#FF972F" />
+                    <path d="M10.8192 33.7508C28.0631 33.7508 42.0498 19.6707 42.0498 2.31165p0.8192V33.7508Z" fill="#FF972F" />
                     <path d="M6.7951 15.0894C6.7951 15.0894 9.42958 17.1147 12.4473 15.0894C15.4649 13.0642 18.0994 15.0894 18.0994 15.0894C18.0994 15.0894 21.4524 17.838 23.7516 15.0894C23.7516 15.0894 26.2424 12.2445 29.4517 15.4752" stroke="white" strokeWidth="1.27782" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M3.29865 21.2135C3.29865 21.2135 6.31633 23.2387 9.76511 21.2135C13.2139 19.1882 16.2316 21.2135 16.2316 21.2135C16.2316 21.2135 20.1115 23.962 22.698 21.2135C22.698 21.2135 25.572 18.3685 29.2124 21.5992" stroke="white" strokeWidth="1.27782" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M27.5833 7.23014C27.4875 7.23014 27.3917 7.32658 27.3917 7.42302C27.3917 7.51946 27.4875 7.61589 27.5833 7.61589C27.6791 7.61589 27.7749 7.51946 27.7749 7.42302C27.7749 7.32658 27.6791 7.23014 27.5833 7.23014ZM27.5833 6.26575C28.206 6.26575 28.7329 6.79616 28.7329 7.42302C28.7329 8.04987 28.206 8.58028 27.5833 8.58028C26.9606 8.58028 26.4337 8.04987 26.4337 7.42302C26.4337 6.79616 26.9606 6.26575 27.5833 6.26575Z" fill="white" />
@@ -1232,7 +1325,7 @@ const Home = () => {
                   <svg width="41" height="37" viewBox="0 0 41 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.437092 5.17493C0.437092 22.4255 14.5774 36.4176 32.0107 36.4176V5.17493H0.437092Z" fill="#FF972F" />
                     <path
-                      d="M40.0498 11.5962V10.7337L40.0014 10.6857C39.9045 10.1586 39.614 9.67946 39.1297 9.39196C38.4033 8.96069 37.6285 8.52943 36.8537 8.09817C35.6431 7.42731 34.4808 6.70854 33.2702 6.03769C32.2048 5.41475 31.1395 4.83973 30.0741 4.2168C28.8634 3.54594 27.7012 2.82717 26.4906 2.15632C25.7158 1.72505 24.9409 1.24587 24.1661 0.814608C23.7787 0.575018 23.3429 0.383345 22.9071 0.143754C22.8102 0.0479181 22.6165 0.0479181 22.3744 0H22.1322C22.0838 0 22.0354 0.0479181 21.987 0.0479181C21.309 0.143754 20.7763 0.431263 20.4373 1.00628C20.1468 1.53338 19.8562 2.06048 19.5172 2.58758C18.6456 4.07304 17.8223 5.51059 16.9507 6.99605C16.757 7.33148 16.5633 7.47523 16.1759 7.47523C15.4979 7.47523 15.0136 7.81066 14.6262 8.33776C14.4325 8.62527 14.3357 8.96069 14.1904 9.29612V21.5632C14.1904 21.6111 14.2388 21.6111 14.2388 21.659C14.2873 22.234 14.6262 22.7132 15.0621 23.0486C15.3526 23.2882 15.74 23.3361 16.079 23.4799H34.9167L34.9651 23.432C35.982 23.3841 36.8537 22.3299 36.8537 21.3236C36.8053 20.0777 36.8537 18.8318 36.8537 17.6339C36.8537 17.4901 36.9021 17.2984 36.999 17.1547C37.1443 16.8672 37.338 16.5797 37.5317 16.2922C37.9191 15.6692 38.258 15.0463 38.6455 14.3754C39.0813 13.4171 39.7108 12.6025 40.0498 11.5962ZM35.7399 12.7462V18.1131C34.6261 18.2568 33.706 18.6881 32.8828 19.4548C32.108 20.2215 31.6237 21.1798 31.4784 22.2819H31.43C27.5559 22.2819 23.6819 22.2819 19.8078 22.2819C19.6625 22.2819 19.6141 22.234 19.6141 22.0903C19.6141 22.0423 19.6141 21.9465 19.6141 21.8986C19.372 20.7006 18.7424 19.7423 17.7739 19.0235C17.1444 18.5922 16.4664 18.2568 15.74 18.161C15.5463 18.1131 15.4495 18.0651 15.4979 17.8735C15.4979 16.2442 15.4979 14.5671 15.4979 12.9379C15.4979 12.89 15.4979 12.7941 15.4979 12.7941C15.8853 12.6983 16.2243 12.6025 16.5633 12.5066C17.3865 12.2191 18.1129 11.7399 18.694 11.0212C19.2267 10.3982 19.5172 9.67946 19.6625 8.86486C19.711 8.62527 19.7594 8.57735 20.0015 8.57735C23.7787 8.57735 27.5559 8.57735 31.3332 8.57735H31.5753C31.7206 10.8295 33.5607 12.5546 35.7399 12.7462ZM25.6673 2.97092C28.2339 4.45639 30.8489 5.94185 33.4639 7.47523H18.016C18.5972 6.46895 19.1783 5.46267 19.7594 4.45639C22.0838 5.271 24.0209 4.83973 25.6673 2.97092ZM20.3405 3.40219C20.631 2.87509 20.97 2.39591 21.2606 1.82089C21.648 1.10212 22.2775 0.958363 22.8586 1.29379C23.4397 1.62922 24.0693 2.01256 24.6504 2.34799C23.7787 3.59386 21.7933 4.12096 20.3405 3.40219ZM36.8537 9.39196C37.3864 9.67946 37.8706 9.96697 38.4033 10.2545C38.8392 10.4941 39.1781 11.0691 38.8392 11.6441C38.3549 12.5066 37.8706 13.3212 37.3864 14.1838C37.2411 14.4713 37.0474 14.7109 36.9021 15.0463V9.39196H36.8537ZM32.5922 8.57735C33.3186 8.57735 34.045 8.57735 34.723 8.57735C35.1104 8.57735 35.5946 8.96069 35.6431 9.34404C35.6915 9.82322 35.6915 10.2545 35.6915 10.7337C35.6915 11.0212 35.6915 11.3566 35.6915 11.6441C33.9966 11.2608 32.9796 10.2545 32.5922 8.57735ZM35.7399 19.2631C35.7399 19.9819 35.7883 20.6527 35.7399 21.3715C35.6915 21.9465 35.1104 22.3778 34.6745 22.3299C34.384 22.2819 34.0934 22.3299 33.8029 22.3299H32.6407C32.9312 20.4131 34.5777 19.3589 35.7399 19.2631ZM18.4519 8.57735C18.3066 9.87114 17.1928 11.3566 15.4011 11.6441C15.4011 10.9733 15.4495 10.3024 15.4011 9.63155C15.4011 9.20028 15.7885 8.57735 16.3696 8.57735C17.0475 8.52943 17.7255 8.57735 18.4519 8.57735ZM18.4519 22.2819C17.7255 22.2819 17.0475 22.2819 16.3696 22.2819C15.8369 22.2819 15.4011 21.8507 15.4011 21.3236C15.4011 20.7486 15.4011 20.2215 15.4011 19.6464V19.2152C16.9023 19.4548 18.3066 20.8444 18.4519 22.2819Z"
+                      d="M40.0498 11.5962V10.7337L40.0014 10.6857C39.9045 10.1586 39.614 9.67946 39.1297 9.39196C38.4033 8.96069 37.6285 8.52943 36.8537 8.09817C35.6431 7.42731 34.4808 6.70854 33.2702 6.03769C32.2048 5.41475 31.1395 4.83973 30.0741 4.2168C28.8634 3.54594 27.7012 2.82717 26.4906 2.15632C25.7158 1.72505 24.9409 1.24587 24.1661 0.814608C23.7787 0.575018 23.3429 0.383345 22.9071 0.143754C22.8102 0.0479181 22.6165 0.0479181 22.3744 0H22.1322C22.0838 0 22.0354 0.0479181 21.987 0.0479181C21.309 0.143754 20.7763 0.431263 20.4373 1.00628C20.1468 1.53338 19.8562 2.06048 19.5172 2.58758C18.6456 4.07304 17.8223 5.51059 16.9507 6.99605C16.757 7.33148 16.5633 7.47523 16.1759 7.47523C15.4979 7.47523 15.0136 7.81066 14.6262 8.33776C14.4325 8.62527 14.3357 8.96069 14.1904 9.29612V21.5632C14.1904 21.6111 14.2388 21.6111 14.2388 21.659C14.2873 22.234 14.6262 22.7132 15.0621 23.0486C15.3526 23.2882 15.74 23.3361 16.079 23.4799H34.9167L34.9651 23.432C35.982 23.3841 36.8537 22.3299 36.8537 21.3236C36.8053 20.0777 36.8537 18.8318 36.8537 17.6339C36.8537 17.4901 36.9021 17.2984 36.999 17.1547C37.1443 16.8672 37.338 16.5797 37.5317 16.2922C37.9191 15.6692 38.258 15.0463 38.6455 14.3754C39.0813 13.4171 39.7108 12.6025 40.0498 11.5962ZM35.7399 12.7462V18.1131C34.6261 18.2568 33.706 18.6881 32.8828 19.4548C32.108 20.2215 31.6237 21.1798 31.4784 22.2819H31.43C27.5559 22.2819 23.6819 22.2819 19.8078 22.2819C19.6625 22.2819 19.6141 22.234 19.6141 22.0903C19.6141 22.0423 19.6141 21.9465 19.6141 21.8986C19.372 20.7006 18.7424 19.7423 17.7739 19.0235C17.1444 18.5922 16.4664 18.2568 15.74 18.161C15.5463 18.1131 15.4495 18.0651 15.4979 17.8735C15.4979 16.2442 15.4979 14.5671 15.4979 12.9379C15.4979 12.89 15.4979 12.7941 15.4979 12.7941C15.8853 12.6983 16.2243 12.6025 16.5633 12.5066C17.3865 12.2191 18.1129 11.7399 18.694 11.0212C19.2267 10.3982 19.5172 9.67946 19.6625 8.86486C19.711 8.62527 19.7594 8.57735 20.0015 8.57735C23.7787 8.57735 27.5559 8.57735 31.3332 8.57735H31.5753C31.7206 10.8295 33.5607 12.5546 35.7399 12.7462ZM25.6673 2.97092C28.2339 4.45639 30.8489 5.94185 33.4639 7.47523p8.016C18.5972 6.46895 19.1783 5.46267 19.7594 4.45639C22.0838 5.271 24.0209 4.83973 25.6673 2.97092ZM20.3405 3.40219C20.631 2.87509 20.97 2.39591 21.2606 1.82089C21.648 1.10212 22.2775 0.958363 22.8586 1.29379C23.4397 1.62922 24.0693 2.01256 24.6504 2.34799C23.7787 3.59386 21.7933 4.12096 20.3405 3.40219ZM36.8537 9.39196C37.3864 9.67946 37.8706 9.96697 38.4033 10.2545C38.8392 10.4941 39.1781 11.0691 38.8392 11.6441C38.3549 12.5066 37.8706 13.3212 37.3864 14.1838C37.2411 14.4713 37.0474 14.7109 36.9021 15.0463V9.39196H36.8537ZM32.5922 8.57735C33.3186 8.57735 34.045 8.57735 34.723 8.57735C35.1104 8.57735 35.5946 8.96069 35.6431 9.34404C35.6915 9.82322 35.6915 10.2545 35.6915 10.7337C35.6915 11.0212 35.6915 11.3566 35.6915 11.6441C33.9966 11.2608 32.9796 10.2545 32.5922 8.57735ZM35.7399 19.2631C35.7399 19.9819 35.7883 20.6527 35.7399 21.3715C35.6915 21.9465 35.1104 22.3778 34.6745 22.3299C34.384 22.2819 34.0934 22.3299 33.8029 22.3299H32.6407C32.9312 20.4131 34.5777 19.3589 35.7399 19.2631ZM18.4519 8.57735C18.3066 9.87114 17.1928 11.3566 15.4011 11.6441C15.4011 10.9733 15.4495 10.3024 15.4011 9.63155C15.4011 9.20028 15.7885 8.57735 16.3696 8.57735C17.0475 8.52943 17.7255 8.57735 18.4519 8.57735ZM18.4519 22.2819C17.7255 22.2819 17.0475 22.2819 16.3696 22.2819C15.8369 22.2819 15.4011 21.8507 15.4011 21.3236C15.4011 20.7486 15.4011 20.2215 15.4011 19.6464V19.2152C16.9023 19.4548 18.3066 20.8444 18.4519 22.2819Z"
                       fill="white"
                     />
                     <path
@@ -1248,7 +1341,6 @@ const Home = () => {
                 small={true}
               />
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.434882088902!2d-64.2347723843618!3d-31.37457028141809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299b7ceb33413%3A0x89c5c3a779773b97!2sVida%20Cowork!5e0!3m2!1ses-419!2sar!4v1638208913348!5m2!1ses-419!2sar" width="100%" height="450" style={{ border: '0' }} allowFullScreen="true" loading="lazy"></iframe>
           </div>
         </div>
       </div>
@@ -1279,9 +1371,9 @@ const Home = () => {
             </div>
           </div>
           <div className="col-lg-5 col-md-5-col-sm-12">
-            <img src={GreenSectionSeparatorRight} alt="Vida" className="consultSVGContainer" style={{ position: 'absolute' }} />
+            <img src={RightSVGGreenSection} alt="Vida" className="consultSVGContainer" style={{ position: 'absolute' }} />
             <div className="consultContainer">
-              <h1 className="consultTitle extraBoldFont">Envía tu consulta</h1>
+              <p className="consultTitle extraBoldFont">Enviá tu consulta</p>
               <hr className="consultSeparator" />
               <div className="md-form input-with-pre-icon">
                 <i className="fas fa-envelope input-prefix"></i>
@@ -1304,7 +1396,7 @@ const Home = () => {
             </div>
             <div className="consultContainerMobile">
               <div className="container">
-                <h1 className="consultTitleMobile extraBoldFont">Envía tu consulta</h1>
+                <p className="consultTitleMobile extraBoldFont">Enviá tu consulta</p>
                 <hr className="consultSeparator" />
                 <div className="md-form input-with-pre-icon">
                   <i className="fas fa-envelope input-prefix"></i>
@@ -1331,33 +1423,33 @@ const Home = () => {
       </div>
       <div className="ratingContainerMobile">
         <div className="d-flex flex-column">
-          <div className="ratingContent">
+          <div className="container">
             <div className="container">
-              <p className="opinionTitle">
+              <p className="opinionSubtitleMobile">
                 Nos esforzamos cada día para brindarle un espacio cómodo para trabajar. <b>Tu opinión es relevante.</b>
               </p>
-              <p className="opinionSubtitle">Mirá lo que otros usuarios dicen de Vida:</p>
-              <div className="opinionContainer">
-                <img src={ExampleRatingPhoto} alt="Vida" className="ratingUserPhoto" />
-                <div className="flex-column opinionInformation">
-                  <p className="opinionName">Nombre, Apellido</p>
-                  <div className="opinionCalification">
-                    <div className="d-flex">
-                      <img src={YellowStar} alt="Vida" />
-                      <img src={YellowStar} alt="Vida" />
-                      <img src={YellowStar} alt="Vida" />
-                      <img src={YellowStar} alt="Vida" />
-                      <img src={GrayStar} alt="Vida" />
-                    </div>
+              <p className="opinionContent1Mobile">Mirá lo que otros usuarios dicen de Vida:</p>
+            </div>
+            <div className="opinionContainer">
+              <img src={ExampleRatingPhoto} alt="Vida" className="ratingUserPhoto" />
+              <div className="flex-column opinionInformation">
+                <p className="opinionName">Nombre, Apellido</p>
+                <div className="opinionCalification">
+                  <div className="d-flex">
+                    <img src={YellowStar} alt="Vida" />
+                    <img src={YellowStar} alt="Vida" />
+                    <img src={YellowStar} alt="Vida" />
+                    <img src={YellowStar} alt="Vida" />
+                    <img src={GrayStar} alt="Vida" />
                   </div>
-                  <p className="opinionDetail">Me encantó el lugar!! Fui a una reunión con mi empresa.</p>
                 </div>
+                <p className="opinionDetail">Me encantó el lugar!! Fui a una reunión con mi empresa.</p>
               </div>
             </div>
           </div>
           <div className="consultContainerMobile">
             <div className="container">
-              <h1 className="consultTitleMobile extraBoldFont">Envía tu consulta</h1>
+              <p className="consultTitleMobile extraBoldFont">Envía tu consulta</p>
               <hr className="consultSeparator" />
               <div className="md-form input-with-pre-icon">
                 <i className="fas fa-envelope input-prefix"></i>
@@ -1383,7 +1475,7 @@ const Home = () => {
       </div>
       <div className="partnersContainer">
         <div className="container">
-          <h1 className="partnersTitle extraBoldFont">NUESTROS PARTNERS</h1>
+          <p className="partnersTitle extraBoldFont">NUESTROS PARTNERS</p>
           <div className="partnersLogos">
             <img src={Partner1} alt="AnkaLoo" />
             <img src={Partner2} alt="Argentis" />
@@ -1396,7 +1488,7 @@ const Home = () => {
       </div>
       <div className="partnersContainerMobile">
         <div className="container">
-          <h1 className="partnersTitle extraBoldFont">NUESTROS PARTNERS</h1>
+          <p className="partnersTitle extraBoldFont">NUESTROS PARTNERS</p>
           <div className="partnersLogos">
             <img src={Partner1} alt="AnkaLoo" />
             <img src={Partner2} alt="Argentis" />

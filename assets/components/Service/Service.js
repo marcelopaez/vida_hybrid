@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Service = ({ svg, title, subtitle, small }) => {
+const Service = ({ svg, title, subtitle, small, darkText }) => {
   return (
-    <div className={!small ? 'serviceContainer' : 'smallServiceContainer'}>
+    <div className={!small ? (!darkText ? 'serviceContainer' : 'serviceContainerDarkText') : !darkText ? 'smallServiceContainer' : 'smallServiceContainerDarkText'}>
       <div className={!small ? 'serviceContainerImage' : 'smallServiceContainerImage'}>{svg}</div>
       <div className={!small ? 'serviceContainerInformation' : 'smallServiceContainerInformation'}>
         <p className={!small ? 'serviceTitle boldFont' : 'smallServiceTitle boldFont'}>{title}</p>

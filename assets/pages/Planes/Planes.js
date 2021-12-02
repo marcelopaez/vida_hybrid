@@ -16,7 +16,7 @@ const Planes = () => {
             <svg width="707" height="1037" viewBox="0 0 707 1037" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute' }}>
               <path d="M707 0C707 572.749 390.485 1037 0 1037V0H707Z" fill="#004B2A" />
             </svg>
-            <Link to="/">
+            <Link to="/app">
               <img src={OrangeLogo} className="logo" alt="Vida" />
             </Link>
             <div className="planesHeaderContent">
@@ -57,7 +57,7 @@ const Planes = () => {
         </div>
       </div>
 
-      <div className="choosePlan">
+      <div className="choosePlanContainer">
         <div className="choosePlanTitle boldFont">¡Elegí el plan que más se adapte a vos!</div>
         <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
         <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
@@ -125,7 +125,7 @@ const Planes = () => {
 
       <div className="container">
         <div className="whyPlanContainer">
-          <div className="whyPlanTitle">¿Por qué suscribirme a un plan?</div>
+          <div className="whyPlanTitle extraBoldFont">¿Por qué suscribirme a un plan?</div>
           <div className="whyPlanText">Te será de mucha ayuda para organizarte ya que podrás visualizar: Todos los detalles de tu plan La cantidad de horas que utilizaste y cuántas te quedan Un calendario donde ver tus reservas y realizar nuevas</div>
         </div>
       </div>

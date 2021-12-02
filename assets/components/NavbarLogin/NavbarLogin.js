@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import GreenLogo from '../../images/GreenLogo.svg';
+import OrangeLogo from '../../images/OrangeLogo.svg';
 
-const Navbar = () => {
+const NavbarLogin = () => {
   const [windowScroll, setWindowScroll] = useState(0);
 
   const handleScroll = () => {
@@ -19,38 +19,38 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar py-3">
         {windowScroll !== 0 && (
           <Link to="/">
-            <img src={GreenLogo} className="logoScroll" alt="Vida" />
+            <img src={OrangeLogo} className="logoScroll" alt="Vida" />
           </Link>
         )}
         <div className="collapse navbar-collapse" id="navbarVida">
           <ul className="navbar-nav">
             <li className="nav-item align-middle">
-              <Link to="/planes" className="nav-link">
+              <Link to="/planes" className="nav-link navbarItemLogin">
                 Planes
               </Link>
             </li>
             <li className="nav-item align-middle">
-              <Link to="/salas" className="nav-link">
+              <Link to="/salas" className="nav-link navbarItemLogin">
                 Salas de Reunión
               </Link>
             </li>
             <li className="nav-item align-middle">
-              <Link to="/oficinas" className="nav-link">
+              <Link to="/oficinas" className="nav-link navbarItemLogin">
                 Oficinas
               </Link>
             </li>
             <li className="nav-item align-middle">
-              <Link to="/eventos" className="nav-link">
+              <Link to="/eventos" className="nav-link navbarItemLogin">
                 Eventos
               </Link>
             </li>
             <li className="nav-item align-middle">
-              <Link to="/comunidad" className="nav-link">
+              <Link to="/comunidad" className="nav-link navbarItemLogin">
                 Comunidad
               </Link>
             </li>
             <li className="nav-item align-middle">
-              <Link to="/login" className="nav-link boldFont greenBackground nav-item-login">
+              <Link to="/login" className="nav-link navbarItemLogin navbarItemLoginButton">
                 Iniciar Sesión
               </Link>
             </li>
@@ -61,4 +61,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarLogin;

@@ -17,7 +17,9 @@ const OrangePlan = ({ svg, title, price, time }) => {
         <option value="2">FULL</option>
       </select>
       <p className="orangePlanTime">{time} Hs. en salas de reunión</p>
-      <button className="orangePlanButton">Suscribite</button>
+      <div className="orangePlanButtonContainer">
+        <button className="orangePlanButton">Suscribite</button>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,60 @@
+.planHorizontalContainer {
+  border: 2px solid #fff;
+  background-color: transparent;
+  border-radius: 20px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+  background: #fff;
+}
+
+.planHorizontalLeftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.planHorizontalContainerTitle {
+  font-size: 1.5rem;
+  text-align: center;
+  color: $secondary;
+}
+
+.planHorizontalRightSide {
+  text-align: left;
+}
+
+.planHorizontalContainerDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.15rem;
+}
+
+.planHorizontalContainerPrice {
+  font-size: 2.25rem;
+  text-align: center;
+}
+
+@media (min-width: 300px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

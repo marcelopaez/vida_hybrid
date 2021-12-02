@@ -108,6 +108,32 @@
   margin-top: 35px;
 }
 
+.eventsReservationContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 228px 0 450px 0;
+}
+
+.eventsReservationTitle {
+  font-size: 2.25rem;
+  color: $secondary;
+  margin-bottom: 54px;
+}
+
+.eventsReservationInput {
+  margin: 0 14px 0 0 !important;
+}
+
+.eventsReservationButton {
+  background-color: $secondary;
+  margin-top: 54px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 15px;
+  width: 100%;
+}
+
 @media (min-width: 300px) {
 }
 

@@ -22,19 +22,18 @@
   width: 400px;
 }
 
-.choosePlan {
+.chooseRoomContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
 }
 
-.choosePlanTitle {
+.chooseRoomTitle {
   color: $secondary;
   font-size: 2.25rem;
 }
 
-.choosePlanImage {
+.chooseRoomImage {
   width: 125px;
   height: 125px;
   margin: 1rem;
@@ -43,7 +42,7 @@
 .hourPlansContainer {
   display: flex;
   flex-direction: column;
-  margin: 200px 0 192px 0;
+  margin: 180px 0 192px 0;
 }
 
 .hourPlansTitle {
@@ -146,9 +145,9 @@
 }
 
 @media (min-width: 300px) {
-  .choosePlan {
-    margin-top: 10rem;
+  .chooseRoomContainer {
     flex-direction: column;
+    margin: 6rem 1rem 220px 1rem;
   }
 }
 
@@ -156,8 +155,9 @@
 }
 
 @media (min-width: 768px) {
-  .choosePlan {
+  .chooseRoomContainer {
     flex-direction: row;
+    margin: 6rem 2rem 220px 2rem;
   }
 }
 

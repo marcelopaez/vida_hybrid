@@ -1,6 +1,7 @@
 .orangePlan {
-  margin: 2rem 1rem;
+  margin: 1.5rem;
   box-shadow: 2px 2px 2px #cecece;
+  border: 1px solid #cecece;
   background: #fff;
   height: 500px;
   width: 340px;
@@ -18,6 +19,10 @@
   position: absolute;
 }
 
+.orangePlanTitle {
+  font-size: 1.5rem;
+}
+
 .orangePlanInformation {
   position: absolute;
   color: #fff;
@@ -33,7 +38,7 @@
 }
 
 .orangePlanPrice {
-  font-size: 3rem;
+  font-size: 2.25rem;
 }
 
 .orangePlanPrice {
@@ -48,6 +53,7 @@
   background: #fafafa;
   color: #afafaf;
   width: 300px;
+  padding: 0 1.85rem 0 1.85rem;
 }
 
 .orangePlanTime {
@@ -55,6 +61,11 @@
   top: 210px;
   color: #000 !important;
   font-size: 1.1rem;
+  padding: 0 1.85rem 0 1.85rem;
+}
+
+.orangePlanButtonContainer {
+  padding: 0 1.85rem 0 1.85rem;
 }
 
 .orangePlanButton {

@@ -7,8 +7,10 @@
 @import './components/footer.scss';
 @import './components/sideMenuItem.scss';
 @import './components/plan.scss';
+@import './components/planHorizontal.scss';
 @import './components/service.scss';
 @import './components/orangePlan.scss';
+@import './components/navbarLogin.scss';
 
 // Pages
 @import './pages/home.scss';
@@ -20,3 +22,4 @@
 @import './pages/oficinas.scss';
 @import './pages/comunidad.scss';
 @import './pages/eventos.scss';
+@import './pages/login.scss';

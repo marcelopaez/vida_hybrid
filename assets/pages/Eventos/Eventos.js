@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar';
 import NavbarMobile from '../../components/NavbarMobile';
 import OrangeLogo from '../../images/OrangeLogo.svg';
 import BackgroundImage from '../../images/EventsBackground.jpg';
-import GreenSectionSeparatorLeft from '../../images/GreenSectionSeparatorLeft.svg';
+import LeftSVGGreenSection from '../../images/LeftSVGGreenSection.svg';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -71,7 +71,7 @@ const Eventos = () => {
       </div>
 
       <div className="eventsFormatContainer">
-        <img src={GreenSectionSeparatorLeft} alt="Vida" className="eventsFormatSVGContainer" style={{ position: 'absolute' }} />
+        <img src={LeftSVGGreenSection} alt="Vida" className="eventsFormatSVGContainer" style={{ position: 'absolute' }} />
         <div className="eventsFormatSVGContent">
           <p className="extraBoldFont">Accedé a todas nuestras salas a través de nuestros planes</p>
         </div>
@@ -373,17 +373,17 @@ const Eventos = () => {
       </div>
 
       <div className="container">
-        <div className="officesReservationContainer">
-          <p className="officesReservationTitle">¿Te interesa reservar?</p>
+        <div className="eventsReservationContainer">
+          <p className="eventsReservationTitle boldFont">¿Te interesa reservar?</p>
           <div className="md-form form-lg">
-            <input type="text" id="name" className="form-control form-control-lg" />
+            <input type="text" id="name" className="form-control form-control-lg eventsReservationInput" />
             <label for="name">Nombre y apellido / Empresa</label>
           </div>
           <div className="md-form form-lg">
-            <input type="email" id="email" className="form-control form-control-lg" />
+            <input type="email" id="email" className="form-control form-control-lg eventsReservationInput" />
             <label for="email">E-mail</label>
           </div>
-          <button className="officesReservationButton">Enviar</button>
+          <button className="eventsReservationButton">Enviar</button>
         </div>
       </div>
     </main>

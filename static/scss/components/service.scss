@@ -5,10 +5,24 @@
   margin: 25px;
 }
 
+.serviceContainerDarkText {
+  @extend .serviceContainer;
+  flex-direction: row !important;
+  color: #000;
+  flex: unset;
+  justify-content: space-between;
+  height: unset !important;
+}
+
 .smallServiceContainer {
   display: flex;
   color: #fff;
   margin-bottom: 35px;
+}
+
+.smallServiceContainerDarkText {
+  @extend .smallServiceContainer;
+  color: #000;
 }
 
 .serviceContainerImage,

@@ -6,19 +6,19 @@ const NavbarMobile = () => {
   return (
     <nav className="navbar navbar-expand-lg navbarMobile fixed-top navbar-dark d-flex">
       <div className="buttonSmallUp">
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobileVida" aria-controls="navbarMobileVida" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
       </div>
       <Link to="/">
-        <img src={OrangeLogoSmall} alt="Vida" loading="lazy" />
+        <img src={OrangeLogoSmall} alt="Vida" loading="lazy" width="150px" />
       </Link>
       <div className="buttonSmallDown">
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobileVida" aria-controls="navbarMobileVida" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
       </div>
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className="collapse navbar-collapse" id="navbarMobileVida">
         <ul className="navbar-nav">
           <li className="nav-item align-middle">
             <Link to="/planes" className="nav-link">

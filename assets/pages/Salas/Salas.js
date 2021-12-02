@@ -7,7 +7,7 @@ import OrangePlan from '../../components/OrangePlan';
 import BackgroundImage from '../../images/PlanesBackground.jpg';
 import Service from '../../components/Service';
 import ChoosePlan from '../../images/ChoosePlan.jpg';
-import GreenSectionSeparatorLeft from '../../images/GreenSectionSeparatorLeft.svg';
+import LeftSVGGreenSection from '../../images/LeftSVGGreenSection.svg';
 
 const Salas = () => {
   return (
@@ -137,11 +137,11 @@ const Salas = () => {
         </div>
       </div>
 
-      <div className="choosePlan">
-        <div className="choosePlanTitle boldFont">¡Explorá nuestras salas!</div>
-        <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
-        <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
-        <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
+      <div className="chooseRoomContainer">
+        <div className="chooseRoomTitle boldFont">¡Explorá nuestras salas!</div>
+        <img className="chooseRoomImage" src={ChoosePlan} alt="Plan" />
+        <img className="chooseRoomImage" src={ChoosePlan} alt="Plan" />
+        <img className="chooseRoomImage" src={ChoosePlan} alt="Plan" />
       </div>
 
       <div className="container">
@@ -186,7 +186,7 @@ const Salas = () => {
       </div>
 
       <div className="roomsFooter ">
-        <img src={GreenSectionSeparatorLeft} alt="Vida" className="roomsFooterSVGContainer" style={{ position: 'absolute' }} />
+        <img src={LeftSVGGreenSection} alt="Vida" className="roomsFooterSVGContainer" style={{ position: 'absolute' }} />
         <div className="roomsFooterSVGContent">
           <p className="extraBoldFont">Accedé a todas nuestras salas a través de nuestros planes</p>
         </div>

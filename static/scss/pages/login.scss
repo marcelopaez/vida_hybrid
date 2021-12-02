@@ -1,0 +1,63 @@
+.loginContainer {
+  margin-bottom: 200px;
+}
+
+.loginTitle {
+  color: #4f4949;
+  font-size: 3rem;
+  margin: 100px 0;
+}
+
+.inputIconOrange {
+  color: $secondary !important;
+}
+
+.loginButton {
+  background: $secondary;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.consultEmailLogin,
+.consultPasswordLogin {
+  margin-bottom: 50px !important;
+}
+
+.loginSeparator {
+  height: 300px;
+  border-left: 2px solid #e9e8e8;
+}
+
+.loginSubtitle {
+  font-size: 1.5rem;
+  color: #4f4949;
+  margin-left: 65px;
+}
+
+.loginIconsContainer {
+  display: flex;
+  align-items: center;
+  margin: 100px 0 0 65px;
+}
+
+@media (min-width: 300px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
