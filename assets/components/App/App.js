@@ -12,6 +12,7 @@ import Oficinas from '../../pages/Oficinas';
 import Eventos from '../../pages/Eventos';
 import Comunidad from '../../pages/Comunidad';
 import Login from '../../pages/Login';
+import Reservas from '../../pages/Reservas';
 import NotFound from '../../components/NotFound';
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
         <Route exact path="/comunidad" component={Comunidad} />
         <Route exact path="/eventos" component={Eventos} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/reservas" component={Reservas} />
         <Redirect to="/404" component={NotFound} />
       </Switch>
       <Footer />

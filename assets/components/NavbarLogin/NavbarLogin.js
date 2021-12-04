@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import GreenLogo from '../../images/GreenLogo.svg';
 import OrangeLogo from '../../images/OrangeLogo.svg';
 
 const NavbarLogin = () => {
@@ -17,9 +18,12 @@ const NavbarLogin = () => {
   return (
     <main>
       <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar py-3">
+        <a class="navbar-brand" href="#">
+          <img src={OrangeLogo} alt="Vida" />
+        </a>
         {windowScroll !== 0 && (
           <Link to="/">
-            <img src={OrangeLogo} className="logoScroll" alt="Vida" />
+            <img src={GreenLogo} alt="Vida" style={{ marginLeft: '-218px' }} />
           </Link>
         )}
         <div className="collapse navbar-collapse" id="navbarVida">

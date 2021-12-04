@@ -24,7 +24,6 @@
 }
 
 .welcomeContainerMobile {
-  position: relative;
   background: $primaryDarker;
   height: 50vh;
 }
@@ -38,8 +37,7 @@
 .welcomeContainerMobileContent {
   position: absolute;
   text-align: left;
-  left: 5px;
-  margin-top: 15px;
+  margin: 15px 0 0 5px;
 }
 
 .plansContainerHome {
@@ -51,6 +49,13 @@
 .plansTitle {
   text-align: center;
   margin: 0;
+  padding: 7.5rem 0 1.85rem 0;
+}
+
+.plansSubtitle {
+  text-align: center;
+  padding-bottom: 3.1rem;
+  font-size: 1.5rem;
 }
 
 .plansContainerMobile {
@@ -65,35 +70,19 @@
   margin-bottom: 10px;
 }
 
-.plansSubtitle {
-  text-align: center;
-  padding-bottom: 3.1rem;
-  font-size: 1.5rem;
-}
-
 .plansSubtitleMobile {
   font-size: 1rem;
   margin-bottom: 30px;
 }
 
 .meetingsContainer {
-  color: #fff;
   position: relative;
   z-index: 2;
-  width: 100%;
-  background-position: center;
   height: 70vh;
-  background-repeat: no-repeat;
 }
 
 .meetingsContainerMobile {
   color: #fff;
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  top: 0;
 }
 
 .meetingsContainerMobile,
@@ -102,9 +91,8 @@
 }
 
 .roomsContainer {
-  position: relative;
   color: #fff;
-  top: -700px;
+  margin-top: -700px;
 }
 
 .roomsTitle {
@@ -125,7 +113,6 @@
 
 .roomsSubtitleMobile {
   margin-top: 15px;
-  width: 100%;
 }
 
 .roomsContent1 {
@@ -135,7 +122,6 @@
 }
 
 .roomsContent1Mobile {
-  width: 100%;
   padding-bottom: 30px;
 }
 
@@ -156,7 +142,6 @@
 }
 
 .servicesContainer {
-  position: relative;
   margin-top: -25px;
   background: $primaryDarker;
 }
@@ -166,10 +151,8 @@
 }
 
 .servicesSection {
-  background-color: $primaryDarker;
-  color: #fff;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -195,32 +178,18 @@
 }
 
 .eventsContainer {
-  position: relative;
   color: #fff;
-  top: -650px;
-  right: -1100px;
-  z-index: 2;
-  width: 100%;
-  height: 65vh;
+  margin: -650px 0 0 1100px;
 }
 
 .eventsContainerMobile {
   color: #fff;
-  right: -1100px;
-  z-index: 2;
-  width: 100%;
-  padding-bottom: 33px;
 }
 
 .eventsSVGContainer {
   position: absolute;
   right: 0;
   top: -50px;
-}
-
-.eventsContainerContent {
-  position: absolute;
-  color: #fff;
 }
 
 .eventsTitle {
@@ -253,7 +222,8 @@
 }
 
 .eventsContent1Mobile {
-  @extend .eventsContent1;
+  font-size: 1.1rem;
+  margin: 0;
   padding: 0 0 40px 0;
   width: 100%;
 }
@@ -261,10 +231,8 @@
 .eventsButton {
   margin-left: 0;
 }
-
+// acá va comunidad
 .strategicPlaceContainer {
-  position: relative;
-  width: 100%;
   background-color: $primaryDarker;
 }
 
@@ -275,17 +243,11 @@
 }
 
 .strategicPlaceLogoContainer {
-  margin-bottom: 86px;
   color: #fff;
   padding-top: 90px;
 }
 
 .locationText {
-  font-size: 0.85rem;
-  margin: 0;
-}
-
-.locationSubText {
   font-size: 0.85rem;
 }
 
@@ -293,16 +255,20 @@
   margin-right: 30px;
 }
 
+.strategicPlaceTitle {
+  color: #fff;
+  text-align: left;
+  padding-top: 90px;
+  margin-bottom: 50px;
+  font-size: 3rem;
+}
+
 .ratingContainer {
-  position: relative;
-  width: 100%;
   background-color: $secondary;
   color: #fff;
 }
 
 .ratingContainerMobile {
-  position: relative;
-  width: 100%;
   background-color: $secondary;
   color: #fff;
 }
@@ -320,7 +286,6 @@
 }
 
 .opinionSubtitleMobile {
-  width: 100%;
   padding: 30px 0 15px 0;
 }
 
@@ -331,22 +296,17 @@
 }
 
 .opinionContent1Mobile {
-  @extend .opinionContent1;
+  font-size: 1.1rem;
+  margin: 0;
   padding: 0 0 40px 0;
-  width: 100%;
 }
 
 .opinionContainer {
   background-color: #fff;
-  color: #000;
   border-radius: 15px;
   padding: 1rem;
-  display: flex;
-  align-items: center;
-
-  p {
-    margin-bottom: 0;
-  }
+  color: #9f9d9b;
+  margin-bottom: 10px;
 }
 
 .ratingUserPhoto {
@@ -355,7 +315,6 @@
 
 .opinionName {
   margin: 20px 0 10px 0 !important;
-  color: #9f9d9b;
   font-size: 1rem;
 }
 
@@ -365,29 +324,17 @@
 
 .opinionDetail {
   margin: 10px 0 20px 0 !important;
-  color: #9f9d9b;
   font-size: 0.8rem;
 }
 
-.strategicPlaceTitle {
-  color: #fff;
-  text-align: left;
-  padding-top: 90px;
-  margin-bottom: 50px;
-  font-size: 3rem;
-}
-
 .consultSVGContainer {
-  position: absolute;
   right: -15px;
   top: -50px;
   z-index: 2;
 }
 
-.consultContainer,
-.consultContainerMobile {
+.consultContainer {
   position: relative;
-  color: #fff;
   z-index: 3;
 }
 
@@ -397,13 +344,13 @@
 
 .consultTitle {
   font-size: 2.25rem;
-  // padding: 10px 0 40px 0;
   padding-bottom: 40px;
   margin: 0;
 }
 
 .consultTitleMobile {
-  @extend .consultTitle;
+  font-size: 2.25rem;
+  margin: 0;
   padding: 50px 0 40px 0;
 }
 
@@ -423,15 +370,6 @@
   margin-bottom: 30px !important;
 }
 
-.consultEmail,
-#consultContent {
-  width: 50%;
-}
-
-.consultEmailMobile {
-  width: 100% !important;
-}
-
 .consultSelect {
   margin-bottom: 30px !important;
 }
@@ -439,10 +377,6 @@
 .consultLabel {
   margin-bottom: 15px;
   font-size: 1.1rem;
-}
-
-.consultImputMobile {
-  width: 100% !important;
 }
 
 .mdb-select {
@@ -457,15 +391,20 @@
   border: none;
   border-radius: 10px;
   padding: 10px 15px;
-  width: 50%;
+  width: 100%;
 }
 
 .consultButtonMobile {
-  @extend .consultButton;
+  background: #fff;
+  color: $primaryDarker;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
   margin-bottom: 50px;
   width: 100%;
 }
 
+// community
 .communityTitle {
   color: $primaryDarker;
   text-align: left;
@@ -509,20 +448,12 @@
 .card-vida-img-bottom,
 .card-vida-img-horizontal {
   flex: 1 0 auto;
-  // width: 300px;
-  // height: auto;
   object-fit: cover;
 }
 
 .card-vida-body {
   padding: 1rem;
 }
-
-// .card-vida-img-horizontal {
-//   height: 300px;
-//   width: auto;
-//   object-fit: cover;
-// }
 
 .partnersContainer {
   background-color: #f5f5f5;
@@ -579,10 +510,6 @@
     width: 50%;
   }
 
-  .plansTitle {
-    padding: 8rem 0 1.85rem 0;
-  }
-
   .roomsTitleMobile,
   .eventsTitleMobile {
     font-size: 2.75rem;
@@ -634,23 +561,11 @@
     justify-content: center;
     flex-direction: column;
   }
-
-  // .card-vida {
-  //   max-width: 200px;
-  // }
-
-  // .card-vida-horizontal {
-  //   max-width: 270px;
-  // }
 }
 
 @media (min-width: 576px) {
   .welcomeContainerMobileContent {
     width: 80%;
-  }
-
-  .welcomeContainerMobileSVG {
-    width: unset;
   }
 
   .welcomeTitle {
@@ -663,11 +578,6 @@
 
   .welcomeText {
     margin: 0;
-  }
-
-  .plansTitle {
-    padding: 7.5rem 0 1.85rem 0;
-    font-size: 2.75rem;
   }
 
   .roomsTitleMobile,
@@ -685,14 +595,6 @@
   .opinionInformation {
     margin-left: 2rem;
   }
-
-  // .card-vida {
-  //   max-width: 400px;
-  // }
-
-  // .card-vida-horizontal {
-  //   max-width: 600px;
-  // }
 }
 
 @media (min-width: 768px) {
@@ -753,10 +655,6 @@
   .partnersContainerMobile {
     display: none;
   }
-
-  .eventsContainerContent {
-    left: calc(100vw - (100vw - 40%));
-  }
 }
 
 @media (min-width: 1200px) {
@@ -775,10 +673,6 @@
   .ratingContent {
     margin-left: 50px;
   }
-
-  .eventsContainerContent {
-    left: calc(100vw - (100vw - 50%));
-  }
 }
 
 @media (min-width: 1400px) {
@@ -790,10 +684,6 @@
   .eventsSubtitle,
   .eventsContent1 {
     width: 100%;
-  }
-
-  .eventsContainerContent {
-    left: calc(100vw - (100vw - 60%));
   }
 
   .consultContainer {

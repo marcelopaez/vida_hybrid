@@ -2,11 +2,19 @@ import React from 'react';
 import GoogleIcon from '../../images/GoogleIcon.svg';
 import FacebookIcon from '../../images/FacebookIcon.svg';
 import NavbarLogin from '../../components/NavbarLogin';
+import NavbarLoginMobile from '../../components/NavbarLoginMobile';
 
 const Login = () => {
   return (
     <main>
-      <NavbarLogin />
+      <div className="navbarLarger">
+        <NavbarLogin />
+      </div>
+
+      <div className="navbarMobile">
+        <NavbarLoginMobile />
+      </div>
+
       <div className="container loginContainer">
         <p className="loginTitle extraBoldFont">Comenzá tu experiencia en Vida Cowork</p>
         <div className="row">

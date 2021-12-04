@@ -264,7 +264,7 @@ const Home = () => {
       <div className="servicesContainer">
         <div className="container">
           <p className="servicesTitle extraBoldFont">SERVICIOS</p>
-          <div className="d-flex justify-content-center align-items-start flex-wrap servicesSection">
+          <div className="servicesSection">
             <Service
               svg={
                 <svg width="44" height="59" viewBox="0 0 44 59" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -594,6 +594,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <div className="servicesContainerMobile">
         <div className="container">
           <p className="servicesTitleMobile extraBoldFont">Servicios</p>
@@ -603,7 +604,7 @@ const Home = () => {
             <option value="2">Option 2</option>
             <option value="3">Option 3</option>
           </select>
-          <div className="d-flex justify-content-center align-items-start flex-wrap servicesSectionMobile">
+          <div className="servicesSectionMobile">
             <Service
               svg={
                 <svg width="44" height="59" viewBox="0 0 44 59" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -980,6 +981,7 @@ const Home = () => {
           <p className="eventsContent1Mobile">Contamos con diferentes formatos para que puedas visualizar cuál se adapta mejor a tu necesidad</p>
         </div>
       </div>
+
       <div className="communityContainer">
         <div className="container">
           <p className="communityTitle extraBoldFont">COMUNIDAD</p>
@@ -1041,6 +1043,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <div className="strategicPlaceContainer">
         <div className="container">
           <div className="row">
@@ -1196,6 +1199,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <div className="strategicPlaceContainerMobile">
         <div className="container">
           <div className="row">
@@ -1344,6 +1348,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <div className="ratingContainer">
         <div className="row w-100">
           <div className="col-lg-7 col-md-7 col-sm-12">
@@ -1421,6 +1426,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <div className="ratingContainerMobile">
         <div className="d-flex flex-column">
           <div className="container">
@@ -1473,6 +1479,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <div className="partnersContainer">
         <div className="container">
           <p className="partnersTitle extraBoldFont">NUESTROS PARTNERS</p>
@@ -1486,6 +1493,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <div className="partnersContainerMobile">
         <div className="container">
           <p className="partnersTitle extraBoldFont">NUESTROS PARTNERS</p>

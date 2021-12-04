@@ -1,0 +1,174 @@
+.reservationContainer {
+  background-color: #cecece !important;
+  border-radius: 5px;
+}
+
+.reservationVerticalSeparator {
+  height: 100%;
+  border-left: 2px solid #c4c4c4;
+  margin: 0 10px 0 10px;
+}
+
+.reservationHorizontalSeparator {
+  width: 100%;
+  border-bottom: 2px solid #c4c4c4;
+  margin: 0;
+}
+
+.reservationTitle {
+  color: $gray;
+  font-size: 1.5rem;
+  margin-top: 200px;
+}
+
+.reservationSubtitle {
+  color: $gray;
+  font-size: 1.1rem;
+}
+
+.reservationContainer {
+  background: #fff;
+  border-radius: 5px;
+}
+
+.reservationContainerTitle {
+  color: #000;
+  font-size: 2.25rem;
+}
+
+.reservationUserTitle,
+.businessTitle {
+  font-size: 1.5rem;
+  color: $gray;
+}
+
+.businessTitle {
+  margin-top: 44px;
+}
+
+.registerUserOptions,
+.businessOptions {
+  display: flex;
+  align-items: center;
+
+  div {
+    margin: 0 20px 0 20px;
+  }
+}
+
+.reservationUser,
+.businessOption {
+  color: $gray;
+  font-size: 1.1rem;
+}
+
+.businessName {
+  margin-top: 60px;
+}
+
+.businessName,
+.businessEmail,
+.businessPhone,
+.reservationCouponCode {
+  margin-bottom: 14px;
+  border: none;
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 10px;
+  color: $gray;
+}
+
+#loginDateIcon,
+#loginRoomIcon,
+#loginTimeIcon {
+  color: $gray !important;
+}
+
+.reservationDate,
+.reservationRoomType,
+.reservationTime {
+}
+
+.reservationTotalTitle {
+  color: #3e3e3e;
+  font-size: 2.2rem;
+  // margin: 70px 0 30px 0;
+  margin: 0 0 30px 0;
+}
+
+.reservationTotalNumber {
+  color: #3e3e3e;
+  font-size: 2.2rem;
+  margin-bottom: 95px;
+}
+
+.reservationCouponQuestion {
+  color: $gray;
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+}
+
+.reservationCouponCode {
+  margin-bottom: 72px;
+}
+
+.reservationPaymentMethodTitle {
+  color: $gray;
+  font-size: 1.5rem;
+  margin-bottom: 27px;
+}
+
+.reservationPaymentMethodOption {
+  color: $gray;
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+.reservationAcceptButton {
+  background-color: $secondary;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin: 70px 0 60px 0;
+  padding: 10px 15px;
+  width: 300px;
+}
+
+.reservationFooter {
+  margin-bottom: 150px;
+}
+
+.reservationFooterTitle {
+  font-size: 2.25rem;
+  color: $secondary;
+}
+
+.reservationFooterSubtitle {
+  font-size: 1.1rem;
+  color: $gray;
+  line-height: 23px;
+}
+
+@media (min-width: 300px) {
+  .reservationVerticalSeparator {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .reservationVerticalSeparator {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

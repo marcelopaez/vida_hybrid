@@ -1,19 +1,43 @@
 .navbarItemLogin {
-  color: #68605a;
+  color: $gray;
   padding: 1rem;
   margin: 0 25px !important;
 }
 
 .navbarItemLoginButton {
-  border: 1px solid #68605a;
+  border: 1px solid $gray;
   padding: 1rem;
   border-radius: 15px;
 }
 
+.navbarLoginMobile {
+  background-color: $secondary;
+  text-align: center;
+}
+
+.buttonSmallUpLogin {
+  display: none;
+}
+
 @media (min-width: 300px) {
+  .navbarLoginMobile,
+  .buttonSmallDownLogin {
+    display: block;
+  }
+
+  .buttonSmallUp {
+    display: none;
+  }
 }
 
 @media (min-width: 576px) {
+  .buttonSmallDown {
+    display: none;
+  }
+
+  .buttonSmallUp {
+    display: block;
+  }
 }
 
 @media (min-width: 768px) {
@@ -26,4 +50,7 @@
 }
 
 @media (min-width: 1400px) {
+  .navbarLoginMobile {
+    display: none;
+  }
 }
