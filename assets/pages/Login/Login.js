@@ -3,6 +3,7 @@ import GoogleIcon from '../../images/GoogleIcon.svg';
 import FacebookIcon from '../../images/FacebookIcon.svg';
 import NavbarLogin from '../../components/NavbarLogin';
 import NavbarLoginMobile from '../../components/NavbarLoginMobile';
+import BackgroundSVGLogin from '../../images/BackgroundSVGLogin.svg';
 
 const Login = () => {
   return (
@@ -40,6 +41,7 @@ const Login = () => {
                 <img src={GoogleIcon} alt="Google" style={{ marginRight: '20px', opacity: '0.5' }} />
                 <img src={FacebookIcon} alt="Facebook" style={{ marginLeft: '20px', opacity: '0.5' }} />
               </div>
+              <img src={BackgroundSVGLogin} alt="Vida" className="backgroundSVGLogin" />
             </div>
           </div>
         </div>

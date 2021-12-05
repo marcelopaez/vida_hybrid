@@ -505,6 +505,20 @@
   color: #fff !important;
 }
 
+.backgroundSVGHome1 {
+  position: absolute;
+  right: 0;
+}
+
+.backgroundSVGHome2 {
+  position: absolute;
+}
+
+.backgroundSVGHome3 {
+  position: absolute;
+  right: 0;
+}
+
 @media (min-width: 300px) {
   .welcomeContainerMobileContent {
     width: 50%;
@@ -560,6 +574,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+
+  .backgroundSVGHome1,
+  .backgroundSVGHome2,
+  .backgroundSVGHome3 {
+    display: none;
   }
 }
 
@@ -654,6 +674,12 @@
   .strategicPlaceContainerMobile,
   .partnersContainerMobile {
     display: none;
+  }
+
+  .backgroundSVGHome1,
+  .backgroundSVGHome2,
+  .backgroundSVGHome3 {
+    display: block;
   }
 }
 

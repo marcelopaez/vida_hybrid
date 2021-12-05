@@ -27,6 +27,9 @@ import Partner3 from '../../images/Partner3.svg';
 import Partner4 from '../../images/Partner4.svg';
 import Partner5 from '../../images/Partner5.svg';
 import Partner6 from '../../images/Partner6.svg';
+import BackgroundSVGHome1 from '../../images/BackgroundSVGHome1.svg';
+import BackgroundSVGHome2 from '../../images/BackgroundSVGHome2.svg';
+import BackgroundSVGHome3 from '../../images/BackgroundSVGHome3.svg';
 
 const Home = () => {
   const carouselSettings = {
@@ -82,6 +85,7 @@ const Home = () => {
       </div>
 
       <div className="plansContainerHome">
+        <img src={BackgroundSVGHome1} alt="Vida" className="backgroundSVGHome1" />
         <p className="plansTitle extraBoldFont">PLANES EN ESPACIO COMPARTIDO</p>
         <p className="plansSubtitle">Contamos con planes ideales para freelancers y profesionales independientes</p>
         <div className="d-flex justify-content-center align-items-center flex-wrap">
@@ -262,6 +266,7 @@ const Home = () => {
       </div>
 
       <div className="servicesContainer">
+        <img src={BackgroundSVGHome2} alt="Vida" className="backgroundSVGHome2" />
         <div className="container">
           <p className="servicesTitle extraBoldFont">SERVICIOS</p>
           <div className="servicesSection">
@@ -1045,6 +1050,7 @@ const Home = () => {
       </div>
 
       <div className="strategicPlaceContainer">
+        <img src={BackgroundSVGHome3} alt="Vida" className="backgroundSVGHome3" />
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-md-4 col-sm-6">
@@ -1195,7 +1201,7 @@ const Home = () => {
                 small={true}
               />
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.434882088902!2d-64.2347723843618!3d-31.37457028141809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299b7ceb33413%3A0x89c5c3a779773b97!2sVida%20Cowork!5e0!3m2!1ses-419!2sar!4v1638208913348!5m2!1ses-419!2sar" width="100%" height="450" style={{ border: '0' }} allowFullScreen="true" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.434882088902!2d-64.2347723843618!3d-31.37457028141809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299b7ceb33413%3A0x89c5c3a779773b97!2sVida%20Cowork!5e0!3m2!1ses-419!2sar!4v1638208913348!5m2!1ses-419!2sar" width="100%" height="450" style={{ border: '0', zIndex: '2' }} allowFullScreen="true" loading="lazy"></iframe>
           </div>
         </div>
       </div>

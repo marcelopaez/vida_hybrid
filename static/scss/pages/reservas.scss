@@ -1,6 +1,8 @@
 .reservationContainer {
   background-color: #cecece !important;
   border-radius: 5px;
+  position: relative;
+  z-index: 2;
 }
 
 .reservationVerticalSeparator {
@@ -149,8 +151,24 @@
   line-height: 23px;
 }
 
+.backgroundSVGReservas1 {
+  position: absolute;
+  left: -20%;
+}
+
+.backgroundSVGReservas2 {
+  position: absolute;
+  top: 0;
+  right: -20%;
+}
+
 @media (min-width: 300px) {
   .reservationVerticalSeparator {
+    display: none;
+  }
+
+  .backgroundSVGReservas1,
+  .backgroundSVGReservas2 {
     display: none;
   }
 }
@@ -168,7 +186,28 @@
 }
 
 @media (min-width: 1200px) {
+  .backgroundSVGReservas1,
+  .backgroundSVGReservas2 {
+    display: block;
+  }
+
+  .backgroundSVGReservas2 {
+    right: -25%;
+  }
 }
 
 @media (min-width: 1400px) {
+  .backgroundSVGReservas1 {
+    left: -10%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .backgroundSVGReservas1 {
+    left: 0;
+  }
+
+  .backgroundSVGReservas2 {
+    right: 0;
+  }
 }

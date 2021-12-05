@@ -1,6 +1,8 @@
 import React from 'react';
 import NavbarLogin from '../../components/NavbarLogin';
 import NavbarLoginMobile from '../../components/NavbarLoginMobile';
+import BackgroundSVGReservas1 from '../../images/BackgroundSVGReservas1.svg';
+import BackgroundSVGReservas2 from '../../images/BackgroundSVGReservas2.svg';
 
 const Reservas = () => {
   return (
@@ -14,6 +16,7 @@ const Reservas = () => {
       </div>
 
       <div className="container">
+        <img src={BackgroundSVGReservas1} alt="Vida" className="backgroundSVGReservas1" />
         <p className="reservationTitle boldFont">Accedé a nuestras salas de reunión, oficinas o creá tus eventos</p>
         <p className="reservationSubtitle">Texto para las reservas</p>
         <div className="reservationContainer">
@@ -30,30 +33,30 @@ const Reservas = () => {
                 <div>
                   <p className="reservationUserTitle">Usuario registrado</p>
                   <div className="registerUserOptions">
-                    <div class="custom-control custom-checkbox reservationUser">
-                      <input type="checkbox" class="custom-control-input" id="registeredUser" />
-                      <label class="custom-control-label" for="registeredUser">
+                    <div className="custom-control custom-checkbox reservationUser">
+                      <input type="checkbox" className="custom-control-input" id="registeredUser" />
+                      <label className="custom-control-label" for="registeredUser">
                         Sí
                       </label>
                     </div>
-                    <div class="custom-control custom-checkbox reservationUser">
-                      <input type="checkbox" class="custom-control-input" id="notRegisteredUser" />
-                      <label class="custom-control-label" for="notRegisteredUser">
+                    <div className="custom-control custom-checkbox reservationUser">
+                      <input type="checkbox" className="custom-control-input" id="notRegisteredUser" />
+                      <label className="custom-control-label" for="notRegisteredUser">
                         No
                       </label>
                     </div>
                   </div>
                   <p className="businessTitle">Empresa</p>
                   <div className="businessOptions">
-                    <div class="custom-control custom-checkbox businessOption">
-                      <input type="checkbox" class="custom-control-input" id="isBusiness" />
-                      <label class="custom-control-label" for="isBusiness">
+                    <div className="custom-control custom-checkbox businessOption">
+                      <input type="checkbox" className="custom-control-input" id="isBusiness" />
+                      <label className="custom-control-label" for="isBusiness">
                         Sí
                       </label>
                     </div>
-                    <div class="custom-control custom-checkbox businessOption">
-                      <input type="checkbox" class="custom-control-input" id="notBusiness" />
-                      <label class="custom-control-label" for="notBusiness">
+                    <div className="custom-control custom-checkbox businessOption">
+                      <input type="checkbox" className="custom-control-input" id="notBusiness" />
+                      <label className="custom-control-label" for="notBusiness">
                         No
                       </label>
                     </div>
@@ -89,15 +92,15 @@ const Reservas = () => {
               <p className="reservationCouponQuestion">¿Tenés un cupón de descuento?</p>
               <input type="text" className="reservationCouponCode" placeholder="Ingresá tu código" />
               <p className="reservationPaymentMethodTitle">Método de pago</p>
-              <div class="custom-control custom-checkbox reservationPaymentMethodOption">
-                <input type="checkbox" class="custom-control-input" id="paymentMethodMercadoPago" />
-                <label class="custom-control-label" for="paymentMethodMercadoPago">
+              <div className="custom-control custom-checkbox reservationPaymentMethodOption">
+                <input type="checkbox" className="custom-control-input" id="paymentMethodMercadoPago" />
+                <label className="custom-control-label" for="paymentMethodMercadoPago">
                   Mercado Pago
                 </label>
               </div>
-              <div class="custom-control custom-checkbox reservationPaymentMethodOption">
-                <input type="checkbox" class="custom-control-input" id="paymentMethodVida" />
-                <label class="custom-control-label" for="paymentMethodVida">
+              <div className="custom-control custom-checkbox reservationPaymentMethodOption">
+                <input type="checkbox" className="custom-control-input" id="paymentMethodVida" />
+                <label className="custom-control-label" for="paymentMethodVida">
                   Coordinar pago con Vida Cowork
                 </label>
               </div>
@@ -112,6 +115,7 @@ const Reservas = () => {
           <p className="reservationFooterSubtitle">La cantidad de horas que utilizaste y cuántas te quedan</p>
           <p className="reservationFooterSubtitle">Un calendario donde ver tus reservas y realizar nuevas</p>
         </div>
+        <img src={BackgroundSVGReservas2} alt="Vida" className="backgroundSVGReservas2" />
       </div>
     </main>
   );

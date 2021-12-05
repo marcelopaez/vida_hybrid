@@ -18,7 +18,7 @@ const NavbarLogin = () => {
   return (
     <main>
       <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar py-3">
-        <a class="navbar-brand" href="#">
+        <a className="navbar-brand" href="#">
           <img src={OrangeLogo} alt="Vida" />
         </a>
         {windowScroll !== 0 && (
