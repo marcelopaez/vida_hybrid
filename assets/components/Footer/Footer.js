@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <div className="footer">
         <div className="d-flex justify-content-center flex-wrap">
-          <div className="footerColumn footerColumnLeft">
+          <div className="footerColumn footerColumnLeft firstFooterColumn">
             <div className="d-flex strategicPlaceLocationContainer">
               <img src={FooterLogo} alt="Vida" className="footerLogo" />
               <div className="flex-column">
@@ -17,8 +17,8 @@ const Footer = () => {
             </div>
             <p className="locationSubText lightFont">El trabajo es parte de nuestra vida. Te invitamos a disfrutarlo en un espacio relajado, flexible y rodeado de naturaleza.</p>
           </div>
-          <div className="footerColumn" style={{ marginLeft: '4.7rem', marginRight: '4.7rem' }}>
-            <div className="d-flex flex-wrap">
+          <div className="footerColumn secondFooterColumn">
+            <div className="d-flex flex-wrap justify-content-between">
               <div className="footerSubColumn">
                 <div className="footerDescriptionTitle boldFont">Disposición</div>
                 <div className="footerDescriptionContent">
@@ -62,7 +62,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="footerColumn footerColumnRight">
+          <div className="footerColumn footerColumnRight thirdFooterColumn">
             <img src={Logo} alt="Vida" />
             <div className="footerDescriptionTitle boldFont">Seguinos en redes</div>
           </div>

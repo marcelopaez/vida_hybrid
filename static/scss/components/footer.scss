@@ -14,9 +14,7 @@
 }
 
 .footerColumn {
-  margin: 4.4rem 0;
   padding: 0;
-  flex: 1;
 }
 
 .footerLogoContainer {
@@ -71,7 +69,6 @@
 .footerSubColumn {
   padding: 0 !important;
   margin: 0 0.8rem;
-  width: 20%;
 }
 
 .footerColumnLeft,
@@ -93,6 +90,10 @@
     display: block;
   }
 
+  .footerColumn {
+    margin: 0;
+  }
+
   .footerColumnLeft {
     margin-left: 0;
   }
@@ -100,6 +101,21 @@
   .footerColumnRight {
     margin-right: 0;
     align-items: center;
+  }
+
+  .footerSubColumn {
+    width: unset;
+  }
+
+  .firstFooterColumn,
+  .secondFooterColumn,
+  .thirdFooterColumn {
+    flex-basis: 100%;
+  }
+
+  .secondFooterColumn {
+    margin: 0;
+    width: unset;
   }
 }
 
@@ -113,6 +129,32 @@
 
   .footerMobile {
     display: none;
+  }
+
+  .footerColumn {
+    margin: 4.4rem 0;
+  }
+
+  .footerSubColumn {
+    margin: 4.4rem 0;
+    width: 20%;
+  }
+
+  .firstFooterColumn {
+    flex-basis: auto;
+    flex: 0.3 !important;
+  }
+
+  .secondFooterColumn {
+    flex-basis: auto;
+    flex: 0.5 !important;
+    margin: 0 4.7rem;
+    width: 20%;
+  }
+
+  .thirdFooterColumn {
+    flex-basis: auto;
+    flex: 0.2 !important;
   }
 }
 

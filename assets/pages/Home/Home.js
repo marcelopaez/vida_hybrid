@@ -50,7 +50,7 @@ const Home = () => {
             <svg width="707" height="1037" viewBox="0 0 707 1037" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute' }}>
               <path d="M707 0C707 572.749 390.485 1037 0 1037V0H707Z" fill="#004B2A" />
             </svg>
-            <Link to="/">
+            <Link to="/eventos">
               <img src={OrangeLogo} className="logo" alt="Vida" />
             </Link>
             <div className="homeHeaderContent">
@@ -219,10 +219,10 @@ const Home = () => {
       <div id="carouselSalas" className="meetingsContainer carousel slide" data-ride="carousel" style={{ position: 'relative' }}>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={SalasBackground} alt="First slide" />
+            <img src={SalasBackground} alt="Vida" height="650px" />
           </div>
           <div className="carousel-item">
-            <img src={EventosBackground} alt="Second slide" />
+            <img src={EventosBackground} alt="Vida" height="650px" />
           </div>
         </div>
         <img src={LeftSVGOrangeSection} alt="Salas de Reunión" style={{ position: 'absolute', top: '-50px' }} />
@@ -949,10 +949,10 @@ const Home = () => {
       <div id="carouselEventos" className="meetingsContainer carousel slide" data-ride="carousel" style={{ position: 'relative', marginTop: '-65px' }}>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={SalasBackground} alt="First slide" />
+            <img src={SalasBackground} alt="Vida" height="650px" />
           </div>
           <div className="carousel-item">
-            <img src={EventosBackground} alt="Second slide" />
+            <img src={EventosBackground} alt="Vida" height="650px" />
           </div>
         </div>
         <img src={RightSVGOrangeSection} alt="Eventos" className="eventsSVGContainer" />
@@ -972,10 +972,6 @@ const Home = () => {
             </div>
           </Slider>
         </div>
-        <a className="carousel-control-prev" href="#carouselEventos" role="button" data-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="sr-only">Anterior</span>
-        </a>
       </div>
 
       <div className="eventsContainerMobile">
