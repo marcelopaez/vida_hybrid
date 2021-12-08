@@ -47,9 +47,11 @@
 }
 
 .plansContainerHome {
+  position: relative;
   background-color: $primaryDarker;
   color: #fff;
   padding-bottom: 10.8rem;
+  overflow: hidden;
 }
 
 .plansTitle {
@@ -452,11 +454,12 @@
   position: relative;
   z-index: 3;
   color: #fff;
-  width: 1100px;
   height: 170%;
   background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22933%22%20height%3D%22736%22%20viewBox%3D%220%200%20933%20736%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1459.68%20736H729.839C326.779%20736%200.000366211%20406.463%200.000366211%200H729.839C1132.9%200%201459.68%20329.537%201459.68%20736Z%22%20fill%3D%22%23FF972F%22%2F%3E%0A%3C%2Fsvg%3E%0A');
   background-size: cover;
-  margin: -20px 0 0 calc(100% - 600px) !important;
+  // margin: -20px 0 0 calc(100% - 600px) !important;
+  margin: -20px 0 0 0 !important;
+  right: -30px;
 }
 
 .consultContainerMobile {
@@ -596,7 +599,6 @@
 .backgroundSVGHome1 {
   position: absolute;
   right: calc(100% - 110vw);
-  top: 110%;
 }
 
 .backgroundSVGHome2 {
