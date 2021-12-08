@@ -16,26 +16,26 @@
 }
 
 .leftSVGNavbar {
-  position: relative;
+  // position: relative;
+  background-image: url('/assets/images/SVGs/LeftSVGGreen.svg');
 }
 
 .rightSVGNavbar {
   position: absolute;
-}
-
-.leftSVGNavbar {
-  z-index: 50;
-}
-
-.rightSVGNavbar {
   right: 0;
+  z-index: 51;
 }
+
+// .leftSVGNavbar {
+//   z-index: 50;
+// }
 
 .logo {
   margin: 1.1rem;
   position: absolute;
   z-index: 100;
-  left: 1.85rem;
+  left: 30px;
+  top: 0;
 }
 
 .logoScroll {
@@ -65,10 +65,19 @@ ul {
   }
 }
 
-.greenBackground {
-  padding: 0.5rem;
-  background-color: $primaryDarker;
-  border-radius: 1.25rem;
+.nav-item {
+  a {
+    font-size: 1.1rem !important;
+    font-weight: 400 !important;
+    margin: 0 21px !important;
+  }
+}
+
+.navbarLoginOption {
+  border: 2px solid #fff;
+  background: transparent;
+  padding: 8px;
+  border-radius: 15px;
 }
 
 .orangeBackground {
@@ -165,7 +174,7 @@ ul {
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .navbarMobile {
     display: none;
   }

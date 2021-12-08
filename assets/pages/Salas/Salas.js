@@ -1,13 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import NavbarMobile from '../../components/NavbarMobile';
-import OrangeLogo from '../../images/OrangeLogo.svg';
-import OrangePlan from '../../components/OrangePlan';
-import BackgroundImage from '../../images/PlanesBackground.jpg';
+import BackgroundImage from '../../images/Backgrounds/PlanesBackground.jpg';
 import Service from '../../components/Service';
-import ChoosePlan from '../../images/ChoosePlan.jpg';
-import LeftSVGGreenSection from '../../images/LeftSVGGreenSection.svg';
+import ChoosePlan from '../../images/Backgrounds/ChoosePlan.jpg';
+import LeftSVGGreenSection from '../../images/SVGs/LeftSVGGreenSection.svg';
 
 const Salas = () => {
   return (
@@ -15,12 +12,6 @@ const Salas = () => {
       <div className="navbarLarger">
         <div className="background" style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover' }}>
           <div className="leftSVGNavbar">
-            <svg width="707" height="1037" viewBox="0 0 707 1037" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute' }}>
-              <path d="M707 0C707 572.749 390.485 1037 0 1037V0H707Z" fill="#004B2A" />
-            </svg>
-            <Link to="/">
-              <img src={OrangeLogo} className="logo" alt="Vida" />
-            </Link>
             <div className="roomHeaderContent">
               <p className="roomTitle extraBoldFont">Cosmos</p>
               <Service
@@ -42,6 +33,7 @@ const Salas = () => {
                 title={'Capacidad:'}
                 subtitle={'4 personas'}
                 small={true}
+                darkText={false}
               />
               <Service
                 svg={
@@ -99,6 +91,7 @@ const Salas = () => {
                 title={'Wi-Fi de alta velocidad'}
                 subtitle={''}
                 small={true}
+                darkText={false}
               />
               <Service
                 svg={
@@ -116,6 +109,7 @@ const Salas = () => {
                 title={'Equipamiento:'}
                 subtitle={'Sillas ergométricas'}
                 small={true}
+                darkText={false}
               />
               <button className="roomButton">Explorá en 360º</button>
             </div>
@@ -144,7 +138,7 @@ const Salas = () => {
         <img className="chooseRoomImage" src={ChoosePlan} alt="Plan" />
       </div>
 
-      <div className="container">
+      <div className="customContainer">
         <div className="hourPlansContainer">
           <div className="hourPlansTitle">Packs de horas mensuales</div>
           <div className="hourPlansSubtitle">¡Vos elegís cómo organizar las horas!</div>

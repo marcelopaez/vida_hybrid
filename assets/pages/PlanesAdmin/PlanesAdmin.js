@@ -1,10 +1,12 @@
 import React from 'react';
 import SideMenu from '../../components/SideMenu';
 import Plan from '../../components/Plan';
+import NavbarAdmin from '../../components/NavbarAdmin';
 
 const PlanesAdmin = () => {
   return (
     <div className="row marginNavbar generalContent">
+      <NavbarAdmin />
       <div className="col-lg-2 col-md-3 col-sm-12 p-0">
         <SideMenu />
       </div>

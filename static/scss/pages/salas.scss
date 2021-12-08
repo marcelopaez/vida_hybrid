@@ -1,16 +1,19 @@
 .roomHeaderContent {
   position: relative;
-  z-index: 100;
+  z-index: 50;
   color: #fff;
-  top: 20%;
-  margin-left: 6.55rem;
-  width: 500px;
+  padding-left: 50px;
+  width: 700px;
+  height: 100%;
+  background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22707%22%20height%3D%221037%22%20viewBox%3D%220%200%20707%201037%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M707%200C707%20572.749%20390.485%201037%200%201037V0H707Z%22%20fill%3D%22%23004B2A%22%2F%3E%0A%3C%2Fsvg%3E');
+  background-size: 100%;
 }
 
 .roomTitle {
-  z-index: 100;
+  padding-top: 200px;
   color: #fff;
   font-size: 4rem;
+  max-width: 500px;
 }
 
 .roomButton {
@@ -147,7 +150,7 @@
 @media (min-width: 300px) {
   .chooseRoomContainer {
     flex-direction: column;
-    margin: 6rem 1rem 220px 1rem;
+    margin: 120px 1rem 220px 1rem;
   }
 }
 
@@ -157,7 +160,7 @@
 @media (min-width: 768px) {
   .chooseRoomContainer {
     flex-direction: row;
-    margin: 6rem 2rem 220px 2rem;
+    margin: 120px 2rem 220px 2rem;
   }
 }
 
@@ -167,5 +170,5 @@
 @media (min-width: 1200px) {
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
 }

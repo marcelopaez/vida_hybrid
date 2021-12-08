@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import GreenLogo from '../../images/GreenLogo.svg';
-import OrangeLogo from '../../images/OrangeLogo.svg';
+import GreenLogo from '../../images/Logos/GreenLogo.svg';
+import OrangeLogo from '../../images/Logos/OrangeLogo.svg';
 
 const NavbarLogin = () => {
   const [windowScroll, setWindowScroll] = useState(0);
@@ -18,9 +18,9 @@ const NavbarLogin = () => {
   return (
     <main>
       <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar py-3">
-        <a className="navbar-brand" href="#">
-          <img src={OrangeLogo} alt="Vida" />
-        </a>
+        <Link className="navbar-brand" to="/">
+          <img src={OrangeLogo} alt="Vida" className="logo" />
+        </Link>
         {windowScroll !== 0 && (
           <Link to="/">
             <img src={GreenLogo} alt="Vida" style={{ marginLeft: '-218px' }} />
@@ -51,6 +51,11 @@ const NavbarLogin = () => {
             <li className="nav-item align-middle">
               <Link to="/comunidad" className="nav-link navbarItemLogin">
                 Comunidad
+              </Link>
+            </li>
+            <li className="nav-item align-middle">
+              <Link to="/reservas" className="nav-link navbarItemLogin">
+                Reservas
               </Link>
             </li>
             <li className="nav-item align-middle">

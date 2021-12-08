@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import OrangeLogo from '../../images/OrangeLogo.svg';
-import OrangeLogoSmall from '../../images/OrangeLogoSmall.svg';
-import GreenLogo from '../../images/GreenLogo.svg';
-import BackgroundImage from '../../images/HomeBackground.jpg';
+import OrangeLogo from '../../images/Logos/OrangeLogo.svg';
+import OrangeLogoSmall from '../../images/Logos/OrangeLogoSmall.svg';
+import GreenLogo from '../../images/Logos/GreenLogo.svg';
+import BackgroundImage from '../../images/Backgrounds/HomeBackground.jpg';
 
 const NavbarPlanes = () => {
   const [windowScroll, setWindowScroll] = useState(0);
@@ -72,7 +72,12 @@ const NavbarPlanes = () => {
                     </Link>
                   </li>
                   <li className="nav-item align-middle">
-                    <Link to="/login" className="nav-link boldFont greenBackground nav-item-login">
+                    <Link to="/reservas" className="nav-link">
+                      Reservas
+                    </Link>
+                  </li>
+                  <li className="nav-item align-middle">
+                    <Link to="/login" className="nav-link boldFont navbarLoginOption nav-item-login">
                       Iniciar Sesión
                     </Link>
                   </li>
@@ -124,6 +129,11 @@ const NavbarPlanes = () => {
                   <li className="nav-item align-middle">
                     <Link to="/comunidad" className="nav-link">
                       Comunidad
+                    </Link>
+                  </li>
+                  <li className="nav-item align-middle">
+                    <Link to="/reservas" className="nav-link">
+                      Reservas
                     </Link>
                   </li>
                   <li className="nav-item align-middle d-flex justify-content-center loginButtonMobile">

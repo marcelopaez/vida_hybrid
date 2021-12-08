@@ -163,6 +163,10 @@
 }
 
 @media (min-width: 300px) {
+  .reservationContainer {
+    margin: 120px 1rem 220px 1rem;
+  }
+
   .reservationVerticalSeparator {
     display: none;
   }
@@ -177,6 +181,10 @@
 }
 
 @media (min-width: 768px) {
+  .reservationContainer {
+    margin: 120px 2rem 220px 2rem;
+  }
+
   .reservationVerticalSeparator {
     display: block;
   }
@@ -196,7 +204,7 @@
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .backgroundSVGReservas1 {
     left: -10%;
   }

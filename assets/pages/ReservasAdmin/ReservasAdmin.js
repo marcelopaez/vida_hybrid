@@ -1,33 +1,41 @@
 import React from 'react';
 import SideMenu from '../../components/SideMenu';
-import FilterLogo from '../../images/FilterIcon.svg';
-import RoomType1 from '../../images/RoomType1.svg';
-import RoomType2 from '../../images/RoomType2.svg';
-import RoomType3 from '../../images/RoomType3.svg';
-import RoomType4 from '../../images/RoomType4.svg';
-import RoomType5 from '../../images/RoomType5.svg';
-import RoomType6 from '../../images/RoomType6.svg';
-import RoomType7 from '../../images/RoomType7.svg';
-import RoomType8 from '../../images/RoomType8.svg';
-import EterLogo from '../../images/EterLogo.svg';
+import NavbarAdmin from '../../components/NavbarAdmin';
+import RoomType1 from '../../images/Salas/RoomType1.svg';
+import RoomType2 from '../../images/Salas/RoomType2.svg';
+import RoomType3 from '../../images/Salas/RoomType3.svg';
+import RoomType4 from '../../images/Salas/RoomType4.svg';
+import RoomType5 from '../../images/Salas/RoomType5.svg';
+import RoomType6 from '../../images/Salas/RoomType6.svg';
+import RoomType7 from '../../images/Salas/RoomType7.svg';
+import RoomType8 from '../../images/Salas/RoomType8.svg';
+import EterLogo from '../../images/Planes/EterLogo.svg';
 
 const ReservasAdmin = () => {
   return (
     <div className="row marginNavbar generalContent">
+      <NavbarAdmin />
       <div className="col-lg-2 col-md-3 col-sm-12 p-0">
         <SideMenu />
       </div>
+
       <div className="col-lg-10 col-md-9 col-sm-12 p-3">
         <div className="row generalContentBody">
           <div className="col-lg-8 col-md-12 col-sm-12">
-            <h1 className="sectionTitle">Reservas</h1>
+            <h1 className="reservasAdminTitle extraBoldFont">Reservas</h1>
             <div className="filtersSection">
-              <img src={FilterLogo} alt="Filtrar" />
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="#0e4327" xmlns="http://www.w3.org/2000/svg" className="reservasAdminFilterLogo">
+                <path
+                  d="M21.9583 0H1.29167C0.949095 0 0.620555 0.136086 0.37832 0.37832C0.136086 0.620555 0 0.949095 0 1.29167V4.63708C0 5.31263 0.275125 5.97654 0.753042 6.45446L7.75 13.4514V23.25C7.75025 23.4701 7.80667 23.6864 7.91391 23.8786C8.02115 24.0708 8.17566 24.2324 8.36282 24.3481C8.54998 24.4639 8.76359 24.53 8.98342 24.5401C9.20325 24.5502 9.42203 24.5041 9.61904 24.406L14.7857 21.8227C15.2236 21.6031 15.5 21.1562 15.5 20.6667V13.4514L22.497 6.45446C22.9749 5.97654 23.25 5.31263 23.25 4.63708V1.29167C23.25 0.949095 23.1139 0.620555 22.8717 0.37832C22.6294 0.136086 22.3009 0 21.9583 0ZM13.2951 12.0035C13.1749 12.1232 13.0796 12.2655 13.0147 12.4223C12.9497 12.579 12.9164 12.747 12.9167 12.9167V19.8684L10.3333 21.1601V12.9167C10.3336 12.747 10.3003 12.579 10.2353 12.4223C10.1704 12.2655 10.0751 12.1232 9.95487 12.0035L2.58333 4.63708V2.58333H20.668L20.6705 4.62804L13.2951 12.0035Z"
+                  fill="#0e4327"
+                />
+              </svg>
+
               <div className="filterButton">
-                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" className="mx-2" xmlns="http://www.w3.org/2000/svg">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="#fff" className="mx-2" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M5.90625 0C6.13003 0 6.34464 0.0888949 6.50287 0.247129C6.66111 0.405362 6.75 0.619974 6.75 0.84375V1.6875H20.25V0.84375C20.25 0.619974 20.3389 0.405362 20.4971 0.247129C20.6554 0.0888949 20.87 0 21.0938 0C21.3175 0 21.5321 0.0888949 21.6904 0.247129C21.8486 0.405362 21.9375 0.619974 21.9375 0.84375V1.6875H23.625C24.5201 1.6875 25.3785 2.04308 26.0115 2.67601C26.6444 3.30895 27 4.16739 27 5.0625V23.625C27 24.5201 26.6444 25.3785 26.0115 26.0115C25.3785 26.6444 24.5201 27 23.625 27H3.375C2.47989 27 1.62145 26.6444 0.988515 26.0115C0.355579 25.3785 0 24.5201 0 23.625V5.0625C0 4.16739 0.355579 3.30895 0.988515 2.67601C1.62145 2.04308 2.47989 1.6875 3.375 1.6875H5.0625V0.84375C5.0625 0.619974 5.15139 0.405362 5.30963 0.247129C5.46786 0.0888949 5.68247 0 5.90625 0V0ZM1.6875 6.75V23.625C1.6875 24.0726 1.86529 24.5018 2.18176 24.8182C2.49822 25.1347 2.92745 25.3125 3.375 25.3125H23.625C24.0726 25.3125 24.5018 25.1347 24.8182 24.8182C25.1347 24.5018 25.3125 24.0726 25.3125 23.625V6.75H1.6875Z"
-                    fill="white"
+                    fill="#fff"
                   />
                 </svg>
                 <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -228,7 +236,8 @@ const ReservasAdmin = () => {
                 </div>
               </div>
             </div>
-            <div className="table-responsive" style={{ borderRadius: '15px' }}>
+
+            <div className="table-responsive reservasAdminTable" style={{ borderRadius: '15px' }}>
               <table className="table">
                 <thead className="primaryColorDarkerRow">
                   <tr>

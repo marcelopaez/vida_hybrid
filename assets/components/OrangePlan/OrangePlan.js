@@ -1,5 +1,5 @@
 import React from 'react';
-import PlanOrangeSVG from '../../images/PlanOrangeSVG.svg';
+import PlanOrangeSVG from '../../images/SVGs/PlanOrangeSVG.svg';
 
 const OrangePlan = ({ svg, title, price, time }) => {
   return (

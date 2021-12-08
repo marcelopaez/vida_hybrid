@@ -1,9 +1,9 @@
 import React from 'react';
-import GoogleIcon from '../../images/GoogleIcon.svg';
-import FacebookIcon from '../../images/FacebookIcon.svg';
+import GoogleIcon from '../../images/Icons/GoogleIcon.svg';
+import FacebookIcon from '../../images/Icons/FacebookIcon.svg';
 import NavbarLogin from '../../components/NavbarLogin';
 import NavbarLoginMobile from '../../components/NavbarLoginMobile';
-import BackgroundSVGLogin from '../../images/BackgroundSVGLogin.svg';
+import BackgroundSVGLogin from '../../images/SVGs/BackgroundSVGLogin.svg';
 
 const Login = () => {
   return (
@@ -16,10 +16,10 @@ const Login = () => {
         <NavbarLoginMobile />
       </div>
 
-      <div className="container loginContainer">
+      <div className="customContainer loginContainer">
         <p className="loginTitle extraBoldFont">Comenzá tu experiencia en Vida Cowork</p>
         <div className="row">
-          <div className="col-lg-6 col-md-6 col-sm-12">
+          <div className="col-lg-3 offset-lg-3 col-md-4 offset-md-2 col-sm-12">
             <div className="md-form input-with-pre-icon">
               <i className="fas fa-envelope input-prefix inputIconOrange"></i>
               <input type="text" id="consultEmailLogin" className="form-control consultEmailLogin" />
@@ -33,7 +33,7 @@ const Login = () => {
             <button className="loginButton">Enviar</button>
             <button className="loginButton">Registrate</button>
           </div>
-          <div className="col-lg-6 col-md-6 col-sm-12 d-flex">
+          <div className="col-lg-3 col-md-4 col-sm-12 d-flex">
             <div className="loginSeparator" />
             <div className="flex-column">
               <p className="loginSubtitle">O iniciá sesión con</p>

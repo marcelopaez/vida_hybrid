@@ -1,25 +1,61 @@
+.reservasAdminTitle {
+  color: $primaryDarker;
+  font-size: 3rem;
+  margin: 77px 0 55px 0;
+}
+
+.reservasAdminFilterLogo {
+  margin-right: 22px;
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primaryLighter;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 0 15px;
+}
+
+.dropdownButton,
+.normalButton {
+  background-color: $primaryLighter;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.reservasAdminTable {
+  margin-top: 50px;
+}
+
 .primaryColorDarkerRow {
   background-color: $primaryDarker;
 }
 
 .rowHover {
   text-align: center;
+  font-size: 1.1rem;
+  color: #7d7c7a;
 }
 
 .cancelButton {
   background-color: transparent;
   border: none;
+  color: #7d7c7a;
 }
 
 .rowHover:hover .cancelButton {
   background-color: #fff;
-  border: none;
-  border-radius: 15px;
-  color: #000;
+  border-radius: 10px;
+  color: $primaryDarker;
+  padding: 10px;
 }
 
 .rowHover:hover {
-  background-color: $primary;
+  background-color: $primaryLighter;
   color: #fff;
 }
 
@@ -118,5 +154,5 @@
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
 }

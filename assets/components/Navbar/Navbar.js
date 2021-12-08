@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import GreenLogo from '../../images/GreenLogo.svg';
+import GreenLogo from '../../images/Logos/GreenLogo.svg';
+import OrangeLogo from '../../images/Logos/OrangeLogo.svg';
 
 const Navbar = () => {
   const [windowScroll, setWindowScroll] = useState(0);
@@ -23,6 +24,11 @@ const Navbar = () => {
           </Link>
         )}
         <div className="collapse navbar-collapse" id="navbarVida">
+          {windowScroll === 0 && (
+            <Link to="/">
+              <img src={OrangeLogo} className="logo" alt="Vida" />
+            </Link>
+          )}
           <ul className="navbar-nav">
             <li className="nav-item align-middle">
               <Link to="/planes" className="nav-link">
@@ -50,7 +56,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item align-middle">
-              <Link to="/login" className="nav-link boldFont greenBackground nav-item-login">
+              <Link to="/reservas" className="nav-link">
+                Reservas
+              </Link>
+            </li>
+            <li className="nav-item align-middle">
+              <Link to="/login" className="nav-link boldFont navbarLoginOption nav-item-login">
                 Iniciar Sesión
               </Link>
             </li>

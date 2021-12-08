@@ -1,18 +1,24 @@
 .homeHeaderContent {
   position: relative;
-  z-index: 100;
+  z-index: 50;
   color: #fff;
-  top: 15%;
-  margin-left: 6.55rem;
-  width: 500px;
+  padding-left: 50px;
+  width: 700px;
+  height: 100%;
+  background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22707%22%20height%3D%221037%22%20viewBox%3D%220%200%20707%201037%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M707%200C707%20572.749%20390.485%201037%200%201037V0H707Z%22%20fill%3D%22%23004B2A%22%2F%3E%0A%3C%2Fsvg%3E');
+  background-size: 100%;
+}
+
+.welcomeTitle {
+  padding-top: 100px;
 }
 
 .welcomeTitle,
 .welcomeSubtitle,
 .welcomeText,
 .welcomeButton {
-  z-index: 100;
   color: #fff;
+  max-width: 500px;
 }
 
 .welcomeButton {
@@ -30,7 +36,7 @@
 
 .welcomeContainerMobileSVG {
   position: absolute;
-  left: -20px;
+  left: -60px;
   background: $primaryDarker;
 }
 
@@ -49,13 +55,17 @@
 .plansTitle {
   text-align: center;
   margin: 0;
-  padding: 7.5rem 0 1.85rem 0;
+  padding: 105px 0 10px 0;
+  position: relative;
+  z-index: 2;
 }
 
 .plansSubtitle {
   text-align: center;
   padding-bottom: 3.1rem;
   font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .plansContainerMobile {
@@ -91,14 +101,20 @@
 }
 
 .roomsContainer {
+  position: relative;
+  z-index: 3;
   color: #fff;
   margin-top: -700px;
+  width: 935px;
+  height: 110%;
+  background-image: url('data:image/svg+xml,  %3Csvg%20width%3D%22939%22%20height%3D%22721%22%20viewBox%3D%220%200%20939%20721%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M-491%20721H223.964C618.81%20721%20938.928%20398.179%20938.928%200H223.964C-170.882%200%20-491%20322.821%20-491%20721Z%22%20fill%3D%22%23FF972F%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+  background-size: cover;
 }
 
 .roomsTitle {
   font-size: 4.5rem;
-  width: 45%;
-  padding: 60px 0 50px 100px;
+  padding: 40px 0 50px 100px;
+  max-width: 700px;
 }
 
 .roomsTitleMobile {
@@ -107,8 +123,8 @@
 
 .roomsSubtitle {
   font-size: 1.5rem;
-  width: 45%;
   padding: 0 0 25px 100px;
+  max-width: 700px;
 }
 
 .roomsSubtitleMobile {
@@ -117,8 +133,8 @@
 
 .roomsContent1 {
   font-size: 1.1rem;
-  width: 45%;
   padding: 0 0 25px 100px;
+  max-width: 700px;
 }
 
 .roomsContent1Mobile {
@@ -127,8 +143,8 @@
 
 .roomsContent2 {
   font-size: 1.1rem;
-  width: 45%;
   padding: 0 0 40px 100px;
+  max-width: 700px;
 }
 
 .roomsButton,
@@ -142,7 +158,12 @@
 }
 
 .servicesContainer {
-  margin-top: -25px;
+  margin-top: -110px;
+  background: $primaryDarker;
+}
+
+.servicesContainerMiddle {
+  margin-top: -20px;
   background: $primaryDarker;
 }
 
@@ -173,13 +194,30 @@
 }
 
 .servicesTitleMobile {
+  font-size: 2.25rem;
   color: #5b5b5b;
   padding: 50px 0;
 }
 
+.selectServicesMiddle {
+  font-size: 2.25rem;
+  width: 100%;
+}
+
+.selectServicesMobile {
+  color: #000 !important;
+  font-size: 1rem;
+  width: 300px;
+}
+
 .eventsContainer {
+  position: relative;
+  z-index: 3;
   color: #fff;
-  margin: -650px 0 0 1000px;
+  height: 110%;
+  background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22933%22%20height%3D%22736%22%20viewBox%3D%220%200%20933%20736%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1459.68%20736H729.839C326.779%20736%200.000366211%20406.463%200.000366211%200H729.839C1132.9%200%201459.68%20329.537%201459.68%20736Z%22%20fill%3D%22%23FF972F%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+  background-size: cover;
+  margin: -680px 0 0 calc(100% - 835px) !important;
 }
 
 .eventsContainerMobile {
@@ -195,7 +233,8 @@
 .eventsTitle {
   font-size: 4.5rem;
   padding: 0 0 50px 0;
-  margin: 0;
+  margin: 0 0 0 190px;
+  max-width: 700px;
 }
 
 .eventsTitleMobile {
@@ -207,7 +246,8 @@
 .eventsSubtitle {
   font-size: 1.5rem;
   padding: 0 0 25px 0;
-  margin: 0;
+  max-width: 700px;
+  margin: 0 0 0 190px;
 }
 
 .eventsSubtitleMobile {
@@ -218,7 +258,8 @@
 .eventsContent1 {
   font-size: 1.1rem;
   padding: 0 0 40px 0;
-  margin: 0;
+  max-width: 700px;
+  margin: 0 0 0 190px;
 }
 
 .eventsContent1Mobile {
@@ -229,9 +270,85 @@
 }
 
 .eventsButton {
-  margin-left: 0;
+  margin: 0 0 0 190px;
 }
-// acá va comunidad
+
+.communityTitle {
+  color: $primary !important;
+  text-align: left;
+  padding-top: 5rem;
+  margin-bottom: 3rem !important;
+}
+
+.communityTitleBenefits {
+  color: $primary;
+  font-size: 2.25rem;
+  margin-top: 80px;
+}
+
+.communityContainer {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.communityContainerMobile {
+  @extend .communityContainer;
+  top: 0;
+}
+
+.card-vida-vertical {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+}
+
+.card-vida-horizontal {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+}
+
+.card-vida-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+}
+
+.card-vida-body-title {
+  color: $primary;
+  font-size: 1.1rem;
+  margin-bottom: 13px;
+}
+
+.card-vida-body-content {
+  font-size: 1.1rem;
+  color: #656565;
+}
+
+.card-vida-img-top,
+.card-vida-img-bottom,
+.card-vida-img-horizontal {
+  // flex: 1 0 auto;
+  object-fit: cover;
+}
+
+.card-vida-body {
+  padding: 1rem;
+}
+
+.communitySeeMoreButton {
+  background: transparent;
+  border: 1px solid $primary;
+  color: $primary;
+  font-size: 1.1rem;
+  border-radius: 15px;
+  padding: 18px 100px;
+  position: absolute;
+  margin-top: 10px;
+}
+
 .strategicPlaceContainer {
   background-color: $primaryDarker;
 }
@@ -244,7 +361,6 @@
 
 .strategicPlaceLogoContainer {
   color: #fff;
-  padding-top: 90px;
 }
 
 .locationText {
@@ -260,12 +376,11 @@
   text-align: left;
   padding-top: 90px;
   margin-bottom: 50px;
-  font-size: 3rem;
 }
 
 .ratingContainer {
-  background-color: $secondary;
-  color: #fff;
+  background: #f5f5f5;
+  color: #5b5b5b;
 }
 
 .ratingContainerMobile {
@@ -336,6 +451,12 @@
 .consultContainer {
   position: relative;
   z-index: 3;
+  color: #fff;
+  width: 1100px;
+  height: 170%;
+  background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22933%22%20height%3D%22736%22%20viewBox%3D%220%200%20933%20736%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1459.68%20736H729.839C326.779%20736%200.000366211%20406.463%200.000366211%200H729.839C1132.9%200%201459.68%20329.537%201459.68%20736Z%22%20fill%3D%22%23FF972F%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+  background-size: cover;
+  margin: -20px 0 0 calc(100% - 600px) !important;
 }
 
 .consultContainerMobile {
@@ -344,8 +465,8 @@
 
 .consultTitle {
   font-size: 2.25rem;
-  padding-bottom: 40px;
-  margin: 0;
+  padding: 40px 0 20px 0;
+  margin: 0 0 0 190px;
 }
 
 .consultTitleMobile {
@@ -356,10 +477,13 @@
 
 .consultSeparator {
   border-top: 1px solid #e5e5e5;
-  width: 50%;
   position: absolute;
-  margin: 0;
+  margin: 0 0 0 190px;
   margin-bottom: 40px;
+}
+
+.consultDataContainer {
+  margin: 30px 0 0 190px !important;
 }
 
 .input-prefix {
@@ -367,16 +491,27 @@
 }
 
 .consultEmail {
-  margin-bottom: 30px !important;
+  max-width: 300px !important;
+}
+
+.consultEmailLabel {
+  color: #fff !important;
 }
 
 .consultSelect {
-  margin-bottom: 30px !important;
+  max-width: 300px !important;
+  margin: 33px 0 38px 190px !important;
 }
 
 .consultLabel {
   margin-bottom: 15px;
   font-size: 1.1rem;
+  margin: 0 0 0 190px;
+}
+
+.consultInput {
+  max-width: 300px !important;
+  margin: 0 0 0 190px;
 }
 
 .mdb-select {
@@ -391,7 +526,8 @@
   border: none;
   border-radius: 10px;
   padding: 10px 15px;
-  width: 100%;
+  margin: 0 0 0 190px;
+  width: 300px;
 }
 
 .consultButtonMobile {
@@ -404,60 +540,11 @@
   width: 100%;
 }
 
-// community
-.communityTitle {
-  color: $primaryDarker;
-  text-align: left;
-  padding-top: 10.8rem;
-  margin-bottom: 3rem !important;
-  font-size: 3rem;
-}
-
-.communityContainer {
-  position: relative;
-  margin-bottom: 100px;
-}
-
-.communityContainerMobile {
-  @extend .communityContainer;
-  top: 0;
-}
-
-.card-vida-vertical {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  margin: 1rem;
-  overflow: hidden;
-  max-width: 270px;
-}
-
-.card-vida-horizontal {
-  display: flex;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  margin: 1rem;
-  overflow: hidden;
-  max-height: 300px;
-}
-
-.card-vida-body {
-  flex: 1 0 auto;
-}
-
-.card-vida-img-top,
-.card-vida-img-bottom,
-.card-vida-img-horizontal {
-  flex: 1 0 auto;
-  object-fit: cover;
-}
-
-.card-vida-body {
-  padding: 1rem;
-}
-
 .partnersContainer {
   background-color: #f5f5f5;
   position: relative;
+  z-index: 1;
+  padding-top: 200px;
 }
 
 .partnersContainerMobile {
@@ -489,15 +576,16 @@
 .md-form input[type='phone']:not(.browser-default):focus:not([readonly]),
 .md-form input[type='search-md']:focus:not([readonly]),
 .md-form textarea.md-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #fff;
-  box-shadow: 0 1px 0 0 #fff;
+  border-bottom: 1px solid $primaryDarker;
+  box-shadow: 0 1px 0 0 $primaryDarker;
+  color: #fff !important;
 }
 
 .input-prefix {
   color: #fff !important;
 
   &.active {
-    color: $secondary !important;
+    color: $primaryDarker !important;
   }
 }
 
@@ -507,20 +595,35 @@
 
 .backgroundSVGHome1 {
   position: absolute;
-  right: 0;
+  right: calc(100% - 110vw);
+  top: 110%;
 }
 
 .backgroundSVGHome2 {
   position: absolute;
+  left: calc(100% - 108vw);
+  margin-top: 20vh;
 }
 
 .backgroundSVGHome3 {
   position: absolute;
   right: 0;
+  right: calc(100% - 90vw);
+  margin-top: 10vh;
+}
+
+.sliderImageWithOffset {
+  position: relative;
+  right: -25px;
 }
 
 .carousel img {
   width: unset !important;
+}
+
+.carousel-control-next-icon {
+  width: 100px !important;
+  height: 100px !important;
 }
 
 @media (min-width: 300px) {
@@ -529,14 +632,17 @@
   }
 
   .roomsTitleMobile,
-  .eventsTitleMobile {
-    font-size: 2.75rem;
+  .eventsTitleMobile,
+  .communityTitle,
+  .strategicPlaceTitle {
+    font-size: 2.25rem;
   }
 
   .plansContainerHome,
   .meetingsContainer,
   .eventsContainer,
   .servicesContainer,
+  .servicesContainerMiddle,
   .strategicPlaceContainer,
   .ratingContainer,
   .consultContainer,
@@ -557,8 +663,8 @@
     display: block;
   }
 
-  .ratingContent {
-    margin-left: 0;
+  .strategicPlaceLogoContainer {
+    padding-top: 0;
   }
 
   .opinionContainer {
@@ -575,15 +681,25 @@
 
   .partnersLogos {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
   }
 
   .backgroundSVGHome1,
   .backgroundSVGHome2,
   .backgroundSVGHome3 {
     display: none;
+  }
+
+  .card-vida-horizontal {
+    flex-direction: column;
+  }
+
+  .communitySeeMoreButton {
+    right: unset;
   }
 }
 
@@ -606,8 +722,14 @@
 
   .roomsTitleMobile,
   .eventsTitleMobile,
-  .servicesTitle {
+  .servicesTitle,
+  .communityTitle,
+  .strategicPlaceTitle {
     font-size: 4.5rem;
+  }
+
+  .servicesContainerMiddle {
+    display: block;
   }
 
   .opinionContainer {
@@ -644,6 +766,10 @@
     font-size: 4.5rem;
   }
 
+  .card-vida-horizontal {
+    flex-direction: row;
+  }
+
   .opinionContainer {
     width: 730px;
   }
@@ -651,15 +777,13 @@
   .partnersLogos {
     flex-direction: row;
   }
+
+  .communitySeeMoreButton {
+    right: 10%;
+  }
 }
 
 @media (min-width: 992px) {
-  .eventsTitle,
-  .eventsSubtitle,
-  .eventsContent1 {
-    width: 50%;
-  }
-
   .plansContainerHome,
   .meetingsContainer,
   .eventsContainer,
@@ -675,6 +799,7 @@
   .meetingsContainerMobile,
   .eventsContainerMobile,
   .servicesContainerMobile,
+  .servicesContainerMiddle,
   .strategicPlaceContainerMobile,
   .partnersContainerMobile {
     display: none;
@@ -684,6 +809,10 @@
   .backgroundSVGHome2,
   .backgroundSVGHome3 {
     display: block;
+  }
+
+  .strategicPlaceLogoContainer {
+    padding-top: 75px;
   }
 }
 
@@ -699,21 +828,11 @@
   .consultContainerMobile {
     display: none;
   }
-
-  .ratingContent {
-    margin-left: 50px;
-  }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .welcomeContainerMobile {
     display: none;
-  }
-
-  .eventsTitle,
-  .eventsSubtitle,
-  .eventsContent1 {
-    width: 100%;
   }
 
   .consultContainer {

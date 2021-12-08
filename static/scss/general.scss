@@ -40,129 +40,40 @@ body {
   font-weight: 800 !important;
 }
 
-.generalContent {
-  display: flex;
-  background-color: $tertiary;
-}
-
-.sectionTitle {
-  color: $primaryDarker;
-}
-
-.whiteSeparator {
-  height: 1px;
-  background: #fff;
-  border: 0;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.filtersSection {
-  display: flex;
-  margin: 3rem 0;
-}
-
-.filterButton {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: $primaryDarker;
-  color: #fff;
-  padding: 1rem;
-  border-radius: 15px;
-  margin: 1rem;
-}
-
-.dropdownButton,
-.normalButton {
-  background-color: $primaryDarker;
-  border: none;
-  color: #fff;
-}
-
-.pagination.pg-blue .page-item.active .page-link {
-  background-color: $primaryDarker !important;
-}
-
-.pagination .page-item.active .page-link {
-  background-color: $primaryDarker !important;
-}
-
-.darkGreenBackground {
-  background: #0e4327 !important;
+.control-arrow {
+  transform: scale(3) !important;
+  background: $gray !important;
 }
 
 @media (min-width: 300px) {
-  .marginNavbar {
-    margin: 16.5rem 0 0 0;
-  }
-
-  .generalContent {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .generalContentBody {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .filtersSection {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .customContainer {
+    padding: 0 15px 0 15px;
+    margin: 0 10px 0 10px;
+    max-width: none !important;
   }
 }
 
 @media (min-width: 576px) {
-  .marginNavbar {
-    margin: 6rem 0 0 0;
-  }
-
-  .generalContent {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .generalContentBody {
-    flex-direction: column;
-    align-items: flex-start;
+  .customContainer {
+    padding: 0 15px 0 15px;
+    margin: 0 75px 0 75px;
+    max-width: none !important;
   }
 }
 
 @media (min-width: 768px) {
-  .marginNavbar {
-    margin: 7.5rem 0 0 0;
-  }
-
-  .generalContent {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .generalContentBody {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
-  .filtersSection {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
 }
 
 @media (min-width: 992px) {
 }
 
 @media (min-width: 1200px) {
+  .customContainer {
+    padding: 0 15px 0 15px;
+    margin: 0 200px 0 200px;
+    max-width: none !important;
+  }
 }
 
-@media (min-width: 1400px) {
-  .filtersSection {
-    justify-content: flex-start;
-  }
+@media (min-width: 1440px) {
 }

@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import NavbarMobile from '../../components/NavbarMobile';
-import OrangeLogo from '../../images/OrangeLogo.svg';
 import OrangePlan from '../../components/OrangePlan';
-import BackgroundImage from '../../images/PlanesBackground.jpg';
-import ChoosePlan from '../../images/ChoosePlan.jpg';
+import BackgroundImage from '../../images/Backgrounds/PlanesBackground.jpg';
+import ChoosePlan from '../../images/Backgrounds/ChoosePlan.jpg';
 
 const Planes = () => {
   return (
@@ -13,12 +11,6 @@ const Planes = () => {
       <div className="navbarLarger">
         <div className="background" style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover' }}>
           <div className="leftSVGNavbar">
-            <svg width="707" height="1037" viewBox="0 0 707 1037" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute' }}>
-              <path d="M707 0C707 572.749 390.485 1037 0 1037V0H707Z" fill="#004B2A" />
-            </svg>
-            <Link to="/app">
-              <img src={OrangeLogo} className="logo" alt="Vida" />
-            </Link>
             <div className="planesHeaderContent">
               <div className="d-flex align-items-center">
                 <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -123,7 +115,7 @@ const Planes = () => {
         />
       </div>
 
-      <div className="container">
+      <div className="customContainer">
         <div className="whyPlanContainer">
           <div className="whyPlanTitle extraBoldFont">¿Por qué suscribirme a un plan?</div>
           <div className="whyPlanText">Te será de mucha ayuda para organizarte ya que podrás visualizar: Todos los detalles de tu plan La cantidad de horas que utilizaste y cuántas te quedan Un calendario donde ver tus reservas y realizar nuevas</div>

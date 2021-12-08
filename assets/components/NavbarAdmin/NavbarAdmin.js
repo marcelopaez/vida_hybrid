@@ -1,7 +1,7 @@
 import React from 'react';
-import Logo from '../../images/GreenLogo.svg';
-import Profile from '../../images/ProfileIcon.svg';
-import Notifications from '../../images/NotificationsIcon.svg';
+import Logo from '../../images/Logos/GreenLogo.svg';
+import Profile from '../../images/Icons/ProfileIcon.svg';
+import Notifications from '../../images/Icons/NotificationsIcon.svg';
 
 const NavbarAdmin = () => {
   return (

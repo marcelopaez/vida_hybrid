@@ -1,12 +1,10 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import NavbarMobile from '../../components/NavbarMobile';
-import OrangeLogo from '../../images/OrangeLogo.svg';
-import BackgroundImage from '../../images/EventsBackground.jpg';
-import LeftSVGGreenSection from '../../images/LeftSVGGreenSection.svg';
+import BackgroundImage from '../../images/Backgrounds/EventsBackground.jpg';
+import LeftSVGGreenSection from '../../images/SVGs/LeftSVGGreenSection.svg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -16,14 +14,8 @@ const Eventos = () => {
       <div className="navbarLarger">
         <div className="background" style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover' }}>
           <div className="leftSVGNavbar">
-            <svg width="707" height="1037" viewBox="0 0 707 1037" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute' }}>
-              <path d="M707 0C707 572.749 390.485 1037 0 1037V0H707Z" fill="#004B2A" />
-            </svg>
-            <Link to="/">
-              <img src={OrangeLogo} className="logo" alt="Vida" />
-            </Link>
             <div className="eventsHeaderContent">
-              <p className="eventsTitle extraBoldFont">Eventos</p>
+              <p className="eventsTitleEvents extraBoldFont">Eventos</p>
               <p className="eventsSubitle">Nuestro espacio cuenta con un patio de 500 mt2 y un salón de usos múltiples. Podemos recibir desde 10 a 200 personas.</p>
               <p className="eventsText">Contamos con un equipo especializado para asesorarte en todo lo que necesitas.</p>
             </div>
@@ -45,7 +37,7 @@ const Eventos = () => {
         </div>
       </div>
 
-      <div className="container">
+      <div className="customContainer">
         <div className="ourEventsContainer">
           <p className="ourEventsTitle extraBoldFont">¡Mirá nuestros eventos!</p>
           <Carousel infiniteLoop showThumbs={false} showStatus={false} showIndicators showArrows centerMode centerSlidePercentage={25}>
@@ -365,7 +357,7 @@ const Eventos = () => {
         </div>
       </div>
 
-      <div className="container">
+      <div className="customContainer">
         <div className="eventsReservationContainer">
           <p className="eventsReservationTitle boldFont">¿Te interesa reservar?</p>
           <div className="md-form form-lg">

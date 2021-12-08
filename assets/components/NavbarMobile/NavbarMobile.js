@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import OrangeLogoSmall from '../../images/OrangeLogoSmall.svg';
+import OrangeLogoSmall from '../../images/Logos/OrangeLogoSmall.svg';
 
 const NavbarMobile = () => {
   return (
@@ -43,6 +43,11 @@ const NavbarMobile = () => {
           <li className="nav-item align-middle">
             <Link to="/comunidad" className="nav-link">
               Comunidad
+            </Link>
+          </li>
+          <li className="nav-item align-middle">
+            <Link to="/reservas" className="nav-link">
+              Reservas
             </Link>
           </li>
           <li className="nav-item align-middle d-flex justify-content-center loginButtonMobile">

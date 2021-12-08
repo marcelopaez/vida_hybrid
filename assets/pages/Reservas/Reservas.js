@@ -1,8 +1,8 @@
 import React from 'react';
 import NavbarLogin from '../../components/NavbarLogin';
 import NavbarLoginMobile from '../../components/NavbarLoginMobile';
-import BackgroundSVGReservas1 from '../../images/BackgroundSVGReservas1.svg';
-import BackgroundSVGReservas2 from '../../images/BackgroundSVGReservas2.svg';
+import BackgroundSVGReservas1 from '../../images/SVGs/BackgroundSVGReservas1.svg';
+import BackgroundSVGReservas2 from '../../images/SVGs/BackgroundSVGReservas2.svg';
 
 const Reservas = () => {
   return (
@@ -15,7 +15,7 @@ const Reservas = () => {
         <NavbarLoginMobile />
       </div>
 
-      <div className="container">
+      <div className="customContainer">
         <img src={BackgroundSVGReservas1} alt="Vida" className="backgroundSVGReservas1" />
         <p className="reservationTitle boldFont">Accedé a nuestras salas de reunión, oficinas o creá tus eventos</p>
         <p className="reservationSubtitle">Texto para las reservas</p>

@@ -1,8 +1,7 @@
 .orangePlan {
   margin: 1.5rem;
-  box-shadow: 2px 2px 2px #cecece;
   border: 1px solid #cecece;
-  background: #fff;
+  background: #f1f1f1;
   height: 500px;
   width: 340px;
   border-radius: 5px;
@@ -51,7 +50,7 @@
   position: relative;
   top: 200px;
   background: #fafafa;
-  color: #afafaf;
+  color: #000 !important;
   width: 300px;
   padding: 0 1.85rem 0 1.85rem;
 }
@@ -93,5 +92,5 @@
 @media (min-width: 1200px) {
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
 }

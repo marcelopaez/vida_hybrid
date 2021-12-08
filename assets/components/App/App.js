@@ -5,7 +5,9 @@ import Footer from '../Footer';
 import Home from '../../pages/Home';
 import ReservasAdmin from '../../pages/ReservasAdmin';
 import PlanesAdmin from '../../pages/PlanesAdmin';
-import ContratoAdmin from '../../pages/Contrato';
+import ContratoAdmin from '../../pages/ContratoAdmin';
+import IngresosAdmin from '../../pages/IngresosAdmin';
+import ComunidadAdmin from '../../pages/ComunidadAdmin';
 import Planes from '../../pages/Planes';
 import Salas from '../../pages/Salas';
 import Oficinas from '../../pages/Oficinas';
@@ -24,6 +26,8 @@ const App = () => {
         <Route exact path="/reservasAdmin" component={ReservasAdmin} />
         <Route exact path="/planesAdmin" component={PlanesAdmin} />
         <Route exact path="/contratoAdmin" component={ContratoAdmin} />
+        <Route exact path="/ingresosAdmin" component={IngresosAdmin} />
+        <Route exact path="/comunidadAdmin" component={ComunidadAdmin} />
         <Route exact path="/planes" component={Planes} />
         <Route exact path="/salas" component={Salas} />
         <Route exact path="/oficinas" component={Oficinas} />
