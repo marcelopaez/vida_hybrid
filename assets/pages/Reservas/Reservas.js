@@ -6,7 +6,7 @@ import BackgroundSVGReservas2 from '../../images/SVGs/BackgroundSVGReservas2.svg
 
 const Reservas = () => {
   return (
-    <main>
+    <main className="reservationsGeneralContainer">
       <div className="navbarLarger">
         <NavbarLogin />
       </div>

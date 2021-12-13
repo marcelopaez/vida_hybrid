@@ -1,3 +1,7 @@
+.plansGeneralContainerPlans {
+  background: #fff;
+}
+
 .planesHeaderContent {
   position: relative;
   z-index: 50;
@@ -78,6 +82,12 @@
   font-size: 2.25rem;
 }
 
+.choosePlanTitleMobile {
+  color: $secondary;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
 .choosePlanImage {
   width: 125px;
   height: 125px;
@@ -85,7 +95,7 @@
 }
 
 .whyPlanContainer {
-  margin: 210px 0 260px 0;
+  padding: 210px 0 260px 0;
   display: flex;
   flex-direction: column;
 }
@@ -96,8 +106,18 @@
   margin-bottom: 2rem;
 }
 
+.whyPlanTitleMobile {
+  color: $secondary;
+  font-size: 1.1rem;
+  margin: 30px 0 20px 0;
+}
+
 .whyPlanText {
   font-size: 1.1rem;
+}
+
+.whyPlanTextMobile {
+  font-size: 1rem;
 }
 
 .plansContainerPlans {
@@ -107,7 +127,73 @@
   flex-wrap: wrap;
 }
 
+.plansContainerMobilePlans {
+  padding-top: 100px;
+}
+
+.actualPlanHeaderPlansMobile {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 50;
+  color: #fff;
+  padding: 50px;
+  background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22136%22%20height%3D%22139%22%20viewBox%3D%220%200%20136%20139%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M136%20139C136%2062.2285%2075.1146%200%200%200V139H136Z%22%20fill%3D%22%23004B2A%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+  background-size: 100%;
+  margin-top: 100px;
+}
+
+.actualPlanTitleMobile {
+  color: #fff;
+  font-size: 2rem;
+  background-image: url('/assets/images/Backgrounds/SalasBackground.jpg');
+}
+
+.creditsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.creditsPriceContainer {
+  background: $secondary;
+  color: $grayLighter;
+  font-size: 1.5rem;
+  padding: 15px;
+  border-radius: 0 5px 5px 0;
+}
+
+.plansButtonMobilePlans {
+  background: #fff;
+  color: $secondary;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  margin: 20px 0;
+  padding: 10px 0;
+}
+
+.choosePlanContainerMobile {
+  background: #fff;
+}
+
+.whyPlanContainerMobile {
+  padding: 30px 0 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: 300px) {
+  .plansContainerLargerPlans {
+    display: none;
+  }
+
+  .plansContainerMobilePlans {
+    display: block;
+  }
+
   .generalContent {
     flex-direction: column;
     align-items: center;
@@ -176,6 +262,14 @@
 }
 
 @media (min-width: 992px) {
+  .plansContainerLargerPlans {
+    display: block;
+  }
+
+  .plansContainerMobilePlans {
+    display: none;
+  }
+
   .choosePlanContainer {
     flex-direction: row;
     margin: 120px 2rem 220px 2rem;

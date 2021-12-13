@@ -2,6 +2,7 @@
   color: #4f4949;
   font-size: 3rem;
   margin: 100px 0;
+  text-align: center;
 }
 
 .inputIconOrange {
@@ -16,6 +17,14 @@
   padding: 10px 15px;
   width: 100%;
   margin-bottom: 20px;
+}
+
+.loginButtonCenter {
+  @extend .loginButton;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
 }
 
 .consultEmailLogin,
@@ -44,6 +53,12 @@
   position: absolute;
   top: -50%;
   left: 20%;
+}
+
+.seePassword {
+  position: absolute;
+  top: 3px;
+  right: 0;
 }
 
 @media (min-width: 300px) {

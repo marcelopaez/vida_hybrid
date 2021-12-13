@@ -26,18 +26,18 @@
   color: $primaryDarker;
   padding: 1rem 3rem;
   border: none;
-  border-radius: 1.25rem;
+  border-radius: 10px;
 }
 
 .welcomeContainerMobile {
-  background: $primaryDarker;
+  background: $primary;
   height: 50vh;
 }
 
 .welcomeContainerMobileSVG {
   position: absolute;
   left: -60px;
-  background: $primaryDarker;
+  background: $primary;
 }
 
 .welcomeContainerMobileContent {
@@ -50,7 +50,6 @@
   position: relative;
   background-color: $primaryDarker;
   color: #fff;
-  padding-bottom: 10.8rem;
   overflow: hidden;
 }
 
@@ -64,7 +63,8 @@
 
 .plansSubtitle {
   text-align: center;
-  padding-bottom: 3.1rem;
+  padding-bottom: 170px;
+  margin: 0;
   font-size: 1.5rem;
   position: relative;
   z-index: 2;
@@ -115,7 +115,7 @@
 
 .roomsTitle {
   font-size: 4.5rem;
-  padding: 40px 0 50px 100px;
+  padding: 66px 0 25px 100px;
   max-width: 700px;
 }
 
@@ -145,7 +145,7 @@
 
 .roomsContent2 {
   font-size: 1.1rem;
-  padding: 0 0 40px 100px;
+  padding: 0 0 36px 100px;
   max-width: 700px;
 }
 
@@ -157,16 +157,17 @@
   margin-left: 100px;
   padding: 0 100px;
   color: #fff;
+  width: 400px;
 }
 
 .servicesContainer {
   margin-top: -110px;
-  background: $primaryDarker;
+  background: $primary;
 }
 
 .servicesContainerMiddle {
   margin-top: -20px;
-  background: $primaryDarker;
+  background: $primary;
 }
 
 .servicesContainerMobile {
@@ -234,7 +235,7 @@
 
 .eventsTitle {
   font-size: 4.5rem;
-  padding: 0 0 50px 0;
+  padding: 66px 0 25px 0;
   margin: 0 0 0 190px;
   max-width: 700px;
 }
@@ -259,7 +260,7 @@
 
 .eventsContent1 {
   font-size: 1.1rem;
-  padding: 0 0 40px 0;
+  padding: 0 0 80px 0;
   max-width: 700px;
   margin: 0 0 0 190px;
 }
@@ -276,16 +277,17 @@
 }
 
 .communityTitle {
-  color: $primary !important;
+  color: $primary;
   text-align: left;
   padding-top: 5rem;
-  margin-bottom: 3rem !important;
+  margin-bottom: 40px;
+  font-size: 3rem;
 }
 
 .communityTitleBenefits {
   color: $primary;
   font-size: 2.25rem;
-  margin-top: 80px;
+  margin: 80px 0 50px 0;
 }
 
 .communityContainer {
@@ -348,7 +350,7 @@
   border-radius: 15px;
   padding: 18px 100px;
   position: absolute;
-  margin-top: 10px;
+  margin-top: 90px;
 }
 
 .strategicPlaceContainer {
@@ -363,6 +365,7 @@
 
 .strategicPlaceLogoContainer {
   color: #fff;
+  margin-bottom: 90px;
 }
 
 .locationText {
@@ -376,8 +379,7 @@
 .strategicPlaceTitle {
   color: #fff;
   text-align: left;
-  padding-top: 90px;
-  margin-bottom: 50px;
+  padding: 90px 0 50px 0;
 }
 
 .ratingContainer {
@@ -391,7 +393,7 @@
 }
 
 .ratingContent {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .opinionTitle {
@@ -400,6 +402,8 @@
 
 .opinionSubtitle {
   font-size: 1.1rem;
+  margin: 0;
+  padding-bottom: 40px;
 }
 
 .opinionSubtitleMobile {
@@ -423,7 +427,7 @@
   border-radius: 15px;
   padding: 1rem;
   color: #9f9d9b;
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 }
 
 .ratingUserPhoto {
@@ -463,7 +467,7 @@
 }
 
 .consultContainerMobile {
-  background: $primaryDarker;
+  background: $primary;
 }
 
 .consultTitle {
@@ -550,6 +554,10 @@
   padding-top: 200px;
 }
 
+.partnersContainerMiddle {
+  @extend .partnersContainer;
+}
+
 .partnersContainerMobile {
   @extend .partnersContainer;
   top: 0;
@@ -557,8 +565,7 @@
 
 .partnersTitle {
   color: $primaryDarker;
-  padding-top: 3.1rem;
-  padding-bottom: 2rem;
+  padding: 90px 0;
   margin: 0;
   color: $secondary;
   font-size: 3rem;
@@ -581,7 +588,7 @@
 .md-form textarea.md-textarea:focus:not([readonly]) {
   border-bottom: 1px solid $primaryDarker;
   box-shadow: 0 1px 0 0 $primaryDarker;
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .input-prefix {
@@ -599,6 +606,7 @@
 .backgroundSVGHome1 {
   position: absolute;
   right: calc(100% - 110vw);
+  top: 100px;
 }
 
 .backgroundSVGHome2 {
@@ -628,6 +636,18 @@
   height: 100px !important;
 }
 
+.servicesContainerMiddle {
+  .customContainer {
+    .servicesSection {
+      .serviceContainer {
+        flex-basis: 100% !important;
+        margin: 0 0 30px 0 !important;
+        justify-content: flex-start !important;
+      }
+    }
+  }
+}
+
 @media (min-width: 300px) {
   .welcomeContainerMobileContent {
     width: 50%;
@@ -640,6 +660,10 @@
     font-size: 2.25rem;
   }
 
+  .strategicPlaceTitle {
+    margin-bottom: 0;
+  }
+
   .plansContainerHome,
   .meetingsContainer,
   .eventsContainer,
@@ -649,7 +673,8 @@
   .ratingContainer,
   .consultContainer,
   .consultSVGContainer,
-  .partnersContainer {
+  .partnersContainer,
+  .partnersContainerMiddle {
     display: none;
   }
 
@@ -663,10 +688,6 @@
   .partnersContainerMobile,
   .welcomeContainerMobile {
     display: block;
-  }
-
-  .strategicPlaceLogoContainer {
-    padding-top: 0;
   }
 
   .opinionContainer {
@@ -687,7 +708,7 @@
     justify-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
   }
 
   .backgroundSVGHome1,
@@ -725,12 +746,21 @@
   .roomsTitleMobile,
   .eventsTitleMobile,
   .servicesTitle,
-  .communityTitle,
-  .strategicPlaceTitle {
+  .communityTitle {
     font-size: 4.5rem;
   }
 
-  .servicesContainerMiddle {
+  .strategicPlaceTitle {
+    font-size: 3.25rem;
+    margin-bottom: 40px;
+  }
+
+  .partnersContainerMobile {
+    display: none;
+  }
+
+  .servicesContainerMiddle,
+  .partnersContainerMiddle {
     display: block;
   }
 
@@ -789,11 +819,11 @@
   .plansContainerHome,
   .meetingsContainer,
   .eventsContainer,
-  .servicesContainer,
+  .servicesContainerMiddle,
   .strategicPlaceContainer,
   .consultContainer,
   .consultSVGContainer,
-  .partnersContainer {
+  .partnersContainerMiddle {
     display: block;
   }
 
@@ -801,7 +831,6 @@
   .meetingsContainerMobile,
   .eventsContainerMobile,
   .servicesContainerMobile,
-  .servicesContainerMiddle,
   .strategicPlaceContainerMobile,
   .partnersContainerMobile {
     display: none;
@@ -811,10 +840,6 @@
   .backgroundSVGHome2,
   .backgroundSVGHome3 {
     display: block;
-  }
-
-  .strategicPlaceLogoContainer {
-    padding-top: 75px;
   }
 }
 
@@ -833,6 +858,17 @@
 }
 
 @media (min-width: 1440px) {
+  .servicesContainer,
+  .partnersContainer {
+    display: block;
+  }
+
+  .servicesContainerMiddle,
+  .partnersContainerMiddle,
+  .partnersContainerMobile {
+    display: none;
+  }
+
   .welcomeContainerMobile {
     display: none;
   }

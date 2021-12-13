@@ -1,10 +1,12 @@
 import React from 'react';
 import PlanOrangeSVG from '../../images/SVGs/PlanOrangeSVG.svg';
+import PlanOrangeSVGWithoutHover from '../../images/SVGs/PlanOrangeSVGWithoutHover.svg';
 
 const OrangePlan = ({ svg, title, price, time }) => {
   return (
     <div className="orangePlan">
-      <img src={PlanOrangeSVG} alt="Vida" className="orangePlanSVG" />
+      <img src={PlanOrangeSVG} alt="Vida" className="orangePlanSVGWithoutHover" />
+      <img src={PlanOrangeSVGWithoutHover} alt="Vida" className="orangePlanSVGWithHover" />
       <div className="orangePlanInformation">
         <div className="d-flex justify-content-center align-items-center">
           {svg}

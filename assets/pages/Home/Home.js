@@ -74,6 +74,9 @@ const Home = () => {
             </svg>
             <Navbar />
           </div>
+          <a href="https://api.whatsapp.com/send?phone=5493513333333" className="floatWhatsApp floatButton d-none d-lg-flex justify-content-center align-items-center" target="_blank">
+            <i className="fab fa-whatsapp"></i>
+          </a>
         </div>
       </div>
 
@@ -96,7 +99,7 @@ const Home = () => {
         <img src={BackgroundSVGHome1} alt="Vida" className="backgroundSVGHome1" />
         <p className="plansTitle extraBoldFont">PLANES EN ESPACIO COMPARTIDO</p>
         <p className="plansSubtitle">Contamos con planes ideales para freelancers y profesionales independientes</p>
-        <div className="d-flex justify-content-center align-items-center flex-wrap" style={{ position: 'relative', zIndex: '2 ' }}>
+        <div className="d-flex justify-content-center align-items-center flex-wrap" style={{ position: 'relative', zIndex: '2', paddingBottom: '224px' }}>
           <Plan
             svg={
               <svg className="planContainerImage" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -879,7 +882,7 @@ const Home = () => {
               <option value="2">Option 2</option>
               <option value="3">Option 3</option>
             </select>
-            <select className="mdb-select md-form selectServicesMiddle boldFont" id="servicesMiddle" defaultValue="Título">
+            <select className="mdb-select md-form selectServicesMiddle boldFont" id="servicesMiddle" defaultValue="Título" style={{ paddingBottom: '110px' }}>
               <option value="">Título</option>
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
@@ -1066,7 +1069,7 @@ const Home = () => {
               <option value="2">Option 2</option>
               <option value="3">Option 3</option>
             </select>
-            <select className="mdb-select md-form selectServicesMobile boldFont" id="servicesMobile" defaultValue="Título">
+            <select className="mdb-select md-form selectServicesMobile boldFont" id="servicesMobile" defaultValue="Título" style={{ paddingBottom: '110px' }}>
               <option value="">Título</option>
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
@@ -1202,15 +1205,13 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="strategicPlaceContainer">
+      <div className="strategicPlaceContainer" style={{ marginTop: '290px' }}>
         <img src={BackgroundSVGHome3} alt="Vida" className="backgroundSVGHome3" />
         <div className="customContainer">
           <div className="row">
-            <div className="col-lg-6 col-md-6 col-sm-6">
+            <div className="col-lg-12 col-md-12 col-sm-12">
               <p className="strategicPlaceTitle extraBoldFont">LUGAR ESTRATÉGICO</p>
-            </div>
-            <div className="col-lg-6 col-md-6 col-sm-6">
-              <div className="d-flex strategicPlaceLogoContainer" style={{ marginTop: '90px' }}>
+              <div className="d-flex strategicPlaceLogoContainer">
                 <img src={StrategicPlaceLogo} alt="Vida" className="strategicPlaceLogo" />
                 <div className="flex-column">
                   <p className="locationText boldFont">Fernando Fader 3971</p>
@@ -1218,7 +1219,8 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="row" style={{ paddingBottom: '11.3rem' }}>
+            <div className="col-lg-12 col-md-12 col-sm-12"></div>
+            <div className="row" style={{ paddingBottom: '140px' }}>
               <div className="col-lg-6 col-md-6 col-sm-12">
                 <Service
                   svg={
@@ -1279,6 +1281,8 @@ const Home = () => {
                   small={true}
                   darkText={false}
                 />
+              </div>
+              <div className="col-lg-6 col-md-6 col-sm-12">
                 <Service
                   svg={
                     <svg width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1313,32 +1317,6 @@ const Home = () => {
                     </svg>
                   }
                   title={"5' de acceso a circunvalación"}
-                  subtitle={''}
-                  small={true}
-                  darkText={false}
-                />
-              </div>
-              <div className="col-lg-6 col-md-6 col-sm-12">
-                <Service
-                  svg={
-                    <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_106_272)">
-                        <path d="M8.16408 33.8616C22.4568 33.8616 34.0498 22.2016 34.0498 7.82611H8.16408V33.8616Z" fill="#FF972F" />
-                        <path d="M7.0922 12.6985C7.0922 15.4937 9.35521 17.7698 12.1344 17.7698C14.9135 17.7698 17.1765 15.4937 17.1765 12.6985C17.1765 9.90328 14.9135 7.62717 12.1344 7.62717C9.35521 7.58723 7.0922 9.86335 7.0922 12.6985Z" fill="white" />
-                        <path d="M9.55377 12.6979C9.55377 14.1753 10.7448 15.3334 12.1741 15.3334C13.6431 15.3334 14.7944 14.1354 14.7944 12.6979C14.7944 11.2204 13.6034 10.0624 12.1741 10.0624C10.7051 10.0224 9.55377 11.2204 9.55377 12.6979Z" fill="white" />
-                        <path d="M10.5862 25.3568V20.1657C7.60853 19.5667 5.26611 17.2507 4.63088 14.2558H-0.45098" fill="white" />
-                        <path d="M24.7585 14.2558H19.5973C18.962 17.2108 16.6593 19.5268 13.7214 20.1657V20.4053V25.3568" fill="white" />
-                        <path d="M13.7214 0V4.95154C16.6593 5.59045 19.0017 8.14608 19.5973 11.141L24.7585 11.101" fill="white" />
-                        <path d="M-0.452108 11.101H4.66945C5.26498 8.14608 7.6471 5.59045 10.6248 4.95154V0" fill="white" />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_106_272">
-                          <rect width="35" height="34" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  }
-                  title={"5' a pie del río"}
                   subtitle={''}
                   small={true}
                   darkText={false}
@@ -1404,7 +1382,7 @@ const Home = () => {
       <div className="strategicPlaceContainerMobile">
         <div className="customContainer">
           <div className="row">
-            <div className="col-lg-6 col-md-12 col-sm-12">
+            <div className="col-lg-12 col-md-12 col-sm-12">
               <p className="strategicPlaceTitle extraBoldFont">LUGAR ESTRATÉGICO</p>
               <div className="d-flex strategicPlaceLogoContainer">
                 <img src={StrategicPlaceLogo} alt="Vida" className="strategicPlaceLogo" />
@@ -1414,7 +1392,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-md-12 col-sm-12">
+            <div className="col-lg-12 col-md-12 col-sm-12">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.434882088902!2d-64.2347723843618!3d-31.37457028141809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299b7ceb33413%3A0x89c5c3a779773b97!2sVida%20Cowork!5e0!3m2!1ses-419!2sar!4v1638208913348!5m2!1ses-419!2sar" width="100%" height="450" style={{ border: '0' }} allowFullScreen="true" loading="lazy"></iframe>
             </div>
           </div>
@@ -1472,6 +1450,8 @@ const Home = () => {
                 small={true}
                 darkText={false}
               />
+            </div>
+            <div className="col-lg-4 col-md-4 col-sm-6">
               <Service
                 svg={
                   <svg width="40" height="34" viewBox="0 0 40 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1499,25 +1479,6 @@ const Home = () => {
                   </svg>
                 }
                 title={"5' de acceso a circunvalación"}
-                subtitle={''}
-                small={true}
-                darkText={false}
-              />
-            </div>
-            <div className="col-lg-4 col-md-4 col-sm-6">
-              <Service
-                svg={
-                  <svg width="36" height="34" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.16408 33.8617C23.4568 33.8617 35.0498 22.2016 35.0498 7.82617H9.16408V33.8617Z" fill="#FF972F" />
-                    <path d="M8.09244 12.6986C8.09244 15.4938 10.3555 17.7699 13.1346 17.7699C15.9137 17.7699 18.1768 15.4938 18.1768 12.6986C18.1768 9.90334 15.9137 7.62723 13.1346 7.62723C10.3555 7.58729 8.09244 9.86341 8.09244 12.6986Z" fill="white" />
-                    <path d="M10.5538 12.6979C10.5538 14.1753 11.7448 15.3334 13.1741 15.3334C14.6431 15.3334 15.7944 14.1354 15.7944 12.6979C15.7944 11.2204 14.6034 10.0624 13.1741 10.0624C11.7051 10.0224 10.5538 11.2204 10.5538 12.6979Z" fill="white" />
-                    <path d="M11.5864 25.3569V20.1658C8.60877 19.5668 6.26636 17.2507 5.63112 14.2559H0.549264" fill="white" />
-                    <path d="M25.7588 14.2559H20.5975C19.9623 17.2108 17.6596 19.5269 14.7216 20.1658V20.4054V25.3569" fill="white" />
-                    <path d="M14.7216 0V4.95154C17.6596 5.59045 20.002 8.14608 20.5975 11.141L25.7588 11.101" fill="white" />
-                    <path d="M0.548136 11.101H5.6697C6.26523 8.14608 8.64735 5.59045 11.625 4.95154V0" fill="white" />
-                  </svg>
-                }
-                title={"5' a pie del río"}
                 subtitle={''}
                 small={true}
                 darkText={false}
@@ -1573,6 +1534,22 @@ const Home = () => {
                   Nos esforzamos cada día para brindarle un espacio cómodo para trabajar. <b>Tu opinión es relevante.</b>
                 </p>
                 <p className="opinionSubtitle">Mirá lo que otros usuarios dicen de Vida:</p>
+                <div className="opinionContainer">
+                  <img src={ExampleRatingPhoto} alt="Vida" className="ratingUserPhoto" />
+                  <div className="flex-column opinionInformation">
+                    <p className="opinionName">Nombre, Apellido</p>
+                    <div className="opinionCalification">
+                      <div className="d-flex">
+                        <img src={YellowStar} alt="Vida" />
+                        <img src={YellowStar} alt="Vida" />
+                        <img src={YellowStar} alt="Vida" />
+                        <img src={YellowStar} alt="Vida" />
+                        <img src={GrayStar} alt="Vida" />
+                      </div>
+                    </div>
+                    <p className="opinionDetail">Me encantó el lugar!! Fui a una reunión con mi empresa.</p>
+                  </div>
+                </div>
                 <div className="opinionContainer">
                   <img src={ExampleRatingPhoto} alt="Vida" className="ratingUserPhoto" />
                   <div className="flex-column opinionInformation">
@@ -1671,6 +1648,22 @@ const Home = () => {
               <p className="opinionDetail">Me encantó el lugar!! Fui a una reunión con mi empresa.</p>
             </div>
           </div>
+          <div className="opinionContainer">
+            <img src={ExampleRatingPhoto} alt="Vida" className="ratingUserPhoto" />
+            <div className="flex-column opinionInformation">
+              <p className="opinionName">Nombre, Apellido</p>
+              <div className="opinionCalification">
+                <div className="d-flex">
+                  <img src={YellowStar} alt="Vida" />
+                  <img src={YellowStar} alt="Vida" />
+                  <img src={YellowStar} alt="Vida" />
+                  <img src={YellowStar} alt="Vida" />
+                  <img src={GrayStar} alt="Vida" />
+                </div>
+              </div>
+              <p className="opinionDetail">Me encantó el lugar!! Fui a una reunión con mi empresa.</p>
+            </div>
+          </div>
           <div className="consultContainerMobile">
             <div className="customContainer">
               <p className="consultTitleMobile extraBoldFont">Envía tu consulta</p>
@@ -1733,11 +1726,44 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="partnersContainerMiddle">
+        <div className="customContainer">
+          <p className="partnersTitle extraBoldFont">NUESTROS PARTNERS</p>
+          <div className="partnersLogos">
+            <Carousel infiniteLoop showThumbs={false} showArrows centerMode centerSlidePercentage={40} autoplay selectedItem={5} showIndicators={false} showStatus={false}>
+              <img src={Partner1} alt="AnkaLoo" />
+              <img src={Partner2} alt="Aliaga" />
+              <img src={Partner3} alt="Marangoni" />
+              <img src={Partner4} alt="Argentis" />
+              <img src={Partner5} alt="Awla" />
+              <img src={Partner6} alt="Bodego" />
+              <img src={Partner7} alt="Cervetti" />
+              <img src={Partner8} alt="Grupo Gauss" />
+              <img src={Partner9} alt="Big Capital" />
+              <img src={Partner10} alt="Molinos" />
+              <img src={Partner11} alt="Weiv" />
+              <img src={Partner12} alt="GNorte" />
+              <img src={Partner13} alt="Boceto" />
+              <img src={Partner14} alt="The Ludwe" />
+              <img src={Partner15} alt="NeWaves" />
+              <img src={Partner16} alt="Oliver" />
+              <img src={Partner17} alt="SocialBits" />
+              <img src={Partner18} alt="SimpleState" />
+              <img src={Partner19} alt="Solvo" />
+              <img src={Partner20} alt="Tempel" />
+              <img src={Partner21} alt="Pipncia" />
+              <img src={Partner22} alt="Trading Club CBA" />
+            </Carousel>
+            <Slider {...carouselSettings}></Slider>
+          </div>
+        </div>
+      </div>
+
       <div className="partnersContainerMobile">
         <div className="customContainer">
           <p className="partnersTitle extraBoldFont">NUESTROS PARTNERS</p>
           <div className="partnersLogos">
-            <Carousel infiniteLoop showThumbs={false} showArrows centerMode centerSlidePercentage={20} autoplay selectedItem={5} showIndicators={false} showStatus={false}>
+            <Carousel infiniteLoop showThumbs={false} showArrows centerMode centerSlidePercentage={100} autoplay selectedItem={5} showIndicators={false} showStatus={false}>
               <img src={Partner1} alt="AnkaLoo" />
               <img src={Partner2} alt="Aliaga" />
               <img src={Partner3} alt="Marangoni" />

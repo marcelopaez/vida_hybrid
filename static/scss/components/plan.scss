@@ -3,7 +3,7 @@
   background-color: transparent;
   border-radius: 20px;
   color: #fff;
-  padding: 3rem;
+  padding: 2.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,7 +11,7 @@
   position: relative;
   width: 280px;
   transition: all 0.5s ease;
-  height: 350px;
+  height: 290px;
   margin: 1.5rem 1.5rem;
 }
 
@@ -36,7 +36,8 @@
 }
 
 .planContainerDescription {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
+  text-align: center;
 }
 
 .planContainerPrice {

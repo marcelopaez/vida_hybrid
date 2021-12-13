@@ -1,3 +1,7 @@
+.reservationsGeneralContainer {
+  background: $grayLighter;
+}
+
 .reservationContainer {
   background-color: #cecece !important;
   border-radius: 5px;
@@ -20,7 +24,7 @@
 .reservationTitle {
   color: $gray;
   font-size: 1.5rem;
-  margin-top: 200px;
+  padding-top: 200px;
 }
 
 .reservationSubtitle {
@@ -137,7 +141,7 @@
 }
 
 .reservationFooter {
-  margin-bottom: 150px;
+  padding-bottom: 150px;
 }
 
 .reservationFooterTitle {

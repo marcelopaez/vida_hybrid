@@ -1,20 +1,39 @@
 .orangePlan {
   margin: 1.5rem;
   border: 1px solid #cecece;
-  background: #f1f1f1;
+  background: $grayLighter;
   height: 500px;
   width: 340px;
   border-radius: 5px;
-  filter: grayscale(0.4);
   transition: all 0.5s ease-in-out;
+
+  .orangePlanSVGWithHover {
+    display: block;
+  }
+
+  .orangePlanSVGWithoutHover {
+    display: none;
+  }
 }
 
 .orangePlan:hover {
   transform: scale(1.1);
-  filter: grayscale(0);
+
+  .orangePlanSVGWithoutHover {
+    display: block;
+  }
+
+  .orangePlanSVGWithHover {
+    display: none;
+  }
+
+  .orangePlanButton {
+    background: $secondary;
+  }
 }
 
-.orangePlanSVG {
+.orangePlanSVGWithoutHover,
+.orangePlanSVGWithHover {
   position: absolute;
 }
 
@@ -72,9 +91,10 @@
   top: 250px;
   border: none;
   border-radius: 10px;
-  background: $secondary;
+  background: #ffd7b5;
   padding: 20px 15px;
   color: #fff;
+  transition: all 0.5s ease-in-out;
 }
 
 @media (min-width: 300px) {
