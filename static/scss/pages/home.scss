@@ -21,6 +21,20 @@
   max-width: 500px;
 }
 
+.welcomeSubtitle,
+.welcomeText,
+.welcomeButton {
+  font-size: 1.1rem;
+}
+
+.welcomeSubtitle {
+  margin: 53px 0 20px 0;
+}
+
+.welcomeText {
+  margin-bottom: 70px;
+}
+
 .welcomeButton {
   background-color: #fff;
   color: $primaryDarker;
@@ -158,6 +172,7 @@
   padding: 0 100px;
   color: #fff;
   width: 400px;
+  font-size: 1.1rem;
 }
 
 .servicesContainer {
@@ -192,8 +207,8 @@
 .servicesTitle {
   color: #fff;
   text-align: left;
-  padding-top: 172px;
-  margin-bottom: 70px;
+  padding-top: 240px;
+  margin-bottom: 50px;
 }
 
 .servicesTitleMobile {
@@ -247,7 +262,7 @@
 }
 
 .eventsSubtitle {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   padding: 0 0 25px 0;
   max-width: 700px;
   margin: 0 0 0 190px;
@@ -279,9 +294,9 @@
 .communityTitle {
   color: $primary;
   text-align: left;
-  padding-top: 5rem;
-  margin-bottom: 40px;
+  padding: 122px 0 40px 0;
   font-size: 3rem;
+  margin: 0;
 }
 
 .communityTitleBenefits {
@@ -350,11 +365,12 @@
   border-radius: 15px;
   padding: 18px 100px;
   position: absolute;
-  margin-top: 90px;
+  margin: 86px 0;
 }
 
 .strategicPlaceContainer {
   background-color: $primaryDarker;
+  margin-top: 236px;
 }
 
 .strategicPlaceContainerMobile {
@@ -369,17 +385,24 @@
 }
 
 .locationText {
-  font-size: 0.85rem;
+  font-size: 1.5rem;
+}
+
+.locationSubtext {
+  font-size: 1.1rem;
+  font-style: italic;
 }
 
 .strategicPlaceLogo {
+  width: 40px !important;
+  height: 54px !important;
   margin-right: 30px;
 }
 
 .strategicPlaceTitle {
   color: #fff;
   text-align: left;
-  padding: 90px 0 50px 0;
+  padding: 64px 0 80px 0;
 }
 
 .ratingContainer {
@@ -533,8 +556,9 @@
   border: none;
   border-radius: 10px;
   padding: 10px 15px;
-  margin: 0 0 0 190px;
+  margin: 40px 0 0 190px;
   width: 300px;
+  font-size: 14px;
 }
 
 .consultButtonMobile {
@@ -551,7 +575,7 @@
   background-color: #f5f5f5;
   position: relative;
   z-index: 1;
-  padding-top: 200px;
+  padding-top: 126px;
 }
 
 .partnersContainerMiddle {
@@ -655,7 +679,6 @@
 
   .roomsTitleMobile,
   .eventsTitleMobile,
-  .communityTitle,
   .strategicPlaceTitle {
     font-size: 2.25rem;
   }
@@ -708,7 +731,7 @@
     justify-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-bottom: 90px;
+    padding-bottom: 245px;
   }
 
   .backgroundSVGHome1,
@@ -735,24 +758,14 @@
     font-size: 2rem;
   }
 
-  .welcomeSubtitle {
-    margin-top: 10px;
-  }
-
-  .welcomeText {
-    margin: 0;
-  }
-
   .roomsTitleMobile,
   .eventsTitleMobile,
-  .servicesTitle,
-  .communityTitle {
+  .servicesTitle {
     font-size: 4.5rem;
   }
 
   .strategicPlaceTitle {
-    font-size: 3.25rem;
-    margin-bottom: 40px;
+    font-size: 3rem;
   }
 
   .partnersContainerMobile {
@@ -782,15 +795,6 @@
 
   .welcomeTitle {
     font-size: 4rem;
-  }
-
-  .welcomeSubtitle {
-    margin-top: 66px;
-  }
-
-  .welcomeText {
-    margin-top: 33px;
-    margin-bottom: 66px;
   }
 
   .plansTitle,

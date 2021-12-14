@@ -5,7 +5,7 @@ const Service = ({ svg, title, subtitle, small, darkText }) => {
     <div className={!small ? (!darkText ? 'serviceContainer' : 'serviceContainerDarkText') : !darkText ? 'smallServiceContainer' : 'smallServiceContainerDarkText'}>
       <div>{svg}</div>
       <div className={!small ? 'serviceContainerInformation' : 'smallServiceContainerInformation'}>
-        <p className={!small ? 'serviceTitle boldFont' : 'smallServiceTitle boldFont'}>{title}</p>
+        <p className={!small ? 'serviceTitle extraBoldFont' : 'smallServiceTitle extraBoldFont'}>{title}</p>
         <p className="serviceSubtitle">{subtitle}</p>
       </div>
     </div>

@@ -21,15 +21,17 @@ const Planes = () => {
                 </svg>
                 <p className="actualPlanTitle extraBoldFont">Eter</p>
               </div>
-              <select className="mdb-select md-form" id="consultSelect" defaultValue="Tipo de Consulta">
+              <select className="mdb-select md-form consultSelectPlanes" id="consultSelect" defaultValue="Tipo de Consulta">
                 <option value="">Tipo de consulta</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>
               </select>
-              <p className="actualPlanText">5 créditos Vida. 3 Hs. en salas de reunión.</p>
+              <p className="actualPlanText">
+                5 créditos Vida. <br /> 3 Hs. en salas de reunión.
+              </p>
               <p className="actualPlanPrice extraBoldFont">$3800</p>
-              <button className="actualPlanButton">Suscribite</button>
+              <button className="actualPlanButton boldFont">Suscribite</button>
             </div>
           </div>
           <div className="rightSVGNavbar">
@@ -149,8 +151,8 @@ const Planes = () => {
 
           <div className="creditsContainer">
             <div className="flex-column">
-              <p className="m-0 pl-3">5 créditos Vida</p>
-              <p className="m-0 pl-3">3 Hs. en salas de reunión</p>
+              <p className="creditsDescription">5 créditos Vida</p>
+              <p className="creditsDescription">3 Hs. en salas de reunión</p>
             </div>
             <div className="creditsPriceContainer py-4">
               <p className="extraBoldFont m-0">$3800</p>
@@ -158,8 +160,9 @@ const Planes = () => {
           </div>
 
           <button className="plansButtonMobilePlans boldFont">Suscribite</button>
-
-          <div className="choosePlanContainerMobile">
+        </div>
+        <div className="choosePlanContainerMobile">
+          <div className="customContainer">
             <div className="choosePlanTitleMobile boldFont">¡Elegí el plan que más se adapte a vos!</div>
             <div className="d-flex">
               <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
@@ -167,7 +170,9 @@ const Planes = () => {
               <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
             </div>
           </div>
-          <div className="whyPlanContainerMobile">
+        </div>
+        <div className="whyPlanContainerMobile">
+          <div className="customContainer">
             <div className="whyPlanTitleMobile extraBoldFont">¿Por qué suscribirme a un plan?</div>
             <div className="whyPlanTextMobile">Te será de mucha ayuda para organizarte ya que podrás visualizar: Todos los detalles de tu plan La cantidad de horas que utilizaste y cuántas te quedan Un calendario donde ver tus reservas y realizar nuevas</div>
           </div>

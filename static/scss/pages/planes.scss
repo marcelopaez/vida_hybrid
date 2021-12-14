@@ -14,12 +14,20 @@
 }
 
 .actualPlanSVG {
-  margin-top: 200px;
+  margin: 200px 0 43px 0;
   margin-right: 2rem;
 }
 
+.consultSelectPlanes {
+  background: #fff;
+  color: #afafaf;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+}
+
 .actualPlanTitle {
-  padding-top: 200px;
+  padding: 200px 0 43px 0;
 }
 
 .actualPlanTitle,
@@ -54,12 +62,12 @@
 
 .actualPlanText {
   font-size: 1.1rem;
-  margin-top: 33px;
+  margin: 33px 0 0 0;
 }
 
 .actualPlanPrice {
   font-size: 3rem;
-  margin-bottom: 33px;
+  margin: 20px 0 37px 0;
 }
 
 .actualPlanButton {
@@ -69,6 +77,7 @@
   border: none;
   border-radius: 10px;
   width: 400px;
+  font-size: 1.1rem;
 }
 
 .choosePlanContainer {
@@ -85,7 +94,7 @@
 .choosePlanTitleMobile {
   color: $secondary;
   font-size: 1.1rem;
-  margin-bottom: 50px;
+  padding: 44px 0 31px 0;
 }
 
 .choosePlanImage {
@@ -95,7 +104,7 @@
 }
 
 .whyPlanContainer {
-  padding: 210px 0 260px 0;
+  padding: 220px 0 245px 0;
   display: flex;
   flex-direction: column;
 }
@@ -109,7 +118,7 @@
 .whyPlanTitleMobile {
   color: $secondary;
   font-size: 1.1rem;
-  margin: 30px 0 20px 0;
+  padding: 30px 0 20px 0;
 }
 
 .whyPlanText {
@@ -129,6 +138,7 @@
 
 .plansContainerMobilePlans {
   padding-top: 100px;
+  background: #f1f1f1;
 }
 
 .actualPlanHeaderPlansMobile {
@@ -157,6 +167,12 @@
   background: #fff;
 }
 
+.creditsDescription {
+  color: #afafaf;
+  margin: 0;
+  padding-left: 10px;
+}
+
 .creditsPriceContainer {
   background: $secondary;
   color: $grayLighter;
@@ -183,6 +199,8 @@
   padding: 30px 0 50px 0;
   display: flex;
   flex-direction: column;
+  background: #fff;
+  color: #7d7c7a;
 }
 
 @media (min-width: 300px) {
@@ -217,7 +235,7 @@
 
   .choosePlanContainer {
     flex-direction: column;
-    margin: 120px 1rem 220px 1rem;
+    margin: 50px 1rem 220px 1rem;
   }
 }
 
@@ -272,7 +290,7 @@
 
   .choosePlanContainer {
     flex-direction: row;
-    margin: 120px 2rem 220px 2rem;
+    margin: 50px 2rem 220px 2rem;
   }
 }
 

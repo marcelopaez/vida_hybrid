@@ -10,7 +10,7 @@
 }
 
 .communityTitleCommunity {
-  padding-top: 200px;
+  padding: 200px 0 60px 0;
 }
 
 .communityTitleCommunity,
@@ -22,14 +22,26 @@
 
 .communityTitleCommunity {
   font-size: 4rem;
+  margin: 0;
 }
 
 .communitySubitle {
   font-size: 1.5rem;
+  margin-bottom: 25px;
 }
 
 .communityText {
   font-size: 1.1rem;
+}
+
+.communityContainerCommunity {
+  margin-bottom: 245px;
+}
+
+.communityTitleBenefitsCommunity {
+  color: $primary;
+  font-size: 2.25rem;
+  margin: 50px 0;
 }
 
 @media (min-width: 300px) {

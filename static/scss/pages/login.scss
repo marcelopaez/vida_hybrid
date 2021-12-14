@@ -1,7 +1,6 @@
 .loginTitle {
-  color: #4f4949;
+  color: $grayDarker;
   font-size: 3rem;
-  margin: 100px 0;
   text-align: center;
 }
 
@@ -17,6 +16,7 @@
   padding: 10px 15px;
   width: 100%;
   margin-bottom: 20px;
+  font-size: 1.1rem;
 }
 
 .loginButtonCenter {
@@ -39,20 +39,22 @@
 
 .loginSubtitle {
   font-size: 1.5rem;
-  color: #4f4949;
-  margin-left: 65px;
+  color: $grayDarker;
 }
 
 .loginIconsContainer {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 100px 0 0 65px;
+  position: relative;
+  z-index: 2;
 }
 
 .backgroundSVGLogin {
   position: absolute;
   top: -50%;
   left: 20%;
+  z-index: 1;
 }
 
 .seePassword {
@@ -63,7 +65,19 @@
 
 @media (min-width: 300px) {
   .loginContainer {
-    margin: 120px 1rem 220px 1rem;
+    margin: 50px 1rem 50px 1rem;
+  }
+
+  .loginTitle {
+    margin: 150px 0 0 0;
+  }
+
+  .loginSubtitle {
+    margin-left: 0;
+  }
+
+  .loginIconsContainer {
+    margin: 30px 0 0 0;
   }
 
   .backgroundSVGLogin {
@@ -89,6 +103,17 @@
 }
 
 @media (min-width: 992px) {
+  .loginTitle {
+    margin: 200px 0;
+  }
+
+  .loginSubtitle {
+    margin-left: 65px;
+  }
+
+  .loginIconsContainer {
+    margin: 100px 0 0 65px;
+  }
 }
 
 @media (min-width: 1200px) {

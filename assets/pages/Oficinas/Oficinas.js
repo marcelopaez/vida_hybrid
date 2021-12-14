@@ -13,7 +13,6 @@ const Oficinas = () => {
               <p className="officesTitle extraBoldFont">Oficinas privadas</p>
               <p className="officesSubtitle">Si buscás privacidad, tenemos espacios con capacidad para 4 hasta 26 personas.</p>
               <p className="officesText">Adaptamos nuestras oficinas a equipos numerosos.</p>
-              <button className="roomButton">Explorá en 360º</button>
             </div>
           </div>
           <div className="rightSVGNavbar">
@@ -24,7 +23,6 @@ const Oficinas = () => {
           </div>
         </div>
       </div>
-
       <div className="navbarMobile">
         <div className="backgroundMobile">
           <div className="rightSVGNavbar">
@@ -32,26 +30,45 @@ const Oficinas = () => {
           </div>
         </div>
       </div>
-
-      <div className="customContainer">
-        <div className="roomsDescriptionContent">
-          <div className="roomsDescriptionTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
-          <div className="roomsDescriptionText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+      <div className="officesContainerLargerOffices">
+        <div className="customContainer">
+          <div className="roomsDescriptionContent">
+            <div className="roomsDescriptionTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+            <div className="roomsDescriptionText">Si buscás privacidad, tenemos espacios con capacidad para 4 hasta 26 personas. Adaptamos nuestras oficinas a equipos numerosos.</div>
+          </div>
+        </div>
+        <div className="customContainer">
+          <div className="officesReservationContainer">
+            <p className="officesReservationTitle boldFont">¿Te interesa reservar?</p>
+            <div className="md-form form-lg">
+              <input type="text" id="name" className="form-control form-control-lg officesReservationInput" />
+              <label htmlFor="name">Nombre y apellido / Empresa</label>
+            </div>
+            <div className="md-form form-lg">
+              <input type="email" id="email" className="form-control form-control-lg officesReservationInput" />
+              <label htmlFor="email">E-mail</label>
+            </div>
+            <button className="officesReservationButton">Enviar</button>
+          </div>
         </div>
       </div>
 
-      <div className="customContainer">
-        <div className="officesReservationContainer">
-          <p className="officesReservationTitle boldFont">¿Te interesa reservar?</p>
-          <div className="md-form form-lg">
-            <input type="text" id="name" className="form-control form-control-lg officesReservationInput" />
-            <label for="name">Nombre y apellido / Empresa</label>
+      <div className="officesContainerMobileOffices">
+        <div className="customContainer">
+          <p className="officesSubtitleMobile">Si buscás privacidad, tenemos espacios con capacidad para 4 hasta 26 personas.</p>
+          <p className="officesTextMobile">Adaptamos nuestras oficinas a equipos numerosos.</p>
+          <div className="officesReservationContainerMobile">
+            <p className="officesReservationTitleMobile boldFont">¿Te interesa reservar?</p>
+            <div className="md-form form-lg">
+              <input type="text" id="name" className="form-control form-control-lg officesReservationInput" />
+              <label htmlFor="name">Nombre y apellido / Empresa</label>
+            </div>
+            <div className="md-form form-lg">
+              <input type="email" id="email" className="form-control form-control-lg officesReservationInput" />
+              <label htmlFor="email">E-mail</label>
+            </div>
+            <button className="officesReservationButtonMobile">Enviar</button>
           </div>
-          <div className="md-form form-lg">
-            <input type="email" id="email" className="form-control form-control-lg officesReservationInput" />
-            <label for="email">E-mail</label>
-          </div>
-          <button className="officesReservationButton">Enviar</button>
         </div>
       </div>
     </main>

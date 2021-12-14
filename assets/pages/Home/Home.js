@@ -65,7 +65,7 @@ const Home = () => {
               <p className="welcomeTitle extraBoldFont">Bienvenide a Vida Cowork</p>
               <p className="welcomeSubtitle boldFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
               <p className="welcomeText lightFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <button className="welcomeButton">Quiero ser parte de Vida</button>
+              <button className="welcomeButton boldFont">Quiero ser parte de Vida</button>
             </div>
           </div>
           <div className="rightSVGNavbar">
@@ -244,7 +244,7 @@ const Home = () => {
               <p className="roomsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
               <p className="roomsContent2">Podes reservar de manera eventual o contratar un pack mensual.</p>
               <Link to="/salas">
-                <button className="roomsButton">Ver más</button>
+                <button className="roomsButton boldFont">Ver más</button>
               </Link>
             </div>
             <div>
@@ -253,7 +253,7 @@ const Home = () => {
               <p className="roomsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
               <p className="roomsContent2">Podes reservar de manera eventual o contratar un pack mensual.</p>
               <Link to="/salas">
-                <button className="roomsButton">Ver más</button>
+                <button className="roomsButton boldFont">Ver más</button>
               </Link>
             </div>
           </Slider>
@@ -1096,7 +1096,7 @@ const Home = () => {
               <p className="eventsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
               <p className="eventsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
               <Link to="/eventos">
-                <button className="eventsButton">Ver más</button>
+                <button className="eventsButton boldFont">Ver más</button>
               </Link>
             </div>
             <div>
@@ -1104,7 +1104,7 @@ const Home = () => {
               <p className="eventsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
               <p className="eventsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
               <Link to="/eventos">
-                <button className="eventsButton">Ver más</button>
+                <button className="eventsButton boldFont">Ver más</button>
               </Link>
             </div>
           </Slider>
@@ -1205,7 +1205,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="strategicPlaceContainer" style={{ marginTop: '290px' }}>
+      <div className="strategicPlaceContainer">
         <img src={BackgroundSVGHome3} alt="Vida" className="backgroundSVGHome3" />
         <div className="customContainer">
           <div className="row">
@@ -1215,7 +1215,7 @@ const Home = () => {
                 <img src={StrategicPlaceLogo} alt="Vida" className="strategicPlaceLogo" />
                 <div className="flex-column">
                   <p className="locationText boldFont">Fernando Fader 3971</p>
-                  <p className="locationText">Cerro de las Rosas | Córdoba</p>
+                  <p className="locationSubtext boldFont">Cerro de las Rosas | Córdoba</p>
                 </div>
               </div>
             </div>
@@ -1373,7 +1373,7 @@ const Home = () => {
                   darkText={false}
                 />
               </div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.434882088902!2d-64.2347723843618!3d-31.37457028141809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299b7ceb33413%3A0x89c5c3a779773b97!2sVida%20Cowork!5e0!3m2!1ses-419!2sar!4v1638208913348!5m2!1ses-419!2sar" width="100%" height="450" style={{ border: '0', zIndex: '2' }} allowFullScreen="true" loading="lazy"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.434882088902!2d-64.2347723843618!3d-31.37457028141809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299b7ceb33413%3A0x89c5c3a779773b97!2sVida%20Cowork!5e0!3m2!1ses-419!2sar!4v1638208913348!5m2!1ses-419!2sar" width="100%" height="450" style={{ border: '0', zIndex: '2', marginTop: '60px' }} allowFullScreen="true" loading="lazy"></iframe>
             </div>
           </div>
         </div>
@@ -1388,12 +1388,12 @@ const Home = () => {
                 <img src={StrategicPlaceLogo} alt="Vida" className="strategicPlaceLogo" />
                 <div className="flex-column">
                   <p className="locationText boldFont">Fernando Fader 3971</p>
-                  <p className="locationText">Cerro de las Rosas | Córdoba</p>
+                  <p className="locationSubtext boldFont">Cerro de las Rosas | Córdoba</p>
                 </div>
               </div>
             </div>
             <div className="col-lg-12 col-md-12 col-sm-12">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.434882088902!2d-64.2347723843618!3d-31.37457028141809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299b7ceb33413%3A0x89c5c3a779773b97!2sVida%20Cowork!5e0!3m2!1ses-419!2sar!4v1638208913348!5m2!1ses-419!2sar" width="100%" height="450" style={{ border: '0' }} allowFullScreen="true" loading="lazy"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.434882088902!2d-64.2347723843618!3d-31.37457028141809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299b7ceb33413%3A0x89c5c3a779773b97!2sVida%20Cowork!5e0!3m2!1ses-419!2sar!4v1638208913348!5m2!1ses-419!2sar" width="100%" height="450" style={{ border: '0', marginTop: '60px' }} allowFullScreen="true" loading="lazy"></iframe>
             </div>
           </div>
           <div className="row">
@@ -1580,7 +1580,7 @@ const Home = () => {
                   E-mail
                 </label>
               </div>
-              <select className="mdb-select md-form consultSelect" id="consultSelect" defaultValue="Tipo de Consulta">
+              <select className="mdb-select md-form consultSelect boldFont" id="consultSelect" defaultValue="Tipo de Consulta">
                 <option value="">Tipo de consulta</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
@@ -1592,7 +1592,7 @@ const Home = () => {
                 </label>
                 <textarea className="form-control rounded-0 consultInput" id="consultContent" rows="3"></textarea>
               </div>
-              <button className="consultButton">Enviar</button>
+              <button className="consultButton boldFont">Enviar</button>
             </div>
             <div className="consultContainerMobile">
               <div className="customContainer">
@@ -1605,7 +1605,7 @@ const Home = () => {
                     E-mail
                   </label>
                 </div>
-                <select className="mdb-select md-form consultSelect" id="consultSelectMobile" defaultValue="Tipo de Consulta">
+                <select className="mdb-select md-form consultSelect" id="consultSelectMobile boldFont" defaultValue="Tipo de Consulta">
                   <option value="">Tipo de consulta</option>
                   <option value="1">Option 1</option>
                   <option value="2">Option 2</option>
@@ -1617,7 +1617,7 @@ const Home = () => {
                   </label>
                   <textarea className="form-control rounded-0 consultInputMobile" id="consultInputMobile" rows="3"></textarea>
                 </div>
-                <button className="consultButtonMobile">Enviar</button>
+                <button className="consultButtonMobile boldFont">Enviar</button>
               </div>
             </div>
           </div>
@@ -1675,7 +1675,7 @@ const Home = () => {
                   E-mail
                 </label>
               </div>
-              <select className="mdb-select md-form consultSelect" id="consultSelectMobile" defaultValue="Tipo de Consulta">
+              <select className="mdb-select md-form consultSelect boldFont" id="consultSelectMobile" defaultValue="Tipo de Consulta">
                 <option value="">Tipo de consulta</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
@@ -1687,7 +1687,7 @@ const Home = () => {
                 </label>
                 <textarea className="form-control rounded-0 consultInputMobile" id="consultInputMobile" rows="3"></textarea>
               </div>
-              <button className="consultButtonMobile">Enviar</button>
+              <button className="consultButtonMobile boldFont">Enviar</button>
             </div>
           </div>
         </div>

@@ -33,10 +33,9 @@ const Comunidad = () => {
         </div>
       </div>
 
-      <div className="communityContainer">
+      <div className="communityContainerCommunity">
         <div className="customContainer">
-          <p className="communityTitle extraBoldFont">COMUNIDAD</p>
-
+          <p className="communityTitleBenefitsCommunity boldFont">Titulos</p>
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-12">
               <div className="card-vida-horizontal">

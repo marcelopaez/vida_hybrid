@@ -35,13 +35,13 @@ const Reservas = () => {
                   <div className="registerUserOptions">
                     <div className="custom-control custom-checkbox reservationUser">
                       <input type="checkbox" className="custom-control-input" id="registeredUser" />
-                      <label className="custom-control-label" for="registeredUser">
+                      <label className="custom-control-label" htmlFor="registeredUser">
                         Sí
                       </label>
                     </div>
                     <div className="custom-control custom-checkbox reservationUser">
                       <input type="checkbox" className="custom-control-input" id="notRegisteredUser" />
-                      <label className="custom-control-label" for="notRegisteredUser">
+                      <label className="custom-control-label" htmlFor="notRegisteredUser">
                         No
                       </label>
                     </div>
@@ -50,13 +50,13 @@ const Reservas = () => {
                   <div className="businessOptions">
                     <div className="custom-control custom-checkbox businessOption">
                       <input type="checkbox" className="custom-control-input" id="isBusiness" />
-                      <label className="custom-control-label" for="isBusiness">
+                      <label className="custom-control-label" htmlFor="isBusiness">
                         Sí
                       </label>
                     </div>
                     <div className="custom-control custom-checkbox businessOption">
                       <input type="checkbox" className="custom-control-input" id="notBusiness" />
-                      <label className="custom-control-label" for="notBusiness">
+                      <label className="custom-control-label" htmlFor="notBusiness">
                         No
                       </label>
                     </div>
@@ -67,17 +67,17 @@ const Reservas = () => {
                   <div className="md-form input-with-pre-icon">
                     <i className="fas fa-calendar-alt input-prefix" id="loginDateIcon"></i>
                     <input type="text" id="reservationDate" className="form-control reservationDate" />
-                    <label htmlFor="reservationDate">Fecha</label>
+                    <label htmlhtmlFor="reservationDate">Fecha</label>
                   </div>
                   <div className="md-form input-with-pre-icon">
                     <i className="fas fa-filter input-prefix login" id="loginRoomIcon"></i>
                     <input type="text" id="reservationRoomType" className="form-control reservationRoomType" />
-                    <label htmlFor="reservationRoomType">Tipo de Sala</label>
+                    <label htmlhtmlFor="reservationRoomType">Tipo de Sala</label>
                   </div>
                   <div className="md-form input-with-pre-icon">
                     <i className="fas fa-clock input-prefix login" id="loginTimeIcon"></i>
                     <input type="text" id="reservationTime" className="form-control reservationTime" />
-                    <label htmlFor="reservationTime">Horario</label>
+                    <label htmlhtmlFor="reservationTime">Horario</label>
                   </div>
                 </div>
                 <div>
@@ -94,22 +94,22 @@ const Reservas = () => {
               <p className="reservationPaymentMethodTitle">Método de pago</p>
               <div className="custom-control custom-checkbox reservationPaymentMethodOption">
                 <input type="checkbox" className="custom-control-input" id="paymentMethodMercadoPago" />
-                <label className="custom-control-label" for="paymentMethodMercadoPago">
+                <label className="custom-control-label" htmlFor="paymentMethodMercadoPago">
                   Mercado Pago
                 </label>
               </div>
               <div className="custom-control custom-checkbox reservationPaymentMethodOption">
                 <input type="checkbox" className="custom-control-input" id="paymentMethodVida" />
-                <label className="custom-control-label" for="paymentMethodVida">
+                <label className="custom-control-label" htmlFor="paymentMethodVida">
                   Coordinar pago con Vida Cowork
                 </label>
               </div>
-              <button className="reservationAcceptButton">Reservar</button>
+              <button className="reservationAcceptButton boldFont">Reservar</button>
             </div>
           </div>
         </div>
         <div className="reservationFooter">
-          <p className="reservationFooterTitle">Suscribite a un plan para facilitar el acceso a todas nuestras salas!</p>
+          <p className="reservationFooterTitle boldFont">Suscribite a un plan para facilitar el acceso a todas nuestras salas!</p>
           <p className="reservationFooterSubtitle">Te será de mucha ayuda para organizarte ya que podrás visualizar:</p>
           <p className="reservationFooterSubtitle">Todos los detalles de tu plan</p>
           <p className="reservationFooterSubtitle">La cantidad de horas que utilizaste y cuántas te quedan</p>

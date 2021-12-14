@@ -23,7 +23,7 @@ const NavbarLogin = () => {
         </Link>
         {windowScroll !== 0 && (
           <Link to="/">
-            <img src={GreenLogo} alt="Vida" style={{ marginLeft: '-218px' }} />
+            <img src={GreenLogo} alt="Vida" style={{ marginLeft: '-2px' }} />
           </Link>
         )}
         <div className="collapse navbar-collapse" id="navbarVida">

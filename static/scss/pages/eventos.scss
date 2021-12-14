@@ -10,11 +10,12 @@
 }
 
 .eventsTitleEvents {
-  padding-top: 200px;
+  padding: 200px 0 25px 0;
+  margin: 0;
 }
 
 .eventsTitleEvents,
-.eventsSubitle,
+.eventsSubtitleEvents,
 .eventsText {
   color: #fff;
   max-width: 500px;
@@ -24,8 +25,29 @@
   font-size: 4rem;
 }
 
-.eventsSubitle {
+.eventsSubtitleEvents {
   font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.eventsSubtitleEventsMobile,
+.eventsTextMobile,
+.eventsSubtitleEvents2Mobile,
+.eventsText2Mobile {
+  font-size: 1rem;
+}
+
+.eventsSubtitleEventsMobile {
+  padding: 36px 0 14px 0;
+}
+
+.eventsSubtitleEvents2Mobile {
+  color: $secondary;
+  margin: 55px 0 20px 0;
+}
+
+.eventsText2Mobile {
+  color: #9b9b9b;
 }
 
 .eventsText {
@@ -37,10 +59,22 @@
   flex-direction: column;
 }
 
+.ourEventsContainerMobile {
+  display: flex;
+  flex-direction: column;
+  padding: 55px 0;
+}
+
 .ourEventsTitle {
   font-size: 2.25rem;
   color: $secondary;
   margin-bottom: 50px;
+}
+
+.ourEventsTitleMobile {
+  font-size: 2.25rem;
+  color: $secondary;
+  margin-bottom: 20px;
 }
 
 .eventCarouselItemContainer {
@@ -61,71 +95,42 @@
   border-radius: 10px;
 }
 
-.eventsFormatContainer {
-  position: relative;
-  background: $secondary;
-  height: 40vh;
-  padding-top: 60px;
-}
-
-.eventsFormatSVGContainer {
-  position: absolute;
-  left: 0;
-  z-index: 2;
-  top: -25px;
-}
-
-.eventsFormatSVGContent {
-  position: absolute;
-  z-index: 2;
-  color: #fff;
-  font-size: 2.25rem;
-  margin: 4rem 0 0 2rem;
-
-  p {
-    width: 50%;
-  }
-}
-
-.eventsFormatContentContainer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 5rem;
-  z-index: 1;
-}
-
-.roomsFooterPlanContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 4rem 1rem 0 1rem;
-  color: #fff;
-}
-
-.roomsFooterSVGSquare {
-  border: 1px solid #fff;
-  border-radius: 10px;
-  padding: 1rem;
-}
-
-.roomsFooterPlanTitle {
+.evensDescriptionTitle {
   font-size: 1.5rem;
-  margin-top: 35px;
+  color: $secondary;
+  margin: 162px 0 35px 0;
+}
+
+.eventsDescriptionText {
+  font-size: 1.5rem;
+  color: #9b9b9b;
+  margin-bottom: 142px;
 }
 
 .eventsReservationContainer {
+  background: $grayLighter;
   display: flex;
   flex-direction: column;
-  margin: 228px 0 60px 0;
+  padding-bottom: 245px;
+}
+
+.eventsReservationContainerMobile {
+  display: flex;
+  flex-direction: column;
+  margin-top: 125px;
 }
 
 .eventsReservationTitle {
+  padding-top: 58px;
   font-size: 2.25rem;
   color: $secondary;
   margin-bottom: 54px;
+}
+
+.eventsReservationTitleMobile {
+  font-size: 2.25rem;
+  color: $secondary;
+  margin-bottom: 29px;
 }
 
 .eventsReservationInput {
@@ -142,13 +147,35 @@
   width: 100%;
 }
 
+.eventsReservationButtonMobile {
+  background-color: $secondary;
+  margin: 20px 0 50px 0;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 15px;
+  width: 100%;
+}
+
 .carousel-root {
   width: 100% !important;
 }
 
+.eventsContainerMobileEvents {
+  margin-top: 150px;
+}
+
 @media (min-width: 300px) {
+  .eventsContainerLargerEvents {
+    display: none;
+  }
+
+  .eventsContainerMobileEvents {
+    display: block;
+  }
+
   .ourEventsContainer {
-    margin: 120px 1rem 220px 1rem;
+    margin: 50px 1rem 220px 1rem;
   }
 }
 
@@ -157,11 +184,18 @@
 
 @media (min-width: 768px) {
   .ourEventsContainer {
-    margin: 120px 2rem 220px 2rem;
+    margin: 50px 2rem 220px 2rem;
   }
 }
 
 @media (min-width: 992px) {
+  .eventsContainerLargerEvents {
+    display: block;
+  }
+
+  .eventsContainerMobileEvents {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {

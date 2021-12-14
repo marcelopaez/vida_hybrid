@@ -97,8 +97,8 @@ const Footer = () => {
             <p>Reserva</p>
           </div>
           <hr />
-          <div className="d-flex" style={{ marginBottom: '30px' }}>
-            <div className="d-flex">
+          <div className="footerMobileLocation">
+            <div className="footerMobileLocationText">
               <img src={FooterLogoDark} alt="Vida Cowork" className="mr-4" />
               <div className="flex-column">
                 <p className="m-0" style={{ fontSize: '14px' }}>
@@ -109,7 +109,7 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <img src={OrangeLogo} alt="Vida Cowork" width="175px" className="ml-4" />
+            <img src={OrangeLogo} alt="Vida Cowork" width="175px" className="ml-4 mt-sm-3" />
           </div>
           <hr />
           <div className="footerDescriptionTitleMobile boldFont">Seguinos en redes</div>

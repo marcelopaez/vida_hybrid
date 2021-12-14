@@ -56,13 +56,13 @@ const Login = () => {
                 <input type="password" id="consultPasswordLogin" id="passwordLogin" className="form-control consultPasswordLogin" ref={passwordLogin} />
                 <label htmlFor="consultPasswordLogin">Contraseña</label>
                 <div className="seePassword" onClick={() => seePasword('passwordLogin')}>
-                  <i class="far fa-eye"></i>
+                  <i className="far fa-eye"></i>
                 </div>
               </div>
 
-              <button className="loginButton">Iniciar Sesión</button>
+              <button className="loginButton boldFont">Iniciar Sesión</button>
               <button
-                className="loginButton"
+                className="loginButton boldFont"
                 onClick={() => {
                   setLoginUser(false);
                   setFirstStepRegister(true);
@@ -73,7 +73,7 @@ const Login = () => {
             <div className="col-lg-3 col-md-4 col-sm-12 d-flex justify-content-center">
               <div className="loginSeparator" />
               <div className="flex-column">
-                <p className="loginSubtitle">O iniciá sesión con</p>
+                <p className="loginSubtitle boldFont">O iniciá sesión con</p>
                 <div className="loginIconsContainer">
                   <img src={GoogleIcon} alt="Google" style={{ marginRight: '20px', opacity: '0.5' }} />
                   <img src={FacebookIcon} alt="Facebook" style={{ marginLeft: '20px', opacity: '0.5' }} />
@@ -96,7 +96,7 @@ const Login = () => {
                   <input type="password" id="consultPasswordLogin" id="passwordRegister" className="form-control consultPasswordLogin" ref={passwordRegister} />
                   <label htmlFor="consultPasswordLogin">Contraseña</label>
                   <div className="seePassword" onClick={() => seePasword('passwordRegister')}>
-                    <i class="far fa-eye"></i>
+                    <i className="far fa-eye"></i>
                   </div>
                 </div>
                 <div className="md-form input-with-pre-icon" style={{ position: 'relative' }}>
@@ -104,11 +104,11 @@ const Login = () => {
                   <input type="password" id="consultPasswordLogin" id="repeatedPasswordRegister" className="form-control consultPasswordLogin" ref={repeatedPasswordRegister} />
                   <label htmlFor="consultPasswordLogin">Confirmar Contraseña</label>
                   <div className="seePassword" onClick={() => seePasword('repeatedPasswordRegister')}>
-                    <i class="far fa-eye"></i>
+                    <i className="far fa-eye"></i>
                   </div>
                 </div>
                 <button
-                  className="loginButton"
+                  className="loginButton boldFont"
                   onClick={() => {
                     setFirstStepRegister(false);
                     setSecondStepRegister(true);
@@ -119,7 +119,7 @@ const Login = () => {
               <div className="col-lg-3 col-md-4 col-sm-12 d-flex justify-content-center">
                 <div className="loginSeparator" />
                 <div className="flex-column">
-                  <p className="loginSubtitle">O registrate con</p>
+                  <p className="loginSubtitle boldFont">O registrate con</p>
                   <div className="loginIconsContainer">
                     <img src={GoogleIcon} alt="Google" style={{ marginRight: '20px', opacity: '0.5' }} />
                     <img src={FacebookIcon} alt="Facebook" style={{ marginLeft: '20px', opacity: '0.5' }} />
@@ -163,7 +163,7 @@ const Login = () => {
               </div>
             </div>
             <button
-              className="loginButtonCenter w-50"
+              className="loginButtonCenter boldFont w-50"
               onClick={() => {
                 setSecondStepRegister(false);
                 setLoginUser(true);

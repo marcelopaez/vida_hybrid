@@ -1,3 +1,6 @@
+.roomsGeneralContainerRooms {
+  background: $grayLighter;
+}
 .roomHeaderContent {
   position: relative;
   z-index: 50;
@@ -10,11 +13,13 @@
 }
 
 .salasContainerMobile {
+  background: #f1f1f1;
   margin-top: 200px;
 }
 
 .roomTitle {
-  padding-top: 200px;
+  padding: 200px 0 40px 0;
+  margin-bottom: 0;
   color: #fff;
   font-size: 4rem;
   max-width: 500px;
@@ -27,6 +32,8 @@
   border: none;
   border-radius: 1.25rem;
   width: 400px;
+  margin-top: 60px;
+  font-size: 1.1rem;
 }
 
 .chooseRoomContainer {
@@ -35,9 +42,25 @@
   justify-content: center;
 }
 
+.chooseRoomContainerMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 66px;
+  background: #fff;
+}
+
 .chooseRoomTitle {
   color: $secondary;
   font-size: 2.25rem;
+}
+
+.chooseRoomTitleMobile {
+  color: $secondary;
+  font-size: 2.25rem;
+  padding: 43px 0 36px 0;
 }
 
 .chooseRoomImage {
@@ -67,7 +90,20 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: #7d7c7a;
+
+  .table-responsive {
+    .table {
+      color: #7d7c7a;
+
+      tbody {
+        tr {
+          td {
+            font-size: 1.5rem !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 .priceRoomRowTable {
@@ -96,6 +132,8 @@
   border: none;
   border-radius: 10px;
   padding: 20px 24px;
+  font-size: 1.1rem;
+  margin: 100px 0 192px 0;
 }
 
 .roomsFooter {
@@ -133,6 +171,9 @@
 
 .roomsFooterContainerMobile {
   @extend .roomsFooterContainer;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-bottom: 30px;
   margin-left: 0;
 }
 
@@ -162,6 +203,7 @@
   justify-content: space-between;
   border-radius: 10px;
   margin: 8px 0;
+  background: #fff;
 }
 
 .roomHorizontalTitle {
@@ -188,6 +230,8 @@
   background: $secondary;
   margin: 0;
   font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 0 10px 10px 0;
 }
 
 .roomsButtonMobileRooms {
@@ -196,13 +240,17 @@
   width: 100%;
   border-radius: 10px;
   border: none;
-  margin: 20px 0;
+  margin: 33px 0;
   padding: 10px 0;
 }
 
 .allRoomsContainerMobile {
   background: $secondary;
   color: #fff;
+}
+
+.allRoomsTitleMobile {
+  padding: 25px 0;
 }
 
 @media (min-width: 300px) {
@@ -216,7 +264,7 @@
 
   .chooseRoomContainer {
     flex-direction: column;
-    margin: 120px 1rem 220px 1rem;
+    margin: 50px 1rem 200px 1rem;
   }
 }
 
@@ -226,7 +274,7 @@
 @media (min-width: 768px) {
   .chooseRoomContainer {
     flex-direction: row;
-    margin: 120px 2rem 220px 2rem;
+    margin: 50px 2rem 200px 2rem;
   }
 }
 

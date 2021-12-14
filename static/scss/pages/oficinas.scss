@@ -22,8 +22,18 @@
   max-width: 500px;
 }
 
+.officesSubtitleMobile,
+.officesTextMobile {
+  color: $grayDarker;
+  font-size: 1rem;
+}
+
 .officesSubtitle {
   font-size: 1.5rem;
+}
+
+.officesSubtitleMobile {
+  padding: 45px 0 14px 0;
 }
 
 .officesText {
@@ -33,7 +43,7 @@
 .roomsDescriptionTitle {
   color: $secondary;
   font-size: 1.5rem;
-  margin: 45px 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 .roomsDescriptionText {
@@ -43,13 +53,25 @@
 .officesReservationContainer {
   display: flex;
   flex-direction: column;
-  margin: 228px 0 450px 0;
+  margin: 228px 0 245px 0;
+}
+
+.officesReservationContainerMobile {
+  display: flex;
+  flex-direction: column;
+  margin: 45px 0 80px 0;
 }
 
 .officesReservationTitle {
   font-size: 2.25rem;
   color: $secondary;
   margin-bottom: 54px;
+}
+
+.officesReservationTitleMobile {
+  font-size: 2.25rem;
+  color: $secondary;
+  margin: 45px 0 29px 0;
 }
 
 .officesReservationInput {
@@ -66,9 +88,31 @@
   width: 100%;
 }
 
+.officesReservationButtonMobile {
+  background-color: $secondary;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 15px;
+  margin: 20px 0 50px 0;
+  width: 100%;
+}
+
+.officesContainerMobileOffices {
+  margin-top: 150px;
+}
+
 @media (min-width: 300px) {
+  .officesContainerLargerOffices {
+    display: none;
+  }
+
+  .officesContainerMobileOffices {
+    display: block;
+  }
+
   .roomsDescriptionContent {
-    margin: 120px 0 220px 0;
+    margin: 50px 0 228px 0;
   }
 }
 
@@ -77,11 +121,18 @@
 
 @media (min-width: 768px) {
   .roomsDescriptionContent {
-    margin: 120px 0 220px 0;
+    margin: 50px 0 228px 0;
   }
 }
 
 @media (min-width: 992px) {
+  .officesContainerLargerOffices {
+    display: block;
+  }
+
+  .officesContainerMobileOffices {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {

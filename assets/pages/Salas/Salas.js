@@ -1,4 +1,6 @@
 import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Navbar from '../../components/Navbar';
 import NavbarMobile from '../../components/NavbarMobile';
 import BackgroundImage from '../../images/Backgrounds/PlanesBackground.jpg';
@@ -8,7 +10,7 @@ import LeftSVGGreenSection from '../../images/SVGs/LeftSVGGreenSection.svg';
 
 const Salas = () => {
   return (
-    <main>
+    <main className="roomsGeneralContainerRooms">
       <div className="navbarLarger">
         <div className="background" style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover' }}>
           <div className="leftSVGNavbar">
@@ -111,7 +113,7 @@ const Salas = () => {
                 small={true}
                 darkText={false}
               />
-              <button className="roomButton">Explorá en 360º</button>
+              <button className="roomButton boldFont">Explorá en 360º</button>
             </div>
           </div>
           <div className="rightSVGNavbar">
@@ -139,7 +141,7 @@ const Salas = () => {
 
         <div className="customContainer">
           <div className="hourPlansContainer">
-            <div className="hourPlansTitle">Packs de horas mensuales</div>
+            <div className="hourPlansTitle boldFont">Packs de horas mensuales</div>
             <div className="hourPlansSubtitle">¡Vos elegís cómo organizar las horas!</div>
             <div className="hourPlansTable">
               <div className="table-responsive">
@@ -174,7 +176,7 @@ const Salas = () => {
                 </table>
               </div>
             </div>
-            <button className="hourPlansButton">Reservar</button>
+            <button className="hourPlansButton boldFont">Reservar</button>
           </div>
         </div>
 
@@ -183,7 +185,7 @@ const Salas = () => {
           <div className="roomsFooterSVGContent">
             <p className="extraBoldFont">Accedé a todas nuestras salas a través de nuestros planes</p>
           </div>
-          <div className="roomsFooterContainer">
+          <Carousel infiniteLoop showThumbs={false} showStatus={false} showIndicators showArrows centerMode centerSlidePercentage={20}>
             <div className="roomsFooterPlanContainer">
               <div className="roomsFooterSVGSquare">
                 <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -230,7 +232,7 @@ const Salas = () => {
               </div>
               <p className="roomsFooterPlanTitle extraBoldFont">Plan Tierra</p>
             </div>
-          </div>
+          </Carousel>
         </div>
       </div>
 
@@ -256,20 +258,21 @@ const Salas = () => {
             <p className="roomHorizontalTitle">Incluye 32 Hs. mensuales</p>
             <p className="roomHorizontalPrice extraBoldFont">$3800</p>
           </div>
+          <button className="roomsButtonMobileRooms">Suscribite</button>
         </div>
 
-        <button className="roomsButtonMobileRooms">Suscribite</button>
-
-        <div className="chooseRoomContainer">
-          <div className="chooseRoomTitle boldFont">¡Explorá nuestras salas!</div>
-          <img className="chooseRoomImage" src={ChoosePlan} alt="Plan" />
-          <img className="chooseRoomImage" src={ChoosePlan} alt="Plan" />
-          <img className="chooseRoomImage" src={ChoosePlan} alt="Plan" />
+        <div className="chooseRoomContainerMobile">
+          <div className="chooseRoomTitleMobile boldFont">¡Explorá nuestras salas!</div>
+          <div className="d-flex justify-content-center flex-wrap">
+            <img className="chooseRoomImage" src={ChoosePlan} alt="Plan" />
+            <img className="chooseRoomImage" src={ChoosePlan} alt="Plan" />
+            <img className="chooseRoomImage" src={ChoosePlan} alt="Plan" />
+          </div>
         </div>
 
         <div className="allRoomsContainerMobile">
           <div className="customContainer">
-            <p className="extraBoldFont">Accedé a todas nuestras salas a través de nuestros planes</p>
+            <p className="allRoomsTitleMobile extraBoldFont">Accedé a todas nuestras salas a través de nuestros planes</p>
           </div>
           <div className="roomsFooterContainerMobile">
             <div className="roomsFooterPlanContainer">
