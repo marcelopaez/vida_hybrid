@@ -153,6 +153,17 @@
   font-size: 14px;
 }
 
+.reservationNextButton {
+  background-color: $secondary;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin: 40px 0 92px 0;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
 .reservationFooter {
   padding-bottom: 245px;
 }

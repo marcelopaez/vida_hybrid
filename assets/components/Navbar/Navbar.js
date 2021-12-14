@@ -17,13 +17,15 @@ const Navbar = () => {
 
   return (
     <main>
-      <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar py-3">
-        <Link className="navbar-brand" to="/">
-          <img src={OrangeLogo} alt="Vida" className="logo" />
-        </Link>
+      <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar py-4">
+        {windowScroll === 0 && (
+          <Link className="navbar-brand" to="/">
+            <img src={OrangeLogo} alt="Vida" className="logo" />
+          </Link>
+        )}
         {windowScroll !== 0 && (
           <Link to="/">
-            <img src={GreenLogo} alt="Vida" style={{ marginLeft: '15px' }} />
+            <img src={GreenLogo} alt="Vida" className="logo" />
           </Link>
         )}
         <div className="collapse navbar-collapse" id="navbarVida">

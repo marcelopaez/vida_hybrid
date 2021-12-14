@@ -5,7 +5,7 @@ import GreenLogo from '../../images/Logos/GreenLogo.svg';
 const NavbarLoginMobile = () => {
   return (
     <nav className="navbar navbar-expand-lg navbarLoginMobile fixed-top navbar-dark d-flex">
-      <div className="buttonSmallUpLogin">
+      <div className="buttonSmallDownLogin">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobileVida" aria-controls="navbarMobileVida" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -13,11 +13,6 @@ const NavbarLoginMobile = () => {
       <Link to="/">
         <img src={GreenLogo} alt="Vida" loading="lazy" width="150px" />
       </Link>
-      <div className="buttonSmallDownLogin">
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobileVida" aria-controls="navbarMobileVida" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-      </div>
       <div className="collapse navbar-collapse" id="navbarMobileVida">
         <ul className="navbar-nav">
           <li className="nav-item align-middle">

@@ -13,6 +13,11 @@
 .navbarMobile {
   background-color: $primary;
   text-align: center;
+  flex-direction: row !important;
+}
+
+.navbarLoginMobile {
+  flex-direction: row !important;
 }
 
 .leftSVGNavbar {
@@ -68,6 +73,12 @@ ul {
   }
 }
 
+.nav-item:hover {
+  a {
+    color: #fff;
+  }
+}
+
 .navbarLoginOption {
   border: 2px solid #fff;
   background: transparent;
@@ -87,7 +98,7 @@ ul {
 }
 
 .scrolling-navbar {
-  transition: all 1s ease !important;
+  transition: all 0.3s ease !important;
 }
 
 .nav-link {
@@ -101,8 +112,7 @@ ul {
     display: block;
   }
 
-  .navbarLarger,
-  .buttonSmallUp {
+  .navbarLarger {
     display: none;
   }
 
@@ -139,14 +149,6 @@ ul {
     a {
       width: 50%;
     }
-  }
-
-  .buttonSmallUp {
-    display: block;
-  }
-
-  .buttonSmallDown {
-    display: none;
   }
 }
 

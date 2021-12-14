@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import GoogleIcon from '../../images/Icons/GoogleIcon.svg';
 import FacebookIcon from '../../images/Icons/FacebookIcon.svg';
 import NavbarLogin from '../../components/NavbarLogin';
@@ -6,6 +6,8 @@ import NavbarLoginMobile from '../../components/NavbarLoginMobile';
 import BackgroundSVGLogin from '../../images/SVGs/BackgroundSVGLogin.svg';
 
 const Login = () => {
+  useEffect(() => window.scroll(0, 0), []);
+
   const [loginUser, setLoginUser] = useState(true);
   const [firstStepRegister, setFirstStepRegister] = useState(false);
   const [secondStepRegister, setSecondStepRegister] = useState(false);

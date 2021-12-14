@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import NavbarLogin from '../../components/NavbarLogin';
 import NavbarLoginMobile from '../../components/NavbarLoginMobile';
 import BackgroundSVGReservas1 from '../../images/SVGs/BackgroundSVGReservas1.svg';
 import BackgroundSVGReservas2 from '../../images/SVGs/BackgroundSVGReservas2.svg';
 
 const Reservas = () => {
+  useEffect(() => window.scroll(0, 0), []);
+
+  const [firstStepReservation, setFirstStepReservation] = useState(true);
+  const [secondStepReservation, setSecondStepReservation] = useState(false);
+  const [thirdStepReservation, setThirdStepReservation] = useState(false);
+  const [finishReservation, setFinishReservation] = useState(false);
+
   return (
     <main className="reservationsGeneralContainer">
       <div className="navbarLarger">
@@ -127,48 +134,66 @@ const Reservas = () => {
           <p className="reservationSubtitle">Texto para las reservas</p>
         </div>
         <div className="reservationContainerMobile">
-          <select className="mdb-select md-form reservationContainerTitle boldFont" id="reservationContainerTitle" defaultValue="Tipo de Consulta">
-            <option value="">Sala de reunión</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-          </select>
-          <hr className="reservationHorizontalSeparator" />
-          <div className="d-flex">
-            <div>
-              <p className="reservationUserTitle">Usuario registrado</p>
-              <div className="registerUserOptions">
-                <div className="custom-control custom-checkbox reservationUser">
-                  <input type="checkbox" className="custom-control-input" id="registeredUser" />
-                  <label className="custom-control-label" htmlFor="registeredUser">
-                    Sí
-                  </label>
-                </div>
-                <div className="custom-control custom-checkbox reservationUser">
-                  <input type="checkbox" className="custom-control-input" id="notRegisteredUser" />
-                  <label className="custom-control-label" htmlFor="notRegisteredUser">
-                    No
-                  </label>
+          {firstStepReservation && (
+            <>
+              <select className="mdb-select md-form reservationContainerTitle boldFont" id="reservationContainerTitle" defaultValue="Tipo de Consulta">
+                <option value="">Sala de reunión</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <hr className="reservationHorizontalSeparator" />
+              <div className="d-flex">
+                <div>
+                  <p className="reservationUserTitle">Usuario registrado</p>
+                  <div className="registerUserOptions">
+                    <div className="custom-control custom-checkbox reservationUser">
+                      <input type="checkbox" className="custom-control-input" id="registeredUser" />
+                      <label className="custom-control-label" htmlFor="registeredUser">
+                        Sí
+                      </label>
+                    </div>
+                    <div className="custom-control custom-checkbox reservationUser">
+                      <input type="checkbox" className="custom-control-input" id="notRegisteredUser" />
+                      <label className="custom-control-label" htmlFor="notRegisteredUser">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                  <p className="businessTitle">Empresa</p>
+                  <div className="businessOptions">
+                    <div className="custom-control custom-checkbox businessOption">
+                      <input type="checkbox" className="custom-control-input" id="isBusiness" />
+                      <label className="custom-control-label" htmlFor="isBusiness">
+                        Sí
+                      </label>
+                    </div>
+                    <div className="custom-control custom-checkbox businessOption">
+                      <input type="checkbox" className="custom-control-input" id="notBusiness" />
+                      <label className="custom-control-label" htmlFor="notBusiness">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                  <input type="text" className="businessName w-100" placeholder="Nombre y apellido / Empresa" />
+                  <input type="text" className="businessEmail w-100" placeholder="E-mail" />
+                  <input type="text" className="businessPhone w-100" placeholder="Celular" />
+                  <button
+                    className="reservationNextButton boldFont"
+                    onClick={() => {
+                      window.scroll(0, 0);
+                      setFirstStepReservation(false);
+                      setSecondStepReservation(true);
+                    }}>
+                    Siguiente
+                  </button>
                 </div>
               </div>
-              <p className="businessTitle">Empresa</p>
-              <div className="businessOptions">
-                <div className="custom-control custom-checkbox businessOption">
-                  <input type="checkbox" className="custom-control-input" id="isBusiness" />
-                  <label className="custom-control-label" htmlFor="isBusiness">
-                    Sí
-                  </label>
-                </div>
-                <div className="custom-control custom-checkbox businessOption">
-                  <input type="checkbox" className="custom-control-input" id="notBusiness" />
-                  <label className="custom-control-label" htmlFor="notBusiness">
-                    No
-                  </label>
-                </div>
-              </div>
-              <input type="text" className="businessName" placeholder="Nombre y apellido / Empresa" />
-              <input type="text" className="businessEmail" placeholder="E-mail" />
-              <input type="text" className="businessPhone" placeholder="Celular" />
+            </>
+          )}
+
+          {secondStepReservation && (
+            <>
               <div className="md-form input-with-pre-icon">
                 <i className="fas fa-calendar-alt input-prefix" id="loginDateIcon"></i>
                 <input type="text" id="reservationDate" className="form-control reservationDate" />
@@ -184,30 +209,54 @@ const Reservas = () => {
                 <input type="text" id="reservationTime" className="form-control reservationTime" />
                 <label htmlhtmlFor="reservationTime">Horario</label>
               </div>
-            </div>
-            <div>
-              <div className="reservationVerticalSeparator"></div>
-            </div>
-          </div>
+              <button
+                className="reservationNextButton boldFont"
+                onClick={() => {
+                  window.scroll(0, 0);
+                  setSecondStepReservation(false);
+                  setThirdStepReservation(true);
+                }}>
+                Siguiente
+              </button>
+            </>
+          )}
 
-          <p className="reservationTotalTitle extraBoldFont">Total sin descuento</p>
-          <p className="reservationTotalNumber">$2400</p>
-          <p className="reservationCouponQuestion">¿Tenés un cupón de descuento?</p>
-          <input type="text" className="reservationCouponCode" placeholder="Ingresá tu código" />
-          <p className="reservationPaymentMethodTitle">Método de pago</p>
-          <div className="custom-control custom-checkbox reservationPaymentMethodOption">
-            <input type="checkbox" className="custom-control-input" id="paymentMethodMercadoPago" />
-            <label className="custom-control-label" htmlFor="paymentMethodMercadoPago">
-              Mercado Pago
-            </label>
-          </div>
-          <div className="custom-control custom-checkbox reservationPaymentMethodOption">
-            <input type="checkbox" className="custom-control-input" id="paymentMethodVida" />
-            <label className="custom-control-label" htmlFor="paymentMethodVida">
-              Coordinar pago con Vida Cowork
-            </label>
-          </div>
-          <button className="reservationAcceptButton boldFont">Reservar</button>
+          {thirdStepReservation && (
+            <>
+              <p className="reservationTotalTitle extraBoldFont">Total sin descuento</p>
+              <p className="reservationTotalNumber">$2400</p>
+              <p className="reservationCouponQuestion">¿Tenés un cupón de descuento?</p>
+              <input type="text" className="reservationCouponCode" placeholder="Ingresá tu código" />
+              <p className="reservationPaymentMethodTitle">Método de pago</p>
+              <div className="custom-control custom-checkbox reservationPaymentMethodOption">
+                <input type="checkbox" className="custom-control-input" id="paymentMethodMercadoPago" />
+                <label className="custom-control-label" htmlFor="paymentMethodMercadoPago">
+                  Mercado Pago
+                </label>
+              </div>
+              <div className="custom-control custom-checkbox reservationPaymentMethodOption">
+                <input type="checkbox" className="custom-control-input" id="paymentMethodVida" />
+                <label className="custom-control-label" htmlFor="paymentMethodVida">
+                  Coordinar pago con Vida Cowork
+                </label>
+              </div>
+              <button
+                className="reservationAcceptButton boldFont"
+                onClick={() => {
+                  window.scroll(0, 0);
+                  setThirdStepReservation(false);
+                  setFinishReservation(true);
+                }}>
+                Reservar
+              </button>
+            </>
+          )}
+
+          {finishReservation && (
+            <>
+              <p>Gracias</p>
+            </>
+          )}
         </div>
         <img src={BackgroundSVGReservas2} alt="Vida" className="backgroundSVGReservas2" />
       </div>

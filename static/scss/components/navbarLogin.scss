@@ -15,29 +15,14 @@
   text-align: center;
 }
 
-.buttonSmallUpLogin {
-  display: none;
-}
-
 @media (min-width: 300px) {
   .navbarLoginMobile,
   .buttonSmallDownLogin {
     display: block;
   }
-
-  .buttonSmallUp {
-    display: none;
-  }
 }
 
 @media (min-width: 576px) {
-  .buttonSmallDown {
-    display: none;
-  }
-
-  .buttonSmallUp {
-    display: block;
-  }
 }
 
 @media (min-width: 768px) {
@@ -47,6 +32,9 @@
 }
 
 @media (min-width: 1200px) {
+  .buttonSmallDown {
+    display: none;
+  }
 }
 
 @media (min-width: 1440px) {

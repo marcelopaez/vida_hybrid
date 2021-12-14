@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Navbar from '../../components/Navbar';
@@ -7,8 +7,11 @@ import BackgroundImage from '../../images/Backgrounds/PlanesBackground.jpg';
 import Service from '../../components/Service';
 import ChoosePlan from '../../images/Backgrounds/ChoosePlan.jpg';
 import LeftSVGGreenSection from '../../images/SVGs/LeftSVGGreenSection.svg';
+import SalasBackground from '../../images/Backgrounds/SalasBackground.jpg';
 
 const Salas = () => {
+  useEffect(() => window.scroll(0, 0), []);
+
   return (
     <main className="roomsGeneralContainerRooms">
       <div className="navbarLarger">
@@ -124,6 +127,7 @@ const Salas = () => {
           </div>
         </div>
       </div>
+
       <div className="navbarMobile">
         <div className="backgroundMobile">
           <div className="rightSVGNavbar">
@@ -131,6 +135,7 @@ const Salas = () => {
           </div>
         </div>
       </div>
+
       <div className="salasContainerLarger">
         <div className="chooseRoomContainer">
           <div className="chooseRoomTitle boldFont">¡Explorá nuestras salas!</div>
@@ -237,6 +242,11 @@ const Salas = () => {
       </div>
 
       <div className="salasContainerMobile">
+        <div className="salasMobileBackground" style={{ backgroundImage: `url(${SalasBackground})` }}>
+          <div className="semiCircleHeaderMobile">
+            <p className="salasTitleMobile extraBoldFont">Eter</p>
+          </div>
+        </div>
         <div className="customContainer">
           <div className="roomHorizontalMobile">
             <p className="roomHorizontalTitle">Incluye 8 Hs. mensuales</p>

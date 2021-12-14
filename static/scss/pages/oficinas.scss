@@ -9,6 +9,16 @@
   background-size: 100%;
 }
 
+.oficinasMobileBackground {
+  padding-top: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.oficinasTitleMobile {
+  font-size: 2rem;
+}
+
 .officesTitle {
   padding-top: 200px;
   font-size: 4rem;
@@ -96,10 +106,6 @@
   padding: 20px 15px;
   margin: 20px 0 50px 0;
   width: 100%;
-}
-
-.officesContainerMobileOffices {
-  margin-top: 150px;
 }
 
 @media (min-width: 300px) {

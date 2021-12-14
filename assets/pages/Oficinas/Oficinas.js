@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import NavbarMobile from '../../components/NavbarMobile';
 import BackgroundImage from '../../images/Backgrounds/OfficesBackground.jpg';
+import SalasBackground from '../../images/Backgrounds/SalasBackground.jpg';
 
 const Oficinas = () => {
+  useEffect(() => window.scroll(0, 0), []);
+
+  const reservationNameLarger = useRef(null);
+  const reservationNameMobile = useRef(null);
+  const reservationMailLarger = useRef(null);
+  const reservationMailMobile = useRef(null);
+
   return (
     <main>
       <div className="navbarLarger">
@@ -23,6 +31,7 @@ const Oficinas = () => {
           </div>
         </div>
       </div>
+
       <div className="navbarMobile">
         <div className="backgroundMobile">
           <div className="rightSVGNavbar">
@@ -30,6 +39,7 @@ const Oficinas = () => {
           </div>
         </div>
       </div>
+
       <div className="officesContainerLargerOffices">
         <div className="customContainer">
           <div className="roomsDescriptionContent">
@@ -41,11 +51,11 @@ const Oficinas = () => {
           <div className="officesReservationContainer">
             <p className="officesReservationTitle boldFont">¿Te interesa reservar?</p>
             <div className="md-form form-lg">
-              <input type="text" id="name" className="form-control form-control-lg officesReservationInput" />
+              <input type="text" id="name" className="form-control form-control-lg officesReservationInput" ref={reservationNameLarger} />
               <label htmlFor="name">Nombre y apellido / Empresa</label>
             </div>
             <div className="md-form form-lg">
-              <input type="email" id="email" className="form-control form-control-lg officesReservationInput" />
+              <input type="email" id="email" className="form-control form-control-lg officesReservationInput" ref={reservationMailLarger} />
               <label htmlFor="email">E-mail</label>
             </div>
             <button className="officesReservationButton">Enviar</button>
@@ -54,17 +64,22 @@ const Oficinas = () => {
       </div>
 
       <div className="officesContainerMobileOffices">
+        <div className="oficinasMobileBackground" style={{ backgroundImage: `url(${SalasBackground})` }}>
+          <div className="semiCircleHeaderMobile">
+            <p className="oficinasTitleMobile extraBoldFont">Oficinas Privadas</p>
+          </div>
+        </div>
         <div className="customContainer">
           <p className="officesSubtitleMobile">Si buscás privacidad, tenemos espacios con capacidad para 4 hasta 26 personas.</p>
           <p className="officesTextMobile">Adaptamos nuestras oficinas a equipos numerosos.</p>
           <div className="officesReservationContainerMobile">
             <p className="officesReservationTitleMobile boldFont">¿Te interesa reservar?</p>
             <div className="md-form form-lg">
-              <input type="text" id="name" className="form-control form-control-lg officesReservationInput" />
+              <input type="text" id="name" className="form-control form-control-lg officesReservationInput" ref={reservationNameMobile} />
               <label htmlFor="name">Nombre y apellido / Empresa</label>
             </div>
             <div className="md-form form-lg">
-              <input type="email" id="email" className="form-control form-control-lg officesReservationInput" />
+              <input type="email" id="email" className="form-control form-control-lg officesReservationInput" ref={reservationMailMobile} />
               <label htmlFor="email">E-mail</label>
             </div>
             <button className="officesReservationButtonMobile">Enviar</button>

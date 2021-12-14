@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SideMenu from '../../components/SideMenu';
 import NavbarAdmin from '../../components/NavbarAdmin';
 import FilterLogo from '../../images/Icons/FilterIcon.svg';
@@ -8,6 +8,8 @@ import MoreOptionsIcon from '../../images/Icons/MoreOptionsIcon.svg';
 import Profile from '../../images/Icons/ProfileIcon.svg';
 
 const ContratoAdmin = () => {
+  useEffect(() => window.scroll(0, 0), []);
+
   return (
     <div className="row marginNavbar generalContent">
       <NavbarAdmin />

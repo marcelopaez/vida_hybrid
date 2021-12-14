@@ -23,17 +23,30 @@
 }
 
 .footerLogo {
-  margin-right: 15px;
+  margin: 15px;
 }
 
 .locationText {
-  font-size: 0.85rem;
+  font-size: 15px !important;
   margin: 0;
 }
 
 .locationSubText {
-  font-size: 0.85rem;
-  margin-top: 3rem;
+  font-size: 11px;
+  font-style: italic;
+  margin: 0;
+}
+
+.locationSubText2 {
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.locationSubText2Mobile {
+  font-size: 1.1rem;
+  margin-top: 17px;
+  color: #4f4949;
+  text-align: center;
 }
 
 .footerDescriptionTitle {
@@ -44,7 +57,7 @@
 
 .footerDescriptionTitleSocial {
   color: #4f4949;
-  margin-bottom: 10px;
+  margin: 10px 0 10px 0;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -168,6 +181,11 @@
   .footerMobileLocationText {
     margin-bottom: 20px;
   }
+
+  .vidaLogoFooter {
+    transform: scale(2);
+    margin: 40px 0 10px 0;
+  }
 }
 
 @media (min-width: 576px) {
@@ -179,6 +197,10 @@
 
   .footerMobileLocationText {
     margin-bottom: 0;
+  }
+
+  .vidaLogoFooter {
+    margin: 20px 0 10px 60px;
   }
 }
 
@@ -215,6 +237,10 @@
   .thirdFooterColumn {
     flex-basis: auto;
     flex: 0.2 !important;
+  }
+
+  .vidaLogoFooter {
+    margin: 20px 0 10px 0;
   }
 }
 

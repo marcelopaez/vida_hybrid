@@ -3,6 +3,8 @@ import Logo from '../../images/Logos/BlackLogo.svg';
 import FooterLogoDark from '../../images/Logos/FooterLogoDark.svg';
 import InstagramIconRoundedDark from '../../images/Icons/InstagramIconRoundedDark.svg';
 import FacebookIconRoundedDark from '../../images/Icons/FacebookIconRoundedDark.svg';
+import InstagramIconRoundedDarkWhiteBackground from '../../images/Icons/InstagramIconRoundedDarkWhiteBackground.svg';
+import FacebookIconRoundedDarkWhiteBackground from '../../images/Icons/FacebookIconRoundedDarkWhiteBackground.svg';
 
 const Footer = () => {
   return (
@@ -12,12 +14,12 @@ const Footer = () => {
           <div className="footerColumn footerColumnLeft firstFooterColumn">
             <div className="d-flex strategicPlaceLocationContainer">
               <img src={FooterLogoDark} alt="Vida" className="footerLogo" />
-              <div className="flex-column">
+              <div className="d-flex flex-column justify-content-center">
                 <p className="locationText boldFont">Fernando Fader 3971</p>
-                <p className="locationText boldFont">Cerro de las Rosas | Córdoba</p>
+                <p className="locationSubText boldFont">Cerro de las Rosas | Córdoba</p>
               </div>
             </div>
-            <p className="locationSubText lightFont">El trabajo es parte de nuestra vida. Te invitamos a disfrutarlo en un espacio relajado, flexible y rodeado de naturaleza.</p>
+            <p className="locationSubText2 lightFont">El trabajo es parte de nuestra vida. Te invitamos a disfrutarlo en un espacio relajado, flexible y rodeado de naturaleza.</p>
           </div>
           <div className="footerColumn secondFooterColumn">
             <div className="d-flex flex-wrap justify-content-between">
@@ -65,11 +67,11 @@ const Footer = () => {
             </div>
           </div>
           <div className="footerColumn footerColumnRight thirdFooterColumn">
-            <img src={Logo} alt="Vida" />
+            <img src={Logo} alt="Vida" className="vidaLogoFooter" />
             <div className="footerDescriptionTitleSocial boldFont">Seguinos en redes</div>
             <div className="d-flex justify-content-center align-items-center w-100">
-              <img src={InstagramIconRoundedDark} alt="Instagram" className="footerIconRounded" />
-              <img src={FacebookIconRoundedDark} alt="Facebook" className="footerIconRounded" />
+              <img src={InstagramIconRoundedDarkWhiteBackground} alt="Instagram" className="footerIconRounded" />
+              <img src={FacebookIconRoundedDarkWhiteBackground} alt="Facebook" className="footerIconRounded" />
             </div>
           </div>
         </div>
@@ -93,18 +95,14 @@ const Footer = () => {
             <div className="footerMobileLocationText">
               <img src={FooterLogoDark} alt="Vida Cowork" className="mr-4" />
               <div className="flex-column">
-                <p className="m-0" style={{ fontSize: '14px' }}>
-                  Fernando Fader 3971
-                </p>
-                <p className="m-0" style={{ fontSize: '11px' }}>
-                  Cerro de las Rosas | Córdoba
-                </p>
+                <p className="locationText boldFont">Fernando Fader 3971</p>
+                <p className="locationSubText boldFont">Cerro de las Rosas | Córdoba</p>
               </div>
             </div>
-            <img src={Logo} alt="Vida Cowork" width="300px" className="ml-4 mt-sm-3" />
+            <img src={Logo} alt="Vida Cowork" className="vidaLogoFooter" />
           </div>
           <hr />
-          <div className="footerDescriptionTitleSocial boldFont">Seguinos en redes</div>
+          <div className="locationSubText2Mobile boldFont">Seguinos en redes</div>
           <div className="d-flex justify-content-center align-items-center w-100">
             <img src={FacebookIconRoundedDark} alt="Facebook" className="footerIconRounded" />
             <img src={InstagramIconRoundedDark} alt="Instagram" className="footerIconRounded" />

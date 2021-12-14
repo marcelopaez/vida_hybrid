@@ -326,6 +326,7 @@
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.125);
   overflow: hidden;
+  height: 100%;
 }
 
 .card-vida-body {
@@ -349,7 +350,6 @@
 .card-vida-img-top,
 .card-vida-img-bottom,
 .card-vida-img-horizontal {
-  // flex: 1 0 auto;
   object-fit: cover;
 }
 
@@ -366,6 +366,7 @@
   padding: 18px 100px;
   position: absolute;
   margin: 86px 0;
+  width: 380px;
 }
 
 .strategicPlaceContainer {
@@ -377,6 +378,7 @@
   position: relative;
   width: 100%;
   background-color: $primaryDarker;
+  margin-top: 200px;
 }
 
 .strategicPlaceLogoContainer {

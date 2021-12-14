@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import NavbarMobile from '../../components/NavbarMobile';
 import BackgroundImage from '../../images/Backgrounds/OfficesBackground.jpg';
 import Comunidad1 from '../../images/Backgrounds/Comunidad1.jpg';
 
 const Comunidad = () => {
+  useEffect(() => window.scroll(0, 0), []);
+
   return (
     <main>
       <div className="navbarLarger">
@@ -113,6 +115,11 @@ const Comunidad = () => {
       </div>
 
       <div className="communityContainerMobileCommunity">
+        <div className="communityMobileBackground" style={{ backgroundImage: `url(${Comunidad1})` }}>
+          <div className="semiCircleHeaderMobile">
+            <p className="communityTitleMobile extraBoldFont">Comunidad</p>
+          </div>
+        </div>
         <div className="customContainer">
           <div className="card-vida-horizontal">
             <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
