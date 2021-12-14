@@ -1,6 +1,6 @@
 .footer {
-  color: #fff;
-  background-color: $primary;
+  color: #4f4949;
+  background-color: #fff;
   position: relative;
 }
 
@@ -37,13 +37,20 @@
 }
 
 .footerDescriptionTitle {
-  color: $secondary;
+  color: #4f4949;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.footerDescriptionTitleSocial {
+  color: #4f4949;
   margin-bottom: 10px;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .footerDescriptionContent {
-  font-size: 0.85rem;
+  font-size: 14px;
   ul {
     list-style-type: none;
     padding: 0;
@@ -57,7 +64,7 @@
 .rights {
   color: #fff;
   text-align: center;
-  background: $secondary;
+  background: #4f4949;
   padding: 1rem 0;
   font-size: 0.85rem;
   font-style: italic;
@@ -95,22 +102,10 @@
 }
 
 .footerDescriptionTitleMobile {
-  color: $secondary;
+  color: #4f4949;
   margin-top: 17px 0 7px 0;
   font-size: 1.1rem;
   text-align: center;
-}
-
-.footerColumnSocialMediaWhite {
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  img {
-    padding: 35px 0 25px 0;
-  }
 }
 
 .footerIconRounded {
@@ -164,14 +159,6 @@
     width: unset;
   }
 
-  .footerColumnSocialMedia {
-    display: none;
-  }
-
-  .footerColumnSocialMediaWhite {
-    display: block;
-  }
-
   .footerMobileLocation {
     align-items: center;
     justify-content: unset;
@@ -200,8 +187,7 @@
     display: block;
   }
 
-  .footerMobile,
-  .footerColumnSocialMediaWhite {
+  .footerMobile {
     display: none;
   }
 
@@ -239,7 +225,6 @@
 
   .footerColumnRight {
     margin-right: 4.7rem;
-    align-items: flex-end;
   }
 }
 
@@ -247,7 +232,4 @@
 }
 
 @media (min-width: 1440px) {
-  .footerColumnSocialMedia {
-    display: block;
-  }
 }

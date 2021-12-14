@@ -9,6 +9,15 @@
   z-index: 2;
 }
 
+.reservationContainerMobile {
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+  overflow: scroll;
+}
+
 .reservationVerticalSeparator {
   height: 100%;
   border-left: 2px solid #c4c4c4;
@@ -171,6 +180,14 @@
 }
 
 @media (min-width: 300px) {
+  .reservasContainerLarger {
+    display: none;
+  }
+
+  .reservasContainerMobile {
+    display: block;
+  }
+
   .reservationContainer {
     margin: 120px 1rem 136px 1rem;
   }
@@ -199,6 +216,13 @@
 }
 
 @media (min-width: 992px) {
+  .reservasContainerLarger {
+    display: block;
+  }
+
+  .reservasContainerMobile {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {

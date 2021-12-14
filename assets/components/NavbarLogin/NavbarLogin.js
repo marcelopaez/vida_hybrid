@@ -18,12 +18,14 @@ const NavbarLogin = () => {
   return (
     <main>
       <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar py-3">
-        <Link className="navbar-brand" to="/">
-          <img src={OrangeLogo} alt="Vida" className="logo" />
-        </Link>
+        {windowScroll === 0 && (
+          <Link className="navbar-brand" to="/">
+            <img src={OrangeLogo} alt="Vida" className="logo" />
+          </Link>
+        )}
         {windowScroll !== 0 && (
           <Link to="/">
-            <img src={GreenLogo} alt="Vida" style={{ marginLeft: '-2px' }} />
+            <img src={GreenLogo} alt="Vida" style={{ marginLeft: '27px' }} />
           </Link>
         )}
         <div className="collapse navbar-collapse" id="navbarVida">

@@ -1,21 +1,17 @@
 import React from 'react';
-import FooterLogo from '../../images/Logos/FooterLogo.svg';
-import Logo from '../../images/Logos/OrangeLogo.svg';
-import InstagramIconRounded from '../../images/Icons/InstagramIconRounded.svg';
-import FacebookIconRounded from '../../images/Icons/FacebookIconRounded.svg';
+import Logo from '../../images/Logos/BlackLogo.svg';
 import FooterLogoDark from '../../images/Logos/FooterLogoDark.svg';
-import OrangeLogo from '../../images/Logos/OrangeLogo.svg';
 import InstagramIconRoundedDark from '../../images/Icons/InstagramIconRoundedDark.svg';
 import FacebookIconRoundedDark from '../../images/Icons/FacebookIconRoundedDark.svg';
 
 const Footer = () => {
   return (
-    <>
+    <main>
       <div className="footer">
         <div className="d-flex justify-content-between flex-wrap">
           <div className="footerColumn footerColumnLeft firstFooterColumn">
             <div className="d-flex strategicPlaceLocationContainer">
-              <img src={FooterLogo} alt="Vida" className="footerLogo" />
+              <img src={FooterLogoDark} alt="Vida" className="footerLogo" />
               <div className="flex-column">
                 <p className="locationText boldFont">Fernando Fader 3971</p>
                 <p className="locationText boldFont">Cerro de las Rosas | Córdoba</p>
@@ -68,17 +64,13 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="footerColumn footerColumnRight thirdFooterColumn footerColumnSocialMedia">
+          <div className="footerColumn footerColumnRight thirdFooterColumn">
             <img src={Logo} alt="Vida" />
-            <div className="footerDescriptionTitle boldFont">Seguinos en redes</div>
-          </div>
-        </div>
-        <div className="footerColumnSocialMediaWhite">
-          <img src={Logo} alt="Vida" />
-          <div className="footerDescriptionTitle boldFont">Seguinos en redes</div>
-          <div className="d-flex">
-            <img src={InstagramIconRounded} alt="Instagram" className="footerIconRounded" />
-            <img src={FacebookIconRounded} alt="Facebook" className="footerIconRounded" />
+            <div className="footerDescriptionTitleSocial boldFont">Seguinos en redes</div>
+            <div className="d-flex justify-content-center align-items-center w-100">
+              <img src={InstagramIconRoundedDark} alt="Instagram" className="footerIconRounded" />
+              <img src={FacebookIconRoundedDark} alt="Facebook" className="footerIconRounded" />
+            </div>
           </div>
         </div>
         <div className="rights lightText">
@@ -109,11 +101,11 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <img src={OrangeLogo} alt="Vida Cowork" width="175px" className="ml-4 mt-sm-3" />
+            <img src={Logo} alt="Vida Cowork" width="300px" className="ml-4 mt-sm-3" />
           </div>
           <hr />
-          <div className="footerDescriptionTitleMobile boldFont">Seguinos en redes</div>
-          <div className="d-flex justify-content-center">
+          <div className="footerDescriptionTitleSocial boldFont">Seguinos en redes</div>
+          <div className="d-flex justify-content-center align-items-center w-100">
             <img src={FacebookIconRoundedDark} alt="Facebook" className="footerIconRounded" />
             <img src={InstagramIconRoundedDark} alt="Instagram" className="footerIconRounded" />
           </div>
@@ -122,7 +114,7 @@ const Footer = () => {
           <p>Todos los derechos reservados. 2021</p>
         </div>
       </div>
-    </>
+    </main>
   );
 };
 

@@ -33,7 +33,7 @@ const Comunidad = () => {
         </div>
       </div>
 
-      <div className="communityContainerCommunity">
+      <div className="communityContainerLargerCommunity">
         <div className="customContainer">
           <p className="communityTitleBenefitsCommunity boldFont">Titulos</p>
           <div className="row">
@@ -107,6 +107,50 @@ const Comunidad = () => {
                   <p className="card-vida-body-content">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="communityContainerMobileCommunity">
+        <div className="customContainer">
+          <div className="card-vida-horizontal">
+            <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
+            <div className="card-vida-body">
+              <p className="card-vida-body-title extraBoldFont">Título noticia, artículo, evento</p>
+              <p className="card-vida-body-content">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+          </div>
+          <p className="communityTitleBenefitsMobile">Beneficios</p>
+          <div className="d-flex justify-content-center flex-wrap">
+            <div className="card-vida-vertical">
+              <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
+              <div className="card-vida-body">
+                <p className="card-vida-body-title extraBoldFont">Título noticia, artículo, evento</p>
+                <p className="card-vida-body-content">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              </div>
+            </div>
+            <div className="card-vida-vertical">
+              <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
+              <div className="card-vida-body">
+                <p className="card-vida-body-title extraBoldFont">Título noticia, artículo, evento</p>
+                <p className="card-vida-body-content">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              </div>
+            </div>
+            <div className="card-vida-vertical">
+              <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
+              <div className="card-vida-body">
+                <p className="card-vida-body-title extraBoldFont">Título noticia, artículo, evento</p>
+                <p className="card-vida-body-content">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              </div>
+            </div>
+          </div>
+          <p className="communityTitleBenefitsMobile">Título</p>
+          <div className="card-vida-horizontal">
+            <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
+            <div className="card-vida-body">
+              <p className="card-vida-body-title extraBoldFont">Título noticia, artículo, evento</p>
+              <p className="card-vida-body-content">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
           </div>
         </div>
