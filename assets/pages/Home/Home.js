@@ -88,11 +88,11 @@ const Home = () => {
         </div>
         <img src={BackgroundImage} alt="Vida" height="auto" width="100%" style={{ minHeight: '300px' }} />
         <div className="welcomeContainerMobile">
-          <img src={LeftSVGOrangeSectionSmall} alt="Bienvenide" className="welcomeContainerMobileSVG" />
+          {/* <img src={LeftSVGOrangeSectionSmall} alt="Bienvenide" className="welcomeContainerMobileSVG" /> */}
           <div className="welcomeContainerMobileContent">
-            <p className="welcomeTitle extraBoldFont">Bienvenide a Vida Cowork</p>
-            <p className="welcomeSubtitle boldFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-            <p className="welcomeText lightFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p className="welcomeTitleMobile extraBoldFont">Bienvenide a Vida Cowork</p>
+            <p className="welcomeSubtitleMobile boldFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <p className="welcomeTextMobile lightFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
       </div>

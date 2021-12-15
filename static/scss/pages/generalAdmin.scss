@@ -1,0 +1,147 @@
+.generalContentAdminBody {
+  background: #fff !important;
+}
+
+.generalAdminTitle {
+  font-size: 3rem;
+  color: #343434;
+  padding: 60px 0 84px 0;
+}
+
+.generalAdminTitleMobile {
+  font-size: 1.5rem;
+  color: #343434;
+  padding: 30px 0 48px 0;
+}
+
+.blocksContainerGeneralAdmin {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blockGeneralAdmin {
+  background: #f4f4f4;
+  padding: 30px 35px;
+  border-radius: 10px;
+  margin: 20px;
+  max-width: 630px;
+}
+
+.blockGeneralAdminTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.blockGeneralAdminTitle {
+  font-size: 2.25rem;
+  color: #343434;
+  margin: 0;
+}
+
+.blockGeneralAdminSeparator {
+  border-top: 1px solid #989898;
+}
+
+.blockGeneralAdminContent1 {
+  font-size: 2.25rem;
+  color: #7c7c7c;
+  margin: 60px 50px 30px 50px;
+  text-align: center;
+}
+
+.blockGeneralAdminContent2 {
+  font-size: 3rem;
+  color: #7c7c7c;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.blockGeneralAdminButton {
+  background: $primary;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  padding: 18px 16px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.generalAdminFooter {
+  background: $primary;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.generalAdminFooterLeft {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  text-align: center;
+}
+
+.generalAdminFooterRight {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px;
+}
+
+.generalAdminFooterLeftFirstText {
+  font-size: 1.5rem;
+  margin: 0 75px 0 0;
+}
+
+.generalAdminFooterLeftSeparator {
+  border-right: 1px solid #fff;
+}
+
+.generalAdminFooterSecondText {
+  font-size: 1.1rem;
+  margin: 0 0 0 50px;
+}
+
+.generalAdminFooterRightButton {
+  background: #00af62;
+  color: #fff;
+  padding: 18px 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+@media (min-width: 300px) {
+  .generalAdminLarger {
+    display: none;
+  }
+
+  .generalAdminMobile {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .generalAdminLarger {
+    display: block;
+  }
+
+  .generalAdminMobile {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1440px) {
+}

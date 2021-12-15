@@ -137,7 +137,7 @@
 }
 
 .plansContainerMobilePlans {
-  background: #f1f1f1;
+  background: $grayLighter;
 }
 
 .actualPlanHeaderPlansMobileBackground {
@@ -224,11 +224,6 @@
     justify-content: center;
   }
 
-  .generalContentBody {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .marginNavbar {
     margin: 16.5rem 0 0 0;
   }
@@ -252,11 +247,6 @@
     justify-content: center;
   }
 
-  .generalContentBody {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .marginNavbar {
     margin: 6rem 0 0 0;
   }
@@ -266,11 +256,6 @@
   .generalContent {
     flex-direction: row;
     align-items: flex-start;
-  }
-
-  .generalContentBody {
-    flex-direction: row;
-    justify-content: flex-start;
   }
 
   .marginNavbar {

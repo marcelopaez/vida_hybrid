@@ -21,6 +21,21 @@
   max-width: 500px;
 }
 
+.welcomeTitleMobile,
+.welcomeSubtitleMobile,
+.welcomeTextMobile {
+  color: #fff;
+}
+
+.welcomeTitleMobile {
+  margin-top: 30px;
+}
+
+.welcomeTextMobile {
+  margin: 0;
+  padding-bottom: 30px;
+}
+
 .welcomeSubtitle,
 .welcomeText,
 .welcomeButton {
@@ -45,7 +60,7 @@
 
 .welcomeContainerMobile {
   background: $primary;
-  height: 50vh;
+  // height: 50vh;
 }
 
 .welcomeContainerMobileSVG {
@@ -55,9 +70,10 @@
 }
 
 .welcomeContainerMobileContent {
-  position: absolute;
-  text-align: left;
-  margin: 15px 0 0 5px;
+  // position: absolute;
+  // text-align: left;
+  text-align: center;
+  // margin: 15px 0 0 5px;
 }
 
 .plansContainerHome {
@@ -675,9 +691,9 @@
 }
 
 @media (min-width: 300px) {
-  .welcomeContainerMobileContent {
-    width: 50%;
-  }
+  // .welcomeContainerMobileContent {
+  //   width: 50%;
+  // }
 
   .roomsTitleMobile,
   .eventsTitleMobile,
@@ -752,9 +768,9 @@
 }
 
 @media (min-width: 576px) {
-  .welcomeContainerMobileContent {
-    width: 80%;
-  }
+  // .welcomeContainerMobileContent {
+  //   width: 80%;
+  // }
 
   .welcomeTitle {
     font-size: 2rem;
@@ -791,9 +807,9 @@
 }
 
 @media (min-width: 768px) {
-  .welcomeContainerMobileContent {
-    width: 100%;
-  }
+  // .welcomeContainerMobileContent {
+  //   width: 100%;
+  // }
 
   .welcomeTitle {
     font-size: 4rem;

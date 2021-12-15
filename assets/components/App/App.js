@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import NavbarAdmin from '../NavbarAdmin';
 import Footer from '../Footer';
 import Home from '../../pages/Home';
+import GeneralAdmin from '../../pages/GeneralAdmin';
 import ReservasAdmin from '../../pages/ReservasAdmin';
 import PlanesAdmin from '../../pages/PlanesAdmin';
 import ContratoAdmin from '../../pages/ContratoAdmin';
@@ -23,6 +24,7 @@ const App = () => {
       {/* <NavbarAdmin /> */}
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/generalAdmin" component={GeneralAdmin} />
         <Route exact path="/reservasAdmin" component={ReservasAdmin} />
         <Route exact path="/planesAdmin" component={PlanesAdmin} />
         <Route exact path="/contratoAdmin" component={ContratoAdmin} />

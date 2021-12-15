@@ -9,13 +9,13 @@
   }
 
   a > p {
-    color: #000;
+    color: $primary;
   }
 }
 
 .sidebarItem:hover {
   border-left: 5px $primaryDarker solid;
-  background-color: $primary;
+  background-color: $primaryLighter;
 
   a > p {
     color: #fff;
@@ -23,8 +23,9 @@
 }
 
 .categoryTitle {
-  margin: 0 1rem;
-  color: #000;
+  margin: 0 0 0 25px;
+  color: $primary;
+  font-size: 1.1rem;
 }
 
 @media (min-width: 300px) {

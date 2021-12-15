@@ -1,92 +1,280 @@
-.generalContent {
-  display: flex;
-  background-color: $tertiary;
-}
-
-.whiteSeparator {
-  height: 1px;
-  background: #fff;
-  border: 0;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.filtersSection {
-  display: flex;
-  margin: 3rem 0;
-}
-
-.pagination.pg-blue .page-item.active .page-link {
-  background-color: $primaryDarker !important;
-}
-
-.pagination .page-item.active .page-link {
-  background-color: $primaryDarker !important;
-}
-
-.plansContainer {
+.creditsBlocksContainerPlanesAdmin {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.planIcon {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: $primaryDarker;
+.creditsLeftBlockPlanesAdmin {
+  background: #e7e8ed;
+  border-radius: 10px;
 }
 
-.currentPlanContent {
+.creditsLeftBlockTitle {
+  font-size: 2.25rem;
+  color: #343434;
+  padding: 30px 0 25px 30px;
+}
+
+.creditsLeftBlockSubtitle {
+  color: #343434;
+  margin: 0 0 25px 35px;
+}
+
+.progressBarPlanesAdmin {
+  background: #00af62;
+  padding-bottom: 30px;
+  margin: 0 30px;
+  border-radius: 10px;
+}
+
+.creditsLeftBlockFooter {
   display: flex;
-  align-items: space-around;
+  background: $primary;
+  color: #000;
+  border: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.creditsLeftBlockFooterText {
+  font-size: 1.5rem;
+  margin: 15px 0 15px 35px;
+  color: #fff;
+}
+
+.creditsLeftBlockFooterButton {
+  background: #00af62;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 15px 80px 15px 35px;
+  width: 230px;
+}
+
+.creditsRightBlockPlanesAdmin {
+  background: #f8f9fc;
+  border-radius: 10px;
+}
+
+.creditsRightBlockTitle {
+  font-size: 2.25rem;
+  padding: 30px 70px 50px 70px;
+}
+
+.creditsRightBlockSubtitle {
+  font-size: 1.1rem;
+  margin: 0 70px 45px 70px;
+}
+
+.creditsRightBlockButton {
+  background: $primary;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 70px 25px 70px;
+  width: 300px;
+}
+
+.planesAdminTitle {
+  font-size: 2.25rem;
+  color: #343434;
+  margin: 40px 0 65px 0;
+}
+
+.plansPlanesAdminSection {
+  display: flex;
+  align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.actualPlanPlanesAdmin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  background: #f8f9fc;
+  padding: 50px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.actualPlanPlanesAdminSVG {
+  position: absolute;
+  top: -20px;
+}
+
+.actualPlanPlanesAdminTitle {
+  font-size: 1.1rem;
+  margin: 45px 0 15px 0;
+}
+
+.actualPlanPlanesAdminSeparator {
+  border-top: 1px solid #c4c4c4;
   width: 100%;
 }
 
-.buttonContainer {
-  color: $primaryDarker;
-  background-color: #fff;
+.actualPlanPlanesAdminDescription1 {
+  font-size: 1.1rem;
+  margin: 50px 0 10px 0;
+}
+
+.actualPlanPlanesAdminDescription2 {
+  font-size: 1.1rem;
+  margin: 0 0 50px 0;
+}
+
+.actualPlanPlanesAdminButton {
+  background: #00af62;
+  color: #fff;
+  border-radius: 5px;
   border: none;
-  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.otherPlanPlanesAdmin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #e7e8ed;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 30px;
+  width: 230px;
+  position: relative;
+}
+
+.otherPlanPlanesAdminSVG {
+  position: absolute;
+  top: -20px;
+  left: 40%;
+}
+
+.otherPlanPlanesAdminTitle {
+  font-size: 1.5rem;
+  margin: 30px 0 20px 0;
+}
+
+.otherPlanPlanesAdminSubtitle {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.otherPlanPlanesAdminDescription {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.otherPlanPlanesAdminButton {
+  background: $primary;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.creditsLeftBlockButtonMobileContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.creditsLeftBlockButtonMobile {
+  background: $primary;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 250px;
+  margin: 15px;
+}
+
+.otherPlanPlanesAdminMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.otherPlanPlanesAdminMobileContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fc;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.otherPlanPlanesAdminMobileLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otherPlaPlanesAdminMobileSVG {
+  margin-left: 20px;
+}
+
+.otherPlanPlanesAdminMobileTitle {
+  font-size: 1.1rem;
+  margin-left: 20px;
+}
+
+.otherPlanPlanesAdminMobileRight {
+  border: solid #6a6a6a;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid $primary;
+  border-bottom: none;
+  margin: 0 25px 0 150px;
 }
 
 @media (min-width: 300px) {
-  .currentPlanContainer {
-    max-width: 280px;
+  .planesAdminLarger {
+    display: none;
   }
 
-  .buttonContainer {
-    padding: 0.5rem 2rem;
+  .planesAdminMobile {
+    display: block;
+  }
+
+  .creditsLeftBlockPlanesAdmin {
+    margin: 30px 60px;
+  }
+
+  .creditsRightBlockPlanesAdmin {
+    margin: 0 45px;
   }
 }
 
 @media (min-width: 576px) {
-  .currentPlanContainer {
-    max-width: 400px;
-  }
-
-  .buttonContainer {
-    padding: 0.5rem 4rem;
-  }
 }
 
 @media (min-width: 768px) {
+  .planesAdminLarger {
+    display: block;
+  }
+
+  .planesAdminMobile {
+    display: none;
+  }
+
+  .creditsLeftBlockPlanesAdmin,
+  .creditsRightBlockPlanesAdmin {
+    margin: 50px 10px;
+  }
 }
 
 @media (min-width: 992px) {
-  .buttonContainer {
-    padding: 0.5rem 2rem;
-  }
 }
 
 @media (min-width: 1200px) {
-  .buttonContainer {
-    padding: 0.5rem 4rem;
-  }
 }
 
 @media (min-width: 1440px) {

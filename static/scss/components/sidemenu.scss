@@ -1,0 +1,41 @@
+.userNameSideMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $primary;
+  color: #fff;
+}
+
+.userNameDataSideMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.userNameNameSideMenu {
+  font-size: 1.1rem;
+  margin: 50px 0 0 28px;
+}
+
+.userNameDescription {
+  font-size: 14px;
+  margin: 0 0 46px 28px;
+}
+
+@media (min-width: 300px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1440px) {
+}
