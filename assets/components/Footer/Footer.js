@@ -15,8 +15,8 @@ const Footer = () => {
             <div className="d-flex strategicPlaceLocationContainer">
               <img src={FooterLogoDark} alt="Vida" className="footerLogo" />
               <div className="d-flex flex-column justify-content-center">
-                <p className="locationText boldFont">Fernando Fader 3971</p>
-                <p className="locationSubText boldFont">Cerro de las Rosas | Córdoba</p>
+                <p className="locationTextFooter boldFont">Fernando Fader 3971</p>
+                <p className="locationSubTextFooter boldFont">Cerro de las Rosas | Córdoba</p>
               </div>
             </div>
             <p className="locationSubText2 lightFont">El trabajo es parte de nuestra vida. Te invitamos a disfrutarlo en un espacio relajado, flexible y rodeado de naturaleza.</p>
@@ -95,8 +95,8 @@ const Footer = () => {
             <div className="footerMobileLocationText">
               <img src={FooterLogoDark} alt="Vida Cowork" className="mr-4" />
               <div className="flex-column">
-                <p className="locationText boldFont">Fernando Fader 3971</p>
-                <p className="locationSubText boldFont">Cerro de las Rosas | Córdoba</p>
+                <p className="locationTextFooter boldFont">Fernando Fader 3971</p>
+                <p className="locationSubTextFooter boldFont">Cerro de las Rosas | Córdoba</p>
               </div>
             </div>
             <img src={Logo} alt="Vida Cowork" className="vidaLogoFooter" />

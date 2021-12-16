@@ -68,7 +68,7 @@ const Comunidad = () => {
             </div>
           </div>
 
-          <p className="communityTitleBenefits boldFont">Beneficios</p>
+          <p className="communityTitleBenefitsCommunity boldFont">Beneficios</p>
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="card-vida-vertical">
@@ -99,7 +99,7 @@ const Comunidad = () => {
             </div>
           </div>
 
-          <p className="communityTitleBenefits boldFont">Notas o lo que se quiera destacar, por ejemplo, eventos</p>
+          <p className="communityTitleBenefitsCommunity boldFont">Notas o lo que se quiera destacar, por ejemplo, eventos</p>
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="card-vida-horizontal">
