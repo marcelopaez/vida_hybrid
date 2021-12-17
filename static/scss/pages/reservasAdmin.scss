@@ -38,13 +38,13 @@
 .rowHover {
   text-align: center;
   font-size: 1.1rem;
-  color: #7d7c7a;
+  color: $grayDarker2;
 }
 
 .cancelButton {
   background-color: transparent;
   border: none;
-  color: #7d7c7a;
+  color: $grayDarker2;
 }
 
 .rowHover:hover .cancelButton {

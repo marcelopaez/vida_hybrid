@@ -46,7 +46,7 @@ html {
 
 .control-arrow {
   transform: scale(3) !important;
-  background: $gray !important;
+  background: $grayDarker6 !important;
 }
 
 .seePassword {
@@ -80,7 +80,7 @@ html {
 
 .mobileSelect {
   background: #fff !important;
-  color: #afafaf !important;
+  color: $grayLighter4 !important;
   border-radius: 5px;
   width: 100%;
   padding: 10px;

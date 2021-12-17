@@ -3,7 +3,7 @@
   align-items: center;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  border-bottom: 1px solid $grayLighter;
+  border-bottom: 1px solid $grayLighter1;
 }
 
 .navbarAdminData {
@@ -15,7 +15,7 @@
 }
 
 .navbarAdminName {
-  color: #7d7c7a;
+  color: $grayDarker2;
   font-size: 1.1rem;
 }
 
@@ -39,7 +39,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f1f1f1;
+  background-color: $grayLighter1;
   border-radius: 5px;
   max-width: 300px;
   position: absolute;
@@ -58,12 +58,12 @@
 .notificationAdminTitle {
   font-size: 1.1rem;
   margin: 20px;
-  color: #717171;
+  color: $grayDarker3;
 }
 
 .notificationAdminX {
   margin: 0 20px;
-  color: #858482;
+  color: $grayLighter8;
 }
 
 .blockAdminSeparator {
@@ -84,7 +84,7 @@
 .notificationAdminText {
   font-size: 1.1rem;
   margin: 20px 0 20px 20px;
-  color: #717171;
+  color: $grayDarker3;
 }
 
 .blockAdminNotificationSeparator {

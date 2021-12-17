@@ -1,6 +1,6 @@
 .contractAdminTitle {
   font-size: 3rem;
-  color: #343434;
+  color: $grayDarker9;
   padding: 36px 0 60px 0;
 }
 
@@ -22,12 +22,12 @@
 
 .contractAdminContractLeftTitle {
   font-size: 1.5rem;
-  color: #343434;
+  color: $grayDarker9;
   margin: 26px 0 12px 0;
 }
 
 .contractAdminContractLeftSeparator {
-  border: 1px solid #c4c4c4;
+  border: 1px solid $grayLighter5;
   width: 100%;
 }
 

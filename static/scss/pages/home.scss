@@ -229,7 +229,7 @@
 
 .servicesTitleMobile {
   font-size: 2.25rem;
-  color: #5b5b5b;
+  color: $grayDarker5;
   padding: 50px 0;
 }
 
@@ -360,7 +360,7 @@
 
 .card-vida-body-content {
   font-size: 1.1rem;
-  color: #656565;
+  color: $grayDarker4;
 }
 
 .card-vida-img-top,
@@ -424,8 +424,8 @@
 }
 
 .ratingContainer {
-  background: #f5f5f5;
-  color: #5b5b5b;
+  background: $grayLighter2;
+  color: $grayDarker5;
 }
 
 .ratingContainerMobile {
@@ -467,7 +467,7 @@
   background-color: #fff;
   border-radius: 15px;
   padding: 1rem;
-  color: #9f9d9b;
+  color: $grayLighter7;
   margin-bottom: 24px;
 }
 
@@ -590,7 +590,7 @@
 }
 
 .partnersContainer {
-  background-color: #f5f5f5;
+  background-color: $grayLighter2;
   position: relative;
   z-index: 1;
   padding-top: 126px;

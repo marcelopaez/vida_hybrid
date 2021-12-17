@@ -20,7 +20,7 @@
 
 .consultSelectPlanes {
   background: #fff;
-  color: #afafaf;
+  color: $grayLighter4;
   padding: 10px;
   border-radius: 5px;
   margin: 0;
@@ -55,7 +55,7 @@
 .actualPlanTime {
   margin: 0 !important;
   background: #fafafa;
-  color: #afafaf;
+  color: $grayLighter4;
   width: 300px;
   margin-top: 33px;
 }
@@ -71,7 +71,7 @@
 }
 
 .actualPlanButton {
-  background-color: #ffe3c7;
+  background-color: $grayLighter3;
   color: $secondary !important;
   padding: 1rem 3rem;
   border: none;
@@ -137,7 +137,7 @@
 }
 
 .plansContainerMobilePlans {
-  background: $grayLighter;
+  background: $grayLighter1;
 }
 
 .actualPlanHeaderPlansMobileBackground {
@@ -160,14 +160,14 @@
 }
 
 .creditsDescription {
-  color: #afafaf;
+  color: $grayLighter4;
   margin: 0;
   padding-left: 10px;
 }
 
 .creditsPriceContainer {
   background: $secondary;
-  color: $grayLighter;
+  color: $grayLighter1;
   font-size: 1.5rem;
   padding: 15px;
   border-radius: 0 5px 5px 0;
@@ -192,7 +192,7 @@
   display: flex;
   flex-direction: column;
   background: #fff;
-  color: #7d7c7a;
+  color: $grayDarker2;
 }
 
 @media (min-width: 300px) {
