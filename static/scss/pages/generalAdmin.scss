@@ -27,17 +27,43 @@
   max-width: 630px;
 }
 
-.blockGeneralAdminTitleContainer {
+.blockGeneralAdminTitleContainer1,
+.blockGeneralAdminTitleContainer2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 35px;
+  position: relative;
 }
 
 .blockGeneralAdminTitle {
   font-size: 2.25rem;
   color: $grayDarker9;
   margin: 0;
+}
+
+.blockGeneralAdminInfoHoverContainer {
+  padding: 25px;
+  background: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 75px;
+}
+
+.blockGeneralAdminInfoHoverContainer::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -40px;
+  right: 0;
+  border-top: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-bottom: 20px solid #fff;
+}
+
+.blockGeneralAdminInfoHoverText {
+  font-size: 1.1rem;
 }
 
 .blockGeneralAdminSeparator {
