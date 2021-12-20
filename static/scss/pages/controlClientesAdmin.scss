@@ -75,6 +75,41 @@
   font-size: 1.5rem;
 }
 
+.controlClientesAdminRightSide {
+  background-color: $grayLighter10;
+  color: $grayLighter7;
+  height: 100%;
+}
+
+.controlClientesAdminRightSideTitle {
+  font-size: 2.25rem;
+  padding: 100px 0 40px 30px;
+}
+
+.controlClientesAdminRightSideDetail {
+  background: #fff;
+  border-radius: 10px;
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.controlClientesAdminRightSideDetailTitle {
+  font-size: 1.1rem;
+  margin: 15px 0;
+}
+
+.controlClientesAdminRightSideDetailNumber {
+  font-size: 2.25rem;
+  margin: 40px 0 0 0;
+}
+
+.controlClientesAdminRightSideDetailText {
+  font-size: 1.1rem;
+}
+
 @media (min-width: 300px) {
 }
 

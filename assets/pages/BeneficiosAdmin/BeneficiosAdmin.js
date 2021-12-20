@@ -25,14 +25,32 @@ const BeneficiosAdmin = () => {
             <button className="generalAdminHeaderRightButton">Botón asistencia</button>
           </div>
         </div>
-        <div className="generalContentBody">
-          <p className="comunidadAdminTitle boldFont">Beneficios</p>
-          <Carousel infiniteLoop showThumbs={false} showArrows centerMode centerSlidePercentage={30} autoplay selectedItem={2} showIndicators={false} showStatus={false}>
-            <BenefitAdmin image={Comunidad1} title={'Beneficio 1'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
-            <BenefitAdmin image={Comunidad1} title={'Beneficio 2'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
-            <BenefitAdmin image={Comunidad1} title={'Beneficio 3'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
-            <BenefitAdmin image={Comunidad1} title={'Beneficio 4'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
-          </Carousel>
+        <div className="row generalContentBody">
+          <div className="col-lg-8 col-md-8 col-sm-12">
+            <p className="beneficiosAdminTitle boldFont">Beneficios</p>
+            <Carousel infiniteLoop showThumbs={false} showArrows centerMode centerSlidePercentage={30} autoplay selectedItem={2} showIndicators={false} showStatus={false}>
+              <BenefitAdmin image={Comunidad1} title={'Beneficio 1'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
+              <BenefitAdmin image={Comunidad1} title={'Beneficio 2'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
+              <BenefitAdmin image={Comunidad1} title={'Beneficio 3'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
+              <BenefitAdmin image={Comunidad1} title={'Beneficio 4'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
+            </Carousel>
+          </div>
+          <div className="col-lg-4 col-md-4 col-sm-12">
+            <div className="beneficiosAdminRightSide">
+              <p className="beneficiosAdminRightSideTitle boldFont">Cumpleaños del día</p>
+              <div className="beneficiosAdminRightSideBirthdayContainer">
+                <div className="beneficiosAdminRightSideBirthdayImage"></div>
+                <div className="beneficiosAdminRightSideBirthdayData">
+                  <p className="boldFont">Nombre Apellido</p>
+                  <p>Ocupación: </p>
+                  <p>Usuario desde: </p>
+                  <div className="beneficiosAdminRightSideBirthdayButtonContainer">
+                    <button className="beneficiosAdminRightSideBirthdayButton">Ver</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="generalAdminFooter">
           <div className="generalAdminFooterLeft">

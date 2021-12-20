@@ -1,3 +1,175 @@
+.clientesAdminTitle {
+  font-size: 3rem;
+  margin: 30px 0;
+}
+
+.clientesAdminSearch {
+  position: relative;
+  width: 270px;
+}
+
+.clientesAdminInput {
+  padding-left: 50px;
+}
+
+.clientesAdminSearchSVG {
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+
+.clientesAdminFilterButtonsContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.clientesAdminFilterLogo {
+  margin-right: 22px;
+}
+
+.clientesAdminFilterButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primaryLighter2;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 10px 15px;
+}
+
+.clientesAdminDropdownButton {
+  background-color: $primaryLighter2;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.clientesAdminTable {
+  margin-top: 80px;
+}
+
+.clientesAdminTableHead {
+  color: $grayDarker14;
+  font-size: 1.5rem;
+}
+
+.clientesAdminRowHover {
+  font-size: 1.1rem;
+  color: $grayDarker14;
+  text-align: center;
+}
+
+.clientesAdminRowHover:hover {
+  background: $grayDarker15;
+  color: #fff;
+}
+
+.clientesAdminRightSide {
+  color: $grayDarker15;
+}
+
+.clientesAdminRightSideHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.clientesAdminRightSideHeaderImage {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: $grayLighter5;
+}
+
+.clientesAdminRightSideHeaderName {
+  color: $grayDarker10;
+  margin: 0 0 0 24px;
+}
+
+.clientesAdminRightSidePersonalDataTitle {
+  font-size: 1.5rem;
+  margin: 25px 0 0 0;
+}
+
+.clientesAdminRightSidePeronalData {
+  font-size: 1.1rem;
+  margin: 25px 0;
+}
+
+.clientesAdminRightSideActualPlan {
+  color: $grayDarker16;
+  background-color: $grayLighter5;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+}
+
+.clientesAdminRightSideActualPlanTitle {
+  margin: 0 0 8px 0;
+}
+
+.clientesAdminRightSideActualPlanDetail {
+  margin: 0;
+}
+
+.clientesAdminRightSideAvailableTime {
+  color: $grayDarker16;
+  background-color: $grayLighter5;
+  padding: 10px 30px;
+  margin-bottom: 60px;
+}
+
+.clientesAdminRightSideAvailableTimeTitle {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.progress {
+  &.clientesAdminRightSideProgressBar {
+    height: unset !important;
+  }
+
+  .clientesAdminRightSideProgressBar {
+    background: #b7b7b7;
+    border-radius: 10px;
+  }
+}
+
+.clientesAdminRightSideContractContainer {
+  background-color: $grayLighter5;
+  padding: 10px 30px;
+}
+
+.clientesAdminRightSideContractTitle {
+  color: $grayDarker16;
+  margin: 25px 0;
+}
+
+.clientesAdminRightSideContract {
+  display: flex;
+  align-items: center;
+}
+
+.clientesAdminRightSideContractData {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 10px;
+
+  p {
+    font-size: 1.1rem;
+    color: $grayDarker10;
+    margin-left: 10px;
+  }
+}
+
+.clientesAdminRightSideContractDownload {
+  color: $grayDarker16;
+  text-align: right;
+}
+
 @media (min-width: 300px) {
 }
 

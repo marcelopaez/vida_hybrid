@@ -41,7 +41,6 @@ const ReservasAdmin = () => {
               <path
                 d="M21.9583 0H1.29167C0.949095 0 0.620555 0.136086 0.37832 0.37832C0.136086 0.620555 0 0.949095 0 1.29167V4.63708C0 5.31263 0.275125 5.97654 0.753042 6.45446L7.75 13.4514V23.25C7.75025 23.4701 7.80667 23.6864 7.91391 23.8786C8.02115 24.0708 8.17566 24.2324 8.36282 24.3481C8.54998 24.4639 8.76359 24.53 8.98342 24.5401C9.20325 24.5502 9.42203 24.5041 9.61904 24.406L14.7857 21.8227C15.2236 21.6031 15.5 21.1562 15.5 20.6667V13.4514L22.497 6.45446C22.9749 5.97654 23.25 5.31263 23.25 4.63708V1.29167C23.25 0.949095 23.1139 0.620555 22.8717 0.37832C22.6294 0.136086 22.3009 0 21.9583 0ZM13.2951 12.0035C13.1749 12.1232 13.0796 12.2655 13.0147 12.4223C12.9497 12.579 12.9164 12.747 12.9167 12.9167V19.8684L10.3333 21.1601V12.9167C10.3336 12.747 10.3003 12.579 10.2353 12.4223C10.1704 12.2655 10.0751 12.1232 9.95487 12.0035L2.58333 4.63708V2.58333H20.668L20.6705 4.62804L13.2951 12.0035Z"
                 fill="#0e4327"
-                buttonContainer
               />
             </svg>
             <div className="reservasAdminFilterButton">
@@ -51,7 +50,7 @@ const ReservasAdmin = () => {
                   fill="#fff"
                 />
               </svg>
-              <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button className="reservasAdminDropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Mes
               </button>
               <div className="dropdown-menu">
@@ -104,7 +103,7 @@ const ReservasAdmin = () => {
                   fill="white"
                 />
               </svg>
-              <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button className="reservasAdminDropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Día
               </button>
               <div className="dropdown-menu">
@@ -160,7 +159,7 @@ const ReservasAdmin = () => {
                 <path d="M15.9998 29.3334C23.3636 29.3334 29.3332 23.3639 29.3332 16.0001C29.3332 8.63629 23.3636 2.66675 15.9998 2.66675C8.63604 2.66675 2.6665 8.63629 2.6665 16.0001C2.6665 23.3639 8.63604 29.3334 15.9998 29.3334Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M20 21.3333L16.7813 18.1147C16.2812 17.6147 16.0002 16.9365 16 16.2293V8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button className="reservasAdminDropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Hora
               </button>
               <div className="dropdown-menu">
@@ -218,7 +217,7 @@ const ReservasAdmin = () => {
                   fill="white"
                 />
               </svg>
-              <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button className="reservasAdminDropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Tipo de sala
               </button>
               <div className="dropdown-menu">
@@ -300,7 +299,7 @@ const ReservasAdmin = () => {
               </thead>
               <tbody>
                 <tr className="reservasAdminRowHover">
-                  <th scope="row">Mes</th>
+                  <td scope="row">Mes</td>
                   <td>Mes</td>
                   <td>Hora</td>
                   <td>Tipo de Sala</td>
@@ -311,7 +310,7 @@ const ReservasAdmin = () => {
                   </td>
                 </tr>
                 <tr className="reservasAdminRowHover">
-                  <th scope="row">Mes</th>
+                  <td scope="row">Mes</td>
                   <td>Mes</td>
                   <td>Hora</td>
                   <td>Tipo de Sala</td>
@@ -322,7 +321,7 @@ const ReservasAdmin = () => {
                   </td>
                 </tr>
                 <tr className="reservasAdminRowHover">
-                  <th scope="row">Mes</th>
+                  <td scope="row">Mes</td>
                   <td>Mes</td>
                   <td>Hora</td>
                   <td>Tipo de Sala</td>
@@ -333,7 +332,7 @@ const ReservasAdmin = () => {
                   </td>
                 </tr>
                 <tr className="reservasAdminRowHover">
-                  <th scope="row">Mes</th>
+                  <td scope="row">Mes</td>
                   <td>Mes</td>
                   <td>Hora</td>
                   <td>Tipo de Sala</td>
@@ -373,7 +372,7 @@ const ReservasAdmin = () => {
             </nav>
           </div>
 
-          <div className="reservasAdminAvailabilityTitle extraBoldFont">Disponibilidad de salas</div>
+          <p className="reservasAdminAvailabilityTitle extraBoldFont">Disponibilidad de salas</p>
           <div className="reservasAdminFilterButtonsContainer">
             <div className="reservasAdminFilterButton">
               <svg width="27" height="27" viewBox="0 0 27 27" fill="#fff" className="mx-2" xmlns="http://www.w3.org/2000/svg">
@@ -382,7 +381,7 @@ const ReservasAdmin = () => {
                   fill="#fff"
                 />
               </svg>
-              <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button className="reservasAdminDropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Mes
               </button>
               <div className="dropdown-menu">
@@ -435,7 +434,7 @@ const ReservasAdmin = () => {
                   fill="white"
                 />
               </svg>
-              <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button className="reservasAdminDropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Día
               </button>
               <div className="dropdown-menu">
@@ -491,7 +490,7 @@ const ReservasAdmin = () => {
                 <path d="M15.9998 29.3334C23.3636 29.3334 29.3332 23.3639 29.3332 16.0001C29.3332 8.63629 23.3636 2.66675 15.9998 2.66675C8.63604 2.66675 2.6665 8.63629 2.6665 16.0001C2.6665 23.3639 8.63604 29.3334 15.9998 29.3334Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M20 21.3333L16.7813 18.1147C16.2812 17.6147 16.0002 16.9365 16 16.2293V8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              <button className="dropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button className="reservasAdminDropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Hora
               </button>
               <div className="dropdown-menu">
