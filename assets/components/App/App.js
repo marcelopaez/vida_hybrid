@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import NavbarAdmin from '../NavbarAdmin';
 import Footer from '../Footer';
 import Home from '../../pages/Home';
 import GeneralAdmin from '../../pages/GeneralAdmin';
@@ -9,6 +8,9 @@ import PlanesAdmin from '../../pages/PlanesAdmin';
 import ContratoAdmin from '../../pages/ContratoAdmin';
 import IngresosAdmin from '../../pages/IngresosAdmin';
 import ComunidadAdmin from '../../pages/ComunidadAdmin';
+import BeneficiosAdmin from '../../pages/BeneficiosAdmin';
+import ControlClientesAdmin from '../../pages/ControlClientesAdmin';
+import ClientesAdmin from '../../pages/ClientesAdmin';
 import Planes from '../../pages/Planes';
 import Salas from '../../pages/Salas';
 import Oficinas from '../../pages/Oficinas';
@@ -30,6 +32,9 @@ const App = () => {
         <Route exact path="/contratoAdmin" component={ContratoAdmin} />
         <Route exact path="/ingresosAdmin" component={IngresosAdmin} />
         <Route exact path="/comunidadAdmin" component={ComunidadAdmin} />
+        <Route exact path="/comunidadAdminBeneficios" component={BeneficiosAdmin} />
+        <Route exact path="/controlClientesAdmin" component={ControlClientesAdmin} />
+        <Route exact path="/clientesAdmin" component={ClientesAdmin} />
         <Route exact path="/planes" component={Planes} />
         <Route exact path="/salas" component={Salas} />
         <Route exact path="/oficinas" component={Oficinas} />

@@ -15,7 +15,24 @@
 
 .sidebarItem:hover {
   border-left: 5px $primaryDarker solid;
-  background-color: $primaryLighter;
+  background-color: $primaryLighter2;
+
+  a > p {
+    color: #fff;
+  }
+}
+
+.sidebarItemCurrentlySelected {
+  border-left: 5px $primaryDarker solid;
+  background-color: $primaryLighter2;
+  list-style-type: none;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+
+  a {
+    margin: 0;
+  }
 
   a > p {
     color: #fff;

@@ -331,45 +331,45 @@
   top: 0;
 }
 
-.card-vida-vertical {
+.cardVidaVertical {
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(0, 0, 0, 0.125);
   overflow: hidden;
 }
 
-.card-vida-horizontal {
+.cardVidaHorizontal {
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.125);
   overflow: hidden;
   height: 100%;
 }
 
-.card-vida-body {
+.cardVidaBody {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex: 2;
 }
 
-.card-vida-body-title {
+.cardVidaBodyTitle {
   color: $primary;
   font-size: 1.1rem;
   margin-bottom: 13px;
 }
 
-.card-vida-body-content {
+.cardVidaBodyContent {
   font-size: 1.1rem;
   color: $grayDarker4;
 }
 
-.card-vida-img-top,
-.card-vida-img-bottom,
-.card-vida-img-horizontal {
+.cardVidaImgTop,
+.cardVidaImgBottom,
+.cardVidaImgHorizontal {
   object-fit: cover;
 }
 
-.card-vida-body {
+.cardVidaBody {
   padding: 1rem;
 }
 
@@ -758,7 +758,7 @@
     display: none;
   }
 
-  .card-vida-horizontal {
+  .cardVidaHorizontal {
     flex-direction: column;
   }
 
@@ -820,7 +820,7 @@
     font-size: 4.5rem;
   }
 
-  .card-vida-horizontal {
+  .cardVidaHorizontal {
     flex-direction: row;
   }
 

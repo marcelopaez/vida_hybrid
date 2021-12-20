@@ -1,18 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import SideMenu from '../../components/SideMenu';
+import NavbarAdmin from '../../components/NavbarAdmin';
 
 const ContratoAdmin = () => {
   useEffect(() => window.scroll(0, 0), []);
 
+  const [signContract, setSignContract] = useState(false);
+
   return (
     <div className="row marginNavbar generalContent">
-      {/* <NavbarAdmin /> */}
+      <NavbarAdmin />
       <div className="col-lg-2 col-md-3 col-sm-12 p-0">
         <SideMenu />
       </div>
 
       <div className="col-lg-10 col-md-9 col-sm-12 bg-white p-0">
-        <div className="generalContentAdminBody">
+        <div className={`${signContract ? 'generalContentAdminBodyBlur' : 'generalContentAdminBody'}`}>
           <p className="contractAdminTitle extraBoldFont">Contrato</p>
           <div className="contractAdminContractContainer">
             <div className="contractAdminContractLeft">
@@ -24,7 +27,7 @@ const ContratoAdmin = () => {
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
-                    d="M9.33333 1H17.6667C18.2192 1 18.7491 1.22576 19.1398 1.62763C19.5305 2.02949 19.75 2.57454 19.75 3.14286C19.75 3.71118 19.5305 4.25622 19.1398 4.65809C18.7491 5.05995 18.2192 5.28571 17.6667 5.28571H9.33333C8.7808 5.28571 8.2509 5.05995 7.86019 4.65809C7.46949 4.25622 7.25 3.71118 7.25 3.14286C7.25 2.57454 7.46949 2.02949 7.86019 1.62763C8.2509 1.22576 8.7808 1 9.33333 1Z"
+                    d="M9.33333 1H17.6667C18.2192 1 18.749T1 1.22576 19.1398 1.62763C19.5305 2.02949 19.75 2.57454 19.75 3.14286C19.75 3.71118 19.5305 4.25622 19.1398 4.65809C18.7491 5.05995 18.2192 5.28571 17.6667 5.28571H9.33333C8.7808 5.28571 8.2509 5.05995 7.86019 4.65809C7.46949 4.25622 7.25 3.71118 7.25 3.14286C7.25 2.57454 7.46949 2.02949 7.86019 1.62763C8.2509 1.22576 8.7808 1 9.33333 1Z"
                     stroke="#004b2a"
                     strokeWidth="2"
                     strokeLinecap="round"
@@ -70,7 +73,14 @@ const ContratoAdmin = () => {
                   Estado <br /> Pendiente de firma
                 </p>
               </div>
-              <button className="contractAdminContractLeftButton">Firmar</button>
+              <button
+                className="contractAdminContractLeftButton"
+                onClick={() => {
+                  window.scroll(0, 0);
+                  setSignContract(true);
+                }}>
+                Firmar
+              </button>
             </div>
             <div className="contractAdminContractRight">
               <div className="contactAdminContractRightNameContainer">
@@ -90,7 +100,7 @@ const ContratoAdmin = () => {
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                 aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
-              <div className="contactAdminContractRightStatusContainer">
+              <div className="contractAdminContractRightStatusContainer">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M15 0C6.72 0 0 6.72 0 15C0 23.28 6.72 30 15 30C23.28 30 30 23.28 30 15C30 6.72 23.28 0 15 0ZM15 27C8.37 27 3 21.63 3 15C3 8.37 8.37 3 15 3C21.63 3 27 8.37 27 15C27 21.63 21.63 27 15 27Z" fill="#004b2a" />
                   <path d="M7.5 17.25C8.74264 17.25 9.75 16.2426 9.75 15C9.75 13.7574 8.74264 12.75 7.5 12.75C6.25736 12.75 5.25 13.7574 5.25 15C5.25 16.2426 6.25736 17.25 7.5 17.25Z" fill="#004b2a" />
@@ -115,6 +125,48 @@ const ContratoAdmin = () => {
             <button className="generalAdminFooterRightButton">Reservá</button>
           </div>
         </div>
+        {signContract && (
+          <div className="contractAdminSignModal">
+            <div className="contractAdminSignModalHeader">
+              <p className="contractAdminSignModalHeaderTitle extraBoldFont">ATENCIÓN</p>
+              <p className="contractAdminSignModalHeaderX" onClick={() => setSignContract(false)}>
+                X
+              </p>
+            </div>
+            <div className="contractAdminSignModalBody">
+              <div className="d-flex">
+                <svg width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.25 3.14285H3.08333C2.5308 3.14285 2.0009 3.36862 1.61019 3.77048C1.21949 4.17235 1 4.71739 1 5.28571V28.8571C1 29.4255 1.21949 29.9705 1.61019 30.3724C2.0009 30.7742 2.5308 31 3.08333 31H23.9167C24.4692 31 24.9991 30.7742 25.3898 30.3724C25.7805 29.9705 26 29.4255 26 28.8571V5.28571C26 4.71739 25.7805 4.17235 25.3898 3.77048C24.9991 3.36862 24.4692 3.14285 23.9167 3.14285H19.75" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M9.33333 1H17.6667C18.2192 1 18.7491 1.22576 19.1398 1.62763C19.5305 2.02949 19.75 2.57454 19.75 3.14286C19.75 3.71118 19.5305 4.25622 19.1398 4.65809C18.7491 5.05995 18.2192 5.28571 17.6667 5.28571H9.33333C8.7808 5.28571 8.2509 5.05995 7.86019 4.65809C7.46949 4.25622 7.25 3.71118 7.25 3.14286C7.25 2.57454 7.46949 2.02949 7.86019 1.62763C8.2509 1.22576 8.7808 1 9.33333 1Z"
+                    stroke="#004b2a"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path d="M11.4165 11.7143H21.8332" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M11.4165 18.1429H21.8332" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M11.4165 24.5714H21.8332" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M5.1665 11.7143H7.24984" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M5.1665 18.1429H7.24984" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M5.1665 24.5714H7.24984" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <p className="contractAdminSignModalBodyDescription">
+                  <b>Plan eter</b> <br /> PART: Incluye 3 Hs. en salas de reunión <br /> <b>Fecha de firma</b> <br /> 20/10/2021
+                </p>
+              </div>
+            </div>
+            <div className="custom-control custom-checkbox contractAdminSignModalFooter">
+              <input type="checkbox" className="custom-control-input" id="acceptTerms" />
+              <label className="custom-control-label" htmlFor="acceptTerms">
+                Acepto términos y condiciones
+              </label>
+            </div>
+            <div className="contractAdminSignModalButton boldFont">Firmar</div>
+          </div>
+        )}
       </div>
     </div>
   );

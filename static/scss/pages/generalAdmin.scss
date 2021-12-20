@@ -2,6 +2,11 @@
   background: #fff !important;
 }
 
+.generalContentAdminBodyBlur {
+  background: #fff !important;
+  filter: blur(4px) !important;
+}
+
 .generalAdminTitle {
   font-size: 3rem;
   color: $grayDarker10;
@@ -17,14 +22,16 @@
 .blocksContainerGeneralAdmin {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .blockGeneralAdmin {
-  background: #f4f4f4;
+  background: $grayLighter9;
   padding: 30px 35px;
   border-radius: 10px;
   margin: 20px;
   max-width: 630px;
+  width: 100%;
 }
 
 .blockGeneralAdminTitleContainer1,
@@ -73,7 +80,6 @@
 .blockGeneralAdminContent1 {
   font-size: 2.25rem;
   color: $grayDarker1;
-  margin: 60px 50px 30px 50px;
   text-align: center;
 }
 
@@ -94,6 +100,14 @@
   margin-bottom: 30px;
 }
 
+.generalAdminHeader {
+  background: $grayDarker12;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .generalAdminFooter {
   background: $primary;
   color: #fff;
@@ -103,7 +117,8 @@
   margin-top: 200px;
 }
 
-.generalAdminFooterLeft {
+.generalAdminFooterLeft,
+.generalAdminHeaderLeft {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -111,14 +126,16 @@
   text-align: center;
 }
 
-.generalAdminFooterRight {
+.generalAdminFooterRight,
+.generalAdminHeaderRight {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 16px;
 }
 
-.generalAdminFooterLeftFirstText {
+.generalAdminFooterLeftFirstText,
+.generalAdminHeaderLeftFirstText {
   font-size: 1.5rem;
   margin: 0 75px 0 0;
 }
@@ -127,17 +144,241 @@
   border-right: 1px solid #fff;
 }
 
-.generalAdminFooterSecondText {
+.generalAdminHeaderLeftSeparator {
+  border: 1px solid #fff;
+  height: 60px;
+}
+
+.generalAdminFooterSecondText,
+.generalAdminHeaderSecondText {
   font-size: 1.1rem;
   margin: 0 0 0 50px;
 }
 
-.generalAdminFooterRightButton {
+.generalAdminFooterRightButton,
+.generalAdminHeaderRightButton {
   background: #00af62;
   color: #fff;
   padding: 18px 16px;
   border: none;
   border-radius: 5px;
+}
+
+.generalAdminSharedPlaceModal,
+.generalAdminMeetingsRoomModal,
+.generalAdminFinalReservationStepModal {
+  background: #fff;
+  color: $grayDarker2;
+  border-radius: 10px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1100;
+}
+
+.generalAdminSharedPlaceModalHeader,
+.generalAdminMeetingsRoomModalHeader,
+.generalAdminFinalReservationStepModalHeader {
+  position: relative;
+}
+
+.generalAdminSharedPlaceModalHeaderTitle,
+.generalAdminMeetingsRoomModalHeaderTitle,
+.generalAdminFinalReservationStepModalHeaderTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 20px 0;
+  color: $grayDarker10;
+}
+
+.generalAdminSharedPlaceModalHeaderX,
+.generalAdminMeetingsRoomModalHeaderX,
+.generalAdminFinalReservationStepModalHeaderX {
+  position: absolute;
+  right: 30px;
+  top: 0;
+  font-size: 1.1rem;
+  padding: 20px 0;
+}
+
+.generalAdminSharedPlaceModalBody,
+.generalAdminMeetingsRoomModalBody,
+.generalAdminFinalReservationStepModalBody {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.generalAdminSharedPlaceModalBodyLeftSide,
+.generalAdminMeetingsRoomModalBodyLeftSide,
+.generalAdminFinalReservationStepModalBodyLeftSide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.generalAdminSharedPlaceModalBodyLeftSideTitle,
+.generalAdminMeetingsRoomModalBodyLeftSideTitle {
+  font-size: 1.1rem;
+  color: $grayDarker10;
+  margin: 85px 0 35px 0;
+}
+
+.generalAdminSharedPlaceModalLeftSideAvailability,
+.generalAdminMeetingsRoomModalLeftSideAvailability {
+  color: $primaryLighter1;
+  margin-bottom: 35px;
+}
+
+.generalAdminSharedPlaceModalLeftSideHourTitle,
+.generalAdminMeetingsRoomModalLeftSideHourTitle,
+.generalAdminMeetingsRoomModalBodyRightSideAvailableRoomsTitle {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.generalAdminMeetingsRoomModalBodyRightSideAvailableRoomsTitle {
+  margin-top: 100px;
+  color: $grayDarker13;
+}
+
+.sharedPlaceHourOption,
+.meetingsRoomHourOption,
+.meetingsRoomAvailableRoomsOption,
+.paymentMethodOption {
+  font-size: 1.1rem;
+  margin: 7.5px 0;
+}
+
+.generalAdminMeetingsRoomModalLeftSideTimeTitle {
+  font-size: 1.1rem;
+  margin: 35px 0 15px 0;
+}
+
+.generalAdminMeetingsRoomModalLeftSideTimeOptions {
+  color: $grayLighter4;
+}
+
+.generalAdminSharedPlaceModalVerticalSeparator {
+  height: 275px;
+  border: 1px solid $grayLighter5;
+  margin: 85px 20px 0 20px;
+}
+
+.generalAdminMeetingsRoomModalVerticalSeparator {
+  height: 400px;
+  border: 1px solid $grayLighter5;
+  margin: 85px 20px 0 20px;
+}
+
+.generalAdminFinalReservationStepModalVerticalSeparator {
+  height: 250px;
+  border: 1px solid $grayLighter5;
+  margin: 85px 20px 0 20px;
+}
+
+.generalAdminSharedPlaceModalBodyRightSide,
+.generalAdminMeetingsRoommodalBodyRightSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 50px;
+  color: $grayDarker13;
+}
+
+.generalAdminFinalReservationStepModalBodyRightSide {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 50px;
+  color: $grayDarker13;
+}
+
+.generalAdminSharedPlaceModalBodyRightSideTitle {
+  font-size: 1.1rem;
+  margin: 160px 0 20px 0;
+}
+
+.generalAdminMeetingsRoomModalBodyRightSideTitle {
+  font-size: 1.1rem;
+  margin: 55px 0 20px 0;
+  color: $grayDarker13;
+}
+
+.generalAdminSharedPlaceModalBodyRightSidePrice,
+.generalAdminMeetingsRoomModalBodyRightSidePrice,
+.generalAdminFinalReservationStepModalBodyRightSidePrice {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.generalAdminMeetingsRoomModalBodyRightSidePrice,
+.generalAdminFinalReservationStepModalBodyRightSidePrice {
+  color: $grayDarker13;
+}
+
+.generalAdminSharedPlaceModalBodyButton,
+.generalAdminMeetingsRoomModalBodyButton,
+.generalAdminFinalReservationStepModalBodyButton {
+  background: $primary;
+  color: #fff;
+  padding: 18px 16px;
+  border: none;
+  border-radius: 10px;
+  margin: 70px 0 0 0;
+  width: 230px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.generalAdminFinalReservationStepModalBodyLeftSideSubtotal {
+  font-size: 1.1rem;
+  margin: 100px 0 20px 0;
+  color: $grayDarker13;
+}
+
+.generalAdminFinalReservationStepModalBodyLeftSideCouponTitle {
+  font-size: 1.1rem;
+  margin: 50px 0 20px 0;
+}
+
+.generalAdminFinalReservationStepModalBodyLeftSideCoupon {
+}
+
+.generalAdminFinalReservationStepModalBodyRightSideTitle {
+  font-size: 1.5rem;
+  margin: 135px 0 30px 0;
+}
+
+.fullStepCircle {
+  width: 20px;
+  height: 20px;
+  background-color: $primary;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.emptyStepCircle {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid $primary;
+  margin: 0 5px;
+}
+
+.generalAdminModalStepsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 30px 0;
 }
 
 @media (min-width: 300px) {
@@ -148,9 +389,39 @@
   .generalAdminMobile {
     display: block;
   }
+
+  .generalAdminSharedPlaceModal,
+  .generalAdminMeetingsRoomModal,
+  .generalAdminFinalReservationStepModal {
+    max-width: 100vw;
+    padding: 20px 30px;
+  }
+
+  .blockGeneralAdminContent1 {
+    margin: 0;
+  }
+
+  .generalAdminHeader,
+  .generalAdminFooter {
+    display: none;
+  }
 }
 
 @media (min-width: 576px) {
+  .generalAdminSharedPlaceModal,
+  .generalAdminMeetingsRoomModal,
+  .generalAdminFinalReservationStepModal {
+    padding: 70px 100px;
+  }
+
+  .blockGeneralAdminContent1 {
+    margin: 60px 50px 30px 50px;
+  }
+
+  .generalAdminHeader,
+  .generalAdminFooter {
+    display: flex;
+  }
 }
 
 @media (min-width: 768px) {
@@ -164,6 +435,14 @@
 }
 
 @media (min-width: 992px) {
+  .generalAdminSharedPlaceModal {
+    width: 35vw;
+  }
+
+  .generalAdminMeetingsRoomModal,
+  .generalAdminFinalReservationStepModal {
+    width: 50vw;
+  }
 }
 
 @media (min-width: 1200px) {

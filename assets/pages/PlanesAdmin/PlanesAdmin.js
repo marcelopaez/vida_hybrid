@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import SideMenu from '../../components/SideMenu';
-import Plan from '../../components/Plan';
 import NavbarAdmin from '../../components/NavbarAdmin';
 
 const PlanesAdmin = () => {
@@ -8,7 +7,7 @@ const PlanesAdmin = () => {
 
   return (
     <div className="row marginNavbar generalContent">
-      {/* <NavbarAdmin /> */}
+      <NavbarAdmin />
       <div className="col-lg-2 col-md-3 col-sm-12 p-0">
         <SideMenu />
       </div>
@@ -20,8 +19,8 @@ const PlanesAdmin = () => {
               <div className="creditsLeftBlockPlanesAdmin">
                 <p className="creditsLeftBlockTitle extraBoldFont">Te quedan 2 créditos de tu plan,</p>
                 <p className="creditsLeftBlockSubtitle">Utilizalos en espacio compartido</p>
-                <div class="progress" style={{ paddingBottom: '90px' }}>
-                  <div class="progress-bar progressBarPlanesAdmin" role="progressbar" style={{ width: '75%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                <div className="progress" style={{ paddingBottom: '90px' }}>
+                  <div className="progress-bar progressBarPlanesAdmin" role="progressbar" style={{ width: '75%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <div className="creditsLeftBlockFooter">
                   <p className="creditsLeftBlockFooterText extraBoldFont">¡No te quedes sin lugar!</p>
@@ -115,8 +114,8 @@ const PlanesAdmin = () => {
               <div className="creditsLeftBlockPlanesAdmin">
                 <p className="creditsLeftBlockTitle extraBoldFont">Te quedan 2 créditos de tu plan,</p>
                 <p className="creditsLeftBlockSubtitle">Utilizalos en espacio compartido</p>
-                <div class="progress" style={{ paddingBottom: '90px' }}>
-                  <div class="progress-bar progressBarPlanesAdmin" role="progressbar" style={{ width: '75%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                <div className="progress" style={{ paddingBottom: '90px' }}>
+                  <div className="progress-bar progressBarPlanesAdmin" role="progressbar" style={{ width: '75%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <div className="creditsLeftBlockButtonMobileContainer">
                   <button className="creditsLeftBlockButtonMobile">Reservá un lugar</button>

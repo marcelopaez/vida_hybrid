@@ -1,27 +1,47 @@
 .reservasAdminTitle {
   color: $primaryDarker;
   font-size: 3rem;
-  margin: 77px 0 55px 0;
+  margin: 35px 0 40px 0;
+}
+
+.reservasAdminSearch {
+  position: relative;
+  width: 270px;
+}
+
+.reservasAdminInput {
+  padding-left: 50px;
+}
+
+.reservasAdminSearchSVG {
+  position: absolute;
+  left: 10px;
+  top: 0;
 }
 
 .reservasAdminFilterLogo {
   margin-right: 22px;
 }
 
-.filterButton {
+.reservasAdminFilterButtonsContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.reservasAdminFilterButton {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $primaryLighter;
+  background-color: $primaryLighter2;
   color: #fff;
   padding: 1rem;
   border-radius: 5px;
-  margin: 0 15px;
+  margin: 10px 15px;
 }
 
-.dropdownButton,
-.normalButton {
-  background-color: $primaryLighter;
+.dropdownButton {
+  background-color: $primaryLighter2;
   border: none;
   color: #fff;
   font-size: 1.1rem;
@@ -29,129 +49,110 @@
 
 .reservasAdminTable {
   margin-top: 50px;
+  border-radius: 15px;
 }
 
-.primaryColorDarkerRow {
+.reservasAdminPrimaryColorDarkerRow {
   background-color: $primaryDarker;
 }
 
-.rowHover {
+.reservasAdminRowHover {
   text-align: center;
   font-size: 1.1rem;
   color: $grayDarker2;
 }
 
-.cancelButton {
+.reservasAdminCancelButton {
   background-color: transparent;
   border: none;
   color: $grayDarker2;
 }
 
-.rowHover:hover .cancelButton {
+.reservasAdminRowHover:hover .reservasAdminCancelButton {
   background-color: #fff;
   border-radius: 10px;
   color: $primaryDarker;
   padding: 10px;
 }
 
-.rowHover:hover {
-  background-color: $primaryLighter;
+.reservasAdminRowHover:hover {
+  background-color: $primaryLighter2;
   color: #fff;
 }
 
-.roomType {
+.reservasAdminAvailabilityTitle {
+  font-size: 1.5rem;
+  color: $grayDarker10;
+  margin: 115px 0 20px 0;
+}
+
+.reservasAdminRoomsContainer {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  max-width: 175px;
-  margin: 0 0.5rem;
-
-  .roomTypeTitle {
-    font-size: 1.5rem;
-  }
-
-  .roomTypeContent {
-    font-size: 1rem;
-  }
-}
-
-.reservationContainer {
-  background-color: $primaryDarker;
-  border-radius: 15px;
-  color: #fff;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  margin: 3rem 0;
-  padding: 1rem 2rem 0 2rem;
-}
-
-.currentPlanContainer {
-  @extend .reservationContainer;
-  background-color: $primary;
-  position: relative;
-}
-
-.planIcon {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.currentPlanContent {
-  padding: 1rem 2rem 0 2rem;
-  width: 100%;
-}
-
-.buttonContainer {
-  color: $primaryDarker;
-  background-color: #fff;
-  border: none;
-  border-radius: 15px;
-}
-
-.roomTypesSection {
-  display: flex;
+  align-items: center;
   flex-wrap: wrap;
 }
 
-@media (min-width: 300px) {
-  .roomTypesSection {
-    justify-content: center;
-    align-items: center;
-  }
+.reservasAdminRoomContainer {
+  padding: 20px 50px;
+  background-color: #fff;
+  border-radius: 10px;
+}
 
-  .buttonContainer {
-    padding: 0.5rem 2rem;
-  }
+.reservasAdminRoomContainerTitle {
+  font-size: 1.5rem;
+  color: $grayDarker10;
+  margin: 0 0 30px 0;
+}
+
+.reservasAdminRoomContainerImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: $primaryLighter2;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reservasAdminRoomContainerDataContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.reservasAdminRoomContainerData {
+  display: flex;
+  align-items: center;
+  margin: 50px 5px 0 5px;
+}
+
+.reservasAdminRoomContainerDataImage {
+  width: 25px;
+  height: 25px;
+  background-color: $primaryLighter2;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.reservasAdminRoomContainerDataText {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+@media (min-width: 300px) {
 }
 
 @media (min-width: 576px) {
-  .buttonContainer {
-    padding: 0.5rem 4rem;
-  }
 }
 
 @media (min-width: 768px) {
-  .roomTypesSection {
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
 }
 
 @media (min-width: 992px) {
-  .buttonContainer {
-    padding: 0.5rem 2rem;
-  }
 }
 
 @media (min-width: 1200px) {
-  .buttonContainer {
-    padding: 0.5rem 4rem;
-  }
 }
 
 @media (min-width: 1440px) {

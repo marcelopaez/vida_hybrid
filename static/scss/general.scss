@@ -101,9 +101,11 @@ html {
   height: 50vw;
 }
 
-.generalContentAdminBody {
+.generalContentAdminBody,
+.generalContentAdminBodyBlur {
   padding: 0 90px 0 90px;
   margin: 0 10px 0 10px;
+  position: relative;
 }
 
 @media (min-width: 300px) {

@@ -1128,29 +1128,29 @@ const Home = () => {
 
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-12">
-              <div className="card-vida-horizontal">
-                <img className="card-vida-img-horizontal" src={Comunidad1} alt="Vida" />
-                <div className="card-vida-body">
-                  <p className="card-vida-body-title extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="card-vida-body-content">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <div className="cardVidaHorizontal">
+                <img className="cardVidaImgHorizontal" src={Comunidad1} alt="Vida" />
+                <div className="cardVidaBody">
+                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
+                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-12">
-              <div className="card-vida-vertical">
-                <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
-                <div className="card-vida-body">
-                  <p className="card-vida-body-title extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="card-vida-body-content">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <div className="cardVidaVertical">
+                <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
+                <div className="cardVidaBody">
+                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
+                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-12">
-              <div className="card-vida-vertical">
-                <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
-                <div className="card-vida-body">
-                  <p className="card-vida-body-title extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="card-vida-body-content">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <div className="cardVidaVertical">
+                <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
+                <div className="cardVidaBody">
+                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
+                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                 </div>
               </div>
             </div>
@@ -1159,29 +1159,29 @@ const Home = () => {
           <p className="communityTitleBenefits boldFont">Beneficios</p>
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="card-vida-vertical">
-                <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
-                <div className="card-vida-body">
-                  <p className="card-vida-body-title extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="card-vida-body-content">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <div className="cardVidaVertical">
+                <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
+                <div className="cardVidaBody">
+                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
+                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="card-vida-vertical">
-                <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
-                <div className="card-vida-body">
-                  <p className="card-vida-body-title extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="card-vida-body-content">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <div className="cardVidaVertical">
+                <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
+                <div className="cardVidaBody">
+                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
+                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="card-vida-vertical">
-                <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
-                <div className="card-vida-body">
-                  <p className="card-vida-body-title extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="card-vida-body-content">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <div className="cardVidaVertical">
+                <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
+                <div className="cardVidaBody">
+                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
+                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                 </div>
               </div>
             </div>
@@ -1190,11 +1190,11 @@ const Home = () => {
           <p className="communityTitleBenefits boldFont">Notas o lo que se quiera destacar, por ejemplo, eventos</p>
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12" style={{ position: 'relative' }}>
-              <div className="card-vida-horizontal">
-                <img className="card-vida-img-top" src={Comunidad1} alt="Vida" />
-                <div className="card-vida-body">
-                  <p className="card-vida-body-title extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="card-vida-body-content">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <div className="cardVidaHorizontal">
+                <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
+                <div className="cardVidaBody">
+                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
+                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                 </div>
               </div>
               <div style={{ position: 'absolute', right: '15px' }}>

@@ -1,0 +1,94 @@
+.controlClientesAdminTitle {
+  font-size: 3rem;
+  margin: 40px 0;
+  color: $grayLighter7;
+}
+
+.controlClientesAdminPlanesContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.controlClientesAdminPlan {
+  background: #fff;
+  border-radius: 10px;
+  margin: 40px;
+  color: $grayLighter7;
+  text-align: center;
+  padding: 50px 30px;
+}
+
+.controlClientesAdminPlanTitle {
+  font-size: 1.1rem;
+  margin: 15px 0;
+}
+
+.controlClientesAdminPlanQuantity {
+  font-size: 2.25rem;
+  margin: 40px 0 0 0;
+}
+
+.controlClientesAdminPlanDetail {
+  font-size: 1.1rem;
+}
+
+.controlClientesAdminNumbersTitle {
+  font-size: 2.25rem;
+  margin: 40px 0;
+  color: $grayLighter7;
+}
+
+.controlClientesAdminGeneralNumbersContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.controlClientesAdminGeneralNumbers {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: $grayLighter7;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 100px 20px 30px;
+  margin: 40px;
+
+  svg {
+    margin-right: 20px;
+  }
+}
+
+.controlClientesAdminGeneralNumbersSeparator {
+  border: 1px solid $grayLighter7;
+  height: 75px;
+  margin-right: 20px;
+}
+
+.controlClientesAdminGeneralNumbersTitle {
+  font-size: 1.1rem;
+  margin: 0 0 15px 0;
+}
+
+.controlClientesAdminGeneralNumbersAmount {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 300px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1440px) {
+}

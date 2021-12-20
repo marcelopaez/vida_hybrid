@@ -117,6 +117,10 @@ const Login = () => {
                   }}>
                   Siguiente
                 </button>
+                <div className="loginStepsContainer">
+                  <div className="fullStepCircleOrange"></div>
+                  <div className="emptyStepCircleOrange"></div>
+                </div>
               </div>
               <div className="col-lg-3 col-md-4 col-sm-12 d-flex justify-content-center">
                 <div className="loginSeparator" />

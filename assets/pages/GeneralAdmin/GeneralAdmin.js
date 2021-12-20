@@ -8,6 +8,10 @@ const GeneralAdmin = () => {
   const [showInfo1, setShowInfo1] = useState(false);
   const [showInfo2, setShowInfo2] = useState(false);
 
+  const [sharedSpace, setSharedSpace] = useState(false);
+  const [meetingsRoom, setMeetingsRoom] = useState(false);
+  const [finalReservationStep, setFinalReservationStep] = useState(false);
+
   return (
     <div className="row marginNavbar generalContent">
       <NavbarAdmin />
@@ -16,7 +20,7 @@ const GeneralAdmin = () => {
       </div>
       <div className="col-lg-10 col-md-9 col-sm-12 bg-white p-0">
         <div className="generalAdminLarger">
-          <div className="generalContentAdminBody">
+          <div className={`${sharedSpace || meetingsRoom || finalReservationStep ? 'generalContentAdminBodyBlur' : 'generalContentAdminBody'}`}>
             <p className="generalAdminTitle extraBoldFont">No te quedes sin lugar, reservá</p>
             <div className="blocksContainerGeneralAdmin">
               <div className="blockGeneralAdmin">
@@ -37,7 +41,14 @@ const GeneralAdmin = () => {
                 <div className="blockGeneralAdminSeparator"></div>
                 <p className="blockGeneralAdminContent1">Créditos Vida disponibles</p>
                 <p className="blockGeneralAdminContent2 extraBoldFont">5</p>
-                <button className="blockGeneralAdminButton">Reservá</button>
+                <button
+                  className="blockGeneralAdminButton"
+                  onClick={() => {
+                    window.scroll(0, 0);
+                    setSharedSpace(true);
+                  }}>
+                  Reservá
+                </button>
               </div>
               <div className="blockGeneralAdmin">
                 <div className="blockGeneralAdminTitleContainer2">
@@ -57,7 +68,14 @@ const GeneralAdmin = () => {
                 <div className="blockGeneralAdminSeparator"></div>
                 <p className="blockGeneralAdminContent1">Horas disponibles</p>
                 <p className="blockGeneralAdminContent2 extraBoldFont">3</p>
-                <button className="blockGeneralAdminButton">Reservá</button>
+                <button
+                  className="blockGeneralAdminButton"
+                  onClick={() => {
+                    window.scroll(0, 0);
+                    setMeetingsRoom(true);
+                  }}>
+                  Reservá
+                </button>
               </div>
             </div>
           </div>
@@ -71,6 +89,169 @@ const GeneralAdmin = () => {
               <button className="generalAdminFooterRightButton">Reservá</button>
             </div>
           </div>
+
+          {sharedSpace && (
+            <div className="generalAdminSharedPlaceModal">
+              <div className="generalAdminSharedPlaceModalHeader">
+                <p className="generalAdminSharedPlaceModalHeaderTitle extraBoldFont">RESERVÁ YA</p>
+                <p className="generalAdminSharedPlaceModalHeaderX" onClick={() => setSharedSpace(false)}>
+                  X
+                </p>
+                <hr className="m-0" />
+              </div>
+              <div className="generalAdminSharedPlaceModalBody">
+                <div className="generalAdminSharedPlaceModalBodyLeftSide">
+                  <select className="mdb-select md-form generalAdminSharedPlaceModalBodyLeftSideTitle extraBoldFont" defaultValue="Espacio compartido">
+                    <option value="Espacio compartido">Espacio compartido</option>
+                    <option value="Espacio compartido">Espacio compartido</option>
+                  </select>
+                  <p className="generalAdminSharedPlaceModalLeftSideAvailability boldFont">Hay disponibilidad de lugar</p>
+                  <p className="generalAdminSharedPlaceModalLeftSideHourTitle">Elegí un horario</p>
+                  <div className="custom-control custom-checkbox sharedPlaceHourOption">
+                    <input type="checkbox" className="custom-control-input" id="morningSharedPlace" />
+                    <label className="custom-control-label lightFont" htmlFor="morningSharedPlace">
+                      Por la mañana (00 a 00)
+                    </label>
+                  </div>
+                  <div className="custom-control custom-checkbox sharedPlaceHourOption">
+                    <input type="checkbox" className="custom-control-input" id="afternoonSharedPlace" />
+                    <label className="custom-control-label lightFont" htmlFor="afternoonSharedPlace">
+                      Por la tarde (00 a 00)
+                    </label>
+                  </div>
+                </div>
+                <div className="generalAdminSharedPlaceModalVerticalSeparator"></div>
+                <div className="generalAdminSharedPlaceModalBodyRightSide">
+                  <p className="generalAdminSharedPlaceModalBodyRightSideTitle boldFont">Subtotal</p>
+                  <p className="generalAdminSharedPlaceModalBodyRightSidePrice extraBoldFont">$3400</p>
+                </div>
+              </div>
+              <button
+                className="generalAdminSharedPlaceModalBodyButton"
+                onClick={() => {
+                  setSharedSpace(false);
+                  setFinalReservationStep(true);
+                }}>
+                Reservar
+              </button>
+              <div className="generalAdminModalStepsContainer">
+                <div className="fullStepCircle"></div>
+                <div className="emptyStepCircle"></div>
+              </div>
+            </div>
+          )}
+
+          {meetingsRoom && (
+            <div className="generalAdminMeetingsRoomModal">
+              <div className="generalAdminMeetingsRoomModalHeader">
+                <p className="generalAdminMeetingsRoomModalHeaderTitle extraBoldFont">RESERVÁ YA</p>
+                <p className="generalAdminMeetingsRoomModalHeaderX" onClick={() => setMeetingsRoom(false)}>
+                  X
+                </p>
+                <hr className="m-0" />
+              </div>
+              <div className="generalAdminMeetingsRoomModalBody">
+                <div className="generalAdminMeetingsRoomModalBodyLeftSide">
+                  <select className="mdb-select md-form generalAdminMeetingsRoomModalBodyLeftSideTitle extraBoldFont" defaultValue="Espacio compartido">
+                    <option value="Espacio compartido">Espacio compartido</option>
+                    <option value="Espacio compartido">Espacio compartido</option>
+                  </select>
+                  <p className="generalAdminMeetingsRoomModalLeftSideAvailability boldFont">Hay disponibilidad de lugar</p>
+                  <p className="generalAdminMeetingsRoomModalLeftSideHourTitle">Elegí un horario</p>
+                  <div className="custom-control custom-checkbox meetingsRoomHourOption">
+                    <input type="checkbox" className="custom-control-input" id="morningMeetingsRoom" />
+                    <label className="custom-control-label lightFont" htmlFor="morningMeetingsRoom">
+                      Por la mañana (00 a 00)
+                    </label>
+                  </div>
+                  <div className="custom-control custom-checkbox meetingsRoomHourOption">
+                    <input type="checkbox" className="custom-control-input" id="afternoonMeetingsRoom" />
+                    <label className="custom-control-label lightFont" htmlFor="afternoonMeetingsRoom">
+                      Por la tarde (00 a 00)
+                    </label>
+                  </div>
+                  <p className="generalAdminMeetingsRoomModalLeftSideTimeTitle">Cantidad de Hs</p>
+                  <select className="mdb-select md-form generalAdminMeetingsRoomModalLeftSideTimeOptions extraBoldFont" defaultValue="1 Hs">
+                    <option value="1 Hs">1 Hs</option>
+                    <option value="2 Hs">2 Hs</option>
+                    <option value="3 Hs">3 Hs</option>
+                    <option value="4 Hs">4 Hs</option>
+                  </select>
+                </div>
+                <div className="generalAdminMeetingsRoomModalVerticalSeparator"></div>
+                <div className="generalAdminMeetingsRoomModalBodyRightSide">
+                  <p className="generalAdminMeetingsRoomModalBodyRightSideAvailableRoomsTitle">Salas disponibles</p>
+                  <div className="custom-control custom-checkbox meetingsRoomAvailableRoomsOption">
+                    <input type="checkbox" className="custom-control-input" id="meetingsRoomType1" />
+                    <label className="custom-control-label lightFont" htmlFor="meetingsRoomType1">
+                      Río (5 personas)
+                    </label>
+                  </div>
+                  <div className="custom-control custom-checkbox meetingsRoomAvailableRoomsOption">
+                    <input type="checkbox" className="custom-control-input" id="meetingsRoomType2" />
+                    <label className="custom-control-label lightFont" htmlFor="meetingsRoomType2">
+                      Bosque (12 personas)
+                    </label>
+                  </div>
+                  <p className="generalAdminMeetingsRoomModalBodyRightSideTitle boldFont">Subtotal</p>
+                  <p className="generalAdminMeetingsRoomModalBodyRightSidePrice extraBoldFont">$3400</p>
+                </div>
+              </div>
+              <button
+                className="generalAdminMeetingsRoomModalBodyButton"
+                onClick={() => {
+                  setMeetingsRoom(false);
+                  setFinalReservationStep(true);
+                }}>
+                Reservar
+              </button>
+              <div className="generalAdminModalStepsContainer">
+                <div className="fullStepCircle"></div>
+                <div className="emptyStepCircle"></div>
+              </div>
+            </div>
+          )}
+
+          {finalReservationStep && (
+            <div className="generalAdminFinalReservationStepModal">
+              <div className="generalAdminFinalReservationStepModalHeader">
+                <p className="generalAdminFinalReservationStepModalHeaderTitle extraBoldFont">RESERVÁ YA</p>
+                <p className="generalAdminFinalReservationStepModalHeaderX" onClick={() => setFinalReservationStep(false)}>
+                  X
+                </p>
+                <hr className="m-0" />
+              </div>
+              <div className="generalAdminFinalReservationStepModalBody">
+                <div className="generalAdminFinalReservationStepModalBodyLeftSide">
+                  <p className="generalAdminFinalReservationStepModalBodyLeftSideSubtotal boldFont">Subtotal</p>
+                  <p className="generalAdminFinalReservationStepModalBodyLeftSidePrice extraBoldFont">$3400</p>
+                  <p className="generalAdminFinalReservationStepModalBodyLeftSideCouponTitle">¿Tenés un cupón de descuento?</p>
+                  <input type="text" id="coupon" className="form-control form-control-lg generalAdminFinalReservationStepModalBodyLeftSideCoupon" placeholder="Ingresá tu código" />
+                </div>
+                <div className="generalAdminFinalReservationStepModalVerticalSeparator"></div>
+                <div className="generalAdminFinalReservationStepModalBodyRightSide">
+                  <p className="generalAdminFinalReservationStepModalBodyRightSideTitle">Método de pago</p>
+                  <div className="custom-control custom-checkbox paymentMethodOption">
+                    <input type="checkbox" className="custom-control-input" id="mercadoPagoOption" />
+                    <label className="custom-control-label lightFont" htmlFor="mercadoPagoOption">
+                      Mercado Pago
+                    </label>
+                  </div>
+                  <div className="custom-control custom-checkbox paymentMethodOption">
+                    <input type="checkbox" className="custom-control-input" id="vidaCoworkOption" />
+                    <label className="custom-control-label lightFont" htmlFor="vidaCoworkOption">
+                      Coordinar pago con Vida Cowork
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <button className="generalAdminFinalReservationStepModalBodyButton">Reservar</button>
+              <div className="generalAdminModalStepsContainer">
+                <div className="fullStepCircle"></div>
+                <div className="fullStepCircle"></div>
+              </div>
+            </div>
+          )}
         </div>
         <div className="generalAdminMobile">
           <div className="customContainer">

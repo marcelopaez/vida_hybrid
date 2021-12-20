@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 const SideMenuItem = ({ svg, title, link }) => {
   return (
-    <li className="sidebarItem">
+    <li className={`${window.document.documentURI.includes(link) ? 'sidebarItemCurrentlySelected' : 'sidebarItem'}`}>
+      {/* <li className="sidebarItem"> */}
       {svg}
       <Link to={link}>
         <p className="categoryTitle">{title}</p>

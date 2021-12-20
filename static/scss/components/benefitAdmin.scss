@@ -1,0 +1,47 @@
+.benefitAdminContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 50px;
+}
+
+.benefitImage {
+  object-fit: cover;
+}
+
+.benefitAdminBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+}
+
+.benefitAdminBodyTitle {
+  color: $primary;
+  font-size: 1.1rem;
+  margin-bottom: 13px;
+}
+
+.benefitAdminBodyContent {
+  font-size: 1.1rem;
+  color: $grayDarker4;
+}
+
+@media (min-width: 300px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1440px) {
+}
