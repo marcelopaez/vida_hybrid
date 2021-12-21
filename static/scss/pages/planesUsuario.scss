@@ -1,0 +1,305 @@
+.creditsBlocksContainerPlanesUsuario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.creditsLeftBlockPlanesUsuario {
+  background: #e7e8ed;
+  border-radius: 10px;
+}
+
+.creditsLeftBlockTitle {
+  font-size: 2.25rem;
+  color: $grayDarker10;
+  padding: 30px 0 25px 30px;
+}
+
+.creditsLeftBlockSubtitle {
+  color: $grayDarker10;
+  margin: 0 0 25px 35px;
+}
+
+.progressBarPlanesUsuario {
+  background: #00af62;
+  padding-bottom: 30px;
+  margin: 0 30px;
+  border-radius: 10px;
+}
+
+.creditsLeftBlockFooter {
+  display: flex;
+  background: $primary;
+  color: #000;
+  border: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.creditsLeftBlockFooterText {
+  font-size: 1.5rem;
+  margin: 15px 0 15px 35px;
+  color: #fff;
+  flex: 0.5;
+}
+
+.creditsLeftBlockFooterButton {
+  background: #00af62;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 15px 35px;
+  width: 230px;
+  flex: 0.5;
+}
+
+.creditsRightBlockPlanesUsuario {
+  background: #f8f9fc;
+  border-radius: 10px;
+}
+
+.creditsRightBlockTitle {
+  font-size: 2.25rem;
+}
+
+.creditsRightBlockSubtitle {
+  font-size: 1.1rem;
+}
+
+.creditsRightBlockButton {
+  background: $primary;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 0 25px 0;
+  width: 100%;
+}
+
+.planesUsuarioTitle {
+  font-size: 2.25rem;
+  color: $grayDarker10;
+  margin: 40px 0 65px 0;
+}
+
+.plansPlanesUsuarioSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.actualPlanPlanesUsuario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #f8f9fc;
+  padding: 50px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.actualPlanPlanesUsuarioSVG {
+  position: absolute;
+  top: -20px;
+}
+
+.actualPlanPlanesUsuarioTitle {
+  font-size: 1.1rem;
+  margin: 45px 0 15px 0;
+}
+
+.actualPlanPlanesUsuarioSeparator {
+  border-top: 1px solid $grayLighter5;
+  width: 100%;
+}
+
+.actualPlanPlanesUsuarioDescription1 {
+  font-size: 1.1rem;
+  margin: 50px 0 10px 0;
+}
+
+.actualPlanPlanesUsuarioDescription2 {
+  font-size: 1.1rem;
+  margin: 0 0 50px 0;
+}
+
+.actualPlanPlanesUsuarioButton {
+  background: #00af62;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.otherPlanPlanesUsuario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #e7e8ed;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 30px;
+  width: 230px;
+  position: relative;
+}
+
+.otherPlanPlanesUsuarioSVG {
+  position: absolute;
+  top: -20px;
+  left: 40%;
+}
+
+.otherPlanPlanesUsuarioTitle {
+  font-size: 1.5rem;
+  margin: 30px 0 20px 0;
+}
+
+.otherPlanPlanesUsuarioSubtitle {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.otherPlanPlanesUsuarioDescription {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.otherPlanPlanesUsuarioButton {
+  background: $primary;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.creditsLeftBlockButtonMobileContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.creditsLeftBlockButtonMobile {
+  background: $primary;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 250px;
+  margin: 15px;
+}
+
+.otherPlanPlanesUsuarioMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.otherPlanPlanesUsuarioMobileContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fc;
+  padding: 10px 0;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.otherPlanPlanesUsuarioMobileLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otherPlaPlanesUsuarioMobileSVG {
+  margin-left: 20px;
+}
+
+.otherPlanPlanesUsuarioMobileTitle {
+  font-size: 1.1rem;
+  margin-left: 20px;
+}
+
+.otherPlanPlanesUsuarioMobileRight {
+  border: solid $grayDarker17;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid $primary;
+  border-bottom: none;
+  margin: 0 25px 0 70px;
+}
+
+@media (min-width: 300px) {
+  .planesUsuarioLarger {
+    display: none;
+  }
+
+  .planesUsuarioMobile {
+    display: block;
+  }
+
+  .creditsLeftBlockPlanesUsuario {
+    margin: 30px 60px;
+  }
+
+  .creditsRightBlockPlanesUsuario {
+    margin: 0 45px;
+  }
+
+  .creditsRightBlockTitle {
+    padding: 30px 70px 50px 70px;
+  }
+
+  .creditsRightBlockSubtitle {
+    margin: 0 70px 45px 70px;
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .planesUsuarioLarger {
+    display: block;
+  }
+
+  .planesUsuarioMobile {
+    display: none;
+  }
+
+  .creditsLeftBlockPlanesUsuario,
+  .creditsRightBlockPlanesUsuario {
+    margin: 50px 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .creditsRightBlockTitle {
+    padding: 30px 20px 50px 20px;
+  }
+
+  .creditsRightBlockSubtitle {
+    margin: 0 20px 45px 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .creditsRightBlockTitle {
+    padding: 30px 70px 50px 70px;
+  }
+
+  .creditsRightBlockSubtitle {
+    margin: 0 70px 45px 70px;
+  }
+}
+
+@media (min-width: 1440px) {
+}

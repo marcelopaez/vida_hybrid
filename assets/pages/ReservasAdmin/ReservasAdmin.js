@@ -1,29 +1,26 @@
 import React, { useEffect } from 'react';
-import SideMenu from '../../components/SideMenu';
+import SideMenuAdmin from '../../components/SideMenuAdmin';
 import NavbarAdmin from '../../components/NavbarAdmin';
-import RoomType1 from '../../images/Salas/RoomType1.svg';
-import RoomType2 from '../../images/Salas/RoomType2.svg';
-import RoomType3 from '../../images/Salas/RoomType3.svg';
-import RoomType4 from '../../images/Salas/RoomType4.svg';
-import RoomType5 from '../../images/Salas/RoomType5.svg';
-import RoomType6 from '../../images/Salas/RoomType6.svg';
-import RoomType7 from '../../images/Salas/RoomType7.svg';
-import RoomType8 from '../../images/Salas/RoomType8.svg';
-import EterLogo from '../../images/Planes/EterLogo.svg';
+import NavbarAdminMobile from '../../components/NavbarAdminMobile';
 
 const ReservasAdmin = () => {
   useEffect(() => window.scroll(0, 0), []);
 
   return (
     <div className="row marginNavbar generalContent">
-      <NavbarAdmin />
-      <div className="col-lg-2 col-md-3 col-sm-12 p-0">
-        <SideMenu />
+      <div className="navbarAdminLarger">
+        <NavbarAdmin />
+      </div>
+      <div className="navbarAdminMobile">
+        <NavbarAdminMobile />
+      </div>
+      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
+        <SideMenuAdmin />
       </div>
 
       <div className="col-lg-10 col-md-9 col-sm-12 bg-white p-3">
         <div className="generalContentBody">
-          <h1 className="reservasAdminTitle extraBoldFont">Reservas</h1>
+          <h1 className="reservasAdminTitle extraBoldFont">Reservas realizadas</h1>
           <div className="reservasAdminSearch">
             <input type="text" className="form-control" className="reservasAdminInput" />
             <svg className="reservasAdminSearchSVG" width="31" height="30" viewBox="0 0 31 30" fill="black" xmlns="http://www.w3.org/2000/svg">

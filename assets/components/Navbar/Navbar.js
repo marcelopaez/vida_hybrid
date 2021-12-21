@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <main>
-      <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar">
+      <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar navbarHome">
         {windowScroll === 0 ? (
           <Link className="navbar-brand" to="/">
             <img src={OrangeLogo} alt="Vida" className="logo" />

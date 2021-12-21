@@ -1,0 +1,106 @@
+.navbarAdminDataMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notificationsIconMobile {
+  margin: 0 10px;
+}
+
+.navbarAdminNameMobile {
+  color: $grayDarker2;
+  font-size: 1.1rem;
+  margin: 0 10px;
+}
+
+.fakeProfilePictureAdminMobile {
+  width: 38px;
+  height: 38px;
+  background-color: $primary;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.notificationAdminMobileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $grayLighter1;
+  border-radius: 5px;
+  max-width: 300px;
+  position: absolute;
+  top: 130px;
+  border-radius: 5px;
+}
+
+.notificationAdminMobileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.notificationAdminMobileTitle {
+  font-size: 1.1rem;
+  margin: 20px;
+  color: $grayDarker3;
+}
+
+.notificationAdminMobileX {
+  margin: 0 20px;
+  color: $grayLighter8;
+}
+
+.blockAdminMobileSeparator {
+  border: 1px solid #a6a6a6;
+  width: 100%;
+}
+
+.notificationAdminMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notificationAdminMobileSVG {
+  margin: 20px 0 20px 20px;
+}
+
+.notificationAdminMobileText {
+  font-size: 1.1rem;
+  margin: 20px 0 20px 20px;
+  color: $grayDarker3;
+}
+
+.blockAdminMobileNotificationSeparator {
+  border: 1px solid #d9d9d9;
+  width: 100%;
+}
+
+.arrowProfileAdminMobile {
+  border: solid $primary;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid $primary;
+  border-bottom: none;
+}
+
+@media (min-width: 300px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1440px) {
+}

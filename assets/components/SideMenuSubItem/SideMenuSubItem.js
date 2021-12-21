@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SideMenuSubItem = ({ title }) => {
+const SideMenuSubItem = ({ svg, title, link }) => {
   return (
-    <li className="sidebarSubItem">
-      <p className="subCategoryTitle">{title}</p>
-    </li>
+    <Link to={link}>
+      <li className="sidebarSubItem">
+        {svg && svg}
+        <p className="subCategoryTitle">{title}</p>
+      </li>
+    </Link>
   );
 };
 

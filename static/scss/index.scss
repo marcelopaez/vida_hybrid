@@ -4,6 +4,8 @@
 // Components
 @import './components/navbar.scss';
 @import './components/navbarAdmin.scss';
+@import './components/navbarAdminMobile.scss';
+@import './components/navbarLogin.scss';
 @import './components/footer.scss';
 @import './components/sideMenu.scss';
 @import './components/sideMenuItem.scss';
@@ -13,20 +15,25 @@
 @import './components/service.scss';
 @import './components/orangePlan.scss';
 @import './components/planAdmin.scss';
-@import './components/navbarLogin.scss';
 @import './components/benefitAdmin.scss';
 
 // Pages
-@import './pages/home.scss';
-@import './pages/generalAdmin.scss';
-@import './pages/planesAdmin.scss';
+@import './pages/generalUsuario.scss';
+@import './pages/crearReservaUsuario.scss';
+@import './pages/planesUsuario.scss';
+@import './pages/contratoUsuario.scss';
+@import './pages/comunidadUsuario.scss';
+
 @import './pages/reservasAdmin.scss';
-@import './pages/contratoAdmin.scss';
-@import './pages/ingresosAdmin.scss';
-@import './pages/comunidadAdmin.scss';
-@import './pages/beneficiosAdmin.scss';
-@import './pages/controlClientesAdmin.scss';
 @import './pages/clientesAdmin.scss';
+@import './pages/planesAdmin.scss';
+@import './pages/comunidadAdmin.scss';
+@import './pages/comunidadBeneficiosAdmin.scss';
+@import './pages/crearReservaAdmin.scss';
+
+@import './pages/ingresosAdmin.scss';
+
+@import './pages/home.scss';
 @import './pages/planes.scss';
 @import './pages/salas.scss';
 @import './pages/oficinas.scss';

@@ -1,20 +1,26 @@
 import React, { useEffect } from 'react';
-import SideMenu from '../../components/SideMenu';
+import SideMenuAdmin from '../../components/SideMenuAdmin';
 import NavbarAdmin from '../../components/NavbarAdmin';
+import NavbarAdminMobile from '../../components/NavbarAdminMobile';
 
 const ClientesAdmin = () => {
   useEffect(() => window.scroll(0, 0), []);
 
   return (
     <div className="row marginNavbar generalContent">
-      <NavbarAdmin />
-      <div className="col-lg-2 col-md-3 col-sm-12 p-0">
-        <SideMenu />
+      <div className="navbarAdminLarger">
+        <NavbarAdmin />
+      </div>
+      <div className="navbarAdminMobile">
+        <NavbarAdminMobile />
+      </div>
+      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
+        <SideMenuAdmin />
       </div>
 
       <div className="col-lg-10 col-md-9 col-sm-12 bg-white p-3">
         <div className="row generalContentBody">
-          <div className="col-lg-8 col-md-8 col-sm-12">
+          <div className="col-lg-8 col-md-12 col-sm-12">
             <h1 className="clientesAdminTitle extraBoldFont">Clientes</h1>
             <div className="clientesAdminSearch">
               <input type="text" className="form-control clientesAdminInput" />
@@ -326,7 +332,7 @@ const ClientesAdmin = () => {
               </nav>
             </div>
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-12">
+          <div className="col-lg-4 col-md-12 col-sm-12">
             <div className="clientesAdminRightSide">
               <div className="clientesAdminRightSideHeader">
                 <div className="clientesAdminRightSideHeaderImage"></div>

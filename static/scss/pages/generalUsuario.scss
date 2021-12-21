@@ -25,17 +25,16 @@
   justify-content: center;
 }
 
-.blockGeneralAdmin {
+.blockGeneralUsuario {
   background: $grayLighter9;
   padding: 30px 35px;
   border-radius: 10px;
   margin: 20px;
-  max-width: 630px;
   width: 100%;
 }
 
-.blockGeneralAdminTitleContainer1,
-.blockGeneralAdminTitleContainer2 {
+.blockGeneralUsuarioTitleContainer1,
+.blockGeneralUsuarioTitleContainer2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,13 +42,13 @@
   position: relative;
 }
 
-.blockGeneralAdminTitle {
+.blockGeneralUsuarioTitle {
   font-size: 2.25rem;
   color: $grayDarker10;
   margin: 0;
 }
 
-.blockGeneralAdminInfoHoverContainer {
+.blockGeneralUsuarioInfoHoverContainer {
   padding: 25px;
   background: #fff;
   border-radius: 5px;
@@ -57,7 +56,7 @@
   top: 75px;
 }
 
-.blockGeneralAdminInfoHoverContainer::after {
+.blockGeneralUsuarioInfoHoverContainer::after {
   content: '';
   display: block;
   position: absolute;
@@ -69,28 +68,28 @@
   border-bottom: 20px solid #fff;
 }
 
-.blockGeneralAdminInfoHoverText {
+.blockGeneralUsuarioInfoHoverText {
   font-size: 1.1rem;
 }
 
-.blockGeneralAdminSeparator {
+.blockGeneralUsuarioSeparator {
   border-top: 1px solid #989898;
 }
 
-.blockGeneralAdminContent1 {
+.blockGeneralUsuarioContent1 {
   font-size: 2.25rem;
   color: $grayDarker1;
   text-align: center;
 }
 
-.blockGeneralAdminContent2 {
+.blockGeneralUsuarioContent2 {
   font-size: 3rem;
   color: $grayDarker1;
   margin-bottom: 50px;
   text-align: center;
 }
 
-.blockGeneralAdminButton {
+.blockGeneralUsuarioButton {
   background: $primary;
   color: #fff;
   border-radius: 5px;
@@ -106,6 +105,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: -16px;
 }
 
 .generalAdminFooter {
@@ -124,6 +124,7 @@
   justify-content: space-around;
   padding: 20px;
   text-align: center;
+  flex: 0.75;
 }
 
 .generalAdminFooterRight,
@@ -132,6 +133,7 @@
   justify-content: flex-end;
   align-items: center;
   padding: 16px;
+  flex: 0.25;
 }
 
 .generalAdminFooterLeftFirstText,
@@ -162,6 +164,7 @@
   padding: 18px 16px;
   border: none;
   border-radius: 5px;
+  width: 100%;
 }
 
 .generalAdminSharedPlaceModal,
@@ -382,6 +385,14 @@
 }
 
 @media (min-width: 300px) {
+  .navbarAdminLarger {
+    display: none;
+  }
+
+  .navbarAdminMobile {
+    display: block;
+  }
+
   .generalAdminLarger {
     display: none;
   }
@@ -397,7 +408,7 @@
     padding: 20px 30px;
   }
 
-  .blockGeneralAdminContent1 {
+  .blockGeneralUsuarioContent1 {
     margin: 0;
   }
 
@@ -414,8 +425,8 @@
     padding: 70px 100px;
   }
 
-  .blockGeneralAdminContent1 {
-    margin: 60px 50px 30px 50px;
+  .blockGeneralUsuarioContent1 {
+    margin: 60px 25px 30px 25px;
   }
 
   .generalAdminHeader,
@@ -435,6 +446,14 @@
 }
 
 @media (min-width: 992px) {
+  .navbarAdminLarger {
+    display: block;
+  }
+
+  .navbarAdminMobile {
+    display: none;
+  }
+
   .generalAdminSharedPlaceModal {
     width: 35vw;
   }
@@ -446,6 +465,13 @@
 }
 
 @media (min-width: 1200px) {
+  .blocksContainerGeneralAdmin {
+    flex-wrap: nowrap;
+  }
+
+  .blockGeneralUsuario {
+    max-width: 450px;
+  }
 }
 
 @media (min-width: 1440px) {

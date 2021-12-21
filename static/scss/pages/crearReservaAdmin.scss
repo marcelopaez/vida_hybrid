@@ -1,0 +1,50 @@
+.crearReservaAdminRightSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.crearReservaAdminRightSideMyReservationsTitle {
+  font-size: 1.5rem;
+  color: $grayDarker10;
+  margin: 150px 0 15px 0;
+}
+
+.crearReservaAdminRightSideMyReservationsTable {
+  text-align: center;
+  table {
+    thead {
+      tr {
+        th {
+          color: $grayDarker17;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          color: $grayDarker17;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 300px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1440px) {
+}

@@ -1,37 +1,37 @@
-.contractAdminTitle {
+.contratoUsuarioTitle {
   font-size: 3rem;
   color: $grayDarker10;
   padding: 36px 0 60px 0;
 }
 
-.contractAdminContractContainer {
+.contratoUsuarioContractContainer {
   display: flex;
   flex-wrap: wrap;
 }
 
-.contractAdminContractLeft {
+.contratoUsuarioContractLeft {
   background: #e5e5e5;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   padding: 50px;
   border-radius: 10px;
   margin: 0 25px;
 }
 
-.contractAdminContractLeftTitle {
+.contratoUsuarioContractLeftTitle {
   font-size: 1.5rem;
   color: $grayDarker10;
   margin: 26px 0 12px 0;
 }
 
-.contractAdminContractLeftSeparator {
+.contratoUsuarioContractLeftSeparator {
   border: 1px solid $grayLighter5;
   width: 100%;
 }
 
-.contractAdminContractLeftFirstSection {
+.contratoUsuarioContractLeftFirstSection {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -39,12 +39,12 @@
   width: 100%;
 }
 
-.contractAdminContractLeftFirstSectionDescription {
+.contratoUsuarioContractLeftFirstSectionDescription {
   font-size: 1.1rem;
   margin-left: 20px;
 }
 
-.contractAdminContractLeftSecondSection {
+.contratoUsuarioContractLeftSecondSection {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -52,12 +52,12 @@
   width: 100%;
 }
 
-.contractAdminContractLeftSecondSectionDescription {
+.contratoUsuarioContractLeftSecondSectionDescription {
   font-size: 1.1rem;
   margin-left: 20px;
 }
 
-.contractAdminContractLeftThirdtSection {
+.contratoUsuarioContractLeftThirdtSection {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -65,12 +65,12 @@
   width: 100%;
 }
 
-.contractAdminContractLeftThirdtSectionDescription {
+.contratoUsuarioContractLeftThirdtSectionDescription {
   font-size: 1.1rem;
   margin-left: 20px;
 }
 
-.contractAdminContractLeftButton {
+.contratoUsuarioContractLeftButton {
   background: $primary;
   color: #fff;
   border: none;
@@ -80,7 +80,7 @@
   width: 100%;
 }
 
-.contractAdminContractRight {
+.contratoUsuarioContractRight {
   margin: 0 25px;
 }
 
@@ -89,24 +89,24 @@
   align-items: center;
 }
 
-.contractAdminContractRightName {
+.contratoUsuarioContractRightName {
   margin-left: 20px;
 }
 
-.contractAdminContractRightDescription {
+.contratoUsuarioContractRightDescription {
   margin: 40px 0;
 }
 
-.contractAdminContractRightStatusContainer {
+.contratoUsuarioContractRightStatusContainer {
   display: flex;
   align-items: center;
 }
 
-.contractAdminContractRightStatus {
+.contratoUsuarioContractRightStatus {
   margin-left: 20px;
 }
 
-.contractAdminSignModal {
+.contratoUsuarioSignModal {
   background: #fff;
   color: $grayDarker2;
   border-radius: 10px;
@@ -116,11 +116,11 @@
   transform: translate(-50%, -50%);
 }
 
-.contractAdminSignModalHeader {
+.contratoUsuarioSignModalHeader {
   position: relative;
 }
 
-.contractAdminSignModalHeaderTitle {
+.contratoUsuarioSignModalHeaderTitle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,7 +129,7 @@
   padding: 20px 0;
 }
 
-.contractAdminSignModalHeaderX {
+.contratoUsuarioSignModalHeaderX {
   position: absolute;
   right: 30px;
   top: 0;
@@ -137,19 +137,19 @@
   padding: 20px 0;
 }
 
-.contractAdminSignModalBody {
+.contratoUsuarioSignModalBody {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
 
-.contractAdminSignModalBodyDescription {
+.contratoUsuarioSignModalBodyDescription {
   margin-left: 20px;
   font-size: 1.1rem;
   line-height: 40px;
 }
 
-.contractAdminSignModalButton {
+.contratoUsuarioSignModalButton {
   background: $primary;
   color: #fff;
   border: none;
@@ -164,51 +164,56 @@
 }
 
 @media (min-width: 300px) {
-  .contratoAdminMobile {
+  .contratoUsuarioMobile {
     display: block;
   }
 
-  .contratoAdminLarger {
+  .contratoUsuarioLarger {
     display: none;
   }
 
-  .contractAdminContractLeft,
-  .contractAdminContractRight {
+  .contratoUsuarioContractLeft,
+  .contratoUsuarioContractRight {
     flex: 1;
   }
 
-  .contractAdminSignModal {
+  .contratoUsuarioContractRight {
+    margin-top: 30px;
+  }
+
+  .contratoUsuarioSignModal {
     max-width: 100vw;
     padding: 20px 30px;
   }
 }
 
 @media (min-width: 576px) {
-  .contractAdminSignModal {
+  .contratoUsuarioSignModal {
     padding: 70px 100px;
   }
 }
 
 @media (min-width: 768px) {
-  .contratoAdminMobile {
+  .contratoUsuarioMobile {
     display: none;
   }
 
-  .contratoAdminLarger {
+  .contratoUsuarioLarger {
     display: block;
   }
 }
 
 @media (min-width: 992px) {
-  .contractAdminContractLeft {
+  .contratoUsuarioContractLeft {
     flex: 1;
   }
 
-  .contractAdminContractRight {
+  .contratoUsuarioContractRight {
     flex: 2;
+    margin-top: 0;
   }
 
-  .contractAdminSignModal {
+  .contratoUsuarioSignModal {
     width: 35vw;
   }
 }

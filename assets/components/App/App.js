@@ -2,15 +2,22 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Footer from '../Footer';
 import Home from '../../pages/Home';
-import GeneralAdmin from '../../pages/GeneralAdmin';
+
+import GeneralUsuario from '../../pages/GeneralUsuario';
+import CrearReservaUsuario from '../../pages/CrearReservaUsuario';
+import PlanesUsuario from '../../pages/PlanesUsuario';
+import ContratoUsuario from '../../pages/ContratoUsuario';
+import ComunidadUsuario from '../../pages/ComunidadUsuario';
+
 import ReservasAdmin from '../../pages/ReservasAdmin';
-import PlanesAdmin from '../../pages/PlanesAdmin';
-import ContratoAdmin from '../../pages/ContratoAdmin';
-import IngresosAdmin from '../../pages/IngresosAdmin';
-import ComunidadAdmin from '../../pages/ComunidadAdmin';
-import BeneficiosAdmin from '../../pages/BeneficiosAdmin';
-import ControlClientesAdmin from '../../pages/ControlClientesAdmin';
 import ClientesAdmin from '../../pages/ClientesAdmin';
+import PlanesAdmin from '../../pages/PlanesAdmin';
+import ComunidadAdmin from '../../pages/ComunidadAdmin';
+import ComunidadBeneficiosAdmin from '../../pages/ComunidadBeneficiosAdmin';
+import CrearReservaAdmin from '../../pages/CrearReservaAdmin';
+
+import IngresosAdmin from '../../pages/IngresosAdmin';
+
 import Planes from '../../pages/Planes';
 import Salas from '../../pages/Salas';
 import Oficinas from '../../pages/Oficinas';
@@ -26,22 +33,28 @@ const App = () => {
       {/* <NavbarAdmin /> */}
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/generalAdmin" component={GeneralAdmin} />
-        <Route exact path="/reservasAdmin" component={ReservasAdmin} />
-        <Route exact path="/planesAdmin" component={PlanesAdmin} />
-        <Route exact path="/contratoAdmin" component={ContratoAdmin} />
-        <Route exact path="/ingresosAdmin" component={IngresosAdmin} />
-        <Route exact path="/comunidadAdmin" component={ComunidadAdmin} />
-        <Route exact path="/comunidadAdminBeneficios" component={BeneficiosAdmin} />
-        <Route exact path="/controlClientesAdmin" component={ControlClientesAdmin} />
+        {/* Cliente */}
+        <Route exact path="/generalUsuario" component={GeneralUsuario} />
+        <Route exact path="/crearReservaUsuario" component={CrearReservaUsuario} />
+        <Route exact path="/planesUsuario" component={PlanesUsuario} />
+        <Route exact path="/contratoUsuario" component={ContratoUsuario} />
+        <Route exact path="/comunidadUsuario" component={ComunidadUsuario} />
+        {/* Admin */}
+        <Route exact path="/controlClientes" component={ReservasAdmin} />
         <Route exact path="/clientesAdmin" component={ClientesAdmin} />
+        <Route exact path="/planesAdmin" component={PlanesAdmin} />
+        <Route exact path="/comunidadAdmin" component={ComunidadAdmin} />
+        <Route exact path="/comunidadBeneficiosAdmin" component={ComunidadBeneficiosAdmin} />
+        <Route exact path="/crearReservaAdmin" component={CrearReservaAdmin} />
+        <Route exact path="/ingresosAdmin" component={IngresosAdmin} />
+        {/* Home */}
         <Route exact path="/planes" component={Planes} />
         <Route exact path="/salas" component={Salas} />
         <Route exact path="/oficinas" component={Oficinas} />
         <Route exact path="/comunidad" component={Comunidad} />
         <Route exact path="/eventos" component={Eventos} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/reservas" component={Reservas} />
+        <Route exact path="/reservar" component={Reservas} />
         <Redirect to="/404" component={NotFound} />
       </Switch>
       <Footer />

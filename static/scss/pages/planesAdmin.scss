@@ -1,276 +1,127 @@
-.creditsBlocksContainerPlanesAdmin {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.creditsLeftBlockPlanesAdmin {
-  background: #e7e8ed;
-  border-radius: 10px;
-}
-
-.creditsLeftBlockTitle {
-  font-size: 2.25rem;
-  color: $grayDarker10;
-  padding: 30px 0 25px 30px;
-}
-
-.creditsLeftBlockSubtitle {
-  color: $grayDarker10;
-  margin: 0 0 25px 35px;
-}
-
-.progressBarPlanesAdmin {
-  background: #00af62;
-  padding-bottom: 30px;
-  margin: 0 30px;
-  border-radius: 10px;
-}
-
-.creditsLeftBlockFooter {
-  display: flex;
-  background: $primary;
-  color: #000;
-  border: none;
-  border-radius: 0 0 10px 10px;
-}
-
-.creditsLeftBlockFooterText {
-  font-size: 1.5rem;
-  margin: 15px 0 15px 35px;
-  color: #fff;
-}
-
-.creditsLeftBlockFooterButton {
-  background: #00af62;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 15px 80px 15px 35px;
-  width: 230px;
-}
-
-.creditsRightBlockPlanesAdmin {
-  background: #f8f9fc;
-  border-radius: 10px;
-}
-
-.creditsRightBlockTitle {
-  font-size: 2.25rem;
-  padding: 30px 70px 50px 70px;
-}
-
-.creditsRightBlockSubtitle {
-  font-size: 1.1rem;
-  margin: 0 70px 45px 70px;
-}
-
-.creditsRightBlockButton {
-  background: $primary;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 0 70px 25px 70px;
-  width: 300px;
-}
-
 .planesAdminTitle {
-  font-size: 2.25rem;
-  color: $grayDarker10;
-  margin: 40px 0 65px 0;
+  font-size: 3rem;
+  margin: 40px 0;
+  color: $grayLighter7;
 }
 
-.plansPlanesAdminSection {
+.planesAdminPlanesContainer {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
-.actualPlanPlanesAdmin {
+.planesAdminPlan {
+  background: #fff;
+  border-radius: 10px;
+  margin: 40px;
+  color: $grayLighter7;
+  text-align: center;
+  padding: 50px 30px;
+}
+
+.planesAdminPlanTitle {
+  font-size: 1.1rem;
+  margin: 15px 0;
+}
+
+.planesAdminPlanQuantity {
+  font-size: 2.25rem;
+  margin: 40px 0 0 0;
+}
+
+.planesAdminPlanDetail {
+  font-size: 1.1rem;
+}
+
+.planesAdminNumbersTitle {
+  font-size: 2.25rem;
+  margin: 40px 0;
+  color: $grayLighter7;
+}
+
+.planesAdminGeneralNumbersContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: #f8f9fc;
-  padding: 50px;
-  border-radius: 10px;
-  position: relative;
+  flex-wrap: wrap;
 }
 
-.actualPlanPlanesAdminSVG {
-  position: absolute;
-  top: -20px;
-}
-
-.actualPlanPlanesAdminTitle {
-  font-size: 1.1rem;
-  margin: 45px 0 15px 0;
-}
-
-.actualPlanPlanesAdminSeparator {
-  border-top: 1px solid $grayLighter5;
-  width: 100%;
-}
-
-.actualPlanPlanesAdminDescription1 {
-  font-size: 1.1rem;
-  margin: 50px 0 10px 0;
-}
-
-.actualPlanPlanesAdminDescription2 {
-  font-size: 1.1rem;
-  margin: 0 0 50px 0;
-}
-
-.actualPlanPlanesAdminButton {
-  background: #00af62;
-  color: #fff;
-  border-radius: 5px;
-  border: none;
-  padding: 10px;
-  margin-bottom: 30px;
-  width: 100%;
-}
-
-.otherPlanPlanesAdmin {
+.planesAdminGeneralNumbers {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: #e7e8ed;
+  color: $grayLighter7;
+  background: #fff;
   border-radius: 10px;
-  padding: 25px;
-  margin: 30px;
-  width: 230px;
-  position: relative;
+  padding: 20px 100px 20px 30px;
+  margin: 40px;
+
+  svg {
+    margin-right: 20px;
+  }
 }
 
-.otherPlanPlanesAdminSVG {
-  position: absolute;
-  top: -20px;
-  left: 40%;
+.planesAdminGeneralNumbersSeparator {
+  border: 1px solid $grayLighter7;
+  height: 75px;
+  margin-right: 20px;
 }
 
-.otherPlanPlanesAdminTitle {
+.planesAdminGeneralNumbersTitle {
+  font-size: 1.1rem;
+  margin: 0 0 15px 0;
+}
+
+.planesAdminGeneralNumbersAmount {
   font-size: 1.5rem;
-  margin: 30px 0 20px 0;
 }
 
-.otherPlanPlanesAdminSubtitle {
-  font-size: 1.1rem;
-  margin-bottom: 12px;
+.planesAdminRightSide {
+  background-color: $grayLighter10;
+  color: $grayLighter7;
+  height: 100%;
 }
 
-.otherPlanPlanesAdminDescription {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
+.planesAdminRightSideTitle {
+  font-size: 2.25rem;
+  padding: 100px 0 40px 30px;
 }
 
-.otherPlanPlanesAdminButton {
-  background: $primary;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  width: 100%;
-}
-
-.creditsLeftBlockButtonMobileContainer {
+.planesAdminRightSideDetail {
+  background: #fff;
+  border-radius: 10px;
+  margin: 0 30px;
   display: flex;
-  justify-content: center;
-}
-
-.creditsLeftBlockButtonMobile {
-  background: $primary;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  width: 250px;
-  margin: 15px;
-}
-
-.otherPlanPlanesAdminMobile {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  border-radius: 5px;
-  width: 100%;
 }
 
-.otherPlanPlanesAdminMobileContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f8f9fc;
-  padding: 10px 0;
-  margin: 10px 0;
-  width: 100%;
-}
-
-.otherPlanPlanesAdminMobileLeft {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.otherPlaPlanesAdminMobileSVG {
-  margin-left: 20px;
-}
-
-.otherPlanPlanesAdminMobileTitle {
+.planesAdminRightSideDetailTitle {
   font-size: 1.1rem;
-  margin-left: 20px;
+  margin: 15px 0;
 }
 
-.otherPlanPlanesAdminMobileRight {
-  border: solid #6a6a6a;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid $primary;
-  border-bottom: none;
-  margin: 0 25px 0 70px;
+.planesAdminRightSideDetailSeparator {
+  border: 1px solid $grayLighter10;
+  width: 100%;
+}
+
+.planesAdminRightSideDetailNumber {
+  font-size: 2.25rem;
+  margin: 40px 0 0 0;
+}
+
+.planesAdminRightSideDetailText {
+  font-size: 1.1rem;
 }
 
 @media (min-width: 300px) {
-  .planesAdminLarger {
-    display: none;
-  }
-
-  .planesAdminMobile {
-    display: block;
-  }
-
-  .creditsLeftBlockPlanesAdmin {
-    margin: 30px 60px;
-  }
-
-  .creditsRightBlockPlanesAdmin {
-    margin: 0 45px;
-  }
 }
 
 @media (min-width: 576px) {
 }
 
 @media (min-width: 768px) {
-  .planesAdminLarger {
-    display: block;
-  }
-
-  .planesAdminMobile {
-    display: none;
-  }
-
-  .creditsLeftBlockPlanesAdmin,
-  .creditsRightBlockPlanesAdmin {
-    margin: 50px 10px;
-  }
 }
 
 @media (min-width: 992px) {

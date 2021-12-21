@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 
 const SideMenuItem = ({ svg, title, link }) => {
   return (
-    <li className={`${window.document.documentURI.includes(link) ? 'sidebarItemCurrentlySelected' : 'sidebarItem'}`}>
-      {/* <li className="sidebarItem"> */}
-      {svg}
-      <Link to={link}>
+    <Link to={link}>
+      <li className={`${window.document.documentURI.includes(link) ? 'sidebarItemCurrentlySelected' : 'sidebarItem'}`}>
+        {svg}
         <p className="categoryTitle">{title}</p>
-      </Link>
-    </li>
+      </li>
+    </Link>
   );
 };
 

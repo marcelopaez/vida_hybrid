@@ -4,9 +4,9 @@ import SideMenuItem from '../SideMenuItem/SideMenuItem';
 import SideMenuSubItem from '../SideMenuSubItem/SideMenuSubItem';
 import ProfileIcon from '../../images/Icons/ProfileIconWhite.svg';
 
-const SideMenu = () => {
+const SideMenuAdmin = () => {
   return (
-    <main className="sideMenu">
+    <main>
       <div className="userNameSideMenu">
         <img src={ProfileIcon} alt="Vida Cowork" />
         <div className="userNameDataSideMenu">
@@ -24,52 +24,52 @@ const SideMenu = () => {
               />
             </svg>
           }
-          link={'/generalUsuario'}
-          title={'General'}
+          link={'/controlClientes'}
+          title={'Control Clientes'}
         />
 
-        {(window.document.documentURI.includes('general') || window.document.documentURI.includes('crearReserva')) && (
+        {(window.document.documentURI.includes('controlClientes') || window.document.documentURI.includes('clientesAdmin') || window.document.documentURI.includes('planesAdmin')) && (
           <SideMenuSubItem
             svg={
-              <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 3.5H4.5C3.57174 3.5 2.6815 3.86875 2.02513 4.52513C1.36875 5.1815 1 6.07174 1 7V28C1 28.9283 1.36875 29.8185 2.02513 30.4749C2.6815 31.1313 3.57174 31.5 4.5 31.5H22C22.9283 31.5 23.8185 31.1313 24.4749 30.4749C25.1313 29.8185 25.5 28.9283 25.5 28V7C25.5 6.07174 25.1313 5.1815 24.4749 4.52513C23.8185 3.86875 22.9283 3.5 22 3.5H18.5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M14.9167 2.25H11.5833C9.74238 2.25 8.25 3.36929 8.25 4.75C8.25 6.13071 9.74238 7.25 11.5833 7.25H14.9167C16.7576 7.25 18.25 6.13071 18.25 4.75C18.25 3.36929 16.7576 2.25 14.9167 2.25Z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M8 24.5V15.75" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M13.25 24.5V22.75" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M18.5 24.5V19.25" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <svg width="34" height="40" viewBox="0 0 34 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M22.4815 24.4615C22.2369 24.3815 20.6907 23.6846 21.6569 20.7477H21.643C24.1615 18.1538 26.0861 13.98 26.0861 9.87076C26.0861 3.5523 21.8846 0.23999 17.0015 0.23999C12.1154 0.23999 7.93689 3.55076 7.93689 9.87076C7.93689 13.9969 9.85074 18.1877 12.3846 20.7754C13.3723 23.3661 11.6061 24.3277 11.2369 24.4631C6.12305 26.3123 0.123047 29.6831 0.123047 33.0108V34.2585C0.123047 38.7923 8.91382 39.8231 17.0492 39.8231C25.1969 39.8231 33.8769 38.7923 33.8769 34.2585V33.0108C33.8769 29.5831 27.8477 26.2385 22.4815 24.4615Z"
+                  fill="#fff"
+                />
               </svg>
             }
-            link={'/crearReservaUsuario'}
-            title={'Crear reserva'}
+            link={'/clientesAdmin'}
+            title={'Clientes'}
+          />
+        )}
+        {(window.document.documentURI.includes('controlClientes') || window.document.documentURI.includes('clientesAdmin') || window.document.documentURI.includes('planesAdmin')) && (
+          <SideMenuSubItem
+            svg={
+              <svg width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.25 3.14285H3.08333C2.5308 3.14285 2.0009 3.36862 1.61019 3.77048C1.21949 4.17235 1 4.71739 1 5.28571V28.8571C1 29.4255 1.21949 29.9705 1.61019 30.3724C2.0009 30.7742 2.5308 31 3.08333 31H23.9167C24.4692 31 24.9991 30.7742 25.3898 30.3724C25.7805 29.9705 26 29.4255 26 28.8571V5.28571C26 4.71739 25.7805 4.17235 25.3898 3.77048C24.9991 3.36862 24.4692 3.14285 23.9167 3.14285H19.75" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M9.33333 1H17.6667C18.2192 1 18.7491 1.22576 19.1398 1.62763C19.5305 2.02949 19.75 2.57454 19.75 3.14286C19.75 3.71118 19.5305 4.25622 19.1398 4.65809C18.7491 5.05995 18.2192 5.28571 17.6667 5.28571H9.33333C8.7808 5.28571 8.2509 5.05995 7.86019 4.65809C7.46949 4.25622 7.25 3.71118 7.25 3.14286C7.25 2.57454 7.46949 2.02949 7.86019 1.62763C8.2509 1.22576 8.7808 1 9.33333 1Z"
+                  stroke="#fff"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path d="M11.4165 11.7143H21.8332" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M11.4165 18.1429H21.8332" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M11.4165 24.5714H21.8332" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M5.1665 11.7143H7.24984" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M5.1665 18.1429H7.24984" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M5.1665 24.5714H7.24984" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            }
+            link={'/planesAdmin'}
+            title={'Planes'}
           />
         )}
 
-        <SideMenuItem
-          svg={
-            <svg width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.25 3.14285H3.08333C2.5308 3.14285 2.0009 3.36862 1.61019 3.77048C1.21949 4.17235 1 4.71739 1 5.28571V28.8571C1 29.4255 1.21949 29.9705 1.61019 30.3724C2.0009 30.7742 2.5308 31 3.08333 31H23.9167C24.4692 31 24.9991 30.7742 25.3898 30.3724C25.7805 29.9705 26 29.4255 26 28.8571V5.28571C26 4.71739 25.7805 4.17235 25.3898 3.77048C24.9991 3.36862 24.4692 3.14285 23.9167 3.14285H19.75" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M9.33333 1H17.6667C18.2192 1 18.7491 1.22576 19.1398 1.62763C19.5305 2.02949 19.75 2.57454 19.75 3.14286C19.75 3.71118 19.5305 4.25622 19.1398 4.65809C18.7491 5.05995 18.2192 5.28571 17.6667 5.28571H9.33333C8.7808 5.28571 8.2509 5.05995 7.86019 4.65809C7.46949 4.25622 7.25 3.71118 7.25 3.14286C7.25 2.57454 7.46949 2.02949 7.86019 1.62763C8.2509 1.22576 8.7808 1 9.33333 1Z"
-                stroke="#004b2a"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path d="M11.4165 11.7143H21.8332" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M11.4165 18.1429H21.8332" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M11.4165 24.5714H21.8332" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M5.1665 11.7143H7.24984" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M5.1665 18.1429H7.24984" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M5.1665 24.5714H7.24984" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          }
-          link={'/planesUsuario'}
-          title={'Planes'}
-        />
-
-        <SideMenuItem
+        {/* <SideMenuItem
           svg={
             <svg width="26" height="29" viewBox="0 0 26 29" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -78,9 +78,23 @@ const SideMenu = () => {
               />
             </svg>
           }
-          link={'/contratoUsuario'}
-          title={'Contrato'}
-        />
+          link={'/contratos'}
+          title={'Contratos'}
+        /> */}
+
+        {/* <SideMenuItem
+          svg={
+            <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 3.5H4.5C3.57174 3.5 2.6815 3.86875 2.02513 4.52513C1.36875 5.1815 1 6.07174 1 7V28C1 28.9283 1.36875 29.8185 2.02513 30.4749C2.6815 31.1313 3.57174 31.5 4.5 31.5H22C22.9283 31.5 23.8185 31.1313 24.4749 30.4749C25.1313 29.8185 25.5 28.9283 25.5 28V7C25.5 6.07174 25.1313 5.1815 24.4749 4.52513C23.8185 3.86875 22.9283 3.5 22 3.5H18.5" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M14.9167 2.25H11.5833C9.74238 2.25 8.25 3.36929 8.25 4.75C8.25 6.13071 9.74238 7.25 11.5833 7.25H14.9167C16.7576 7.25 18.25 6.13071 18.25 4.75C18.25 3.36929 16.7576 2.25 14.9167 2.25Z" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M8 24.5V15.75" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M13.25 24.5V22.75" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M18.5 24.5V19.25" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          }
+          link={'/estadisticas'}
+          title={'Estadísticas'}
+        /> */}
 
         <SideMenuItem
           svg={
@@ -111,12 +125,28 @@ const SideMenu = () => {
               />
             </svg>
           }
-          link={'/comunidadUsuario'}
+          link={'/comunidadAdmin'}
           title={'Comunidad'}
+        />
+
+        {window.document.documentURI.includes('comunidadAdmin') && <SideMenuSubItem link={'/comunidadBeneficiosAdmin'} title={'Agregar beneficios'} />}
+
+        <SideMenuItem
+          svg={
+            <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 3.5H4.5C3.57174 3.5 2.6815 3.86875 2.02513 4.52513C1.36875 5.1815 1 6.07174 1 7V28C1 28.9283 1.36875 29.8185 2.02513 30.4749C2.6815 31.1313 3.57174 31.5 4.5 31.5H22C22.9283 31.5 23.8185 31.1313 24.4749 30.4749C25.1313 29.8185 25.5 28.9283 25.5 28V7C25.5 6.07174 25.1313 5.1815 24.4749 4.52513C23.8185 3.86875 22.9283 3.5 22 3.5H18.5" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M14.9167 2.25H11.5833C9.74238 2.25 8.25 3.36929 8.25 4.75C8.25 6.13071 9.74238 7.25 11.5833 7.25H14.9167C16.7576 7.25 18.25 6.13071 18.25 4.75C18.25 3.36929 16.7576 2.25 14.9167 2.25Z" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M8 24.5V15.75" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M13.25 24.5V22.75" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M18.5 24.5V19.25" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          }
+          link={'/crearReservaAdmin'}
+          title={'Reserva manual'}
         />
       </ul>
     </main>
   );
 };
 
-export default SideMenu;
+export default SideMenuAdmin;

@@ -7,7 +7,7 @@ const NavbarAdmin = () => {
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top scrolling-navbar navbarAdmin">
-      <a className="navbar-brand" href="/" className="m-0 p-0">
+      <a className="navbar-brand" href="/app" className="m-0 p-0">
         <img src={Logo} width="200px" alt="Vida Cowork" className="navbarLogoAdmin" />
       </a>
       <div className="navbarAdminData">

@@ -2,14 +2,20 @@ import React, { useEffect } from 'react';
 import SideMenu from '../../components/SideMenu';
 import Plan from '../../components/Plan';
 import NavbarAdmin from '../../components/NavbarAdmin';
+import NavbarAdminMobile from '../../components/NavbarAdminMobile';
 
 const IngresosAdmin = () => {
   useEffect(() => window.scroll(0, 0), []);
 
   return (
     <div className="row marginNavbar generalContent">
-      <NavbarAdmin />
-      <div className="col-lg-2 col-md-3 col-sm-12 p-0">
+      <div className="navbarAdminLarger">
+        <NavbarAdmin />
+      </div>
+      <div className="navbarAdminMobile">
+        <NavbarAdminMobile />
+      </div>
+      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
         <SideMenu />
       </div>
       <div className="col-lg-10 col-md-9 col-sm-12 p-3">

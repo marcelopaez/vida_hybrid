@@ -1,182 +1,129 @@
 import React, { useEffect } from 'react';
-import SideMenu from '../../components/SideMenu';
+import SideMenuAdmin from '../../components/SideMenuAdmin';
 import NavbarAdmin from '../../components/NavbarAdmin';
+import NavbarAdminMobile from '../../components/NavbarAdminMobile';
 
 const PlanesAdmin = () => {
   useEffect(() => window.scroll(0, 0), []);
 
   return (
     <div className="row marginNavbar generalContent">
-      <NavbarAdmin />
-      <div className="col-lg-2 col-md-3 col-sm-12 p-0">
-        <SideMenu />
+      <div className="navbarAdminLarger">
+        <NavbarAdmin />
       </div>
-
-      <div className="col-lg-10 col-md-9 col-sm-12 bg-white p-0">
-        <div className="planesAdminLarger">
-          <div className="generalContentAdminBody">
-            <div className="creditsBlocksContainerPlanesAdmin">
-              <div className="creditsLeftBlockPlanesAdmin">
-                <p className="creditsLeftBlockTitle extraBoldFont">Te quedan 2 créditos de tu plan,</p>
-                <p className="creditsLeftBlockSubtitle">Utilizalos en espacio compartido</p>
-                <div className="progress" style={{ paddingBottom: '90px' }}>
-                  <div className="progress-bar progressBarPlanesAdmin" role="progressbar" style={{ width: '75%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <div className="creditsLeftBlockFooter">
-                  <p className="creditsLeftBlockFooterText extraBoldFont">¡No te quedes sin lugar!</p>
-                  <button className="creditsLeftBlockFooterButton">Reservá</button>
-                </div>
-              </div>
-              <div className="creditsRightBlockPlanesAdmin">
-                <p className="creditsRightBlockTitle extraBoldFont">No te quedes sin créditos</p>
-                <p className="creditsRightBlockSubtitle">Recargá créditos para seguir utilizando el espacio compartido</p>
-                <button className="creditsRightBlockButton">Recargá</button>
-              </div>
-            </div>
-
+      <div className="navbarAdminMobile">
+        <NavbarAdminMobile />
+      </div>
+      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
+        <SideMenuAdmin />
+      </div>
+      <div className="col-lg-10 col-md-9 col-sm-12 p-3" style={{ backgroundColor: '#e5e5e5' }}>
+        <div className="row generalContentBody">
+          <div className="col-lg-8 col-md-12 col-sm-12">
             <p className="planesAdminTitle extraBoldFont">Planes</p>
-
-            <div className="plansPlanesAdminSection">
-              <div className="actualPlanPlanesAdmin">
-                <svg className="actualPlanPlanesAdminSVG" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#00AF62" />
-                  <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#00AF62" />
-                  <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#00AF62" />
-                  <path d="M46.8663 46.6618H62.0001C62.0001 38.4274 55.1655 31.6461 46.8663 31.6461H31.7324C31.7324 40.042 38.5671 46.6618 46.8663 46.6618Z" fill="#00AF62" />
-                </svg>
-
-                <p className="actualPlanPlanesAdminTitle extraBoldFont">Estás suscrito al plan Eter</p>
-                <div className="actualPlanPlanesAdminSeparator"></div>
-                <p className="actualPlanPlanesAdminDescription1 boldFont">1 día a la semana</p>
-                <p className="actualPlanPlanesAdminDescription2">PART: Incluye 3 Hs. en salas de reunión</p>
-                <button className="actualPlanPlanesAdminButton">Ver detalle</button>
+            <div className="planesAdminPlanesContainer">
+              <div className="planesAdminPlan">
+                <p className="planesAdminPlanTitle">Eter</p>
+                <hr />
+                <p className="planesAdminPlanQuantity extraBoldFont">24</p>
+                <p className="planesAdminPlanDetail lightFont">Personas suscritas</p>
               </div>
 
-              <div className="otherPlanPlanesAdmin">
-                <svg className="otherPlanPlanesAdminSVG">
-                  <path d="M13.0501 4.32912L1.77159 0C-0.620814 6.1519 2.45514 13.1013 8.72097 15.4937L19.8855 19.8228C22.2779 13.6709 19.202 6.72152 13.0501 4.32912Z" fill="#00AF62" />
-                  <path d="M40.3921 23.0125L29.2276 18.6834C26.8352 24.8353 29.9111 31.8986 36.063 34.1771L47.2276 38.5062C49.62 32.3543 46.544 25.4049 40.3921 23.0125Z" fill="#00AF62" />
-                  <path d="M23.6447 33.0382L12.4801 28.7091C10.0877 34.861 13.1636 41.8104 19.4295 44.2028L30.594 48.5319C32.9864 42.38 29.9105 35.3167 23.6447 33.0382Z" fill="#00AF62" />
-                </svg>
-                <p className="otherPlanPlanesAdminTitle extraBoldFont">Aire</p>
-                <p className="otherPlanPlanesAdminSubtitle boldFont">Enfocate 2 días a la semana</p>
-                <p className="otherPlanPlanesAdminDescription">FULL: Incluye 6 Hs. en salas de reunión PART: Incluye 4 Hs. en salas de reunión</p>
-                <button className="otherPlanPlanesAdminButton">Solicitar</button>
+              <div className="planesAdminPlan">
+                <p className="planesAdminPlanTitle">Aire</p>
+                <hr />
+                <p className="planesAdminPlanQuantity extraBoldFont">24</p>
+                <p className="planesAdminPlanDetail lightFont">Personas suscritas</p>
               </div>
 
-              <div className="otherPlanPlanesAdmin">
-                <svg className="otherPlanPlanesAdminSVG" width="41" height="49" viewBox="0 0 41 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20.3514 0C25.9561 5.94293 30.6 10.6009 34.9236 15.5801C42.45 24.093 41.9696 35.3363 34.2831 43.0461C26.7568 50.4346 14.4264 50.4346 6.73988 43.0461C-0.946598 35.497 -1.427 24.093 5.93921 15.5801C10.1027 10.6009 14.9068 5.94293 20.3514 0Z" fill="#00AF62" />
-                </svg>
-                <p className="otherPlanPlanesAdminTitle extraBoldFont">Agua</p>
-                <p className="otherPlanPlanesAdminSubtitle boldFont">Trabajá 3 veces por semana, descansá 2</p>
-                <p className="otherPlanPlanesAdminDescription">FULL: Incluye 8 Hs. en salas de reunión PART: Incluye 5 Hs. en salas de reunión</p>
-                <button className="otherPlanPlanesAdminButton">Solicitar</button>
+              <div className="planesAdminPlan">
+                <p className="planesAdminPlanTitle">Agua</p>
+                <hr />
+                <p className="planesAdminPlanQuantity extraBoldFont">24</p>
+                <p className="planesAdminPlanDetail lightFont">Personas suscritas</p>
               </div>
 
-              <div className="otherPlanPlanesAdmin">
-                <svg className="otherPlanPlanesAdminSVG" width="45" height="49" viewBox="0 0 45 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.6396 24.4194V48.8387C33.175 48.8387 44.059 37.9547 44.059 24.4194V0C30.5237 0 19.6396 10.8841 19.6396 24.4194Z" fill="#00AF62" />
-                  <path d="M16.0116 33.7684V48.8386C7.63929 48.8386 0.941406 42.1408 0.941406 33.7684V18.8377C9.17422 18.8377 16.0116 25.5356 16.0116 33.7684Z" fill="#00AF62" />
-                </svg>
-                <p className="otherPlanPlanesAdminTitle extraBoldFont">Fuego</p>
-                <p className="otherPlanPlanesAdminSubtitle boldFont">Un día de franco! 4 veces a la semana</p>
-                <p className="otherPlanPlanesAdminDescription">FULL: Incluye 10 Hs. en salas de reunión PART: Incluye 6 Hs. en salas de reunión</p>
-                <button className="otherPlanPlanesAdminButton">Solicitar</button>
+              <div className="planesAdminPlan">
+                <p className="planesAdminPlanTitle">Fuego</p>
+                <hr />
+                <p className="planesAdminPlanQuantity extraBoldFont">24</p>
+                <p className="planesAdminPlanDetail lightFont">Personas suscritas</p>
               </div>
 
-              <div className="otherPlanPlanesAdmin">
-                <svg className="otherPlanPlanesAdminSVG" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.955566 24.4862C1.42645 37.0432 11.786 47.0888 24.5 47.0888C37.5279 47.0888 48.0444 36.7293 48.0444 23.7014V0.156963C48.0444 0.156963 48.0444 0.156963 47.8874 0.156963C34.8595 0.156963 24.343 10.6735 24.343 23.7014V23.8583C24.343 23.8583 24.343 23.8583 24.343 23.7014C24.343 10.6735 13.9835 0 0.955566 0V24.4862Z" fill="#00AF62" />
+              <div className="planesAdminPlan">
+                <p className="planesAdminPlanTitle">Tierra</p>
+                <hr />
+                <p className="planesAdminPlanQuantity extraBoldFont">24</p>
+                <p className="planesAdminPlanDetail lightFont">Personas suscritas</p>
+              </div>
+            </div>
+
+            <p className="planesAdminNumbersTitle extraBoldFont">Números generales</p>
+
+            <div className="planesAdminGeneralNumbersContainer">
+              <div className="planesAdminGeneralNumbers">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="#9f9d9b" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.5 17.5C20.5 17.25 19.5 16.75 18.75 16C18 15.75 17.75 15 17.75 14.5C17.75 14 18 13.25 18.5 13C19.25 12.5 20 12 20.75 12.25C22.25 12.25 23.5 13 24.25 14L26.5 11C25.75 10.25 25 9.75 24.25 9.25C23.5 8.75 22.5 8.5 21.5 8.5V5H18.5V8.5C17.25 8.75 16 9.5 15 10.5C14 11.75 13.25 13.25 13.5 14.75C13.5 16.25 14 17.75 15 18.75C16.25 20 18 20.75 19.5 21.5C20.25 21.75 21.25 22.25 22 22.75C22.5 23.25 22.75 24 22.75 24.75C22.75 25.5 22.5 26.25 22 27C21.25 27.75 20.25 28 19.5 28C18.5 28 17.25 27.75 16.5 27C15.75 26.5 15 25.75 14.5 25L12 27.75C12.75 28.75 13.5 29.5 14.5 30.25C15.75 31 17.25 31.75 18.75 31.75V35H21.5V31.25C23 31 24.25 30.25 25.25 29.25C26.5 28 27.25 26 27.25 24.25C27.25 22.75 26.75 21 25.5 20C24.25 18.75 23 18 21.5 17.5V17.5ZM20 0C9 0 0 9 0 20C0 31 9 40 20 40C31 40 40 31 40 20C40 9 31 0 20 0ZM20 37.25C10.5 37.25 2.75 29.5 2.75 20C2.75 10.5 10.5 2.75 20 2.75C29.5 2.75 37.25 10.5 37.25 20C37.25 29.5 29.5 37.25 20 37.25V37.25Z"
+                    fill="#9f9d9b"
+                  />
                 </svg>
-                <p className="otherPlanPlanesAdminTitle extraBoldFont">Tierra</p>
-                <p className="otherPlanPlanesAdminSubtitle boldFont">Vení 5 días a la semana</p>
-                <p className="otherPlanPlanesAdminDescription">FULL: Incluye 12 Hs. en salas de reunión PART: Incluye 7 Hs. en salas de reunión</p>
-                <button className="otherPlanPlanesAdminButton">Solicitar</button>
+                <div className="planesAdminGeneralNumbersSeparator"></div>
+                <div>
+                  <p className="planesAdminGeneralNumbersTitle">Ingresos totales</p>
+                  <div className="planesAdminGeneralNumbersAmount extraBoldFont">$25464</div>
+                </div>
+              </div>
+
+              <div className="planesAdminGeneralNumbers">
+                <svg width="34" height="40" viewBox="0 0 34 40" fill="#9f9d9b" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22.4815 24.4615C22.2369 24.3815 20.6907 23.6846 21.6569 20.7477H21.643C24.1615 18.1538 26.0861 13.98 26.0861 9.87076C26.0861 3.5523 21.8846 0.23999 17.0015 0.23999C12.1154 0.23999 7.93689 3.55076 7.93689 9.87076C7.93689 13.9969 9.85074 18.1877 12.3846 20.7754C13.3723 23.3661 11.6061 24.3277 11.2369 24.4631C6.12305 26.3123 0.123047 29.6831 0.123047 33.0108V34.2585C0.123047 38.7923 8.91382 39.8231 17.0492 39.8231C25.1969 39.8231 33.8769 38.7923 33.8769 34.2585V33.0108C33.8769 29.5831 27.8477 26.2385 22.4815 24.4615Z"
+                    fill="#9f9d9b"
+                  />
+                </svg>
+                <div className="planesAdminGeneralNumbersSeparator"></div>
+                <div>
+                  <p className="planesAdminGeneralNumbersTitle">Total usuarios</p>
+                  <div className="planesAdminGeneralNumbersAmount extraBoldFont">464</div>
+                </div>
+              </div>
+
+              <div className="planesAdminGeneralNumbers">
+                <svg width="27" height="32" viewBox="0 0 27 32" fill="#9f9d9b" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.25 3.14282H3.08333C2.5308 3.14282 2.0009 3.36859 1.61019 3.77045C1.21949 4.17231 1 4.71736 1 5.28568V28.8571C1 29.4254 1.21949 29.9705 1.61019 30.3723C2.0009 30.7742 2.5308 31 3.08333 31H23.9167C24.4692 31 24.9991 30.7742 25.3898 30.3723C25.7805 29.9705 26 29.4254 26 28.8571V5.28568C26 4.71736 25.7805 4.17231 25.3898 3.77045C24.9991 3.36859 24.4692 3.14282 23.9167 3.14282H19.75" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M9.33333 1H17.6667C18.2192 1 18.7491 1.22576 19.1398 1.62763C19.5305 2.02949 19.75 2.57454 19.75 3.14286C19.75 3.71118 19.5305 4.25622 19.1398 4.65809C18.7491 5.05995 18.2192 5.28571 17.6667 5.28571H9.33333C8.7808 5.28571 8.2509 5.05995 7.86019 4.65809C7.46949 4.25622 7.25 3.71118 7.25 3.14286C7.25 2.57454 7.46949 2.02949 7.86019 1.62763C8.2509 1.22576 8.7808 1 9.33333 1Z"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path d="M11.4165 11.7142H21.8332" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M11.4165 18.1428H21.8332" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M11.4165 24.5714H21.8332" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M5.1665 11.7142H7.24984" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M5.1665 18.1428H7.24984" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M5.1665 24.5714H7.24984" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <div className="planesAdminGeneralNumbersSeparator"></div>
+                <div>
+                  <p className="planesAdminGeneralNumbersTitle">Total planes vendidos</p>
+                  <div className="planesAdminGeneralNumbersAmount extraBoldFont">25464</div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="generalAdminFooter">
-            <div className="generalAdminFooterLeft">
-              <p className="generalAdminFooterLeftFirstText boldFont">Reservá ya</p>
-              <div className="generalAdminFooterLeftSeparator"></div>
-              <p className="generalAdminFooterSecondText">¿Necesitás un espacio ahora mismo? Reservá la próxima sala disponible</p>
-            </div>
-            <div className="generalAdminFooterRight">
-              <button className="generalAdminFooterRightButton">Reservá</button>
-            </div>
-          </div>
-        </div>
-
-        <div className="planesAdminMobile">
-          <div className="customContainer">
-            <div className="creditsBlocksContainerPlanesAdmin">
-              <div className="creditsLeftBlockPlanesAdmin">
-                <p className="creditsLeftBlockTitle extraBoldFont">Te quedan 2 créditos de tu plan,</p>
-                <p className="creditsLeftBlockSubtitle">Utilizalos en espacio compartido</p>
-                <div className="progress" style={{ paddingBottom: '90px' }}>
-                  <div className="progress-bar progressBarPlanesAdmin" role="progressbar" style={{ width: '75%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <div className="creditsLeftBlockButtonMobileContainer">
-                  <button className="creditsLeftBlockButtonMobile">Reservá un lugar</button>
-                </div>
-              </div>
-            </div>
-
-            <div className="plansPlanesAdminSection">
-              <div className="actualPlanPlanesAdmin">
-                <p className="actualPlanPlanesAdminTitle extraBoldFont">Estás suscrito al plan Eter</p>
-                <div className="actualPlanPlanesAdminSeparator"></div>
-                <p className="actualPlanPlanesAdminDescription1 boldFont">1 día a la semana</p>
-                <p className="actualPlanPlanesAdminDescription2">PART: Incluye 3 Hs. en salas de reunión</p>
-                <button className="actualPlanPlanesAdminButton">Ver detalle</button>
-              </div>
-
-              <p className="planesAdminTitle extraBoldFont">Otros Planes</p>
-
-              <div className="otherPlanPlanesAdminMobile">
-                <div className="otherPlanPlanesAdminMobileContainer">
-                  <div className="otherPlanPlanesAdminMobileLeft">
-                    <svg className="otherPlaPlanesAdminMobileSVG" width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M13.0501 4.32912L1.77159 0C-0.620814 6.1519 2.45514 13.1013 8.72097 15.4937L19.8855 19.8228C22.2779 13.6709 19.202 6.72152 13.0501 4.32912Z" fill="#00AF62" />
-                      <path d="M40.3921 23.0125L29.2276 18.6834C26.8352 24.8353 29.9111 31.8986 36.063 34.1771L47.2276 38.5062C49.62 32.3543 46.544 25.4049 40.3921 23.0125Z" fill="#00AF62" />
-                      <path d="M23.6447 33.0382L12.4801 28.7091C10.0877 34.861 13.1636 41.8104 19.4295 44.2028L30.594 48.5319C32.9864 42.38 29.9105 35.3167 23.6447 33.0382Z" fill="#00AF62" />
-                    </svg>
-                    <p className="otherPlanPlanesAdminMobileTitle extraBoldFont">Aire</p>
-                  </div>
-                  <div className="otherPlanPlanesAdminMobileRight"></div>
-                </div>
-
-                <div className="otherPlanPlanesAdminMobileContainer">
-                  <div className="otherPlanPlanesAdminMobileLeft">
-                    <svg className="otherPlaPlanesAdminMobileSVG" width="41" height="49" viewBox="0 0 41 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.3514 0C25.9561 5.94293 30.6 10.6009 34.9236 15.5801C42.45 24.093 41.9696 35.3363 34.2831 43.0461C26.7568 50.4346 14.4264 50.4346 6.73988 43.0461C-0.946598 35.497 -1.427 24.093 5.93921 15.5801C10.1027 10.6009 14.9068 5.94293 20.3514 0Z" fill="#00AF62" />
-                    </svg>
-                    <p className="otherPlanPlanesAdminMobileTitle extraBoldFont">Agua</p>
-                  </div>
-                  <div className="otherPlanPlanesAdminMobileRight"></div>
-                </div>
-
-                <div className="otherPlanPlanesAdminMobileContainer">
-                  <div className="otherPlanPlanesAdminMobileLeft">
-                    <svg className="otherPlaPlanesAdminMobileSVG" width="45" height="49" viewBox="0 0 45 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19.6396 24.4194V48.8387C33.175 48.8387 44.059 37.9547 44.059 24.4194V0C30.5237 0 19.6396 10.8841 19.6396 24.4194Z" fill="#00AF62" />
-                      <path d="M16.0116 33.7684V48.8386C7.63929 48.8386 0.941406 42.1408 0.941406 33.7684V18.8377C9.17422 18.8377 16.0116 25.5356 16.0116 33.7684Z" fill="#00AF62" />
-                    </svg>
-                    <p className="otherPlanPlanesAdminMobileTitle extraBoldFont">Fuego</p>
-                  </div>
-                  <div className="otherPlanPlanesAdminMobileRight"></div>
-                </div>
-
-                <div className="otherPlanPlanesAdminMobileContainer">
-                  <div className="otherPlanPlanesAdminMobileLeft">
-                    <svg className="otherPlaPlanesAdminMobileSVG" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.955566 24.4862C1.42645 37.0432 11.786 47.0888 24.5 47.0888C37.5279 47.0888 48.0444 36.7293 48.0444 23.7014V0.156963C48.0444 0.156963 48.0444 0.156963 47.8874 0.156963C34.8595 0.156963 24.343 10.6735 24.343 23.7014V23.8583C24.343 23.8583 24.343 23.8583 24.343 23.7014C24.343 10.6735 13.9835 0 0.955566 0V24.4862Z" fill="#00AF62" />
-                    </svg>
-                    <p className="otherPlanPlanesAdminMobileTitle extraBoldFont">Tierra</p>
-                  </div>
-                  <div className="otherPlanPlanesAdminMobileRight"></div>
-                </div>
+          <div className="col-lg-4 col-md-12 col-sm-12">
+            <div className="planesAdminRightSide">
+              <p className="planesAdminRightSideTitle extraBoldFont">Detalle</p>
+              <div className="planesAdminRightSideDetail">
+                <div className="planesAdminRightSideDetailTitle">Tierra</div>
+                <hr className="planesAdminRightSideDetailSeparator" />
+                <p className="planesAdminRightSideDetailNumber extraBoldFont">24</p>
+                <p className="planesAdminRightSideDetailText lightFont">Personas suscritas</p>
               </div>
             </div>
           </div>

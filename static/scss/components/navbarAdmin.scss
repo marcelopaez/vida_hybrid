@@ -6,6 +6,12 @@
   border-bottom: 1px solid $grayLighter1;
 }
 
+.navbarAdmin {
+  &.top-nav-collapse {
+    background-color: #fff !important;
+  }
+}
+
 .navbarAdminData {
   display: flex;
   align-items: center;

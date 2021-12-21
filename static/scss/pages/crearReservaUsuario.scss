@@ -1,0 +1,241 @@
+.crearReservaUsuarioModalEventOptionButton {
+  background: $primary;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 18px 16px;
+  width: 270px;
+  margin: 40px 30px;
+}
+
+.crearReservaUsuarioModalEventOptionButtonDisabled {
+  @extend .crearReservaUsuarioModalEventOptionButton;
+  background: $grayDarker18;
+}
+
+.crearReservaUsuarioModalNewEventContainer {
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #dfdfdf;
+  position: absolute;
+  width: 300px;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.crearReservaUsuarioModalNewEventHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.crearReservaUsuarioModalNewEventHeaderTitle {
+  font-size: 1.1rem;
+  margin: 25px 0 15px 20px;
+}
+
+.crearReservaUsuarioModalNewEventHeaderX {
+  font-size: 2rem;
+  margin: 25px 20px 15px 0;
+}
+
+.crearReservaUsuarioModalNewEventOptionsContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.crearReservaUsuarioModalNewEventOptionContainer {
+  padding: 10px;
+  background: #fff;
+  color: $grayDarker10;
+}
+
+.crearReservaUsuarioModalNewEventOptionContainer:hover {
+  background: $primary;
+  color: #fff;
+}
+
+.crearReservaUsuarioModalNewEventOptionTitle {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.crearReservaUsuarioModalNewEventOptionSubtitle {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.crearReservaUsuarioModalNewEventButton {
+  background: $primary;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 18px 16px;
+  width: 250px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 25px 0;
+}
+
+.crearReservaUsuarioNewEventAvailabilityContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 25px;
+  color: $grayDarker13;
+  padding: 10px;
+}
+
+.crearReservaUsuarioNewEventAvailabilityTitle {
+  font-size: 1.1rem;
+  margin: 0 0 20px 0;
+}
+
+.crearReservaUsuarioNewEventAvailabilityOption {
+  font-size: 1.1rem;
+  margin: 7.5px 20px;
+}
+
+.crearReservaUsuarioRightSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.crearReservaUsuarioRightSideTitle {
+  font-size: 1.5rem;
+  color: $grayDarker10;
+  padding: 115px 0 24px 0;
+}
+
+.crearReservaUsuarioRightSideAvailableCredits {
+  font-size: 3rem;
+  color: $grayDarker10;
+  margin: 0 0 55px 0;
+}
+
+.crearReservaUsuarioRightSideActualPlanContainer {
+  background-color: $primary;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 30px;
+}
+
+.crearReservaUsuarioRightSideActualPlanTitle {
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+.crearReservaUsuarioRightSideActualPlanSubtitle {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.crearReservaUsuarioRightSideMyReservationsTitle {
+  font-size: 1.5rem;
+  color: $grayDarker10;
+  margin: 150px 0 15px 0;
+}
+
+.crearReservaUsuarioRightSideMyReservationsTable {
+  text-align: center;
+  table {
+    thead {
+      tr {
+        th {
+          color: $grayDarker17;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          color: $grayDarker17;
+        }
+      }
+    }
+  }
+}
+
+.crearReservaUsuarioModalNewEventConfirmationContainer {
+  @extend .crearReservaUsuarioModalNewEventContainer;
+  width: 75%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.crearReservaUsuarioModalNewEventConfirmationContentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.crearReservaUsuarioModalNewEventConfirmationContentTitle {
+  font-size: 1.1rem;
+  color: $grayDarker10;
+  margin: 30px 0;
+}
+
+.crearReservaUsuarioModalNewEventConfirmationContentCompany {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.crearReservaUsuarioModalNewEventConfirmationContentCompanyElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: $primary;
+  color: #fff;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.crearReservaUsuarioModalNewEventConfirmationContentCompanyElementImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.crearReservaUsuarioModalNewEventConfirmationContentCompanyElementTitle {
+  font-size: 1.1rem;
+  margin: 15px 0 0 0;
+}
+
+.crearReservaUsuarioModalNewEventConfirmationContentCompanyElementSubtitle {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+@media (min-width: 300px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1440px) {
+}
