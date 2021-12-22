@@ -114,7 +114,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 200px;
+  margin: 200px -15px 0 -15px;
 }
 
 .generalAdminFooterLeft,
@@ -255,6 +255,7 @@
 .paymentMethodOption {
   font-size: 1.1rem;
   margin: 7.5px 0;
+  padding-left: 0 !important;
 }
 
 .generalAdminMeetingsRoomModalLeftSideTimeTitle {
@@ -263,7 +264,9 @@
 }
 
 .generalAdminMeetingsRoomModalLeftSideTimeOptions {
-  color: $grayLighter4;
+  color: $grayLighter4 !important;
+  background-color: #fff !important;
+  border: 1px solid $grayLighter5 !important;
 }
 
 .generalAdminSharedPlaceModalVerticalSeparator {

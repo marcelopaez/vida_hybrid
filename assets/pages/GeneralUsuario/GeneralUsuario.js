@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import SideMenu from '../../components/SideMenu';
 import NavbarAdmin from '../../components/NavbarAdmin';
 import NavbarAdminMobile from '../../components/NavbarAdminMobile';
@@ -12,6 +12,15 @@ const GeneralUsuario = () => {
   const [sharedSpace, setSharedSpace] = useState(false);
   const [meetingsRoom, setMeetingsRoom] = useState(false);
   const [finalReservationStep, setFinalReservationStep] = useState(false);
+
+  const reservationHourMorning = useRef(null);
+  const reservationHourAfternoon = useRef(null);
+  const reservationHourQuantity = useRef(null);
+  const reservationAvailableRooms1 = useRef(null);
+  const reservationAvailableRooms2 = useRef(null);
+  const reservationCode = useRef(null);
+  const reservationMercadoPagoMethod = useRef(null);
+  const reservationVidaMethod = useRef(null);
 
   return (
     <div className="row marginNavbar generalContent">
@@ -113,15 +122,15 @@ const GeneralUsuario = () => {
                   </select>
                   <p className="generalAdminSharedPlaceModalLeftSideAvailability boldFont">Hay disponibilidad de lugar</p>
                   <p className="generalAdminSharedPlaceModalLeftSideHourTitle">Elegí un horario</p>
-                  <div className="custom-control custom-checkbox sharedPlaceHourOption">
-                    <input type="checkbox" className="custom-control-input" id="morningSharedPlace" />
-                    <label className="custom-control-label lightFont" htmlFor="morningSharedPlace">
+                  <div className="form-check sharedPlaceHourOption">
+                    <input type="radio" className="form-check-input" id="morningSharedPlace" name="reservationHour" ref={reservationHourMorning} />
+                    <label className="form-check-label lightFont" for="morningSharedPlace">
                       Por la mañana (00 a 00)
                     </label>
                   </div>
-                  <div className="custom-control custom-checkbox sharedPlaceHourOption">
-                    <input type="checkbox" className="custom-control-input" id="afternoonSharedPlace" />
-                    <label className="custom-control-label lightFont" htmlFor="afternoonSharedPlace">
+                  <div className="form-check sharedPlaceHourOption">
+                    <input type="radio" className="form-check-input" id="afternoonSharedPlace" name="reservationHour" ref={reservationHourAfternoon} />
+                    <label className="form-check-label lightFont" for="afternoonSharedPlace">
                       Por la tarde (00 a 00)
                     </label>
                   </div>
@@ -164,20 +173,20 @@ const GeneralUsuario = () => {
                   </select>
                   <p className="generalAdminMeetingsRoomModalLeftSideAvailability boldFont">Hay disponibilidad de lugar</p>
                   <p className="generalAdminMeetingsRoomModalLeftSideHourTitle">Elegí un horario</p>
-                  <div className="custom-control custom-checkbox meetingsRoomHourOption">
-                    <input type="checkbox" className="custom-control-input" id="morningMeetingsRoom" />
-                    <label className="custom-control-label lightFont" htmlFor="morningMeetingsRoom">
+                  <div className="form-check sharedPlaceHourOption">
+                    <input type="radio" className="form-check-input" id="morningSharedPlace" name="reservationHour" ref={reservationHourMorning} />
+                    <label className="form-check-label lightFont" for="morningSharedPlace">
                       Por la mañana (00 a 00)
                     </label>
                   </div>
-                  <div className="custom-control custom-checkbox meetingsRoomHourOption">
-                    <input type="checkbox" className="custom-control-input" id="afternoonMeetingsRoom" />
-                    <label className="custom-control-label lightFont" htmlFor="afternoonMeetingsRoom">
+                  <div className="form-check sharedPlaceHourOption">
+                    <input type="radio" className="form-check-input" id="afternoonSharedPlace" name="reservationHour" ref={reservationHourAfternoon} />
+                    <label className="form-check-label lightFont" for="afternoonSharedPlace">
                       Por la tarde (00 a 00)
                     </label>
                   </div>
                   <p className="generalAdminMeetingsRoomModalLeftSideTimeTitle">Cantidad de Hs</p>
-                  <select className="mdb-select md-form generalAdminMeetingsRoomModalLeftSideTimeOptions extraBoldFont" defaultValue="1 Hs">
+                  <select className="mdb-select md-form generalAdminMeetingsRoomModalLeftSideTimeOptions extraBoldFont" defaultValue="1 Hs" ref={reservationHourQuantity}>
                     <option value="1 Hs">1 Hs</option>
                     <option value="2 Hs">2 Hs</option>
                     <option value="3 Hs">3 Hs</option>
@@ -187,15 +196,15 @@ const GeneralUsuario = () => {
                 <div className="generalAdminMeetingsRoomModalVerticalSeparator"></div>
                 <div className="generalAdminMeetingsRoomModalBodyRightSide">
                   <p className="generalAdminMeetingsRoomModalBodyRightSideAvailableRoomsTitle">Salas disponibles</p>
-                  <div className="custom-control custom-checkbox meetingsRoomAvailableRoomsOption">
-                    <input type="checkbox" className="custom-control-input" id="meetingsRoomType1" />
-                    <label className="custom-control-label lightFont" htmlFor="meetingsRoomType1">
+                  <div className="form-check meetingsRoomAvailableRoomsOption">
+                    <input type="radio" className="form-check-input" id="reservationAvailableRoom1" name="reservationAvailableRooms" ref={reservationAvailableRooms1} />
+                    <label className="form-check-label lightFont" for="reservationAvailableRoom1">
                       Río (5 personas)
                     </label>
                   </div>
-                  <div className="custom-control custom-checkbox meetingsRoomAvailableRoomsOption">
-                    <input type="checkbox" className="custom-control-input" id="meetingsRoomType2" />
-                    <label className="custom-control-label lightFont" htmlFor="meetingsRoomType2">
+                  <div className="form-check meetingsRoomAvailableRoomsOption">
+                    <input type="radio" className="form-check-input" id="reservationAvailableRoom2" name="reservationAvailableRooms" ref={reservationAvailableRooms2} />
+                    <label className="form-check-label lightFont" for="reservationAvailableRoom2">
                       Bosque (12 personas)
                     </label>
                   </div>
@@ -232,20 +241,20 @@ const GeneralUsuario = () => {
                   <p className="generalAdminFinalReservationStepModalBodyLeftSideSubtotal boldFont">Subtotal</p>
                   <p className="generalAdminFinalReservationStepModalBodyLeftSidePrice extraBoldFont">$3400</p>
                   <p className="generalAdminFinalReservationStepModalBodyLeftSideCouponTitle">¿Tenés un cupón de descuento?</p>
-                  <input type="text" id="coupon" className="form-control form-control-lg generalAdminFinalReservationStepModalBodyLeftSideCoupon" placeholder="Ingresá tu código" />
+                  <input type="text" id="coupon" className="form-control form-control-lg generalAdminFinalReservationStepModalBodyLeftSideCoupon" placeholder="Ingresá tu código" ref={reservationCode} />
                 </div>
                 <div className="generalAdminFinalReservationStepModalVerticalSeparator"></div>
                 <div className="generalAdminFinalReservationStepModalBodyRightSide">
                   <p className="generalAdminFinalReservationStepModalBodyRightSideTitle">Método de pago</p>
-                  <div className="custom-control custom-checkbox paymentMethodOption">
-                    <input type="checkbox" className="custom-control-input" id="mercadoPagoOption" />
-                    <label className="custom-control-label lightFont" htmlFor="mercadoPagoOption">
+                  <div className="form-check paymentMethodOption">
+                    <input type="radio" className="form-check-input" id="reservationMercadoPagoMethod" name="reservationPaymentMethod" ref={reservationMercadoPagoMethod} />
+                    <label className="form-check-label lightFont" for="reservationMercadoPagoMethod">
                       Mercado Pago
                     </label>
                   </div>
-                  <div className="custom-control custom-checkbox paymentMethodOption">
-                    <input type="checkbox" className="custom-control-input" id="vidaCoworkOption" />
-                    <label className="custom-control-label lightFont" htmlFor="vidaCoworkOption">
+                  <div className="form-check paymentMethodOption">
+                    <input type="radio" className="form-check-input" id="reservationVidaMethod" name="reservationPaymentMethod" ref={reservationVidaMethod} />
+                    <label className="form-check-label lightFont" for="reservationVidaMethod">
                       Coordinar pago con Vida Cowork
                     </label>
                   </div>

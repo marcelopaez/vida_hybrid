@@ -15,6 +15,9 @@ const OrangePlan = ({ svg, title, price, time }) => {
         <p className="orangePlanPrice extraBoldFont">${price}</p>
       </div>
       <select className="mdb-select md-form orangePlanSelect" defaultValue="Tipo de Consulta">
+        <option value="Tipo de Consulta" disabled>
+          Tipo de Consulta
+        </option>
         <option value="1">PART</option>
         <option value="2">FULL</option>
       </select>

@@ -1,10 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import SideMenuAdmin from '../../components/SideMenuAdmin';
 import NavbarAdmin from '../../components/NavbarAdmin';
 import NavbarAdminMobile from '../../components/NavbarAdminMobile';
 
 const ClientesAdmin = () => {
   useEffect(() => window.scroll(0, 0), []);
+
+  const clientSelected = useRef(null);
+  const monthSelected = useRef(null);
+  const daySelected = useRef(null);
+  const hourSelected = useRef(null);
+  const roomTypeSelected = useRef(null);
 
   return (
     <div className="row marginNavbar generalContent">
@@ -23,7 +29,7 @@ const ClientesAdmin = () => {
           <div className="col-lg-8 col-md-12 col-sm-12">
             <h1 className="clientesAdminTitle extraBoldFont">Clientes</h1>
             <div className="clientesAdminSearch">
-              <input type="text" className="form-control clientesAdminInput" />
+              <input type="text" className="form-control clientesAdminInput" ref={clientSelected} />
               <svg className="clientesAdminSearchSVG" width="31" height="30" viewBox="0 0 31 30" fill="black" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M29.25 28.5L22.8752 22.1138L29.25 28.5ZM26.4079 13.5789C26.4079 16.7825 25.1353 19.8548 22.8701 22.1201C20.6048 24.3853 17.5325 25.6579 14.3289 25.6579C11.1254 25.6579 8.05308 24.3853 5.78784 22.1201C3.5226 19.8548 2.25 16.7825 2.25 13.5789C2.25 10.3754 3.5226 7.30308 5.78784 5.03784C8.05308 2.7726 11.1254 1.5 14.3289 1.5C17.5325 1.5 20.6048 2.7726 22.8701 5.03784C25.1353 7.30308 26.4079 10.3754 26.4079 13.5789V13.5789Z"
@@ -48,47 +54,23 @@ const ClientesAdmin = () => {
                     fill="#fff"
                   />
                 </svg>
-                <button className="clientesAdminDropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Mes
-                </button>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="#">
-                    Enero
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Febrero
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Marzo
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Abril
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Mayo
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Junio
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Julio
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Agosto
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Septiembre
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Octubre
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Noviembre
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Diciembre
-                  </a>
-                </div>
+                <select className="mdb-select md-form m-0" defaultValue="Mes" ref={monthSelected}>
+                  <option value="Mes" disabled>
+                    Mes
+                  </option>
+                  <option value="Enero">Enero</option>
+                  <option value="Febrero">Febrero</option>
+                  <option value="Marzo">Marzo</option>
+                  <option value="Abril">Abril</option>
+                  <option value="Mayo">Mayo</option>
+                  <option value="Junio">Junio</option>
+                  <option value="Julio">Julio</option>
+                  <option value="Agosto">Agosto</option>
+                  <option value="Septiembre">Septiembre</option>
+                  <option value="Octubre">Octubre</option>
+                  <option value="Noviembre">Noviembre</option>
+                  <option value="Diciembre">Diciembre</option>
+                </select>
               </div>
               <div className="clientesAdminFilterButton">
                 <svg width="29" height="29" viewBox="0 0 29 29" fill="none" className="mx-2" xmlns="http://www.w3.org/2000/svg">
@@ -101,112 +83,62 @@ const ClientesAdmin = () => {
                     fill="white"
                   />
                 </svg>
-                <button className="clientesAdminDropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Día
-                </button>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="#">
-                    1
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    2
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    3
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    4
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    5
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    6
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    7
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    8
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    9
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    10
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    11
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    12
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    13
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    14
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    15
-                  </a>
-                </div>
+                <select className="mdb-select md-form m-0" defaultValue="Día" ref={daySelected}>
+                  <option value="Día" disabled>
+                    Día
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                </select>
               </div>
               <div className="clientesAdminFilterButton">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" className="mx-2" xmlns="http://www.w3.org/2000/svg">
                   <path d="M15.9998 29.3334C23.3636 29.3334 29.3332 23.3639 29.3332 16.0001C29.3332 8.63629 23.3636 2.66675 15.9998 2.66675C8.63604 2.66675 2.6665 8.63629 2.6665 16.0001C2.6665 23.3639 8.63604 29.3334 15.9998 29.3334Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M20 21.3333L16.7813 18.1147C16.2812 17.6147 16.0002 16.9365 16 16.2293V8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <button className="clientesAdminDropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Hora
-                </button>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="#">
-                    1
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    2
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    3
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    4
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    5
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    6
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    7
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    8
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    9
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    10
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    11
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    12
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    13
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    14
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    15
-                  </a>
-                </div>
+                <select className="mdb-select md-form m-0" defaultValue="Hora" ref={hourSelected}>
+                  <option value="Hora" disabled>
+                    Hora
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                </select>
               </div>
               <div className="clientesAdminFilterButton">
                 <svg width="29" height="29" viewBox="0 0 29 29" fill="none" className="mx-2" xmlns="http://www.w3.org/2000/svg">
@@ -215,35 +147,19 @@ const ClientesAdmin = () => {
                     fill="white"
                   />
                 </svg>
-                <button className="clientesAdminDropdownButton dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Tipo de sala
-                </button>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="#">
-                    Mesa Rusa
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Herradura
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Taller
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Escuela
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Imperial
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Auditorio
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Libre
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Outdoor
-                  </a>
-                </div>
+                <select className="mdb-select md-form m-0" defaultValue="Tipo de Sala" ref={roomTypeSelected}>
+                  <option value="Tipo de Sala" disabled>
+                    Tipo de Sala
+                  </option>
+                  <option value="Mesa Rusa">Mesa Rusa</option>
+                  <option value="Herradura">Herradura</option>
+                  <option value="Taller">Taller</option>
+                  <option value="Escuela">Escuela</option>
+                  <option value="Imperial">Imperial</option>
+                  <option value="Auditorio">Auditorio</option>
+                  <option value="Libre">Libre</option>
+                  <option value="Outdoor">Outdoor</option>
+                </select>
               </div>
             </div>
             <div className="table-responsive clientesAdminTable">

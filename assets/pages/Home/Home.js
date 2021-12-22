@@ -711,7 +711,7 @@ const Home = () => {
         <div className="customContainer">
           <p className="servicesTitle extraBoldFont">SERVICIOS</p>
           <select className="mdb-select md-form selectServicesMiddle boldFont" id="servicesMiddle" defaultValue="Título">
-            <option value="">Título</option>
+            <option value="Título">Título</option>
             <option value="1">Option 1</option>
             <option value="2">Option 2</option>
             <option value="3">Option 3</option>
@@ -879,13 +879,13 @@ const Home = () => {
               darkText={false}
             />
             <select className="mdb-select md-form selectServicesMiddle boldFont" id="servicesMiddle" defaultValue="Título">
-              <option value="">Título</option>
+              <option value="Título">Título</option>
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
               <option value="3">Option 3</option>
             </select>
             <select className="mdb-select md-form selectServicesMiddle boldFont" id="servicesMiddle" defaultValue="Título" style={{ paddingBottom: '110px' }}>
-              <option value="">Título</option>
+              <option value="Título">Título</option>
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
               <option value="3">Option 3</option>
@@ -899,7 +899,7 @@ const Home = () => {
           <p className="servicesTitleMobile extraBoldFont">Servicios</p>
           <div className="servicesSection">
             <select className="mdb-select md-form selectServicesMobile boldFont" id="servicesMobile" defaultValue="Título">
-              <option value="">Título</option>
+              <option value="Título">Título</option>
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
               <option value="3">Option 3</option>
@@ -1066,13 +1066,13 @@ const Home = () => {
               darkText={true}
             />
             <select className="mdb-select md-form selectServicesMobile boldFont" id="servicesMobile" defaultValue="Título">
-              <option value="">Título</option>
+              <option value="Título">Título</option>
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
               <option value="3">Option 3</option>
             </select>
             <select className="mdb-select md-form selectServicesMobile boldFont" id="servicesMobile" defaultValue="Título" style={{ paddingBottom: '110px' }}>
-              <option value="">Título</option>
+              <option value="Título">Título</option>
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
               <option value="3">Option 3</option>
@@ -1583,7 +1583,7 @@ const Home = () => {
                 </label>
               </div>
               <select className="mdb-select md-form consultSelect boldFont" id="consultSelect" defaultValue="Tipo de Consulta">
-                <option value="">Tipo de consulta</option>
+                <option value="Tipo de Consulta">Tipo de consulta</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>
@@ -1608,7 +1608,7 @@ const Home = () => {
                   </label>
                 </div>
                 <select className="mdb-select md-form consultSelect" id="consultSelectMobile boldFont" defaultValue="Tipo de Consulta">
-                  <option value="">Tipo de consulta</option>
+                  <option value="Tipo de Consulta">Tipo de consulta</option>
                   <option value="1">Option 1</option>
                   <option value="2">Option 2</option>
                   <option value="3">Option 3</option>
@@ -1678,7 +1678,7 @@ const Home = () => {
                 </label>
               </div>
               <select className="mdb-select md-form consultSelect boldFont" id="consultSelectMobile" defaultValue="Tipo de Consulta">
-                <option value="">Tipo de consulta</option>
+                <option value="Tipo de Consulta">Tipo de consulta</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>

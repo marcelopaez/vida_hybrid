@@ -114,6 +114,8 @@ const SideMenu = () => {
           link={'/comunidadUsuario'}
           title={'Comunidad'}
         />
+
+        {window.document.documentURI.includes('comunidad') && <SideMenuSubItem link={'/comunidadBeneficiosUsuario'} title={'Ver beneficios'} />}
       </ul>
     </main>
   );

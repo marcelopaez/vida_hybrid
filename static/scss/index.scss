@@ -2,6 +2,7 @@
 @import './general.scss';
 
 // Components
+@import './components/notFound.scss';
 @import './components/navbar.scss';
 @import './components/navbarAdmin.scss';
 @import './components/navbarAdminMobile.scss';
@@ -23,6 +24,7 @@
 @import './pages/planesUsuario.scss';
 @import './pages/contratoUsuario.scss';
 @import './pages/comunidadUsuario.scss';
+@import './pages/comunidadBeneficiosUsuario.scss';
 
 @import './pages/reservasAdmin.scss';
 @import './pages/clientesAdmin.scss';

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Navbar from '../../components/Navbar';
 import NavbarMobile from '../../components/NavbarMobile';
 import OrangePlan from '../../components/OrangePlan';
@@ -8,6 +8,8 @@ import PlanesBackground from '../../images/Backgrounds/PlanesBackground.jpg';
 
 const Planes = () => {
   useEffect(() => window.scroll(0, 0), []);
+
+  const queryType = useRef(null);
 
   return (
     <main className="plansGeneralContainerPlans">
@@ -24,8 +26,8 @@ const Planes = () => {
                 </svg>
                 <p className="actualPlanTitle extraBoldFont">Eter</p>
               </div>
-              <select className="mdb-select md-form consultSelectPlanes" id="consultSelect" defaultValue="Tipo de Consulta">
-                <option value="">Tipo de consulta</option>
+              <select className="mdb-select md-form consultSelectPlanes" id="consultSelect" defaultValue="Tipo de Consulta" ref={queryType}>
+                <option value="Tipo de consulta">Tipo de consulta</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>
@@ -148,7 +150,7 @@ const Planes = () => {
         </div>
         <div className="customContainer">
           <select className="mdb-select md-form mobileSelect" id="servicesMiddle" defaultValue="Título">
-            <option value="">Título</option>
+            <option value="Título">Título</option>
             <option value="1">Option 1</option>
             <option value="2">Option 2</option>
             <option value="3">Option 3</option>

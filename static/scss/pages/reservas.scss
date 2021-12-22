@@ -203,6 +203,10 @@
     margin: 120px 1rem 136px 1rem;
   }
 
+  .reservationContainerTitle {
+    padding-left: 0;
+  }
+
   .reservationVerticalSeparator {
     display: none;
   }
@@ -233,6 +237,10 @@
 
   .reservasContainerMobile {
     display: none;
+  }
+
+  .reservationContainerTitle {
+    padding-left: 100px;
   }
 }
 

@@ -8,6 +8,7 @@ import CrearReservaUsuario from '../../pages/CrearReservaUsuario';
 import PlanesUsuario from '../../pages/PlanesUsuario';
 import ContratoUsuario from '../../pages/ContratoUsuario';
 import ComunidadUsuario from '../../pages/ComunidadUsuario';
+import ComunidadBeneficiosUsuario from '../../pages/ComunidadBeneficiosUsuario';
 
 import ReservasAdmin from '../../pages/ReservasAdmin';
 import ClientesAdmin from '../../pages/ClientesAdmin';
@@ -39,6 +40,7 @@ const App = () => {
         <Route exact path="/planesUsuario" component={PlanesUsuario} />
         <Route exact path="/contratoUsuario" component={ContratoUsuario} />
         <Route exact path="/comunidadUsuario" component={ComunidadUsuario} />
+        <Route exact path="/comunidadBeneficiosUsuario" component={ComunidadBeneficiosUsuario} />
         {/* Admin */}
         <Route exact path="/controlClientes" component={ReservasAdmin} />
         <Route exact path="/clientesAdmin" component={ClientesAdmin} />
@@ -55,7 +57,7 @@ const App = () => {
         <Route exact path="/eventos" component={Eventos} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/reservar" component={Reservas} />
-        <Redirect to="/404" component={NotFound} />
+        <Route component={NotFound} />
       </Switch>
       <Footer />
     </BrowserRouter>

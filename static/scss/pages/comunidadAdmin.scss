@@ -14,10 +14,11 @@
 }
 
 .comunidadAdminNoticeReceiverSelect {
-  background-color: $grayLighter12;
-  color: $grayLighter7;
+  background-color: $grayLighter12 !important;
+  color: $grayLighter7 !important;
   padding: 10px;
   border-radius: 5px;
+  border: 1px solid $grayLighter12;
 }
 
 .comunidadAdminNoticeReceiverTitle,

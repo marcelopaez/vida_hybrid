@@ -3,11 +3,8 @@
   align-items: flex-start;
   flex-direction: column;
   overflow: hidden;
+  max-width: 300px;
   margin: 50px;
-}
-
-.benefitImage {
-  object-fit: cover;
 }
 
 .benefitAdminBody {
@@ -26,6 +23,10 @@
 .benefitAdminBodyContent {
   font-size: 1.1rem;
   color: $grayDarker4;
+}
+
+.benefitImage {
+  object-fit: cover;
 }
 
 @media (min-width: 300px) {
