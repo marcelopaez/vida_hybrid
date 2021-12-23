@@ -142,7 +142,9 @@ const ContratoUsuario = () => {
             <div className="contratoUsuarioSignModalHeader">
               <p className="contratoUsuarioSignModalHeaderTitle extraBoldFont">ATENCIÓN</p>
               <p className="contratoUsuarioSignModalHeaderX" onClick={() => setSignContract(false)}>
-                X
+                <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.0005 1L11.0005 10.5M1.00049 20L11.0005 10.5M11.0005 10.5L1.00049 1L21.0005 20" stroke="#343434" />
+                </svg>
               </p>
             </div>
             <div className="contratoUsuarioSignModalBody">

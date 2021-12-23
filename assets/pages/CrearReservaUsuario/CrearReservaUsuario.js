@@ -97,7 +97,9 @@ const CrearReservaUsuario = () => {
                 <div className="crearReservaUsuarioModalNewEventHeader">
                   <p className="crearReservaUsuarioModalNewEventHeaderTitle extraBoldFont">Sala de reunión</p>
                   <p className="crearReservaUsuarioModalNewEventHeaderX" onClick={() => setShowMeetingsRoomModal(false)}>
-                    X
+                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.0005 1L11.0005 10.5M1.00049 20L11.0005 10.5M11.0005 10.5L1.00049 1L21.0005 20" stroke="#343434" />
+                    </svg>
                   </p>
                 </div>
                 <hr />
@@ -142,7 +144,9 @@ const CrearReservaUsuario = () => {
                 <div className="crearReservaUsuarioModalNewEventHeader">
                   <p className="crearReservaUsuarioModalNewEventHeaderTitle extraBoldFont">Espacio compartido</p>
                   <p className="crearReservaUsuarioModalNewEventHeaderX" onClick={() => setShowSharedPlaceModal(false)}>
-                    X
+                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.0005 1L11.0005 10.5M1.00049 20L11.0005 10.5M11.0005 10.5L1.00049 1L21.0005 20" stroke="#343434" />
+                    </svg>
                   </p>
                 </div>
                 <hr />
@@ -172,7 +176,9 @@ const CrearReservaUsuario = () => {
                 <div className="crearReservaUsuarioModalNewEventHeader">
                   <p className="crearReservaUsuarioModalNewEventHeaderTitle extraBoldFont">¡Tu reserva se guardó con éxito!</p>
                   <p className="crearReservaUsuarioModalNewEventHeaderX" onClick={() => setShowFinalStep(false)}>
-                    X
+                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.0005 1L11.0005 10.5M1.00049 20L11.0005 10.5M11.0005 10.5L1.00049 1L21.0005 20" stroke="#343434" />
+                    </svg>
                   </p>
                 </div>
                 <hr />

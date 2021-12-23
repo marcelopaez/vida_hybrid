@@ -110,7 +110,9 @@ const GeneralUsuario = () => {
               <div className="generalAdminSharedPlaceModalHeader">
                 <p className="generalAdminSharedPlaceModalHeaderTitle extraBoldFont">RESERVÁ YA</p>
                 <p className="generalAdminSharedPlaceModalHeaderX" onClick={() => setSharedSpace(false)}>
-                  X
+                  <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.0005 1L11.0005 10.5M1.00049 20L11.0005 10.5M11.0005 10.5L1.00049 1L21.0005 20" stroke="#343434" />
+                  </svg>
                 </p>
                 <hr className="m-0" />
               </div>
@@ -161,7 +163,9 @@ const GeneralUsuario = () => {
               <div className="generalAdminMeetingsRoomModalHeader">
                 <p className="generalAdminMeetingsRoomModalHeaderTitle extraBoldFont">RESERVÁ YA</p>
                 <p className="generalAdminMeetingsRoomModalHeaderX" onClick={() => setMeetingsRoom(false)}>
-                  X
+                  <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.0005 1L11.0005 10.5M1.00049 20L11.0005 10.5M11.0005 10.5L1.00049 1L21.0005 20" stroke="#343434" />
+                  </svg>
                 </p>
                 <hr className="m-0" />
               </div>
@@ -232,7 +236,9 @@ const GeneralUsuario = () => {
               <div className="generalAdminFinalReservationStepModalHeader">
                 <p className="generalAdminFinalReservationStepModalHeaderTitle extraBoldFont">RESERVÁ YA</p>
                 <p className="generalAdminFinalReservationStepModalHeaderX" onClick={() => setFinalReservationStep(false)}>
-                  X
+                  <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.0005 1L11.0005 10.5M1.00049 20L11.0005 10.5M11.0005 10.5L1.00049 1L21.0005 20" stroke="#343434" />
+                  </svg>
                 </p>
                 <hr className="m-0" />
               </div>

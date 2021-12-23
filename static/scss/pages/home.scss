@@ -70,10 +70,7 @@
 }
 
 .welcomeContainerMobileContent {
-  // position: absolute;
-  // text-align: left;
   text-align: center;
-  // margin: 15px 0 0 5px;
 }
 
 .plansContainerHome {
@@ -329,48 +326,6 @@
 .communityContainerMobile {
   @extend .communityContainer;
   top: 0;
-}
-
-.cardVidaVertical {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  overflow: hidden;
-}
-
-.cardVidaHorizontal {
-  display: flex;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  overflow: hidden;
-  height: 100%;
-}
-
-.cardVidaBody {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 2;
-}
-
-.cardVidaBodyTitle {
-  color: $primary;
-  font-size: 1.1rem;
-  margin-bottom: 13px;
-}
-
-.cardVidaBodyContent {
-  font-size: 1.1rem;
-  color: $grayDarker4;
-}
-
-.cardVidaImgTop,
-.cardVidaImgBottom,
-.cardVidaImgHorizontal {
-  object-fit: cover;
-}
-
-.cardVidaBody {
-  padding: 1rem;
 }
 
 .communitySeeMoreButton {
@@ -691,10 +646,6 @@
 }
 
 @media (min-width: 300px) {
-  // .welcomeContainerMobileContent {
-  //   width: 50%;
-  // }
-
   .roomsTitleMobile,
   .eventsTitleMobile,
   .strategicPlaceTitle {
@@ -758,20 +709,12 @@
     display: none;
   }
 
-  .cardVidaHorizontal {
-    flex-direction: column;
-  }
-
   .communitySeeMoreButton {
     right: unset;
   }
 }
 
 @media (min-width: 576px) {
-  // .welcomeContainerMobileContent {
-  //   width: 80%;
-  // }
-
   .welcomeTitle {
     font-size: 2rem;
   }
@@ -807,10 +750,6 @@
 }
 
 @media (min-width: 768px) {
-  // .welcomeContainerMobileContent {
-  //   width: 100%;
-  // }
-
   .welcomeTitle {
     font-size: 4rem;
   }
@@ -818,10 +757,6 @@
   .plansTitle,
   .servicesTitle {
     font-size: 4.5rem;
-  }
-
-  .cardVidaHorizontal {
-    flex-direction: row;
   }
 
   .opinionContainer {

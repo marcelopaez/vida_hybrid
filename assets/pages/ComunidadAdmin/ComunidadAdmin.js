@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import SideMenuAdmin from '../../components/SideMenuAdmin';
 import NavbarAdmin from '../../components/NavbarAdmin';
 import NavbarAdminMobile from '../../components/NavbarAdminMobile';
+import ComunidadCard from '../../components/ComunidadCard';
+import Comunidad1 from '../../images/Backgrounds/Comunidad1.jpg';
 
 const ComunidadAdmin = () => {
   useEffect(() => window.scroll(0, 0), []);
@@ -41,6 +43,17 @@ const ComunidadAdmin = () => {
               <option value="Permitir acción (asistir a evento)">Permitir acción (asistir a evento)</option>
               <option value="Permitir acción (asistir a evento)">Permitir acción (asistir a evento)</option>
             </select>
+            <p className="comunidadAdminArticlesTitle boldFont">Títulos</p>
+            <div className="row rowCards">
+              <div className="col-lg-6 col-md-12 col-sm-12">
+                <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} vertical={true} admin={true} />
+              </div>
+              <div className="col-lg-6 col-md-12 col-sm-12">
+                <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} vertical={true} admin={true} />
+              </div>
+            </div>
+            <p className="comunidadAdminArticlesTitle boldFont">Notas o lo que se quiera destacar, por ejemplo, eventos</p>
+            <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} admin={true} />
           </div>
           <div className="col-lg-4 col-md-12 col-sm-12">
             <div className="comunidadAdminRightSide">

@@ -13,18 +13,31 @@
   font-size: 1.1rem;
 }
 
-.communityTitlecomunidadUsuario {
-  color: $primary;
-  text-align: left;
-  padding: 60px 0 40px 0;
-  font-size: 3rem;
-  margin: 0;
+.comunidadUsuarioArticlesTitle {
+  color: $grayDarker11;
+  margin: 40px 0;
+  font-size: 2.25rem;
 }
 
 @media (min-width: 300px) {
+  .comunidadUsuarioArticlesContainerLarger,
+  .comunidadUsuarioArticlesContainerMiddle {
+    display: none;
+  }
+
+  .comunidadUsuarioArticlesContainerMobile {
+    display: block;
+  }
 }
 
 @media (min-width: 576px) {
+  .comunidadUsuarioArticlesContainerMobile {
+    display: none;
+  }
+
+  .comunidadUsuarioArticlesContainerMiddle {
+    display: block;
+  }
 }
 
 @media (min-width: 768px) {
@@ -37,4 +50,12 @@
 }
 
 @media (min-width: 1400px) {
+  .comunidadUsuarioArticlesContainerLarger {
+    display: block;
+  }
+
+  .comunidadUsuarioArticlesContainerMobile,
+  .comunidadUsuarioArticlesContainerMiddle {
+    display: none;
+  }
 }

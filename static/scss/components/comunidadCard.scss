@@ -1,0 +1,105 @@
+.generalContentBody {
+  .row {
+    &.rowCards {
+      .col-sm-12 {
+        margin: 50px 0;
+      }
+    }
+  }
+}
+
+.customContainer {
+  .row {
+    &.rowCards {
+      .col-sm-12 {
+        margin: 50px 0;
+      }
+    }
+  }
+}
+
+.cardVidaVertical {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+  height: 100%;
+}
+
+.cardVidaHorizontal {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+}
+
+.cardVidaBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+}
+
+.cardVidaBodyAdmin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+  position: relative;
+}
+
+.cardVidaBodyEditIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.cardVidaBodyTitle {
+  color: $primary;
+  font-size: 1.1rem;
+  margin-bottom: 13px;
+}
+
+.cardVidaBodyContent {
+  font-size: 1.1rem;
+  color: $grayDarker4;
+}
+
+.cardVidaImgTop {
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.cardVidaImgHorizontal {
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.cardVidaBody {
+  padding: 1rem;
+}
+
+@media (min-width: 300px) {
+  .cardVidaHorizontal {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .cardVidaHorizontal {
+    flex-direction: row;
+    max-height: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

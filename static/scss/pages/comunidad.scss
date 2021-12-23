@@ -44,12 +44,8 @@
   font-size: 1.1rem;
 }
 
-.communityContainerLargerCommunity {
+.comunidadCommunityContainer {
   margin-bottom: 245px;
-}
-
-.communityContainerMobileCommunity {
-  margin-bottom: 50px;
 }
 
 .communityTitleBenefitsCommunity {
@@ -65,12 +61,8 @@
 }
 
 @media (min-width: 300px) {
-  .communityContainerLargerCommunity {
-    display: none;
-  }
-
-  .communityContainerMobileCommunity {
-    display: block;
+  .comunidadCommunityContainer {
+    margin-bottom: 50px;
   }
 }
 
@@ -81,12 +73,8 @@
 }
 
 @media (min-width: 992px) {
-  .communityContainerLargerCommunity {
-    display: block;
-  }
-
-  .communityContainerMobileCommunity {
-    display: none;
+  .comunidadCommunityContainer {
+    margin-bottom: 245px;
   }
 }
 

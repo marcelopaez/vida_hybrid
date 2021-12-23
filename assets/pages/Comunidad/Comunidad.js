@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar';
 import NavbarMobile from '../../components/NavbarMobile';
 import BackgroundImage from '../../images/Backgrounds/OfficesBackground.jpg';
 import Comunidad1 from '../../images/Backgrounds/Comunidad1.jpg';
+import ComunidadCard from '../../components/ComunidadCard';
 
 const Comunidad = () => {
   useEffect(() => window.scroll(0, 0), []);
@@ -26,7 +27,6 @@ const Comunidad = () => {
           </div>
         </div>
       </div>
-
       <div className="navbarMobile">
         <div className="backgroundMobile">
           <div className="rightSVGNavbar">
@@ -35,129 +35,38 @@ const Comunidad = () => {
         </div>
       </div>
 
-      <div className="communityContainerLargerCommunity">
+      <div className="comunidadCommunityContainer">
         <div className="customContainer">
           <p className="communityTitleBenefitsCommunity boldFont">Titulos</p>
-          <div className="row">
-            <div className="col-lg-6 col-md-6 col-sm-12">
-              <div className="cardVidaHorizontal">
-                <img className="cardVidaImgHorizontal" src={Comunidad1} alt="Vida" />
-                <div className="cardVidaBody">
-                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-              </div>
+          <div className="row rowCards">
+            <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+              <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-12">
-              <div className="cardVidaVertical">
-                <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
-                <div className="cardVidaBody">
-                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-              </div>
+            <div className="col-xl-3 col-lg-12 col-md-12 col-sm-12">
+              <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} vertical={true} />
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-12">
-              <div className="cardVidaVertical">
-                <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
-                <div className="cardVidaBody">
-                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-              </div>
+            <div className="col-xl-3 col-lg-12 col-md-12 col-sm-12">
+              <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} vertical={true} />
             </div>
           </div>
 
           <p className="communityTitleBenefitsCommunity boldFont">Beneficios</p>
-          <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="cardVidaVertical">
-                <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
-                <div className="cardVidaBody">
-                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-              </div>
+          <div className="row rowCards">
+            <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+              <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} vertical={true} />
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="cardVidaVertical">
-                <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
-                <div className="cardVidaBody">
-                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-              </div>
+            <div className="col-xl-3 col-lg-12 col-md-12 col-sm-12">
+              <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} vertical={true} />
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="cardVidaVertical">
-                <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
-                <div className="cardVidaBody">
-                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-              </div>
+            <div className="col-xl-3 col-lg-12 col-md-12 col-sm-12">
+              <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} vertical={true} />
             </div>
           </div>
 
           <p className="communityTitleBenefitsCommunity boldFont">Notas o lo que se quiera destacar, por ejemplo, eventos</p>
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
-              <div className="cardVidaHorizontal">
-                <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
-                <div className="cardVidaBody">
-                  <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
-                  <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="communityContainerMobileCommunity">
-        <div className="communityMobileBackground" style={{ backgroundImage: `url(${Comunidad1})` }}>
-          <div className="semiCircleHeaderMobile">
-            <p className="communityTitleMobile extraBoldFont">Comunidad</p>
-          </div>
-        </div>
-        <div className="customContainer">
-          <div className="cardVidaHorizontal">
-            <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
-            <div className="cardVidaBody">
-              <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
-              <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div>
-          </div>
-          <p className="communityTitleBenefitsMobile">Beneficios</p>
-          <div className="d-flex justify-content-center flex-wrap">
-            <div className="cardVidaVertical">
-              <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
-              <div className="cardVidaBody">
-                <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
-                <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              </div>
-            </div>
-            <div className="cardVidaVertical">
-              <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
-              <div className="cardVidaBody">
-                <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
-                <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              </div>
-            </div>
-            <div className="cardVidaVertical">
-              <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
-              <div className="cardVidaBody">
-                <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
-                <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              </div>
-            </div>
-          </div>
-          <p className="communityTitleBenefitsMobile">Título</p>
-          <div className="cardVidaHorizontal">
-            <img className="cardVidaImgTop" src={Comunidad1} alt="Vida" />
-            <div className="cardVidaBody">
-              <p className="cardVidaBodyTitle extraBoldFont">Título noticia, artículo, evento</p>
-              <p className="cardVidaBodyContent">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
             </div>
           </div>
         </div>

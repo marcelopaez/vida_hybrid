@@ -25,7 +25,7 @@ const ComunidadBeneficiosUsuario = () => {
           <div className="generalAdminHeaderLeft">
             <p className="generalAdminHeaderLeftFirstText boldFont">EVENTO</p>
             <div className="generalAdminHeaderLeftSeparator"></div>
-            <p className="generalAdminHeaderSecondText">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <p className="generalAdminHeaderSecondText">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
           <div className="generalAdminHeaderRight">
             <button className="generalAdminHeaderRightButton">Botón asistencia</button>
