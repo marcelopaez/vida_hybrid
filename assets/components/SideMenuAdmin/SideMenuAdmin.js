@@ -129,21 +129,23 @@ const SideMenuAdmin = () => {
           title={'Comunidad'}
         />
 
-        {window.document.documentURI.includes('comunidadAdmin') && <SideMenuSubItem link={'/comunidadBeneficiosAdmin'} title={'Agregar beneficios'} />}
+        {(window.document.documentURI.includes('comunidadAdmin') || window.document.documentURI.includes('comunidadBeneficiosAdmin')) && <SideMenuSubItem link={'/comunidadBeneficiosAdmin'} title={'Agregar beneficios'} />}
 
-        <SideMenuItem
-          svg={
-            <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 3.5H4.5C3.57174 3.5 2.6815 3.86875 2.02513 4.52513C1.36875 5.1815 1 6.07174 1 7V28C1 28.9283 1.36875 29.8185 2.02513 30.4749C2.6815 31.1313 3.57174 31.5 4.5 31.5H22C22.9283 31.5 23.8185 31.1313 24.4749 30.4749C25.1313 29.8185 25.5 28.9283 25.5 28V7C25.5 6.07174 25.1313 5.1815 24.4749 4.52513C23.8185 3.86875 22.9283 3.5 22 3.5H18.5" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M14.9167 2.25H11.5833C9.74238 2.25 8.25 3.36929 8.25 4.75C8.25 6.13071 9.74238 7.25 11.5833 7.25H14.9167C16.7576 7.25 18.25 6.13071 18.25 4.75C18.25 3.36929 16.7576 2.25 14.9167 2.25Z" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M8 24.5V15.75" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M13.25 24.5V22.75" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M18.5 24.5V19.25" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          }
-          link={'/crearReservaAdmin'}
-          title={'Reserva manual'}
-        />
+        {(window.document.documentURI.includes('controlClientes') || window.document.documentURI.includes('clientesAdmin') || window.document.documentURI.includes('planesAdmin') || window.document.documentURI.includes('comunidadAdmin') || window.document.documentURI.includes('comunidadBeneficiosAdmin') || window.document.documentURI.includes('crearReservaAdmin')) && (
+          <SideMenuItem
+            svg={
+              <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 3.5H4.5C3.57174 3.5 2.6815 3.86875 2.02513 4.52513C1.36875 5.1815 1 6.07174 1 7V28C1 28.9283 1.36875 29.8185 2.02513 30.4749C2.6815 31.1313 3.57174 31.5 4.5 31.5H22C22.9283 31.5 23.8185 31.1313 24.4749 30.4749C25.1313 29.8185 25.5 28.9283 25.5 28V7C25.5 6.07174 25.1313 5.1815 24.4749 4.52513C23.8185 3.86875 22.9283 3.5 22 3.5H18.5" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M14.9167 2.25H11.5833C9.74238 2.25 8.25 3.36929 8.25 4.75C8.25 6.13071 9.74238 7.25 11.5833 7.25H14.9167C16.7576 7.25 18.25 6.13071 18.25 4.75C18.25 3.36929 16.7576 2.25 14.9167 2.25Z" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M8 24.5V15.75" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M13.25 24.5V22.75" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M18.5 24.5V19.25" stroke="#004b2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            }
+            link={'/crearReservaAdmin'}
+            title={'Reserva manual'}
+          />
+        )}
       </ul>
     </main>
   );

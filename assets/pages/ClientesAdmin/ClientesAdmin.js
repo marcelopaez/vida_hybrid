@@ -30,14 +30,8 @@ const ClientesAdmin = () => {
             <h1 className="clientesAdminTitle extraBoldFont">Clientes</h1>
             <div className="clientesAdminSearch">
               <input type="text" className="form-control clientesAdminInput" ref={clientSelected} />
-              <svg className="clientesAdminSearchSVG" width="31" height="30" viewBox="0 0 31 30" fill="black" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M29.25 28.5L22.8752 22.1138L29.25 28.5ZM26.4079 13.5789C26.4079 16.7825 25.1353 19.8548 22.8701 22.1201C20.6048 24.3853 17.5325 25.6579 14.3289 25.6579C11.1254 25.6579 8.05308 24.3853 5.78784 22.1201C3.5226 19.8548 2.25 16.7825 2.25 13.5789C2.25 10.3754 3.5226 7.30308 5.78784 5.03784C8.05308 2.7726 11.1254 1.5 14.3289 1.5C17.5325 1.5 20.6048 2.7726 22.8701 5.03784C25.1353 7.30308 26.4079 10.3754 26.4079 13.5789V13.5789Z"
-                  stroke="white"
-                  strokeWidth="2.84211"
-                  strokeLinecap="round"
-                  fill="black"
-                />
+              <svg width="23" height="23" viewBox="0 0 23 23" className="clientesAdminSearchSVG" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 22L17.2779 17.2695L22 22ZM19.8947 10.9474C19.8947 13.3204 18.9521 15.5962 17.2741 17.2741C15.5962 18.9521 13.3204 19.8947 10.9474 19.8947C8.57438 19.8947 6.29858 18.9521 4.62062 17.2741C2.94267 15.5962 2 13.3204 2 10.9474C2 8.57438 2.94267 6.29858 4.62062 4.62062C6.29858 2.94267 8.57438 2 10.9474 2C13.3204 2 15.5962 2.94267 17.2741 4.62062C18.9521 6.29858 19.8947 8.57438 19.8947 10.9474V10.9474Z" stroke="#7D7C7A" stroke-width="2.42105" stroke-linecap="round" />
               </svg>
             </div>
             <div className="clientesAdminFilterButtonsContainer">

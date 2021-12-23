@@ -10,7 +10,7 @@
 }
 
 .welcomeTitle {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .welcomeTitle,
@@ -357,6 +357,11 @@
   margin-bottom: 90px;
 }
 
+.strategicPlaceLogoContainerMobile {
+  color: #fff;
+  margin-bottom: 0;
+}
+
 .locationText {
   font-size: 1.5rem;
 }
@@ -424,6 +429,13 @@
   padding: 1rem;
   color: $grayLighter7;
   margin-bottom: 24px;
+}
+
+.opinionContainerMobile {
+  @extend .opinionContainer;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .ratingUserPhoto {

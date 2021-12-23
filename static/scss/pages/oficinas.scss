@@ -64,6 +64,10 @@
   display: flex;
   flex-direction: column;
   margin: 228px 0 245px 0;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .officesReservationContainerMobile {

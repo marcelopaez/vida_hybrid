@@ -1,6 +1,5 @@
 .sideMenu {
   background-color: $primaryLighter3;
-  padding: 0 0 50% 0;
 }
 
 .userNameSideMenu {
@@ -28,12 +27,18 @@
 }
 
 @media (min-width: 300px) {
+  .sideMenu {
+    padding: 0;
+  }
 }
 
 @media (min-width: 576px) {
 }
 
 @media (min-width: 768px) {
+  .sideMenu {
+    padding: 0 0 50% 0;
+  }
 }
 
 @media (min-width: 992px) {

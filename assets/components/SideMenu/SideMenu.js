@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import SideMenuItem from '../SideMenuItem/SideMenuItem';
 import SideMenuSubItem from '../SideMenuSubItem/SideMenuSubItem';
 import ProfileIcon from '../../images/Icons/ProfileIconWhite.svg';
@@ -28,7 +27,7 @@ const SideMenu = () => {
           title={'General'}
         />
 
-        {(window.document.documentURI.includes('general') || window.document.documentURI.includes('crearReserva')) && (
+        {(window.document.documentURI.includes('general') || window.document.documentURI.includes('crearReservaUsuario')) && (
           <SideMenuSubItem
             svg={
               <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">

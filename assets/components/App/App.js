@@ -59,7 +59,9 @@ const App = () => {
         <Route exact path="/reservar" component={Reservas} />
         <Route component={NotFound} />
       </Switch>
-      <Footer />
+      {!window.document.documentURI.includes('Admin') && !window.document.documentURI.includes('Usuario') && (
+        <Footer />
+      )}
     </BrowserRouter>
   );
 };

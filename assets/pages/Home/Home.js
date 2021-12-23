@@ -1345,7 +1345,7 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
               <p className="strategicPlaceTitle extraBoldFont">LUGAR ESTRATÉGICO</p>
-              <div className="d-flex strategicPlaceLogoContainer">
+              <div className="d-flex strategicPlaceLogoContainerMobile">
                 <img src={StrategicPlaceLogo} alt="Vida" className="strategicPlaceLogo" />
                 <div className="flex-column">
                   <p className="locationText boldFont">Fernando Fader 3971</p>
@@ -1358,7 +1358,7 @@ const Home = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-6 col-md-6 col-sm-12">
+            <div className="col-lg-6 col-md-6 col-sm-12 mt-5">
               <Service
                 svg={
                   <svg width="35" height="29" viewBox="0 0 35 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1412,7 +1412,7 @@ const Home = () => {
                 darkText={false}
               />
             </div>
-            <div className="col-lg-4 col-md-4 col-sm-6">
+            <div className="col-lg-4 col-md-4 col-sm-6 mt-5">
               <Service
                 svg={
                   <svg width="40" height="34" viewBox="0 0 40 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1593,7 +1593,7 @@ const Home = () => {
             </p>
             <p className="opinionContent1Mobile">Mirá lo que otros usuarios dicen de Vida:</p>
           </div>
-          <div className="opinionContainer">
+          <div className="opinionContainerMobile">
             <img src={ExampleRatingPhoto} alt="Vida" className="ratingUserPhoto" />
             <div className="flex-column opinionInformation">
               <p className="opinionName">Nombre, Apellido</p>
@@ -1609,7 +1609,7 @@ const Home = () => {
               <p className="opinionDetail">Me encantó el lugar!! Fui a una reunión con mi empresa.</p>
             </div>
           </div>
-          <div className="opinionContainer">
+          <div className="opinionContainerMobile">
             <img src={ExampleRatingPhoto} alt="Vida" className="ratingUserPhoto" />
             <div className="flex-column opinionInformation">
               <p className="opinionName">Nombre, Apellido</p>
