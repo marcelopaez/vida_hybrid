@@ -44,9 +44,45 @@ html {
   font-weight: 800 !important;
 }
 
+.carouselArrow {
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: 0;
+  padding: 5px;
+  z-index: 1000;
+}
+
+.carouselArrow:hover {
+  background: none !important;
+}
+
+.carouselArrowPrevious {
+  @extend .carouselArrow;
+  left: 0;
+  margin-right: 100px;
+}
+
+.carouselArrowNext {
+  @extend .carouselArrow;
+  right: 0;
+  margin-left: 100px;
+}
+
+.carouselArrow:hover {
+  background: #c4c4c4;
+}
+
 .control-arrow {
   transform: scale(3) !important;
   background: $grayDarker6 !important;
+}
+
+.control-arrow:hover {
+  background: #c4c4c4 !important;
 }
 
 .seePassword {
@@ -96,7 +132,7 @@ html {
   background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22136%22%20height%3D%22139%22%20viewBox%3D%220%200%20136%20139%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M136%20139C136%2062.2285%2075.1146%200%200%200V139H136Z%22%20fill%3D%22%23004B2A%22%2F%3E%0A%3C%2Fsvg%3E%0A');
   background-size: 100%;
   margin-top: 100px;
-  padding-left: 15px;
+  padding: 40px 0 0 15px;
   width: 50vw;
   height: 50vw;
 }
@@ -124,6 +160,10 @@ html {
 
 .fc-event-main {
   background-color: $primary;
+}
+
+.fc .fc-button-primary {
+  background: $primary !important;
 }
 
 @media (min-width: 300px) {

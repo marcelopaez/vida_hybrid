@@ -12,11 +12,18 @@
   }
 }
 
+.navbarLogoAdmin {
+  margin: 5px 0 5px 20px;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+
 .navbarAdminData {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 40px 0;
+  margin: 10px 0;
   position: relative;
 }
 
@@ -103,12 +110,6 @@
     justify-content: center;
   }
 
-  .navbarLogoAdmin {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-  }
-
   .navbarAdminData {
     flex-direction: column;
     width: 100%;
@@ -135,10 +136,6 @@
 @media (min-width: 768px) {
   .navbarAdmin {
     justify-content: space-between;
-  }
-
-  .navbarLogoAdmin {
-    margin-top: unset;
   }
 
   .navbarAdminData {

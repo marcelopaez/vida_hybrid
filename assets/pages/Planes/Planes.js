@@ -6,8 +6,11 @@ import BackgroundImage from '../../images/Backgrounds/PlanesBackground.jpg';
 import ChoosePlan from '../../images/Backgrounds/ChoosePlan.jpg';
 import PlanesBackground from '../../images/Backgrounds/PlanesBackground.jpg';
 
-const Planes = () => {
-  useEffect(() => window.scroll(0, 0), []);
+const Planes = ({ hideAlternativeFooter }) => {
+  useEffect(() => {
+    hideAlternativeFooter();
+    window.scroll(0, 0);
+  }, []);
 
   const queryType = useRef(null);
 
@@ -158,8 +161,8 @@ const Planes = () => {
 
           <div className="creditsContainer">
             <div className="flex-column">
-              <p className="creditsDescription">5 créditos Vida</p>
-              <p className="creditsDescription">3 Hs. en salas de reunión</p>
+              <p className="creditsDescriptionMobile">5 créditos Vida</p>
+              <p className="creditsDescriptionMobile">3 Hs. en salas de reunión</p>
             </div>
             <div className="creditsPriceContainer py-4">
               <p className="extraBoldFont m-0">$3800</p>

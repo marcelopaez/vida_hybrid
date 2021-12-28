@@ -4,8 +4,11 @@ import NavbarMobile from '../../components/NavbarMobile';
 import BackgroundImage from '../../images/Backgrounds/OfficesBackground.jpg';
 import SalasBackground from '../../images/Backgrounds/SalasBackground.jpg';
 
-const Oficinas = () => {
-  useEffect(() => window.scroll(0, 0), []);
+const Oficinas = ({ showAlternativeFooter }) => {
+  useEffect(() => {
+    showAlternativeFooter();
+    window.scroll(0, 0);
+  }, []);
 
   const reservationNameLarger = useRef(null);
   const reservationNameMobile = useRef(null);
@@ -51,12 +54,16 @@ const Oficinas = () => {
           <div className="officesReservationContainer">
             <p className="officesReservationTitle boldFont">¿Te interesa reservar?</p>
             <div className="md-form form-lg">
-              <input type="text" id="name" className="form-control form-control-lg officesReservationInput" ref={reservationNameLarger} />
-              <label htmlFor="name">Nombre y apellido / Empresa</label>
+              <input type="text" id="reservationNameLarger" className="form-control form-control-lg officesReservationInput reservationNameLarger" ref={reservationNameLarger} />
+              <label htmlFor="reservationNameLarger" className="reservationNameLarger">
+                Nombre y apellido / Empresa
+              </label>
             </div>
             <div className="md-form form-lg">
-              <input type="email" id="email" className="form-control form-control-lg officesReservationInput" ref={reservationMailLarger} />
-              <label htmlFor="email">E-mail</label>
+              <input type="email" id="reservationEmailLarger" className="form-control form-control-lg officesReservationInput reservationEmailLarger" ref={reservationMailLarger} />
+              <label htmlFor="reservationEmailLarger" className="reservationEmailLarger">
+                E-mail
+              </label>
             </div>
             <button className="officesReservationButton">Enviar</button>
           </div>
@@ -75,12 +82,16 @@ const Oficinas = () => {
           <div className="officesReservationContainerMobile">
             <p className="officesReservationTitleMobile boldFont">¿Te interesa reservar?</p>
             <div className="md-form form-lg">
-              <input type="text" id="name" className="form-control form-control-lg officesReservationInput" ref={reservationNameMobile} />
-              <label htmlFor="name">Nombre y apellido / Empresa</label>
+              <input type="text" id="reservationNameMobile" className="form-control form-control-lg officesReservationInput reservationNameMobile" ref={reservationNameMobile} />
+              <label htmlFor="reservationNameMobile" className="reservationNameMobile">
+                Nombre y apellido / Empresa
+              </label>
             </div>
             <div className="md-form form-lg">
-              <input type="email" id="email" className="form-control form-control-lg officesReservationInput" ref={reservationMailMobile} />
-              <label htmlFor="email">E-mail</label>
+              <input type="email" id="reservationEmailMobile" className="form-control form-control-lg officesReservationInput reservationEmailMobile" ref={reservationMailMobile} />
+              <label htmlFor="reservationEmailMobile" className="reservationEmailMobile">
+                E-mail
+              </label>
             </div>
             <button className="officesReservationButtonMobile">Enviar</button>
           </div>

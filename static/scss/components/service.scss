@@ -8,7 +8,6 @@
 
 .serviceContainerDarkText {
   @extend .serviceContainer;
-  flex-direction: row !important;
   color: #000;
   flex: unset;
   justify-content: space-between;
@@ -18,12 +17,16 @@
 .smallServiceContainer {
   display: flex;
   color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .smallServiceContainerDarkText {
   @extend .smallServiceContainer;
   color: #000;
+}
+
+.serviceContainerSVG {
+  width: 100px;
 }
 
 .serviceContainerInformation {
@@ -73,8 +76,9 @@
   }
 
   .serviceContainerDarkText {
-    align-items: flex-start;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 300px;
   }
 
@@ -88,6 +92,10 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
+  }
+
+  .serviceContainerDarkText {
+    flex-direction: row;
   }
 }
 

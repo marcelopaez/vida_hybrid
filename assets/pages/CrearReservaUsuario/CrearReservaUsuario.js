@@ -75,23 +75,44 @@ const CrearReservaUsuario = () => {
                 </button>
               )}
             </div>
-            <FullCalendar
-              plugins={[timeGridPlugin, interactionPlugin]}
-              initialView="timeGridWeek"
-              dateClick={(selectedOptionEvent) => handleDateClick(selectedOptionEvent)}
-              events={[
-                { title: 'Reserva 1', date: '2021-12-21' },
-                { title: 'Reserva 2', date: '2021-12-22' },
-                {
-                  title: 'Reserva3',
-                  start: '2021-12-21T13:30:00',
-                  end: '2021-12-21T14:30:00',
-                  description: 'Espacio compartido',
-                },
-              ]}
-              locale={esLocale}
-              eventContent={renderEventContent}
-            />
+            {selectedOptionEvent === 'meetingsRoom' && (
+              <FullCalendar
+                plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+                initialView="dayGridMonth"
+                dateClick={(selectedOptionEvent) => handleDateClick(selectedOptionEvent)}
+                events={[
+                  { title: 'Reserva 1', date: '2021-12-21' },
+                  { title: 'Reserva 2', date: '2021-12-22' },
+                  {
+                    title: 'Reserva3',
+                    start: '2021-12-21T13:30:00',
+                    end: '2021-12-21T14:30:00',
+                    description: 'Espacio compartido',
+                  },
+                ]}
+                locale={esLocale}
+                eventContent={renderEventContent}
+              />
+            )}
+            {selectedOptionEvent !== 'meetingsRoom' && (
+              <FullCalendar
+                plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+                initialView="timeGridWeek"
+                dateClick={(selectedOptionEvent) => handleDateClick(selectedOptionEvent)}
+                events={[
+                  { title: 'Reserva 1', date: '2021-12-23' },
+                  { title: 'Reserva 2', date: '2021-12-24' },
+                  {
+                    title: 'Reserva3',
+                    start: '2021-12-25T13:30:00',
+                    end: '2021-12-25T14:30:00',
+                    description: 'Espacio compartido',
+                  },
+                ]}
+                locale={esLocale}
+                eventContent={renderEventContent}
+              />
+            )}
             {showMeetingsRoomModal && (
               <div className="crearReservaUsuarioModalNewEventContainer">
                 <div className="crearReservaUsuarioModalNewEventHeader">

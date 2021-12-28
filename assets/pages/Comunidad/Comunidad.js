@@ -5,8 +5,11 @@ import BackgroundImage from '../../images/Backgrounds/OfficesBackground.jpg';
 import Comunidad1 from '../../images/Backgrounds/Comunidad1.jpg';
 import ComunidadCard from '../../components/ComunidadCard';
 
-const Comunidad = () => {
-  useEffect(() => window.scroll(0, 0), []);
+const Comunidad = ({ showAlternativeFooter }) => {
+  useEffect(() => {
+    showAlternativeFooter();
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <main>
@@ -39,13 +42,13 @@ const Comunidad = () => {
         <div className="customContainer">
           <p className="communityTitleBenefitsCommunity boldFont">Titulos</p>
           <div className="row rowCards">
-            <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+            <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 mt-0">
               <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
             </div>
-            <div className="col-xl-3 col-lg-12 col-md-12 col-sm-12">
+            <div className="col-xl-3 col-lg-12 col-md-12 col-sm-12 mt-0">
               <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} vertical={true} />
             </div>
-            <div className="col-xl-3 col-lg-12 col-md-12 col-sm-12">
+            <div className="col-xl-3 col-lg-12 col-md-12 col-sm-12 mt-0">
               <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} vertical={true} />
             </div>
           </div>

@@ -4,8 +4,11 @@ import NavbarLoginMobile from '../../components/NavbarLoginMobile';
 import BackgroundSVGReservas1 from '../../images/SVGs/BackgroundSVGReservas1.svg';
 import BackgroundSVGReservas2 from '../../images/SVGs/BackgroundSVGReservas2.svg';
 
-const Reservas = () => {
-  useEffect(() => window.scroll(0, 0), []);
+const Reservas = ({ hideAlternativeFooter }) => {
+  useEffect(() => {
+    hideAlternativeFooter();
+    window.scroll(0, 0);
+  }, []);
 
   const [firstStepReservation, setFirstStepReservation] = useState(true);
   const [secondStepReservation, setSecondStepReservation] = useState(false);

@@ -5,6 +5,8 @@ import NavbarAdminMobile from '../../components/NavbarAdminMobile';
 import BenefitAdmin from '../../components/BenefitAdmin';
 import Comunidad1 from '../../images/Backgrounds/Comunidad1.jpg';
 import { Carousel } from 'react-responsive-carousel';
+import PreviousArrow from '../../images/Icons/PreviousArrow.svg';
+import NextArrow from '../../images/Icons/NextArrow.svg';
 
 const ComunidadBeneficiosUsuario = () => {
   useEffect(() => window.scroll(0, 0), []);
@@ -34,7 +36,28 @@ const ComunidadBeneficiosUsuario = () => {
         <div className="generalContentBody">
           <p className="comunidadBeneficiosUsuarioTitle boldFont">Beneficios</p>
           <div className="comunidadBeneficiosUsuarioBenefitsContainer">
-            <Carousel infiniteLoop showThumbs={false} showStatus={false} showIndicators showArrows centerMode centerSlidePercentage={30}>
+            <Carousel
+              infiniteLoop
+              showThumbs={false}
+              showStatus={false}
+              showIndicators
+              showArrows
+              centerMode
+              centerSlidePercentage={30}
+              renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
+                hasPrev && (
+                  <button onClick={clickHandler} className="carouselArrowPrevious">
+                    <img src={PreviousArrow} />
+                  </button>
+                )
+              }
+              renderArrowNext={(clickHandler, hasNext, labelNext) =>
+                hasNext && (
+                  <button onClick={clickHandler} className="carouselArrowNext">
+                    <img src={NextArrow} />
+                  </button>
+                )
+              }>
               <BenefitAdmin image={Comunidad1} title={'Beneficio 1'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
               <BenefitAdmin image={Comunidad1} title={'Beneficio 2'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
               <BenefitAdmin image={Comunidad1} title={'Beneficio 3'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />

@@ -16,6 +16,12 @@
 }
 
 .orangePlan:hover {
+  .orangePlanTime {
+    color: #000 !important;
+  }
+}
+
+.orangePlan:hover {
   transform: scale(1.1);
 
   .orangePlanSVGWithoutHover {
@@ -76,7 +82,7 @@
 .orangePlanTime {
   position: relative;
   top: 210px;
-  color: #000 !important;
+  color: $grayLighter4 !important;
   font-size: 1.1rem;
   padding: 0 1.85rem 0 1.85rem;
 }
@@ -90,10 +96,22 @@
   top: 250px;
   border: none;
   border-radius: 10px;
-  background: #ffd7b5;
+  background-color: $secondaryLight;
   padding: 20px 15px;
   color: #fff;
   transition: all 0.5s ease-in-out;
+  width: 100%;
+  transition: .5s all ease;
+}
+
+.orangePlanButton:hover {
+  background-color: $grayLighter13 !important;
+  color: $secondary !important;
+}
+
+.orangePlanButton:focus {
+  background: #fff !important;
+  color: $secondary !important;
 }
 
 @media (min-width: 300px) {

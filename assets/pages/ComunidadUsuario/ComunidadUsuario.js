@@ -6,6 +6,8 @@ import Comunidad1 from '../../images/Backgrounds/Comunidad1.jpg';
 import BenefitAdmin from '../../components/BenefitAdmin';
 import { Carousel } from 'react-responsive-carousel';
 import ComunidadCard from '../../components/ComunidadCard';
+import PreviousArrow from '../../images/Icons/PreviousArrow.svg';
+import NextArrow from '../../images/Icons/NextArrow.svg';
 
 const ComunidadUsuario = () => {
   useEffect(() => window.scroll(0, 0), []);
@@ -27,9 +29,6 @@ const ComunidadUsuario = () => {
             <p className="generalAdminHeaderLeftFirstText boldFont">EVENTO</p>
             <div className="generalAdminHeaderLeftSeparator"></div>
             <p className="generalAdminHeaderSecondText">Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <div className="generalAdminHeaderRight">
-            <button className="generalAdminHeaderRightButton">Botón asistencia</button>
           </div>
         </div>
         <div className="generalContentBody">
@@ -54,7 +53,28 @@ const ComunidadUsuario = () => {
 
           <p className="comunidadUsuarioArticlesTitle boldFont">Beneficios</p>
           <div className="comunidadUsuarioArticlesContainerLarger">
-            <Carousel infiniteLoop showThumbs={false} showStatus={false} showIndicators showArrows centerMode centerSlidePercentage={20}>
+            <Carousel
+              infiniteLoop
+              showThumbs={false}
+              showStatus={false}
+              showIndicators
+              showArrows
+              centerMode
+              centerSlidePercentage={20}
+              renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
+                hasPrev && (
+                  <button onClick={clickHandler} className="carouselArrowPrevious">
+                    <img src={PreviousArrow} />
+                  </button>
+                )
+              }
+              renderArrowNext={(clickHandler, hasNext, labelNext) =>
+                hasNext && (
+                  <button onClick={clickHandler} className="carouselArrowNext">
+                    <img src={NextArrow} />
+                  </button>
+                )
+              }>
               <BenefitAdmin image={Comunidad1} title={'Beneficio 1'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
               <BenefitAdmin image={Comunidad1} title={'Beneficio 2'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
               <BenefitAdmin image={Comunidad1} title={'Beneficio 3'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
@@ -62,7 +82,28 @@ const ComunidadUsuario = () => {
             </Carousel>
           </div>
           <div className="comunidadUsuarioArticlesContainerMiddle">
-            <Carousel infiniteLoop showThumbs={false} showStatus={false} showIndicators showArrows centerMode centerSlidePercentage={40}>
+            <Carousel
+              infiniteLoop
+              showThumbs={false}
+              showStatus={false}
+              showIndicators
+              showArrows
+              centerMode
+              centerSlidePercentage={40}
+              renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
+                hasPrev && (
+                  <button onClick={clickHandler} className="carouselArrowPrevious">
+                    <img src={PreviousArrow} />
+                  </button>
+                )
+              }
+              renderArrowNext={(clickHandler, hasNext, labelNext) =>
+                hasNext && (
+                  <button onClick={clickHandler} className="carouselArrowNext">
+                    <img src={NextArrow} />
+                  </button>
+                )
+              }>
               <BenefitAdmin image={Comunidad1} title={'Beneficio 1'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
               <BenefitAdmin image={Comunidad1} title={'Beneficio 2'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
               <BenefitAdmin image={Comunidad1} title={'Beneficio 3'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
@@ -70,7 +111,28 @@ const ComunidadUsuario = () => {
             </Carousel>
           </div>
           <div className="comunidadUsuarioArticlesContainerMobile">
-            <Carousel infiniteLoop showThumbs={false} showStatus={false} showIndicators showArrows centerMode centerSlidePercentage={100}>
+            <Carousel
+              infiniteLoop
+              showThumbs={false}
+              showStatus={false}
+              showIndicators
+              showArrows
+              centerMode
+              centerSlidePercentage={100}
+              renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
+                hasPrev && (
+                  <button onClick={clickHandler} className="carouselArrowPrevious">
+                    <img src={PreviousArrow} />
+                  </button>
+                )
+              }
+              renderArrowNext={(clickHandler, hasNext, labelNext) =>
+                hasNext && (
+                  <button onClick={clickHandler} className="carouselArrowNext">
+                    <img src={NextArrow} />
+                  </button>
+                )
+              }>
               <BenefitAdmin image={Comunidad1} title={'Beneficio 1'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
               <BenefitAdmin image={Comunidad1} title={'Beneficio 2'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
               <BenefitAdmin image={Comunidad1} title={'Beneficio 3'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />

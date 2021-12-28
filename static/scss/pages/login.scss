@@ -6,6 +6,10 @@
 
 .inputIconOrange {
   color: $secondary !important;
+
+  &.active {
+    color: $grayDarker8 !important;
+  }
 }
 
 .loginButton {
@@ -17,6 +21,17 @@
   width: 100%;
   margin-bottom: 20px;
   font-size: 1.1rem;
+  transition: .5s all ease;
+}
+
+.loginButton:hover {
+  background-color: $grayLighter13;
+  color: $secondary;
+}
+
+.loginButton:focus {
+  background: #fff;
+  color: $secondary;
 }
 
 .loginButtonCenter {
@@ -25,6 +40,17 @@
   left: 50%;
   transform: translateX(-50%);
   margin-top: 20px;
+}
+
+.registerButton {
+  background: #fff;
+  color: $secondary;
+  border: 1px solid $secondary;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
 }
 
 .consultEmailLogin,
@@ -79,6 +105,40 @@
   align-items: center;
   justify-content: center;
   margin: 20px 0 30px 0;
+}
+
+.consultEmailLogin,
+.consultPasswordLogin,
+.consultEmailRegister,
+.consultPasswordRegister1,
+.consultPasswordRegister2,
+.consultRegisterName,
+.consultRegisterDocument,
+.consultRegisterBirthday,
+.consultRegisterPhone,
+.consultRegisterJob {
+  color: $secondary !important;
+
+  &.active {
+    color: $grayDarker8 !important;
+  }
+}
+
+#consultEmailLogin,
+#consultPasswordLogin,
+#consultEmailRegister,
+#consultPasswordRegister1,
+#consultPasswordRegister2,
+#consultRegisterName,
+#consultRegisterDocument,
+#consultRegisterBirthday,
+#consultRegisterPhone,
+#consultRegisterJob {
+  border-bottom: 1px solid $secondary !important;
+
+  &:focus {
+    border-bottom: 1px solid $grayDarker8 !important;
+  }
 }
 
 @media (min-width: 300px) {

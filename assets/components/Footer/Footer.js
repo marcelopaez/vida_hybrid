@@ -82,7 +82,7 @@ const Footer = () => {
 
       <div className="footerMobile">
         <div className="customContainer">
-          <div className="footerTitlesSection">
+          <div className="footerTitlesSectionMobile">
             <p>Salas</p>
             <p>Formatos</p>
             <p>Planes</p>
@@ -99,7 +99,7 @@ const Footer = () => {
                 <p className="locationSubTextFooter boldFont">Cerro de las Rosas | Córdoba</p>
               </div>
             </div>
-            <img src={Logo} alt="Vida Cowork" className="vidaLogoFooter" />
+            <img src={Logo} alt="Vida Cowork" className="vidaLogoFooterMobile" />
           </div>
           <hr />
           <div className="locationSubText2Mobile boldFont">Seguinos en redes</div>

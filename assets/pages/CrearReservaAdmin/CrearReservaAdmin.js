@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import SideMenu from '../../components/SideMenu';
+import SideMenuAdmin from '../../components/SideMenuAdmin';
 import NavbarAdmin from '../../components/NavbarAdmin';
 import NavbarAdminMobile from '../../components/NavbarAdminMobile';
 import FullCalendar from '@fullcalendar/react';
@@ -34,7 +34,7 @@ const CrearReservaAdmin = () => {
         <NavbarAdminMobile />
       </div>
       <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
-        <SideMenu />
+        <SideMenuAdmin />
       </div>
       <div className="col-lg-10 col-md-9 col-sm-12 p-3">
         <div className="row generalContentBody">
@@ -59,7 +59,7 @@ const CrearReservaAdmin = () => {
           </div>
           <div className="col-lg-4 col-md-12 col-sm-12">
             <div className="crearReservaUsuarioRightSide">
-              <p className="crearReservaUsuarioRightSideMyReservationsTitle">Mis Reservas</p>
+              <p className="crearReservaUsuarioRightSideMyReservationsTitle">Reservas realizadas / Reservas para el dia de hoy</p>
               <div className="table-responsive crearReservaUsuarioRightSideMyReservationsTable">
                 <table className="table">
                   <thead>

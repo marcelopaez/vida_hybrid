@@ -4,6 +4,12 @@
   position: relative;
 }
 
+.alternativeFooter {
+  color: $grayDarker8;
+  background-color: #f1f1f1;
+  position: relative;
+}
+
 .footerMobile {
   color: #000;
   background-color: $grayLighter1;
@@ -114,6 +120,18 @@
   }
 }
 
+.footerTitlesSectionMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  p {
+    margin: 15px;
+    font-size: 14px !important;
+  }
+}
+
 .footerDescriptionTitleMobile {
   color: $grayDarker8;
   margin-top: 17px 0 7px 0;
@@ -186,6 +204,10 @@
     transform: scale(2);
     margin: 40px 0 10px 0;
   }
+
+  .footerTitlesSectionMobile {
+    width: 20%;
+  }
 }
 
 @media (min-width: 576px) {
@@ -201,6 +223,11 @@
 
   .vidaLogoFooter {
     margin: 20px 0 10px 60px;
+  }
+
+  .vidaLogoFooterMobile {
+    margin-left: 50px;
+    width: 30%;
   }
 }
 
@@ -241,6 +268,10 @@
 
   .vidaLogoFooter {
     margin: 20px 0 10px 0;
+  }
+
+  .vidaLogoFooter {
+    width: unset;
   }
 }
 

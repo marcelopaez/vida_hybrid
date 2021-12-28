@@ -1,5 +1,6 @@
 .navbarItemLogin {
-  color: $grayDarker6 !important;
+  color: $grayDarker7;
+  background-color: #fff;
   padding: 18px 16px;
   margin: 0 25px !important;
   font-size: 1.1rem;
@@ -7,9 +8,14 @@
 }
 
 .navbarItemLogin:hover {
-  background: $grayDarker7 !important;
+  background-color: $grayDarker19;
   border-radius: 10px;
-  color: #fff !important;
+  color: #fff;
+}
+
+.navbarItemLogin:focus {
+  background-color: $grayDarker7;
+  color: #fff;
 }
 
 .navbarItemLoginButton {
@@ -18,7 +24,7 @@
   border-radius: 15px;
 }
 
-.navbarLoginMobile {
+.navbarLogin {
   background-color: #fff;
   text-align: center;
 }

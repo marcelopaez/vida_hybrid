@@ -40,13 +40,8 @@ const NavbarMobile = () => {
               Comunidad
             </Link>
           </li>
-          <li className="nav-item align-middle">
-            <Link to="/reservas" className="nav-link">
-              Reservas
-            </Link>
-          </li>
           <li className="nav-item align-middle d-flex justify-content-center loginButtonMobile">
-            <Link to="/login" className="nav-link boldFont orangeBackground nav-item-login">
+            <Link to="/login" className="nav-link boldFont orangeBackground navItemLogin">
               Iniciar Sesión
             </Link>
           </li>

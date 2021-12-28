@@ -7,9 +7,14 @@ import BackgroundImage from '../../images/Backgrounds/EventsBackground.jpg';
 import EventosBackground from '../../images/Backgrounds/EventosBackground2.jpg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import PreviousArrow from '../../images/Icons/PreviousArrow.svg';
+import NextArrow from '../../images/Icons/NextArrow.svg';
 
-const Eventos = () => {
-  useEffect(() => window.scroll(0, 0), []);
+const Eventos = ({ hideAlternativeFooter }) => {
+  useEffect(() => {
+    hideAlternativeFooter();
+    window.scroll(0, 0);
+  }, []);
 
   const reservationNameLarger = useRef(null);
   const reservationNameMobile = useRef(null);
@@ -48,7 +53,28 @@ const Eventos = () => {
         <div className="customContainer">
           <div className="ourEventsContainer">
             <p className="ourEventsTitle extraBoldFont">¡Mirá nuestros eventos!</p>
-            <Carousel infiniteLoop showThumbs={false} showStatus={false} showIndicators showArrows centerMode centerSlidePercentage={25}>
+            <Carousel
+              infiniteLoop
+              showThumbs={false}
+              showStatus={false}
+              showIndicators
+              showArrows
+              centerMode
+              centerSlidePercentage={25}
+              renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
+                hasPrev && (
+                  <button onClick={clickHandler} className="carouselArrowPrevious">
+                    <img src={PreviousArrow} />
+                  </button>
+                )
+              }
+              renderArrowNext={(clickHandler, hasNext, labelNext) =>
+                hasNext && (
+                  <button onClick={clickHandler} className="carouselArrowNext">
+                    <img src={NextArrow} />
+                  </button>
+                )
+              }>
               <div className="eventCarouselItemContainer">
                 <p className="eventCarouselItemTitle lightFont">Evento 1</p>
                 <div className="fakeEventImage"></div>
@@ -64,16 +90,22 @@ const Eventos = () => {
         </div>
         <div className="eventsReservationContainer">
           <div className="customContainer">
-            <p className="eventsReservationTitle boldFont">¿Te interesa reservar?</p>
-            <div className="md-form form-lg">
-              <input type="text" id="name" className="form-control form-control-lg eventsReservationInput" ref={reservationNameLarger} />
-              <label htmlFor="name">Nombre y apellido / Empresa</label>
+            <div className="eventsReservationContainerForm">
+              <p className="eventsReservationTitle boldFont">¿Te interesa reservar?</p>
+              <div className="md-form form-lg">
+                <input type="text" id="eventsNameLarger" className="form-control form-control-lg eventsReservationInput eventsNameLarger" ref={reservationNameLarger} />
+                <label htmlFor="eventsNameLarger" className="eventsNameLarger">
+                  Nombre y apellido / Empresa
+                </label>
+              </div>
+              <div className="md-form form-lg">
+                <input type="email" id="eventsEmailLarger" className="form-control form-control-lg eventsReservationInput eventsEmailLarger" ref={reservationMailLarger} />
+                <label htmlFor="eventsEmailLarger" className="eventsEmailLarger">
+                  E-mail
+                </label>
+              </div>
+              <button className="eventsReservationButton">Enviar</button>
             </div>
-            <div className="md-form form-lg">
-              <input type="email" id="email" className="form-control form-control-lg eventsReservationInput" ref={reservationMailLarger} />
-              <label htmlFor="email">E-mail</label>
-            </div>
-            <button className="eventsReservationButton">Enviar</button>
           </div>
         </div>
       </div>
@@ -81,7 +113,7 @@ const Eventos = () => {
       <div className="eventsContainerMobileEvents">
         <div className="eventsMobileBackground" style={{ backgroundImage: `url(${EventosBackground})` }}>
           <div className="semiCircleHeaderMobile">
-            <p className="eventsTitleMobile extraBoldFont">Eventos</p>
+            <p className="eventsTitleMobileEvents extraBoldFont">Eventos</p>
           </div>
         </div>
         <div className="customContainer">
@@ -90,7 +122,28 @@ const Eventos = () => {
 
           <div className="ourEventsContainerMobile">
             <p className="ourEventsTitleMobile extraBoldFont">¡Mirá nuestros eventos!</p>
-            <Carousel infiniteLoop showThumbs={false} showStatus={false} showIndicators showArrows centerMode centerSlidePercentage={10}>
+            <Carousel
+              infiniteLoop
+              showThumbs={false}
+              showStatus={false}
+              showIndicators
+              showArrows
+              centerMode
+              centerSlidePercentage={10}
+              renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
+                hasPrev && (
+                  <button onClick={clickHandler} className="carouselArrowPrevious">
+                    <img src={PreviousArrow} />
+                  </button>
+                )
+              }
+              renderArrowNext={(clickHandler, hasNext, labelNext) =>
+                hasNext && (
+                  <button onClick={clickHandler} className="carouselArrowNext">
+                    <img src={NextArrow} />
+                  </button>
+                )
+              }>
               <div className="eventCarouselItemContainer">
                 <p className="eventCarouselItemTitle lightFont">Evento 1</p>
                 <div className="fakeEventImage"></div>
@@ -108,12 +161,16 @@ const Eventos = () => {
           <div className="eventsReservationContainerMobile">
             <p className="eventsReservationTitleMobile boldFont">¿Te interesa reservar?</p>
             <div className="md-form form-lg">
-              <input type="text" id="name" className="form-control form-control-lg eventsReservationInput" ref={reservationNameMobile} />
-              <label htmlFor="name">Nombre y apellido / Empresa</label>
+              <input type="text" id="eventsNameMobile" className="form-control form-control-lg eventsReservationInput eventsNameMobile" ref={reservationNameMobile} />
+              <label htmlFor="eventsNameMobile" className="eventsNameMobile">
+                Nombre y apellido / Empresa
+              </label>
             </div>
             <div className="md-form form-lg">
-              <input type="email" id="email" className="form-control form-control-lg eventsReservationInput" ref={reservationMailMobile} />
-              <label htmlFor="email">E-mail</label>
+              <input type="email" id="eventsEmailMobile" className="form-control form-control-lg eventsReservationInput eventsEmailMobile" ref={reservationMailMobile} />
+              <label htmlFor="eventsEmailMobile" className="eventsEmailMobile">
+                E-mail
+              </label>
             </div>
             <button className="eventsReservationButtonMobile">Enviar</button>
           </div>

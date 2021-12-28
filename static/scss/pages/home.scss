@@ -25,15 +25,19 @@
 .welcomeSubtitleMobile,
 .welcomeTextMobile {
   color: #fff;
+  position: relative;
 }
 
 .welcomeTitleMobile {
-  margin-top: 30px;
+  margin: 20px 0 30px 30px;
+}
+
+.welcomeSubtitleMobile {
+  margin: 0 0 15px 30px;
 }
 
 .welcomeTextMobile {
-  margin: 0;
-  padding-bottom: 30px;
+  margin: 0 0 0 30px;
 }
 
 .welcomeSubtitle,
@@ -52,30 +56,50 @@
 
 .welcomeButton {
   background-color: #fff;
-  color: $primaryDarker;
+  color: $primary;
   padding: 1rem 3rem;
   border: none;
   border-radius: 10px;
+  transition: 0.5s all ease;
+}
+
+.welcomeButton:hover {
+  background-color: $primaryLighter4;
+  color: #fff;
+}
+
+.welcomeButton:focus {
+  background: $primary;
+  color: #fff;
 }
 
 .welcomeContainerMobile {
-  background: $primary;
-  // height: 50vh;
+  background: #fff;
+  color: #000;
+  height: 50vh;
 }
 
 .welcomeContainerMobileSVG {
   position: absolute;
-  left: -60px;
-  background: $primary;
+  width: 100%;
+  height: 400px;
+  transform: scaleX(2.5);
 }
 
 .welcomeContainerMobileContent {
-  text-align: center;
+  text-align: left;
+}
+
+.plansContainerHomePreviousSeparator {
+  height: 50px;
+  width: 100%;
+  background-color: $secondary;
 }
 
 .plansContainerHome {
   position: relative;
-  background-color: $primaryDarker;
+  z-index: 3;
+  background-color: $primary;
   color: #fff;
   overflow: hidden;
 }
@@ -117,7 +141,11 @@
 .meetingsContainer {
   position: relative;
   z-index: 2;
-  height: 70vh;
+}
+
+.eventsContainerCarousel {
+  @extend .meetingsContainer;
+  height: calc(75vh - 50px);
 }
 
 .meetingsContainerMobile {
@@ -131,18 +159,17 @@
 
 .roomsContainer {
   position: relative;
-  z-index: 3;
   color: #fff;
   margin-top: -700px;
-  width: 935px;
-  height: 110%;
+  height: 85vh;
   background-image: url('data:image/svg+xml,  %3Csvg%20width%3D%22939%22%20height%3D%22721%22%20viewBox%3D%220%200%20939%20721%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M-491%20721H223.964C618.81%20721%20938.928%20398.179%20938.928%200H223.964C-170.882%200%20-491%20322.821%20-491%20721Z%22%20fill%3D%22%23FF972F%22%2F%3E%0A%3C%2Fsvg%3E%0A');
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .roomsTitle {
   font-size: 4.5rem;
-  padding: 66px 0 25px 100px;
+  padding: 66px 0 25px 140px;
   max-width: 700px;
 }
 
@@ -152,7 +179,7 @@
 
 .roomsSubtitle {
   font-size: 1.5rem;
-  padding: 0 0 25px 100px;
+  padding: 0 0 25px 140px;
   max-width: 700px;
 }
 
@@ -162,7 +189,7 @@
 
 .roomsContent1 {
   font-size: 1.1rem;
-  padding: 0 0 25px 100px;
+  padding: 0 0 25px 140px;
   max-width: 700px;
 }
 
@@ -172,7 +199,7 @@
 
 .roomsContent2 {
   font-size: 1.1rem;
-  padding: 0 0 36px 100px;
+  padding: 0 0 36px 140px;
   max-width: 700px;
 }
 
@@ -180,22 +207,27 @@
 .eventsButton {
   border: 2px solid #fff;
   background: none;
-  border-radius: 15px;
-  margin-left: 100px;
-  padding: 0 100px;
+  border-radius: 8px;
+  margin-left: 140px;
+  padding: 0 140px;
   color: #fff;
   width: 400px;
   font-size: 1.1rem;
 }
 
 .servicesContainer {
-  margin-top: -110px;
   background: $primary;
+  position: relative;
+  z-index: 3;
+  margin-top: -60px;
 }
 
 .servicesContainerMiddle {
   margin-top: -20px;
   background: $primary;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 3;
 }
 
 .servicesContainerMobile {
@@ -224,31 +256,81 @@
   margin-bottom: 50px;
 }
 
+.servicesTitleMiddle {
+  color: #fff;
+  text-align: left;
+  padding: 50px 0;
+}
+
 .servicesTitleMobile {
   font-size: 2.25rem;
   color: $grayDarker5;
   padding: 50px 0;
 }
 
-.selectServicesMiddle {
-  font-size: 2.25rem;
+.servicesDropdownMenu {
+  border-bottom: 1px solid $grayDarker5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
   width: 100%;
+  cursor: pointer;
+
+  button,
+  p {
+    margin-bottom: 15px;
+  }
 }
 
-.selectServicesMobile {
-  color: #000 !important;
-  font-size: 1rem;
-  width: 300px;
+.servicesDropdownMenuButton {
+  border: none;
+  background: none;
+  color: $grayDarker5;
+  font-weight: 600;
 }
+
+.servicesDropdownMenuMiddle {
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  width: 100%;
+  cursor: pointer;
+
+  button,
+  p {
+    margin-bottom: 15px;
+  }
+}
+
+.servicesDropdownMenuButtonMiddle {
+  border: none;
+  background: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+// .selectServicesMiddle {
+//   font-size: 2.25rem;
+//   width: 100%;
+// }
+
+// .selectServicesMobile {
+//   color: #000 !important;
+//   font-size: 1rem;
+//   width: 300px;
+// }
 
 .eventsContainer {
   position: relative;
-  z-index: 3;
   color: #fff;
-  height: 110%;
+  height: 80vh;
   background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22933%22%20height%3D%22736%22%20viewBox%3D%220%200%20933%20736%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1459.68%20736H729.839C326.779%20736%200.000366211%20406.463%200.000366211%200H729.839C1132.9%200%201459.68%20329.537%201459.68%20736Z%22%20fill%3D%22%23FF972F%22%2F%3E%0A%3C%2Fsvg%3E%0A');
   background-size: cover;
-  margin: -680px 0 0 calc(100% - 835px) !important;
+  background-repeat: no-repeat;
+  margin: -680px 0 0 calc(100% - 935px) !important;
 }
 
 .eventsContainerMobile {
@@ -263,9 +345,9 @@
 
 .eventsTitle {
   font-size: 4.5rem;
-  padding: 66px 0 25px 0;
+  padding: 90px 0 25px 0;
   margin: 0 0 0 190px;
-  max-width: 700px;
+  max-width: 500px;
 }
 
 .eventsTitleMobile {
@@ -277,7 +359,7 @@
 .eventsSubtitle {
   font-size: 1.1rem;
   padding: 0 0 25px 0;
-  max-width: 700px;
+  max-width: 500px;
   margin: 0 0 0 190px;
 }
 
@@ -289,7 +371,7 @@
 .eventsContent1 {
   font-size: 1.1rem;
   padding: 0 0 80px 0;
-  max-width: 700px;
+  max-width: 500px;
   margin: 0 0 0 190px;
 }
 
@@ -308,7 +390,6 @@
   color: $primary;
   text-align: left;
   padding: 122px 0 40px 0;
-  font-size: 3rem;
   margin: 0;
 }
 
@@ -321,6 +402,9 @@
 .communityContainer {
   position: relative;
   margin-bottom: 100px;
+  margin-top: -60px;
+  z-index: 3;
+  background-color: #fff;
 }
 
 .communityContainerMobile {
@@ -329,7 +413,7 @@
 }
 
 .communitySeeMoreButton {
-  background: transparent;
+  background: #fff;
   border: 1px solid $primary;
   color: $primary;
   font-size: 1.1rem;
@@ -337,18 +421,30 @@
   padding: 18px 100px;
   position: absolute;
   margin: 86px 0;
-  width: 380px;
+  transition: 0.5s all ease;
+}
+
+.communitySeeMoreButton:hover {
+  background-color: $primaryLighter4;
+  color: #fff;
+}
+
+.communitySeeMoreButton:focus {
+  background: $primary;
+  color: #fff;
 }
 
 .strategicPlaceContainer {
-  background-color: $primaryDarker;
+  background-color: $primary;
   margin-top: 236px;
+  position: relative;
+  z-index: 3;
 }
 
 .strategicPlaceContainerMobile {
   position: relative;
   width: 100%;
-  background-color: $primaryDarker;
+  background-color: $primary;
   margin-top: 200px;
 }
 
@@ -391,6 +487,10 @@
 .ratingContainerMobile {
   background-color: $secondary;
   color: #fff;
+}
+
+.ratingContainerMargin {
+  margin-left: 40px;
 }
 
 .ratingContent {
@@ -464,13 +564,11 @@
 
 .consultContainer {
   position: relative;
-  z-index: 3;
   color: #fff;
-  height: 170%;
+  height: 100%;
   background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22933%22%20height%3D%22736%22%20viewBox%3D%220%200%20933%20736%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1459.68%20736H729.839C326.779%20736%200.000366211%20406.463%200.000366211%200H729.839C1132.9%200%201459.68%20329.537%201459.68%20736Z%22%20fill%3D%22%23FF972F%22%2F%3E%0A%3C%2Fsvg%3E%0A');
   background-size: cover;
-  // margin: -20px 0 0 calc(100% - 600px) !important;
-  margin: -20px 0 0 0 !important;
+  margin: -10px 0 0 0 !important;
   right: -30px;
 }
 
@@ -480,7 +578,7 @@
 
 .consultTitle {
   font-size: 2.25rem;
-  padding: 40px 0 20px 0;
+  padding: 20px 0 20px 0;
   margin: 0 0 0 190px;
 }
 
@@ -498,7 +596,7 @@
 }
 
 .consultDataContainer {
-  margin: 30px 0 0 190px !important;
+  margin: 0 0 0 190px !important;
 }
 
 .input-prefix {
@@ -506,7 +604,7 @@
 }
 
 .consultEmail {
-  max-width: 300px !important;
+  max-width: 270px !important;
 }
 
 .consultEmailLabel {
@@ -514,8 +612,7 @@
 }
 
 .consultSelect {
-  max-width: 300px !important;
-  margin: 33px 0 38px 190px !important;
+  max-width: 270px !important;
 }
 
 .consultLabel {
@@ -525,7 +622,7 @@
 }
 
 .consultInput {
-  max-width: 300px !important;
+  max-width: 270px !important;
   margin: 0 0 0 190px;
 }
 
@@ -536,30 +633,39 @@
 }
 
 .consultButton {
-  background: #fff;
-  color: $primaryDarker;
-  border: none;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
   border-radius: 10px;
   padding: 10px 15px;
-  margin: 40px 0 0 190px;
-  width: 300px;
+  margin: 20px 0 0 190px;
+  width: 270px;
   font-size: 14px;
+  transition: 0.5s all ease;
 }
 
 .consultButtonMobile {
-  background: #fff;
-  color: $primaryDarker;
+  background: transparent;
+  color: #fff;
   border: none;
   border-radius: 10px;
   padding: 10px 15px;
   margin-bottom: 50px;
   width: 100%;
+  transition: 0.5s all ease;
+}
+
+.consultButton:hover,
+.consultButtonMobile:hover,
+.consultButton:focus,
+.consultButtonMobile:focus {
+  background-color: #fff;
+  color: $secondary;
 }
 
 .partnersContainer {
   background-color: $grayLighter2;
   position: relative;
-  z-index: 1;
   padding-top: 126px;
 }
 
@@ -595,9 +701,10 @@
 .md-form input[type='phone']:not(.browser-default):focus:not([readonly]),
 .md-form input[type='search-md']:focus:not([readonly]),
 .md-form textarea.md-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid $primaryDarker;
+  border-bottom: 1px solid $grayDarker8;
   box-shadow: 0 1px 0 0 $primaryDarker;
-  color: #000 !important;
+  color: $grayDarker8 !important;
+  box-shadow: 0 1px 0 0 $grayDarker8 !important;
 }
 
 .input-prefix {
@@ -631,6 +738,12 @@
   margin-top: 10vh;
 }
 
+.backgroundSVGHomeMobile1 {
+  position: absolute;
+  right: 0;
+  top: -20%;
+}
+
 .sliderImageWithOffset {
   position: relative;
   right: -25px;
@@ -658,9 +771,27 @@
 }
 
 @media (min-width: 300px) {
+  .welcomeContainerMobileSVG {
+    left: 0;
+  }
+
+  .welcomeContainerMobileContent {
+    width: 90%;
+  }
+
+  .welcomeTitleMobile {
+    font-size: 1rem;
+  }
+
+  .welcomeSubtitleMobile,
+  .welcomeTextMobile {
+    font-size: 14px;
+  }
+
   .roomsTitleMobile,
   .eventsTitleMobile,
-  .strategicPlaceTitle {
+  .strategicPlaceTitle,
+  .communityTitle {
     font-size: 2.25rem;
   }
 
@@ -699,7 +830,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 270px;
   }
 
   .opinionInformation {
@@ -723,17 +853,54 @@
 
   .communitySeeMoreButton {
     right: unset;
+    width: 90%;
+  }
+
+  .plansContainerHomePreviousSeparator {
+    display: none;
+  }
+
+  .consultSelect {
+    margin: 15px 0 15px 0 !important;
   }
 }
 
 @media (min-width: 576px) {
+  .welcomeContainerMobileSVG {
+    left: -10%;
+  }
+
+  .welcomeContainerMobileContent {
+    width: 80%;
+  }
+
   .welcomeTitle {
     font-size: 2rem;
   }
 
+  .welcomeTitleMobile {
+    font-size: 1.5rem;
+  }
+
+  .welcomeSubtitleMobile,
+  .welcomeTextMobile {
+    font-size: 1rem;
+  }
+
+  .communityTitle {
+    font-size: 3rem;
+  }
+
+  .communitySeeMoreButton {
+    width: 380px;
+  }
+
   .roomsTitleMobile,
   .eventsTitleMobile,
-  .servicesTitle {
+  .servicesTitle,
+  .servicesTitleMiddle,
+  .servicesTitle,
+  .servicesTitleMiddleMiddle {
     font-size: 4.5rem;
   }
 
@@ -745,7 +912,6 @@
     display: none;
   }
 
-  .servicesContainerMiddle,
   .partnersContainerMiddle {
     display: block;
   }
@@ -753,7 +919,6 @@
   .opinionContainer {
     flex-direction: row;
     justify-content: flex-start;
-    width: 540px;
   }
 
   .opinionInformation {
@@ -762,17 +927,30 @@
 }
 
 @media (min-width: 768px) {
+  .welcomeContainerMobileSVG {
+    left: -17%;
+  }
+
+  .welcomeContainerMobileContent {
+    width: 60%;
+  }
+
   .welcomeTitle {
     font-size: 4rem;
   }
 
   .plansTitle,
-  .servicesTitle {
+  .servicesTitle,
+  .servicesTitleMiddle {
     font-size: 4.5rem;
   }
 
-  .opinionContainer {
-    width: 730px;
+  .servicesContainerMiddle {
+    display: block;
+  }
+
+  .servicesContainerMobile {
+    display: none;
   }
 
   .partnersLogos {
@@ -780,13 +958,20 @@
   }
 
   .communitySeeMoreButton {
-    right: 10%;
+    right: 15px;
   }
 }
 
 @media (min-width: 992px) {
+  .welcomeContainerMobileSVG {
+    left: -25%;
+  }
+
+  .welcomeContainerMobileContent {
+    width: 50%;
+  }
+
   .plansContainerHome,
-  .meetingsContainer,
   .eventsContainer,
   .servicesContainerMiddle,
   .strategicPlaceContainer,
@@ -797,9 +982,7 @@
   }
 
   .plansContainerMobile,
-  .meetingsContainerMobile,
   .eventsContainerMobile,
-  .servicesContainerMobile,
   .strategicPlaceContainerMobile,
   .partnersContainerMobile {
     display: none;
@@ -810,35 +993,64 @@
   .backgroundSVGHome3 {
     display: block;
   }
+
+  .meetingsContainer {
+    height: 75vh;
+  }
 }
 
 @media (min-width: 1200px) {
-  .ratingContainer {
+  .welcomeContainerMobile {
+    display: none;
+  }
+
+  .roomsContainer {
+    width: 80%;
+    right: 5%;
+  }
+
+  .eventsContainer {
+    width: 80%;
+    left: 10%;
+  }
+
+  .ratingContainer,
+  .meetingsContainer {
     display: block;
   }
 
-  .ratingContainerMobile {
+  .ratingContainerMobile,
+  .meetingsContainerMobile {
     display: none;
   }
 
   .consultContainerMobile {
     display: none;
   }
+
+  .plansContainerHomePreviousSeparator {
+    display: block;
+  }
+
+  .consultSelect {
+    margin: 15px 0 15px 190px !important;
+  }
 }
 
 @media (min-width: 1400px) {
+  .roomsContainer,
+  .eventsContainer {
+    width: 65%;
+  }
+
   .servicesContainer,
   .partnersContainer {
     display: block;
   }
 
-  .servicesContainerMiddle,
   .partnersContainerMiddle,
-  .partnersContainerMobile {
-    display: none;
-  }
-
-  .welcomeContainerMobile {
+  .partnersContainerMobile,
+  .servicesContainerMiddle {
     display: none;
   }
 
@@ -849,6 +1061,12 @@
 }
 
 @media (min-width: 1600px) {
+  .roomsContainer,
+  .eventsContainer {
+    width: 60%;
+    height: 82vh;
+  }
+
   .consultContainer {
     margin-left: 230px;
   }

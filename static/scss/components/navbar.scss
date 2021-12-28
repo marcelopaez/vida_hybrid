@@ -38,17 +38,15 @@
   top: 0;
 }
 
-.logoScroll {
-  margin: -1.85rem 0 -1.85rem 1.85rem;
-  position: absolute;
-  z-index: 100;
-}
-
 .navbar {
   box-shadow: none !important;
 }
 
-.nav-item-login {
+.navbar-nav {
+  align-items: center;
+}
+
+.navItemLogin {
   padding: 1rem;
 }
 
@@ -86,6 +84,13 @@ ul {
   border-radius: 15px;
 }
 
+.navbarLoginOption:hover {
+  border: none;
+  background: $grayLighter13;
+  border: 2px solid $grayLighter13;
+  color: $secondary !important;
+}
+
 .navbarHome {
   &.top-nav-collapse {
     background-color: $secondary !important;
@@ -99,6 +104,22 @@ ul {
 .nav-link {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
+}
+
+.navItemLogin {
+  background-color: $primary;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.navItemLogin:hover {
+  background-color: $primaryLighter4;
+  color: #fff;
+}
+
+.navItemLogin:focus {
+  background-color: #fff;
+  color: $primary;
 }
 
 @media (min-width: 300px) {
@@ -122,11 +143,7 @@ ul {
     }
   }
 
-  .nav-item {
-    padding: 0 !important;
-  }
-
-  .nav-item-login {
+  .navItemLogin {
     margin: 0 !important;
   }
 
@@ -162,16 +179,25 @@ ul {
     display: block;
   }
 
-  .rightSVGNavbar {
-    left: 200px;
-    top: -15px;
+  .nav-link {
+    &.navbarOption {
+      padding: 0 !important;
+    }
+  }
+
+  .rightSVGNavbarSmall {
+    display: block;
+  }
+
+  .rigthSVGNavbar {
+    display: block;
   }
 
   .nav-item {
     padding: 0 !important;
   }
 
-  .nav-item-login {
+  .navItemLogin {
     margin: 0 15px !important;
   }
 
@@ -185,8 +211,24 @@ ul {
 }
 
 @media (min-width: 1400px) {
+  .nav-link {
+    &.navbarOption {
+      padding: 0 0.5rem !important;
+    }
+  }
+
+  .rightSVGNavbarSmall {
+    display: none;
+  }
+
   .rightSVGNavbar {
     top: unset;
     left: unset;
+    display: block;
+
+    svg {
+      position: relative;
+      right: -10%;
+    }
   }
 }

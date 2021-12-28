@@ -4,7 +4,7 @@ import OrangeLogo from '../../images/Logos/OrangeLogo.svg';
 
 const NavbarLoginMobile = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbarLoginMobile fixed-top navbar-light d-flex">
+    <nav className="navbar navbar-expand-lg navbarLoginMobile fixed-top navbar-light bg-white d-flex">
       <div className="buttonSmallDownLogin">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobileVida" aria-controls="navbarMobileVida" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -38,11 +38,6 @@ const NavbarLoginMobile = () => {
           <li className="nav-item align-middle">
             <Link to="/comunidad" className="nav-link navbarItemLogin">
               Comunidad
-            </Link>
-          </li>
-          <li className="nav-item align-middle">
-            <Link to="/reservas" className="nav-link navbarItemLogin">
-              Reservas
             </Link>
           </li>
           <li className="nav-item align-middle">

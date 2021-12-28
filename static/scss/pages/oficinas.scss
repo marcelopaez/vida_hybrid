@@ -15,10 +15,6 @@
   background-repeat: no-repeat;
 }
 
-.oficinasTitleMobile {
-  font-size: 2rem;
-}
-
 .officesTitle {
   padding-top: 200px;
   font-size: 4rem;
@@ -100,6 +96,7 @@
   border-radius: 10px;
   padding: 20px 15px;
   width: 100%;
+  transition: .5s all ease;
 }
 
 .officesReservationButtonMobile {
@@ -110,6 +107,41 @@
   padding: 20px 15px;
   margin: 20px 0 50px 0;
   width: 100%;
+  transition: .5s all ease;
+}
+
+.officesReservationButton:hover,
+.officesReservationButtonMobile:hover {
+  background-color: $grayLighter13;
+  color: $secondary;
+}
+
+.officesReservationButton:focus,
+.officesReservationButtonMobile:focus {
+  background: #fff;
+  color: $secondary;
+}
+
+.reservationNameLarger,
+.reservationEmailLarger,
+.reservationNameMobile,
+.reservationEmailMobile {
+  color: $secondary !important;
+
+  &.active {
+    color: $grayDarker8 !important;
+  }
+}
+
+#reservationNameLarger,
+#reservationEmailLarger,
+#reservationNameMobile,
+#reservationEmailMobile {
+  border-bottom: 1px solid $secondary !important;
+
+  &:focus {
+    border-bottom: 1px solid $grayDarker8 !important;
+  }
 }
 
 @media (min-width: 300px) {
@@ -124,9 +156,16 @@
   .roomsDescriptionContent {
     margin: 50px 0 228px 0;
   }
+
+  .oficinasTitleMobile {
+    font-size: 1.1rem;
+  }
 }
 
 @media (min-width: 576px) {
+  .oficinasTitleMobile {
+    font-size: 2.25rem;
+  }
 }
 
 @media (min-width: 768px) {

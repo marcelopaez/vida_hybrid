@@ -44,6 +44,19 @@
   width: 400px;
   margin-top: 60px;
   font-size: 1.1rem;
+  transition: .5s all ease;
+}
+
+.roomButton:hover,
+.hourPlansButton:hover {
+  background-color: $grayLighter13;
+  color: $secondary;
+}
+
+.roomButton:focus,
+.hourPlansButton:focus {
+  background: #fff;
+  color: $secondary;
 }
 
 .chooseRoomContainer {
@@ -144,6 +157,7 @@
   padding: 20px 24px;
   font-size: 1.1rem;
   margin: 100px 0 192px 0;
+  transition: .5s all ease;
 }
 
 .roomsFooter {
@@ -192,14 +206,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 4rem 1rem 0 1rem;
+  margin: 2rem 0.5rem 0 0.5rem;
   color: #fff;
 }
 
 .roomsFooterSVGSquare {
   border: 1px solid #fff;
   border-radius: 10px;
-  padding: 1rem;
 }
 
 .roomsFooterPlanTitle {
@@ -222,6 +235,7 @@
   padding: 5px;
   border-radius: 10px;
   margin: 0;
+  font-size: 1rem;
 }
 
 .roomHorizontalMobile:hover {
@@ -238,9 +252,9 @@
   color: #fff;
   font-size: 1.5rem;
   background: $secondary;
-  margin: 0;
+  margin: 0 !important;
   font-size: 1.5rem;
-  padding: 10px 15px;
+  padding: 20px;
   border-radius: 0 10px 10px 0;
 }
 
@@ -261,6 +275,7 @@
 
 .allRoomsTitleMobile {
   padding: 25px 0;
+  margin: 0;
 }
 
 @media (min-width: 300px) {
@@ -275,6 +290,12 @@
   .chooseRoomContainer {
     flex-direction: column;
     margin: 50px 1rem 200px 1rem;
+  }
+
+  .roomsFooterSVGSquare {
+    svg {
+      transform: scale(0.5);
+    }
   }
 }
 
@@ -296,10 +317,34 @@
   .salasContainerMobile {
     display: none;
   }
+
+  .roomsFooterCarousel {
+    .carousel-root {
+      width: 85% !important;
+    }
+  }
+
+  .roomsFooterSVGSquare {
+    padding: 1rem;
+
+    svg {
+      transform: scale(1);
+    }
+  }
 }
 
 @media (min-width: 1200px) {
+  .roomsFooterCarousel {
+    .carousel-root {
+      width: 97% !important;
+    }
+  }
 }
 
 @media (min-width: 1400px) {
+  .roomsFooterCarousel {
+    .carousel-root {
+      width: 90% !important;
+    }
+  }
 }

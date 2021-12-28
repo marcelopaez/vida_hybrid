@@ -16,7 +16,6 @@
 }
 
 .eventsTitleMobileEvents {
-  font-size: 2rem;
   margin: 30px 0 0 0;
 }
 
@@ -125,6 +124,13 @@
   padding-bottom: 245px;
 }
 
+.eventsReservationContainerForm {
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .eventsReservationContainerMobile {
   display: flex;
   flex-direction: column;
@@ -156,6 +162,7 @@
   border-radius: 10px;
   padding: 20px 15px;
   width: 100%;
+  transition: .5s all ease;
 }
 
 .eventsReservationButtonMobile {
@@ -166,10 +173,45 @@
   border-radius: 10px;
   padding: 20px 15px;
   width: 100%;
+  transition: .5s all ease;
+}
+
+.eventsReservationButton:hover,
+.eventsReservationButtonMobile:hover {
+  background-color: $grayLighter13;
+  color: $secondary;
+}
+
+.eventsReservationButton:focus,
+.eventsReservationButtonMobile:focus {
+  background: #fff;
+  color: $secondary;
 }
 
 .carousel-root {
   width: 100% !important;
+}
+
+.eventsNameLarger,
+.eventsEmailLarger,
+.eventsNameMobile,
+.eventsEmailMobile {
+  color: $secondary !important;
+
+  &.active {
+    color: $grayDarker8 !important;
+  }
+}
+
+#eventsNameLarger,
+#eventsEmailLarger,
+#eventsNameMobile,
+#eventsEmailMobile {
+  border-bottom: 1px solid $secondary !important;
+
+  &:focus {
+    border-bottom: 1px solid $grayDarker8 !important;
+  }
 }
 
 @media (min-width: 300px) {
@@ -181,12 +223,19 @@
     display: block;
   }
 
+  .eventsTitleMobileEvents {
+    font-size: 1.1rem;
+  }
+
   .ourEventsContainer {
     margin: 50px 1rem 220px 1rem;
   }
 }
 
 @media (min-width: 576px) {
+  .eventsTitleMobileEvents {
+    font-size: 2.25rem;
+  }
 }
 
 @media (min-width: 768px) {

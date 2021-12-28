@@ -1,3 +1,7 @@
+.sidebarItemHover {
+  display: none;
+}
+
 .sidebarItem {
   list-style-type: none;
   padding: 20px;
@@ -11,6 +15,14 @@
   a > p {
     color: $primary;
   }
+
+  .sidebarItemNormal {
+    display: block;
+  }
+
+  .sidebarItemHover {
+    display: none;
+  }
 }
 
 .sidebarItem:hover {
@@ -19,6 +31,14 @@
 
   p {
     color: #fff;
+  }
+
+  .sidebarItemNormal {
+    display: none;
+  }
+
+  .sidebarItemHover {
+    display: block;
   }
 }
 

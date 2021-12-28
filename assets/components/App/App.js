@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Footer from '../Footer';
+import AlternativeFooter from '../AlternativeFooter';
 import Home from '../../pages/Home';
 
 import GeneralUsuario from '../../pages/GeneralUsuario';
@@ -28,7 +30,11 @@ import Login from '../../pages/Login';
 import Reservas from '../../pages/Reservas';
 import NotFound from '../../components/NotFound';
 
-const App = () => {
+const mapStateToProps = (state) => ({
+  showAlternativeFooter: state.general.showAlternativeFooter,
+});
+
+const App = ({ showAlternativeFooter }) => {
   return (
     <BrowserRouter basename="/app/">
       {/* <NavbarAdmin /> */}
@@ -59,11 +65,10 @@ const App = () => {
         <Route exact path="/reservar" component={Reservas} />
         <Route component={NotFound} />
       </Switch>
-      {!window.document.documentURI.includes('Admin') && !window.document.documentURI.includes('Usuario') && (
-        <Footer />
-      )}
+      {!window.document.documentURI.includes('Admin') && !window.document.documentURI.includes('Usuario') && !window.document.documentURI.includes('controlClientes') && !showAlternativeFooter && <Footer />}
+      {showAlternativeFooter && <AlternativeFooter />}
     </BrowserRouter>
   );
 };
 
-export default App;
+export default connect(mapStateToProps, null)(App);

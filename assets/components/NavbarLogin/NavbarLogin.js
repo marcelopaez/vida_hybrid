@@ -17,7 +17,7 @@ const NavbarLogin = () => {
 
   return (
     <main>
-      <nav className="navbar navbar-expand-lg navbarMobileLogin fixed-top scrolling-navbar">
+      <nav className="navbar navbar-expand-lg navbarLogin fixed-top scrolling-navbar">
         {windowScroll === 0 ? (
           <Link className="navbar-brand" to="/">
             <img src={OrangeLogo} alt="Vida" className="logo" />
@@ -52,11 +52,6 @@ const NavbarLogin = () => {
             <li className="nav-item align-middle">
               <Link to="/comunidad" className="nav-link navbarItemLogin">
                 Comunidad
-              </Link>
-            </li>
-            <li className="nav-item align-middle">
-              <Link to="/reservas" className="nav-link navbarItemLogin">
-                Reservas
               </Link>
             </li>
             <li className="nav-item align-middle">
