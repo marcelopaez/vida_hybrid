@@ -48,9 +48,19 @@
   border-radius: 5px;
   padding: 10px 16px;
   width: 130px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 300px) {
+  .comunidadBeneficiosAdminRightSideBirthdayContainer {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .comunidadBeneficiosAdminRightSideBirthdayButtonContainer {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 576px) {
@@ -60,6 +70,9 @@
 }
 
 @media (min-width: 992px) {
+  .comunidadBeneficiosAdminRightSideBirthdayButtonContainer {
+    justify-content: flex-end;
+  }
 }
 
 @media (min-width: 1200px) {

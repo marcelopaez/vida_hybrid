@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PlanHorizontal = ({ svg, title, description, full, part, price }) => {
+const PlanHorizontal = ({ svg, title, description, price }) => {
   return (
     <div className="planHorizontalContainer">
       <div className="planHorizontalLeftSide">
@@ -8,16 +8,7 @@ const PlanHorizontal = ({ svg, title, description, full, part, price }) => {
         <p className="planHorizontalContainerTitle extraBoldFont">{title}</p>
       </div>
       <div className="planHorizontalRightSide">
-        <p className="planHorizontalContainerDescription lightFont">
-          {description}
-          {full?.length > 0 ? (
-            <>
-              <br />
-              FULL: {full} <br />
-              PART: {part}
-            </>
-          ) : null}
-        </p>
+        <p className="planHorizontalContainerDescription lightFont">{description}</p>
         {price?.length > 0 ? <p className="planHorizontalContainerPrice extraBoldFont">${price}</p> : null}
       </div>
     </div>

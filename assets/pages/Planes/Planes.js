@@ -5,6 +5,10 @@ import OrangePlan from '../../components/OrangePlan';
 import BackgroundImage from '../../images/Backgrounds/PlanesBackground.jpg';
 import ChoosePlan from '../../images/Backgrounds/ChoosePlan.jpg';
 import PlanesBackground from '../../images/Backgrounds/PlanesBackground.jpg';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import PreviousArrow from '../../images/Icons/PreviousArrow.svg';
+import NextArrow from '../../images/Icons/NextArrow.svg';
 
 const Planes = ({ hideAlternativeFooter }) => {
   useEffect(() => {
@@ -65,10 +69,36 @@ const Planes = ({ hideAlternativeFooter }) => {
       <div className="plansContainerLargerPlans">
         <div className="choosePlanContainer">
           <div className="choosePlanTitle boldFont">¡Elegí el plan que más se adapte a vos!</div>
-          <div className="d-flex flex-wrap">
-            <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
-            <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
-            <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
+          <div className="customContainer">
+            <Carousel
+              infiniteLoop
+              showThumbs={false}
+              showStatus={false}
+              showIndicators
+              showArrows
+              centerMode={true}
+              selectedItem={2}
+              centerSlidePercentage={100}
+              renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
+                hasPrev && (
+                  <button onClick={clickHandler} className="carouselArrowPrevious">
+                    <img src={PreviousArrow} />
+                  </button>
+                )
+              }
+              renderArrowNext={(clickHandler, hasNext, labelNext) =>
+                hasNext && (
+                  <button onClick={clickHandler} className="carouselArrowNext">
+                    <img src={NextArrow} />
+                  </button>
+                )
+              }>
+              <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
+              <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
+              <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
+              <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
+              <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
+            </Carousel>
           </div>
         </div>
 
@@ -174,11 +204,35 @@ const Planes = ({ hideAlternativeFooter }) => {
         <div className="choosePlanContainerMobile">
           <div className="customContainer">
             <div className="choosePlanTitleMobile boldFont">¡Elegí el plan que más se adapte a vos!</div>
-            <div className="d-flex flex-wrap">
+            <Carousel
+              infiniteLoop
+              showThumbs={false}
+              showStatus={false}
+              showIndicators
+              showArrows
+              centerMode={true}
+              selectedItem={2}
+              centerSlidePercentage={100}
+              renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
+                hasPrev && (
+                  <button onClick={clickHandler} className="carouselArrowPrevious">
+                    <img src={PreviousArrow} />
+                  </button>
+                )
+              }
+              renderArrowNext={(clickHandler, hasNext, labelNext) =>
+                hasNext && (
+                  <button onClick={clickHandler} className="carouselArrowNext">
+                    <img src={NextArrow} />
+                  </button>
+                )
+              }>
               <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
               <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
               <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
-            </div>
+              <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
+              <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
+            </Carousel>
           </div>
         </div>
         <div className="whyPlanContainerMobile">

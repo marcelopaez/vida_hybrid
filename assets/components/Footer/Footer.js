@@ -82,13 +82,15 @@ const Footer = () => {
 
       <div className="footerMobile">
         <div className="customContainer">
-          <div className="footerTitlesSectionMobile">
-            <p>Salas</p>
-            <p>Formatos</p>
-            <p>Planes</p>
-            <p>Servicios</p>
-            <p>Comunidad</p>
-            <p>Reserva</p>
+          <div className="d-flex justify-content-center">
+            <div className="footerTitlesSectionMobile">
+              <p>Salas</p>
+              <p>Formatos</p>
+              <p>Planes</p>
+              <p>Servicios</p>
+              <p>Comunidad</p>
+              <p>Reserva</p>
+            </div>
           </div>
           <hr />
           <div className="footerMobileLocation">

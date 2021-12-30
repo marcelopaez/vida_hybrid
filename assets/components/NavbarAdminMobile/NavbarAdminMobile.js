@@ -7,7 +7,7 @@ const NavbarAdminMobile = () => {
   const [showNotifications, setShowNotifications] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-lg navbarLoginMobile fixed-top navbar-light d-flex">
+    <nav className="navbar navbar-expand-lg navbarLoginMobile fixed-top bg-white navbar-light d-flex">
       <div className="buttonSmallDownLogin">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobileVida" aria-controls="navbarMobileVida" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>

@@ -28,6 +28,10 @@
   max-width: 500px;
 }
 
+.oficinasTitleMobile {
+  width: 85%;
+}
+
 .officesSubtitleMobile,
 .officesTextMobile {
   color: $grayDarker9;
@@ -54,6 +58,36 @@
 
 .roomsDescriptionText {
   font-size: 1.1rem;
+}
+
+.officesReservationConfirmationModalContainer {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid $grayLighter13;
+  margin-top: 50px;
+}
+
+.officesReservationConfirmationModalX {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.officesReservationConfirmationModalTitle {
+  color: $secondary;
+  margin: 60px 0 50px 0;
+}
+
+.officesReservationConfirmationModalContent {
+  color: #7d7c7a;
+  margin: 0 50px 100px 50px;
 }
 
 .officesReservationContainer {
@@ -96,7 +130,7 @@
   border-radius: 10px;
   padding: 20px 15px;
   width: 100%;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 .officesReservationButtonMobile {
@@ -107,7 +141,7 @@
   padding: 20px 15px;
   margin: 20px 0 50px 0;
   width: 100%;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 .officesReservationButton:hover,
@@ -144,12 +178,22 @@
   }
 }
 
+.officesContainerLargerOfficesBlur {
+  filter: blur(4px) !important;
+}
+
+.officesContainerMobileOfficesBlur {
+  filter: blur(4px) !important;
+}
+
 @media (min-width: 300px) {
-  .officesContainerLargerOffices {
+  .officesContainerLargerOffices,
+  .officesContainerLargerOfficesBlur {
     display: none;
   }
 
-  .officesContainerMobileOffices {
+  .officesContainerMobileOffices,
+  .officesContainerMobileOfficesBlur {
     display: block;
   }
 
@@ -160,11 +204,19 @@
   .oficinasTitleMobile {
     font-size: 1.1rem;
   }
+
+  .officesReservationConfirmationModalContainer {
+    width: 200px;
+  }
 }
 
 @media (min-width: 576px) {
   .oficinasTitleMobile {
     font-size: 2.25rem;
+  }
+
+  .officesReservationConfirmationModalContainer {
+    width: 500px;
   }
 }
 
@@ -175,11 +227,13 @@
 }
 
 @media (min-width: 992px) {
-  .officesContainerLargerOffices {
+  .officesContainerLargerOffices,
+  .officesContainerLargerOfficesBlur {
     display: block;
   }
 
-  .officesContainerMobileOffices {
+  .officesContainerMobileOffices,
+  .officesContainerMobileOfficesBlur {
     display: none;
   }
 }

@@ -95,11 +95,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .choosePlanTitle {
   color: $secondary;
   font-size: 2.25rem;
+  margin-bottom: 30px;
 }
 
 .choosePlanTitleMobile {
@@ -197,6 +199,13 @@
   border: none;
   margin: 20px 0;
   padding: 10px 0;
+  transition: 0.5s all ease;
+}
+
+.plansButtonMobilePlans:hover,
+.plansButtonMobilePlans:focus {
+  background-color: $secondary;
+  color: #fff;
 }
 
 .choosePlanContainerMobile {
@@ -231,7 +240,6 @@
   }
 
   .choosePlanContainer {
-    flex-direction: column;
     margin: 50px 1rem 220px 1rem;
   }
 }
@@ -265,7 +273,6 @@
   }
 
   .choosePlanContainer {
-    flex-direction: row;
     margin: 50px 2rem 220px 2rem;
   }
 }

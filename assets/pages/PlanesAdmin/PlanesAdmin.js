@@ -17,7 +17,7 @@ const PlanesAdmin = () => {
       <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
         <SideMenuAdmin />
       </div>
-      <div className="col-lg-10 col-md-9 col-sm-12 p-3" style={{ backgroundColor: '#e5e5e5' }}>
+      <div className="col-lg-10 col-md-9 col-sm-12 p-3">
         <div className="row generalContentBody">
           <div className="col-lg-8 col-md-12 col-sm-12">
             <p className="planesAdminTitle extraBoldFont">Planes</p>
@@ -57,9 +57,78 @@ const PlanesAdmin = () => {
                 <p className="planesAdminPlanDetail lightFont">Personas suscritas</p>
               </div>
             </div>
-
+            <div className="planesAdminPlanesDetailsContainer">
+              <div className="planesAdminPlanesDetailsElement">
+                <p className="planesAdminPlanesDetailsTitle boldFont">Pendiente pago</p>
+                <div className="planesAdminPlanesDetailsImage"></div>
+                <div className="planesAdminPlanesDetailsInfo"></div>
+                <p>Referencias</p>
+              </div>
+              <div className="planesAdminPlanesDetailsElement">
+                <p className="planesAdminPlanesDetailsTitle boldFont">Planes pagos</p>
+                <div className="planesAdminPlanesDetailsImage"></div>
+                <div className="planesAdminPlanesDetailsInfo"></div>
+                <p>Referencias</p>
+              </div>
+              <div className="planesAdminPlanesDetailsElement">
+                <p className="planesAdminPlanesDetailsTitle boldFont">Horas más solicitadas en salas de reunión</p>
+                <div className="planesAdminPlanesDetailsImage"></div>
+                <div className="planesAdminPlanesDetailsInfo"></div>
+                <p>Referencias</p>
+              </div>
+              <div className="planesAdminPlanesDetailsElement">
+                <p className="planesAdminPlanesDetailsTitle boldFont">Disponibilidad oficinas</p>
+                <div className="table-responsive">
+                  <table className="table planesAdminPlanesDetailsTableOfficesAvailability">
+                    <tbody>
+                      <tr>
+                        <td className="planesAdminPlanesDetailsTableOffice">Oficina 1</td>
+                        <td className="planesAdminPlanesDetailsTableStatus extraBoldFont">Disponible</td>
+                      </tr>
+                      <tr>
+                        <td className="planesAdminPlanesDetailsTableOffice">Oficina 2</td>
+                        <td className="planesAdminPlanesDetailsTableStatus extraBoldFont">Ocupada</td>
+                      </tr>
+                      <tr>
+                        <td className="planesAdminPlanesDetailsTableOffice">Oficina 3</td>
+                        <td className="planesAdminPlanesDetailsTableStatus extraBoldFont">Disponible</td>
+                      </tr>
+                      <tr>
+                        <td className="planesAdminPlanesDetailsTableOffice">Oficina 4</td>
+                        <td className="planesAdminPlanesDetailsTableStatus extraBoldFont">Disponible</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div className="planesAdminPlanesDetailsElement">
+                <p className="planesAdminPlanesDetailsTitle boldFont">Turnos más solicitados en espacio compartido</p>
+                <div className="planesAdminPlanesDetailsImage"></div>
+                <div className="planesAdminPlanesDetailsInfo"></div>
+                <p>Referencias</p>
+              </div>
+            </div>
+            <p className="planesAdminDailyReservationsTitle boldFont">Reservas de jornadas</p>
+            <div className="planesAdminDailyReservationsContainer">
+              <div className="planesAdminDailyReservationsElement">
+                <p className="planesAdminDailyReservationsElementTitle boldFont">DÍA</p>
+                <p className="planesAdminDailyReservationsElementNumber extraBoldFont">5</p>
+                <p className="planesAdminDailyReservationsElementDetail lightFont">Reservas registradas</p>
+              </div>
+              <hr className="planesAdminDailyReservationsSeparator" />
+              <div className="planesAdminDailyReservationsElement">
+                <p className="planesAdminDailyReservationsElementTitle boldFont">SEMANA</p>
+                <p className="planesAdminDailyReservationsElementNumber extraBoldFont">24</p>
+                <p className="planesAdminDailyReservationsElementDetail lightFont">Reservas registradas</p>
+              </div>
+              <hr className="planesAdminDailyReservationsSeparator" />
+              <div className="planesAdminDailyReservationsElement">
+                <p className="planesAdminDailyReservationsElementTitle boldFont">MES</p>
+                <p className="planesAdminDailyReservationsElementNumber extraBoldFont">56</p>
+                <p className="planesAdminDailyReservationsElementDetail lightFont">Reservas realizadas</p>
+              </div>
+            </div>
             <p className="planesAdminNumbersTitle extraBoldFont">Números generales</p>
-
             <div className="planesAdminGeneralNumbersContainer">
               <div className="planesAdminGeneralNumbers">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="#9f9d9b" xmlns="http://www.w3.org/2000/svg">

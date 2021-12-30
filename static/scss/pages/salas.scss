@@ -44,7 +44,7 @@
   width: 400px;
   margin-top: 60px;
   font-size: 1.1rem;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 .roomButton:hover,
@@ -157,7 +157,7 @@
   padding: 20px 24px;
   font-size: 1.1rem;
   margin: 100px 0 192px 0;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 .roomsFooter {
@@ -266,6 +266,13 @@
   border: none;
   margin: 33px 0;
   padding: 10px 0;
+  transition: 0.5s all ease;
+}
+
+.roomsButtonMobileRooms:hover,
+.roomsButtonMobileRooms:focus {
+  background-color: $secondary;
+  color: #fff;
 }
 
 .allRoomsContainerMobile {

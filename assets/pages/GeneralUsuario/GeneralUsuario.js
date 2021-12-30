@@ -283,14 +283,28 @@ const GeneralUsuario = () => {
                 <div className="blockGeneralUsuarioSeparator"></div>
                 <p className="blockGeneralUsuarioContent1">Créditos Vida disponibles</p>
                 <p className="blockGeneralUsuarioContent2 extraBoldFont">5</p>
-                <button className="blockGeneralUsuarioButton">Reservá</button>
+                <button
+                  className="blockGeneralUsuarioButton"
+                  onClick={() => {
+                    window.scroll(0, 0);
+                    setSharedSpace(true);
+                  }}>
+                  Reservá
+                </button>
               </div>
               <div className="blockGeneralUsuario">
                 <p className="blockGeneralUsuarioTitle extraBoldFont">Salas de reunión</p>
                 <div className="blockGeneralUsuarioSeparator"></div>
                 <p className="blockGeneralUsuarioContent1">Horas disponibles</p>
                 <p className="blockGeneralUsuarioContent2 extraBoldFont">3</p>
-                <button className="blockGeneralUsuarioButton">Reservá</button>
+                <button
+                  className="blockGeneralUsuarioButton"
+                  onClick={() => {
+                    window.scroll(0, 0);
+                    setMeetingsRoom(true);
+                  }}>
+                  Reservá
+                </button>
               </div>
             </div>
           </div>

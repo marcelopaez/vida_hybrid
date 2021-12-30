@@ -19,7 +19,7 @@ const ComunidadBeneficiosAdmin = () => {
       <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
         <SideMenuAdmin />
       </div>
-      <div className="col-lg-10 col-md-9 col-sm-12 p-0">
+      <div className="col-lg-10 col-md-9 col-sm-12 p-3">
         <div className="row generalContentBody">
           <div className="col-lg-8 col-md-12 col-sm-12">
             <p className="comunidadBeneficiosAdminTitle boldFont">Beneficios</p>

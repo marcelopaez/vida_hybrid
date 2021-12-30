@@ -21,9 +21,9 @@ const ContratoUsuario = () => {
       </div>
 
       <div className="col-lg-10 col-md-9 col-sm-12 bg-white p-0">
-        <div className={`${signContract ? 'generalContentAdminBodyBlur' : 'generalContentAdminBody'}`}>
-          <p className="contratoUsuarioTitle extraBoldFont">Contrato</p>
+        <div className={`${signContract ? 'generalContentBodyBlur' : 'generalContentBody'}`}>
           <div className="contratoUsuarioContractContainer">
+            <p className="contratoUsuarioTitle extraBoldFont">Contrato</p>
             <div className="row">
               <div className="col-lg-6 col-md-12 col-sm-12">
                 <div className="contratoUsuarioContractLeft">

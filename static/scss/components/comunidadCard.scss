@@ -8,6 +8,17 @@
   }
 }
 
+.generalContentBodyBlur {
+  filter: blur(4px) !important;
+  .row {
+    &.rowCards {
+      .col-sm-12 {
+        margin: 50px 0;
+      }
+    }
+  }
+}
+
 .customContainer {
   .row {
     &.rowCards {

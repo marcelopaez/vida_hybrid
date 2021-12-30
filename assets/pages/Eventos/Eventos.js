@@ -59,8 +59,9 @@ const Eventos = ({ hideAlternativeFooter }) => {
               showStatus={false}
               showIndicators
               showArrows
-              centerMode
-              centerSlidePercentage={25}
+              centerMode={true}
+              selectedItem={2}
+              centerSlidePercentage={100}
               renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
                 hasPrev && (
                   <button onClick={clickHandler} className="carouselArrowPrevious">
@@ -80,7 +81,19 @@ const Eventos = ({ hideAlternativeFooter }) => {
                 <div className="fakeEventImage"></div>
               </div>
               <div className="eventCarouselItemContainer">
-                <p className="eventCarouselItemTitle lightFont">Evento 1</p>
+                <p className="eventCarouselItemTitle lightFont">Evento 2</p>
+                <div className="fakeEventImage"></div>
+              </div>
+              <div className="eventCarouselItemContainer">
+                <p className="eventCarouselItemTitle lightFont">Evento 3</p>
+                <div className="fakeEventImage"></div>
+              </div>
+              <div className="eventCarouselItemContainer">
+                <p className="eventCarouselItemTitle lightFont">Evento 4</p>
+                <div className="fakeEventImage"></div>
+              </div>
+              <div className="eventCarouselItemContainer">
+                <p className="eventCarouselItemTitle lightFont">Evento 5</p>
                 <div className="fakeEventImage"></div>
               </div>
             </Carousel>
@@ -128,8 +141,9 @@ const Eventos = ({ hideAlternativeFooter }) => {
               showStatus={false}
               showIndicators
               showArrows
-              centerMode
-              centerSlidePercentage={10}
+              centerMode={true}
+              selectedItem={2}
+              centerSlidePercentage={100}
               renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
                 hasPrev && (
                   <button onClick={clickHandler} className="carouselArrowPrevious">
@@ -149,7 +163,19 @@ const Eventos = ({ hideAlternativeFooter }) => {
                 <div className="fakeEventImage"></div>
               </div>
               <div className="eventCarouselItemContainer">
-                <p className="eventCarouselItemTitle lightFont">Evento 1</p>
+                <p className="eventCarouselItemTitle lightFont">Evento 2</p>
+                <div className="fakeEventImage"></div>
+              </div>
+              <div className="eventCarouselItemContainer">
+                <p className="eventCarouselItemTitle lightFont">Evento 3</p>
+                <div className="fakeEventImage"></div>
+              </div>
+              <div className="eventCarouselItemContainer">
+                <p className="eventCarouselItemTitle lightFont">Evento 4</p>
+                <div className="fakeEventImage"></div>
+              </div>
+              <div className="eventCarouselItemContainer">
+                <p className="eventCarouselItemTitle lightFont">Evento 5</p>
                 <div className="fakeEventImage"></div>
               </div>
             </Carousel>

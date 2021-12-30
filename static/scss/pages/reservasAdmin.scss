@@ -11,6 +11,7 @@
 
 .reservasAdminInput {
   padding-left: 50px;
+  width: 100%;
 }
 
 .reservasAdminSearchSVG {
@@ -59,6 +60,12 @@
   background-color: transparent;
   border: none;
   color: $grayDarker2;
+}
+
+.page-link {
+  &.reservasAdminPagination {
+    background-color: $primary !important;
+  }
 }
 
 .reservasAdminRowHover:hover .reservasAdminCancelButton {
@@ -134,6 +141,9 @@
 }
 
 @media (min-width: 300px) {
+  .reservasAdminRoomsContainer {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 576px) {
@@ -143,6 +153,9 @@
 }
 
 @media (min-width: 992px) {
+  .reservasAdminRoomsContainer {
+    justify-content: initial;
+  }
 }
 
 @media (min-width: 1200px) {

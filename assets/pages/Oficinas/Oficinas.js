@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Navbar from '../../components/Navbar';
 import NavbarMobile from '../../components/NavbarMobile';
 import BackgroundImage from '../../images/Backgrounds/OfficesBackground.jpg';
@@ -14,6 +14,7 @@ const Oficinas = ({ showAlternativeFooter }) => {
   const reservationNameMobile = useRef(null);
   const reservationMailLarger = useRef(null);
   const reservationMailMobile = useRef(null);
+  const [reservationConfirmationModal, setReservationConfirmationModal] = useState(false);
 
   return (
     <main>
@@ -43,7 +44,17 @@ const Oficinas = ({ showAlternativeFooter }) => {
         </div>
       </div>
 
-      <div className="officesContainerLargerOffices">
+      {reservationConfirmationModal && (
+        <div className="officesReservationConfirmationModalContainer">
+          <svg width="22" height="21" className="officesReservationConfirmationModalX" onClick={() => setReservationConfirmationModal(false)} viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.0005 1L11.0005 10.5M1.00049 20L11.0005 10.5M11.0005 10.5L1.00049 1L21.0005 20" stroke="#ff972f" />
+          </svg>
+          <p className="officesReservationConfirmationModalTitle boldFont">¡Gracias!</p>
+          <p className="officesReservationConfirmationModalContent">El equipo de Vida Cowork se pondrá en contacto con vos para brindarte más información sobre las oficinas privadas</p>
+        </div>
+      )}
+
+      <div className={`${reservationConfirmationModal ? 'officesContainerLargerOfficesBlur' : 'officesContainerLargerOffices'}`}>
         <div className="customContainer">
           <div className="roomsDescriptionContent">
             <div className="roomsDescriptionTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
@@ -65,12 +76,13 @@ const Oficinas = ({ showAlternativeFooter }) => {
                 E-mail
               </label>
             </div>
+            {/* <button className="officesReservationButton" onClick={() => setReservationConfirmationModal(true)}> */}
             <button className="officesReservationButton">Enviar</button>
           </div>
         </div>
       </div>
 
-      <div className="officesContainerMobileOffices">
+      <div className={`${reservationConfirmationModal ? 'officesContainerMobileOfficesBlur' : 'officesContainerMobileOffices'}`}>
         <div className="oficinasMobileBackground" style={{ backgroundImage: `url(${SalasBackground})` }}>
           <div className="semiCircleHeaderMobile">
             <p className="oficinasTitleMobile extraBoldFont">Oficinas Privadas</p>
@@ -93,6 +105,7 @@ const Oficinas = ({ showAlternativeFooter }) => {
                 E-mail
               </label>
             </div>
+            {/* <button className="officesReservationButtonMobile" onClick={() => setReservationConfirmationModal(true)}> */}
             <button className="officesReservationButtonMobile">Enviar</button>
           </div>
         </div>

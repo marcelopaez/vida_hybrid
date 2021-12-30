@@ -17,6 +17,7 @@ const Reservas = ({ hideAlternativeFooter }) => {
 
   const registeredUser = useRef(null);
   const unregisteredUser = useRef(null);
+  const reservationDocument = useRef(null);
   const enterprise = useRef(null);
   const notEnterprise = useRef(null);
   const reservationMercadoPagoMethod = useRef(null);
@@ -30,6 +31,7 @@ const Reservas = ({ hideAlternativeFooter }) => {
   const reservationCoupon = useRef(null);
   const registeredUserMobile = useRef(null);
   const unregisteredUserMobile = useRef(null);
+  const reservationDocumentMobile = useRef(null);
   const enterpriseMobile = useRef(null);
   const notEnterpriseMobile = useRef(null);
   const reservationMercadoPagoMethodMobile = useRef(null);
@@ -84,6 +86,7 @@ const Reservas = ({ hideAlternativeFooter }) => {
                         </label>
                       </div>
                     </div>
+                    <input type="number" className="businessDocument" placeholder="DNI / Cuil" ref={reservationDocument} />
                     <p className="businessTitle">Empresa</p>
                     <div className="businessOptions">
                       <div className="form-check businessOption">
@@ -101,7 +104,7 @@ const Reservas = ({ hideAlternativeFooter }) => {
                     </div>
                     <input type="text" className="businessName" placeholder="Nombre y apellido / Empresa" ref={reservationName} />
                     <input type="text" className="businessEmail" placeholder="E-mail" ref={reservationEmail} />
-                    <input type="text" className="businessPhone" placeholder="Celular" ref={reservationPhone} />
+                    <input type="number" className="businessPhone" placeholder="Celular" ref={reservationPhone} />
                     <div className="md-form input-with-pre-icon">
                       <i className="fas fa-calendar-alt input-prefix" id="loginDateIcon"></i>
                       <input type="text" id="reservationDate" className="form-control reservationDate" ref={reservationDate} />
@@ -190,6 +193,7 @@ const Reservas = ({ hideAlternativeFooter }) => {
                       </label>
                     </div>
                   </div>
+                  <input type="number" className="businessDocument w-100" placeholder="DNI / Cuil" ref={reservationDocumentMobile} />
                   <p className="businessTitle">Empresa</p>
                   <div className="businessOptions">
                     <div className="form-check businessOption">
@@ -207,7 +211,7 @@ const Reservas = ({ hideAlternativeFooter }) => {
                   </div>
                   <input type="text" className="businessName w-100" placeholder="Nombre y apellido / Empresa" ref={reservationNameMobile} />
                   <input type="text" className="businessEmail w-100" placeholder="E-mail" ref={reservationEmailMobile} />
-                  <input type="text" className="businessPhone w-100" placeholder="Celular" ref={reservationPhoneMobile} />
+                  <input type="number" className="businessPhone w-100" placeholder="Celular" ref={reservationPhoneMobile} />
                   <button
                     className="reservationNextButton boldFont"
                     onClick={() => {

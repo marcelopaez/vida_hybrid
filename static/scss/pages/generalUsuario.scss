@@ -112,7 +112,6 @@
   background: $grayDarker12;
   color: #fff;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin: -48px;
 }
@@ -157,7 +156,6 @@
 .generalAdminFooterLeftFirstText,
 .generalAdminHeaderLeftFirstText {
   font-size: 1.5rem;
-  margin: 0 75px 0 0;
 }
 
 .generalAdminFooterLeftSeparator {
@@ -172,7 +170,6 @@
 .generalAdminFooterSecondText,
 .generalAdminHeaderSecondText {
   font-size: 1.1rem;
-  margin: 0 0 0 50px;
 }
 
 .generalAdminFooterRightButton,
@@ -436,6 +433,35 @@
   .generalAdminFooter {
     display: none;
   }
+
+  .generalAdminHeaderMoreMargin {
+    justify-content: center;
+  }
+
+  .generalAdminHeaderLeft {
+    flex-direction: column;
+  }
+
+  .generalAdminHeaderLeftFirstText,
+  .generalAdminHeaderSecondText {
+    margin: 0;
+  }
+
+  .generalAdminFooterMoreMargin {
+    flex-direction: column;
+  }
+
+  .generalAdminFooterLeft {
+    flex-direction: column;
+  }
+
+  .generalAdminFooterLeftFirstText {
+    margin: 0;
+  }
+
+  .generalAdminFooterSecondText {
+    margin: 0;
+  }
 }
 
 @media (min-width: 576px) {
@@ -453,6 +479,34 @@
   .generalAdminFooter {
     display: flex;
   }
+
+  .generalAdminHeaderMoreMargin {
+    justify-content: space-between;
+  }
+
+  .generalAdminHeaderLeft {
+    flex-direction: row;
+  }
+
+  .generalAdminHeaderLeftFirstText {
+    margin-right: 50px;
+  }
+
+  .generalAdminHeaderSecondText {
+    margin-left: 50px;
+  }
+
+  .generalAdminFooterLeft {
+    flex-direction: row;
+  }
+
+  .generalAdminFooterLeftFirstText {
+    margin: 0 75px 0 0;
+  }
+
+  .generalAdminFooterSecondText {
+    margin: 0 0 0 50px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -462,6 +516,10 @@
 
   .generalAdminMobile {
     display: none;
+  }
+
+  .generalAdminFooterMoreMargin {
+    flex-direction: row;
   }
 }
 

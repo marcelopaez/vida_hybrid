@@ -1,6 +1,5 @@
 .planesAdminTitle {
-  font-size: 3rem;
-  margin: 40px 0;
+  font-size: 1.5rem;
   color: $grayLighter7;
 }
 
@@ -13,10 +12,8 @@
 .planesAdminPlan {
   background: #fff;
   border-radius: 10px;
-  margin: 40px;
   color: $grayLighter7;
   text-align: center;
-  padding: 50px 30px;
 }
 
 .planesAdminPlanTitle {
@@ -31,6 +28,89 @@
 
 .planesAdminPlanDetail {
   font-size: 1.1rem;
+}
+
+.planesAdminPlanesDetailsContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.planesAdminPlanesDetailsElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 50px;
+}
+
+.planesAdminPlanesDetailsTitle {
+  color: $grayLighter7;
+  margin: 25px 0;
+  text-align: center;
+  max-width: 240px;
+}
+
+.planesAdminPlanesDetailsImage {
+  width: 140px;
+  height: 140px;
+  background-color: $grayLighter5;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.planesAdminPlanesDetailsInfo {
+  display: flex;
+  align-items: center;
+}
+
+.planesAdminPlanesDetailsTableOffice {
+  color: $grayLighter7;
+}
+
+.planesAdminPlanesDetailsTableStatus {
+  color: $grayLighter7;
+}
+
+.planesAdminDailyReservationsTitle {
+  font-size: 1.5rem;
+  color: $grayLighter7;
+  margin: 45px 0;
+}
+
+.planesAdminDailyReservationsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: $grayLighter7;
+}
+
+.planesAdminDailyReservationsElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.planesAdminDailyReservationsElementTitle {
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+}
+
+.planesAdminDailyReservationsElementNumber {
+  font-size: 2.25rem;
+  margin-bottom: 5px;
+}
+
+.planesAdminDailyReservationsElementDetail {
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+.planesAdminDailyReservationsSeparator {
+  border: 1px solid $grayLighter7;
+  height: 75px;
 }
 
 .planesAdminNumbersTitle {
@@ -52,8 +132,6 @@
   color: $grayLighter7;
   background: #fff;
   border-radius: 10px;
-  padding: 20px 100px 20px 30px;
-  margin: 40px;
 
   svg {
     margin-right: 20px;
@@ -76,7 +154,6 @@
 }
 
 .planesAdminRightSide {
-  background-color: $grayLighter10;
   color: $grayLighter7;
   height: 100%;
 }
@@ -116,19 +193,91 @@
 }
 
 @media (min-width: 300px) {
+  .planesAdminTitle {
+    margin: 40px 0;
+  }
+
+  .planesAdminPlanesContainer {
+    justify-content: center;
+  }
+
+  .planesAdminPlan {
+    padding: 20px 30px;
+    margin: 5px;
+  }
+
+  .planesAdminPlanesDetailsContainer {
+    justify-content: center;
+  }
+
+  .planesAdminGeneralNumbers {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .planesAdminDailyReservationsElement {
+    margin: 10px;
+  }
+
+  .planesAdminDailyReservationsSeparator {
+    display: none;
+  }
+
+  .planesAdminPlanesDetailsTableOfficesAvailability {
+    width: 100%;
+  }
 }
 
 @media (min-width: 576px) {
+  .planesAdminTitle {
+    margin: 40px 0 40px 70px;
+  }
+
+  .planesAdminPlanesContainer {
+    justify-content: initial;
+  }
+
+  .planesAdminPlan {
+    padding: 50px 30px;
+    margin: 10px;
+  }
+
+  .planesAdminGeneralNumbers {
+    padding: 20px 100px 20px 30px;
+    margin: 40px;
+  }
+
+  .planesAdminDailyReservationsElement {
+    margin: unset;
+  }
+
+  .planesAdminDailyReservationsSeparator {
+    display: block;
+    margin: 0 20px;
+  }
+
+  .planesAdminPlanesDetailsTableOfficesAvailability {
+    width: 300px;
+  }
 }
 
 @media (min-width: 768px) {
+  .planesAdminPlan {
+    margin: 20px;
+  }
 }
 
 @media (min-width: 992px) {
+  .planesAdminPlanesDetailsContainer {
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 1200px) {
 }
 
 @media (min-width: 1400px) {
+  .planesAdminDailyReservationsSeparator {
+    margin: 0 100px;
+  }
 }

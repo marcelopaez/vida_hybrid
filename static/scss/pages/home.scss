@@ -77,6 +77,8 @@
   background: #fff;
   color: #000;
   height: 50vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .welcomeContainerMobileSVG {
@@ -130,12 +132,7 @@
 .plansTitleMobile {
   color: $secondary;
   font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.plansSubtitleMobile {
-  font-size: 1rem;
-  margin-bottom: 30px;
+  margin: 20px 0;
 }
 
 .meetingsContainer {
@@ -168,9 +165,10 @@
 }
 
 .roomsTitle {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   padding: 66px 0 25px 140px;
   max-width: 700px;
+  margin: 0;
 }
 
 .roomsTitleMobile {
@@ -288,6 +286,7 @@
   background: none;
   color: $grayDarker5;
   font-weight: 600;
+  margin: 15px 0;
 }
 
 .servicesDropdownMenuMiddle {
@@ -312,17 +311,6 @@
   font-weight: 600;
 }
 
-// .selectServicesMiddle {
-//   font-size: 2.25rem;
-//   width: 100%;
-// }
-
-// .selectServicesMobile {
-//   color: #000 !important;
-//   font-size: 1rem;
-//   width: 300px;
-// }
-
 .eventsContainer {
   position: relative;
   color: #fff;
@@ -344,8 +332,8 @@
 }
 
 .eventsTitle {
-  font-size: 4.5rem;
-  padding: 90px 0 25px 0;
+  font-size: 3.5rem;
+  padding: 66px 0 25px 0;
   margin: 0 0 0 190px;
   max-width: 500px;
 }
@@ -645,7 +633,7 @@
 }
 
 .consultButtonMobile {
-  background: transparent;
+  background: $secondary;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -656,10 +644,18 @@
 }
 
 .consultButton:hover,
-.consultButtonMobile:hover,
-.consultButton:focus,
-.consultButtonMobile:focus {
+.consultButton:focus {
   background-color: #fff;
+  color: $secondary;
+}
+
+.consultButtonMobile:hover {
+  background-color: $grayLighter13;
+  color: $secondary;
+}
+
+.consultButtonMobile:focus {
+  background: #fff;
   color: $secondary;
 }
 

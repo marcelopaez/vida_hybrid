@@ -23,6 +23,7 @@ const ComunidadUsuario = () => {
       <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
         <SideMenu />
       </div>
+
       <div className="col-lg-10 col-md-9 col-sm-12 p-5">
         <div className="generalAdminHeaderMoreMargin">
           <div className="generalAdminHeaderLeft">
@@ -59,8 +60,9 @@ const ComunidadUsuario = () => {
               showStatus={false}
               showIndicators
               showArrows
-              centerMode
-              centerSlidePercentage={20}
+              centerMode={true}
+              selectedItem={2}
+              centerSlidePercentage={100}
               renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
                 hasPrev && (
                   <button onClick={clickHandler} className="carouselArrowPrevious">

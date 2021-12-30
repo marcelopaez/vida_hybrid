@@ -99,8 +99,8 @@
 }
 
 .fakeEventImage {
-  width: 233px;
-  height: 187px;
+  width: 270px;
+  height: 150px;
   background-color: $grayLighter5;
   border-radius: 10px;
 }
@@ -162,7 +162,7 @@
   border-radius: 10px;
   padding: 20px 15px;
   width: 100%;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 .eventsReservationButtonMobile {
@@ -173,7 +173,7 @@
   border-radius: 10px;
   padding: 20px 15px;
   width: 100%;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 .eventsReservationButton:hover,

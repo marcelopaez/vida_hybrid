@@ -58,7 +58,6 @@ const Home = () => {
 
   const carouselSettings = {
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
@@ -179,7 +178,6 @@ const Home = () => {
         <div className="customContainer">
           <img src={BackgroundSVGHomeMobile1} alt="Vida" className="backgroundSVGHomeMobile1" />
           <p className="plansTitleMobile extraBoldFont">Planes</p>
-          <p className="plansSubtitleMobile">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <PlanHorizontal
             svg={
               <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -191,8 +189,7 @@ const Home = () => {
             }
             title={'Plan Eter'}
             description={'Vení 1 día a la semana'}
-            full={'Incluye 5 Hs. en salas de reunión'}
-            part={'Incluye 3 Hs. en salas de reunión'}
+            price={'3800'}
           />
           <PlanHorizontal
             svg={
@@ -204,8 +201,7 @@ const Home = () => {
             }
             title={'Plan Aire'}
             description={'Enfocate 2 días a la semana'}
-            full={'Incluye 5 Hs. en salas de reunión'}
-            part={'Incluye 3 Hs. en salas de reunión'}
+            price={'4600'}
           />
           <PlanHorizontal
             svg={
@@ -215,8 +211,7 @@ const Home = () => {
             }
             title={'Plan Agua'}
             description={'Trabajá 3 veces por semana, descansá 2'}
-            full={'Incluye 5 Hs. en salas de reunión'}
-            part={'Incluye 3 Hs. en salas de reunión'}
+            price={'6500'}
           />
           <PlanHorizontal
             svg={
@@ -227,8 +222,7 @@ const Home = () => {
             }
             title={'Plan Fuego'}
             description={'Un día de franco! 4 veces a la semana'}
-            full={'Incluye 5 Hs. en salas de reunión'}
-            part={'Incluye 3 Hs. en salas de reunión'}
+            price={'7400'}
           />
           <PlanHorizontal
             svg={
@@ -238,13 +232,12 @@ const Home = () => {
             }
             title={'Plan Tierra'}
             description={'Vení 5 días a la semana'}
-            full={'Incluye 5 Hs. en salas de reunión'}
-            part={'Incluye 3 Hs. en salas de reunión'}
+            price={'8800'}
           />
         </div>
       </div>
 
-      <div id="carouselSalas" className="meetingsContainer carousel slide" data-ride="carousel" style={{ position: 'relative' }}>
+      <div id="carouselSalas" className="meetingsContainer carousel slide" data-ride="carousel" data-interval="3000" style={{ position: 'relative' }}>
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src={SalasBackground} alt="Vida" height="650px" className="sliderImageWithOffset" />
@@ -282,13 +275,13 @@ const Home = () => {
       </div>
 
       <div className="meetingsContainerMobile">
-        <img src={SalasBackground} alt="Vida" height="auto" width="100%" style={{ minHeight: '300px' }} />
+        <img src={SalasBackground} alt="Vida" height="auto" width="100%" style={{ minHeight: '300px', objectFit: 'cover' }} />
         <div className="customContainer">
           <p className="roomsTitleMobile extraBoldFont">SALAS DE REUNIÓN</p>
           <p className="roomsSubtitleMobile">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
           <p className="roomsContent1Mobile">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
         </div>
-        <img src={SalasBackground} alt="Vida" height="auto" width="100%" style={{ minHeight: '300px' }} />
+        <img src={SalasBackground} alt="Vida" height="auto" width="100%" style={{ minHeight: '300px', objectFit: 'cover' }} />
         <div className="customContainer">
           <p className="roomsTitleMobile extraBoldFont">Oficinas privadas</p>
           <p className="roomsSubtitleMobile">Si buscás privacidad, tenemos espacios con capacidad para 4 hasta 26 personas.</p>
@@ -1698,7 +1691,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div id="carouselEventos" className="eventsContainerCarousel carousel slide" data-ride="carousel" style={{ position: 'relative', overflow: 'hidden' }}>
+      <div id="carouselEventos" className="eventsContainerCarousel carousel slide" data-ride="carousel" data-interval="3000" style={{ position: 'relative', overflow: 'hidden' }}>
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src={SalasBackground} alt="Vida" height="650px" />

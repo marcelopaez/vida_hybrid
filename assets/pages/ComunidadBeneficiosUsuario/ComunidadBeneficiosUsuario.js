@@ -42,8 +42,9 @@ const ComunidadBeneficiosUsuario = () => {
               showStatus={false}
               showIndicators
               showArrows
-              centerMode
-              centerSlidePercentage={30}
+              centerMode={true}
+              selectedItem={2}
+              centerSlidePercentage={100}
               renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
                 hasPrev && (
                   <button onClick={clickHandler} className="carouselArrowPrevious">
@@ -61,6 +62,7 @@ const ComunidadBeneficiosUsuario = () => {
               <BenefitAdmin image={Comunidad1} title={'Beneficio 1'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
               <BenefitAdmin image={Comunidad1} title={'Beneficio 2'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
               <BenefitAdmin image={Comunidad1} title={'Beneficio 3'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
+              <BenefitAdmin image={Comunidad1} title={'Beneficio 4'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
               <BenefitAdmin image={Comunidad1} title={'Beneficio 4'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
             </Carousel>
           </div>

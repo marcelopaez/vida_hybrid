@@ -10,6 +10,7 @@
 
 .clientesAdminInput {
   padding-left: 50px;
+  width: 100%;
 }
 
 .clientesAdminSearchSVG {
@@ -145,6 +146,7 @@
 .clientesAdminRightSideContract {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .clientesAdminRightSideContractData {
@@ -162,6 +164,12 @@
 .clientesAdminRightSideContractDownload {
   color: $grayDarker16;
   text-align: right;
+}
+
+.page-link {
+  &.clientesAdminPagination {
+    background-color: $primary !important;
+  }
 }
 
 @media (min-width: 300px) {
