@@ -93,7 +93,16 @@ const Home = () => {
         <div className="backgroundMobile">
           <NavbarMobile />
         </div>
-        <img src={BackgroundImage} alt="Vida" height="auto" width="100%" style={{ minHeight: '300px' }} />
+        <div className="leftSVGNavbar" style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover' }}>
+          <div className="homeHeaderContent" style={{ textAlign: 'left' }}>
+            <p className="welcomeTitle extraBoldFont">Bienvenide a Vida Cowork</p>
+            <p className="welcomeSubtitle boldFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <p className="welcomeText lightFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button className="welcomeButton welcomeButtonExtraMargin boldFont">Quiero ser parte de Vida</button>
+          </div>
+        </div>
+
+        <img src={BackgroundImage} alt="Vida" height="auto" width="100%" className="backgroundIndexMobile" style={{ minHeight: '300px' }} />
         <div className="welcomeContainerMobile">
           <img src={LeftSVGGreenSectionSmall} alt="Bienvenide" className="welcomeContainerMobileSVG" />
           <div className="welcomeContainerMobileContent">
@@ -258,7 +267,7 @@ const Home = () => {
               </Link>
             </div>
             <div>
-              <p className="roomsTitle extraBoldFont">PRUEBA</p>
+              <p className="roomsTitle extraBoldFont">ESPACIOS COMPARTIDOS</p>
               <p className="roomsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
               <p className="roomsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
               <p className="roomsContent2">Podes reservar de manera eventual o contratar un pack mensual.</p>
@@ -1712,7 +1721,7 @@ const Home = () => {
               </Link>
             </div>
             <div>
-              <p className="eventsTitle extraBoldFont">EVENTOS2</p>
+              <p className="eventsTitle extraBoldFont">EVENTOS.</p>
               <p className="eventsSubtitle">Contamos con cuatro salas full equipadas para 4, 5, 6 y hasta 12 personas.</p>
               <p className="eventsContent1">Incluyen TV con conexión HDMI, pizarra, uso de cocinas e infusiones, WI-FI de alta velocidad y recepción de invitadxs.</p>
               <Link to="/eventos">
@@ -1724,7 +1733,7 @@ const Home = () => {
       </div>
 
       <div className="eventsContainerMobile">
-        <img src={SalasBackground} alt="Vida" height="auto" width="100%" style={{ minHeight: '300px' }} />
+        <img src={SalasBackground} alt="Vida" height="auto" width="100%" style={{ minHeight: '300px', objectFit: 'cover' }} />
         <div className="customContainer">
           <p className="eventsTitleMobile extraBoldFont">EVENTOS</p>
           <p className="eventsSubtitleMobile">Nuestros espacios son ideales para que puedas brindar cursos, workshops, clases personalizadas y eventos de todo tipo</p>
@@ -1963,7 +1972,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-12 col-md-12 col-sm-12">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.434882088902!2d-64.2347723843618!3d-31.37457028141809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299b7ceb33413%3A0x89c5c3a779773b97!2sVida%20Cowork!5e0!3m2!1ses-419!2sar!4v1638208913348!5m2!1ses-419!2sar" width="100%" height="450" style={{ border: '0', marginTop: '60px' }} allowFullScreen="true" loading="lazy"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.434882088902!2d-64.2347723843618!3d-31.37457028141809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299b7ceb33413%3A0x89c5c3a779773b97!2sVida%20Cowork!5e0!3m2!1ses-419!2sar!4v1638208913348!5m2!1ses-419!2sar" width="100%" height="450" style={{ border: '0', marginTop: '60px' }} allowFullScreen={true} loading="lazy"></iframe>
             </div>
           </div>
           <div className="row">
@@ -2021,7 +2030,7 @@ const Home = () => {
                 darkText={false}
               />
             </div>
-            <div className="col-lg-4 col-md-4 col-sm-6 mt-5">
+            <div className="col-lg-6 col-md-6 col-sm-12 mt-5">
               <Service
                 svg={
                   <svg width="40" height="34" viewBox="0 0 40 34" fill="none" xmlns="http://www.w3.org/2000/svg">

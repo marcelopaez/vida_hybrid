@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../../images/Logos/BlackLogo.svg';
 import FooterLogoDark from '../../images/Logos/FooterLogoDark.svg';
 import InstagramIconRoundedDark from '../../images/Icons/InstagramIconRoundedDark.svg';
@@ -84,12 +85,17 @@ const Footer = () => {
         <div className="customContainer">
           <div className="d-flex justify-content-center">
             <div className="footerTitlesSectionMobile">
-              <p>Salas</p>
+              <Link to="/salas">
+                <p>Salas</p>
+              </Link>
+              <Link to="/planes">
+                <p>Planes</p>
+              </Link>
+              <Link to="/comunidad">
+                <p>Comunidad</p>
+              </Link>
               <p>Formatos</p>
-              <p>Planes</p>
               <p>Servicios</p>
-              <p>Comunidad</p>
-              <p>Reserva</p>
             </div>
           </div>
           <hr />

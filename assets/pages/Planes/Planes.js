@@ -11,12 +11,11 @@ import PreviousArrow from '../../images/Icons/PreviousArrow.svg';
 import NextArrow from '../../images/Icons/NextArrow.svg';
 
 const Planes = ({ hideAlternativeFooter }) => {
-  useEffect(() => {
-    hideAlternativeFooter();
-    window.scroll(0, 0);
-  }, []);
+  useEffect(() => hideAlternativeFooter(), []);
+  useEffect(() => window.scroll(0, 0), []);
 
   const queryType = useRef(null);
+  const queryTypeMobile = useRef(null);
 
   return (
     <main className="plansGeneralContainerPlans">
@@ -33,11 +32,13 @@ const Planes = ({ hideAlternativeFooter }) => {
                 </svg>
                 <p className="actualPlanTitle extraBoldFont">Eter</p>
               </div>
-              <select className="mdb-select md-form consultSelectPlanes" id="consultSelect" defaultValue="Tipo de Consulta" ref={queryType}>
-                <option value="Tipo de consulta">Tipo de consulta</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+              <select className="mdb-select md-form consultSelectPlanes" id="consultSelect" defaultValue="Plan" ref={queryType}>
+                <option value="Plan">Plan</option>
+                <option value="Eter">Eter</option>
+                <option value="Aire">Aire</option>
+                <option value="Agua">Agua</option>
+                <option value="Fuego">Fuego</option>
+                <option value="Tierra">Tierra</option>
               </select>
               <p className="actualPlanText">
                 5 créditos Vida. <br /> 3 Hs. en salas de reunión.
@@ -67,6 +68,32 @@ const Planes = ({ hideAlternativeFooter }) => {
       </div>
 
       <div className="plansContainerLargerPlans">
+        <div className="leftSVGNavbar" style={{ marginTop: '-100px', backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover' }}>
+          <div className="planesHeaderContent">
+            <div className="d-flex align-items-center">
+              <svg width="62" height="62" className="actualPlanSVG actualPlanSVGExtraMargin" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#fff" />
+                <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#fff" />
+                <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#fff" />
+                <path d="M46.8663 46.6618H62.0001C62.0001 38.4274 55.1655 31.6461 46.8663 31.6461H31.7324C31.7324 40.042 38.5671 46.6618 46.8663 46.6618Z" fill="#fff" />
+              </svg>
+              <p className="actualPlanTitle actualPlanTitleExtraMargin extraBoldFont">Eter</p>
+            </div>
+            <select className="mdb-select md-form consultSelectPlanes" id="consultSelect" defaultValue="Plan" ref={queryType}>
+              <option value="Plan">Plan</option>
+              <option value="Eter">Eter</option>
+              <option value="Aire">Aire</option>
+              <option value="Agua">Agua</option>
+              <option value="Fuego">Fuego</option>
+              <option value="Tierra">Tierra</option>
+            </select>
+            <p className="actualPlanText">
+              5 créditos Vida. <br /> 3 Hs. en salas de reunión.
+            </p>
+            <p className="actualPlanPrice extraBoldFont">$3800</p>
+            <button className="actualPlanButton actualPlanButtonExtraMargin boldFont">Suscribite</button>
+          </div>
+        </div>
         <div className="choosePlanContainer">
           <div className="choosePlanTitle boldFont">¡Elegí el plan que más se adapte a vos!</div>
           <div className="customContainer">
@@ -171,7 +198,7 @@ const Planes = ({ hideAlternativeFooter }) => {
 
       <div className="plansContainerMobilePlans">
         <div className="actualPlanHeaderPlansMobileBackground" style={{ backgroundImage: `url(${PlanesBackground})` }}>
-          <div className="semiCircleHeaderMobile">
+          <div className="semiCircleHeaderMobileColumn">
             <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#fff" />
               <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#fff" />
@@ -182,11 +209,13 @@ const Planes = ({ hideAlternativeFooter }) => {
           </div>
         </div>
         <div className="customContainer">
-          <select className="mdb-select md-form mobileSelect" id="servicesMiddle" defaultValue="Título">
-            <option value="Título">Título</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
+          <select className="mdb-select md-form mobileSelect" id="servicesMiddle" defaultValue="Plan" ref={queryTypeMobile}>
+            <option value="Plan">Plan</option>
+            <option value="Eter">Eter</option>
+            <option value="Aire">Aire</option>
+            <option value="Agua">Agua</option>
+            <option value="Fuego">Fuego</option>
+            <option value="Tierra">Tierra</option>
           </select>
 
           <div className="creditsContainer">
@@ -201,6 +230,7 @@ const Planes = ({ hideAlternativeFooter }) => {
 
           <button className="plansButtonMobilePlans boldFont">Suscribite</button>
         </div>
+
         <div className="choosePlanContainerMobile">
           <div className="customContainer">
             <div className="choosePlanTitleMobile boldFont">¡Elegí el plan que más se adapte a vos!</div>

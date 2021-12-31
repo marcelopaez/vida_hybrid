@@ -11,10 +11,8 @@ import PreviousArrow from '../../images/Icons/PreviousArrow.svg';
 import NextArrow from '../../images/Icons/NextArrow.svg';
 
 const Eventos = ({ hideAlternativeFooter }) => {
-  useEffect(() => {
-    hideAlternativeFooter();
-    window.scroll(0, 0);
-  }, []);
+  useEffect(() => hideAlternativeFooter(), []);
+  useEffect(() => window.scroll(0, 0), []);
 
   const reservationNameLarger = useRef(null);
   const reservationNameMobile = useRef(null);
@@ -50,6 +48,13 @@ const Eventos = ({ hideAlternativeFooter }) => {
       </div>
 
       <div className="eventsContainerLargerEvents">
+        <div className="leftSVGNavbar" style={{ marginTop: '-100px', backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover' }}>
+          <div className="eventsHeaderContent">
+            <p className="eventsTitleEvents eventsTitleEventsExtraMargin extraBoldFont">Eventos</p>
+            <p className="eventsSubtitleEvents">Nuestro espacio cuenta con un patio de 500 mt2 y un salón de usos múltiples. Podemos recibir desde 10 a 200 personas.</p>
+            <p className="eventsText eventsTextExtraMargin">Contamos con un equipo especializado para asesorarte en todo lo que necesitas.</p>
+          </div>
+        </div>
         <div className="customContainer">
           <div className="ourEventsContainer">
             <p className="ourEventsTitle extraBoldFont">¡Mirá nuestros eventos!</p>

@@ -170,7 +170,7 @@ const Login = ({ hideAlternativeFooter }) => {
                 <i className="fas fa-birthday-cake input-prefix inputIconOrange"></i>
                 <input type="date" id="consultRegisterBirthday" className="form-control consultRegisterBirthday" ref={birthdayRegister} />
                 <label htmlFor="consultRegisterBirthday" className="consultRegisterBirthday">
-                  Fecha de Cumpleaños
+                  {/* Fecha de Cumpleaños */}
                 </label>
               </div>
             </div>

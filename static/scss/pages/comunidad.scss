@@ -63,10 +63,14 @@
 @media (min-width: 300px) {
   .comunidadCommunityContainer {
     margin-bottom: 50px;
+    margin-top: 200px;
   }
 }
 
 @media (min-width: 576px) {
+  .comunidadCommunityContainer {
+    margin-top: 150px;
+  }
 }
 
 @media (min-width: 768px) {

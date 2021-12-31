@@ -89,6 +89,7 @@ html {
   position: absolute;
   top: 3px;
   right: 0;
+  color: $secondary;
 }
 
 .floatButton {
@@ -137,6 +138,21 @@ html {
   height: 50vw;
 }
 
+.semiCircleHeaderMobileColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 50;
+  color: #fff;
+  background-image: url('data:image/svg+xml,%3Csvg%20width%3D%22136%22%20height%3D%22139%22%20viewBox%3D%220%200%20136%20139%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M136%20139C136%2062.2285%2075.1146%200%200%200V139H136Z%22%20fill%3D%22%23004B2A%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+  background-size: 100%;
+  margin-top: 100px;
+  width: 50vw;
+  height: 50vw;
+}
+
 .generalContentAdminBody,
 .generalContentAdminBodyBlur {
   padding: 0 90px 0 90px;
@@ -178,6 +194,11 @@ html {
     align-items: center;
     justify-content: center;
   }
+
+  .semiCircleHeaderMobileColumn {
+    padding: 40px 0 0 0;
+    left: -10%;
+  }
 }
 
 @media (min-width: 576px) {
@@ -191,6 +212,13 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .semiCircleHeaderMobileColumn {
+    padding: 40px 0 0 15px;
+    left: unset;
+    flex-direction: row;
+    justify-content: unset;
   }
 }
 

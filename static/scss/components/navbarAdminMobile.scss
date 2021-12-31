@@ -88,6 +88,29 @@
 }
 
 @media (min-width: 300px) {
+  .navbarMobileOrangeLogo {
+    display: block;
+  }
+
+  .navbarMobileGreenLogo {
+    display: none;
+  }
+
+  .orangeBackground {
+    color: #fff;
+    border-radius: 10px;
+    background-color: $primary;
+
+    &:hover {
+      background-color: $primaryLighter4;
+      color: #fff;
+    }
+
+    &:focus {
+      background-color: #fff;
+      color: $primary;
+    }
+  }
 }
 
 @media (min-width: 576px) {
@@ -97,6 +120,24 @@
 }
 
 @media (min-width: 992px) {
+  .navbarMobileGreenLogo {
+    display: block;
+  }
+
+  .navbarMobileOrangeLogo {
+    display: none;
+  }
+
+  .orangeBackground {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+
+    &:hover {
+      color: $secondary !important;
+      background-color: #fff;
+    }
+  }
 }
 
 @media (min-width: 1200px) {

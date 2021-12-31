@@ -21,6 +21,10 @@
   max-width: 500px;
 }
 
+.welcomeButtonExtraMargin {
+  margin-bottom: 3rem;
+}
+
 .welcomeTitleMobile,
 .welcomeSubtitleMobile,
 .welcomeTextMobile {
@@ -390,14 +394,8 @@
 .communityContainer {
   position: relative;
   margin-bottom: 100px;
-  margin-top: -60px;
   z-index: 3;
   background-color: #fff;
-}
-
-.communityContainerMobile {
-  @extend .communityContainer;
-  top: 0;
 }
 
 .communitySeeMoreButton {
@@ -606,7 +604,6 @@
 .consultLabel {
   margin-bottom: 15px;
   font-size: 1.1rem;
-  margin: 0 0 0 190px;
 }
 
 .consultInput {
@@ -767,6 +764,16 @@
 }
 
 @media (min-width: 300px) {
+  .backgroundIndexMobile {
+    display: block;
+  }
+
+  .navbarMobile {
+    .leftSVGNavbar {
+      display: none;
+    }
+  }
+
   .welcomeContainerMobileSVG {
     left: 0;
   }
@@ -821,6 +828,10 @@
     display: block;
   }
 
+  .communityContainer {
+    margin-top: 0;
+  }
+
   .opinionContainer {
     display: flex;
     align-items: center;
@@ -858,6 +869,11 @@
 
   .consultSelect {
     margin: 15px 0 15px 0 !important;
+  }
+
+  .consultLabel,
+  .consultInput {
+    margin: 0;
   }
 }
 
@@ -959,6 +975,16 @@
 }
 
 @media (min-width: 992px) {
+  .backgroundIndexMobile {
+    display: none;
+  }
+
+  .navbarMobile {
+    .leftSVGNavbar {
+      display: block;
+    }
+  }
+
   .welcomeContainerMobileSVG {
     left: -25%;
   }
@@ -980,7 +1006,8 @@
   .plansContainerMobile,
   .eventsContainerMobile,
   .strategicPlaceContainerMobile,
-  .partnersContainerMobile {
+  .partnersContainerMobile,
+  .welcomeContainerMobile {
     display: none;
   }
 
@@ -990,16 +1017,16 @@
     display: block;
   }
 
+  .plansContainerHomePreviousSeparator {
+    display: block;
+  }
+
   .meetingsContainer {
     height: 75vh;
   }
 }
 
 @media (min-width: 1200px) {
-  .welcomeContainerMobile {
-    display: none;
-  }
-
   .roomsContainer {
     width: 80%;
     right: 5%;
@@ -1008,6 +1035,10 @@
   .eventsContainer {
     width: 80%;
     left: 10%;
+  }
+
+  .communityContainer {
+    margin-top: -60px;
   }
 
   .ratingContainer,
@@ -1024,16 +1055,23 @@
     display: none;
   }
 
-  .plansContainerHomePreviousSeparator {
-    display: block;
-  }
-
   .consultSelect {
     margin: 15px 0 15px 190px !important;
+  }
+
+  .consultLabel,
+  .consultInput {
+    margin: 0 0 0 190px;
   }
 }
 
 @media (min-width: 1400px) {
+  .navbarMobile {
+    .leftSVGNavbar {
+      display: none;
+    }
+  }
+
   .roomsContainer,
   .eventsContainer {
     width: 65%;

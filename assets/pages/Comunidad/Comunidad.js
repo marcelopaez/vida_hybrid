@@ -6,10 +6,8 @@ import Comunidad1 from '../../images/Backgrounds/Comunidad1.jpg';
 import ComunidadCard from '../../components/ComunidadCard';
 
 const Comunidad = ({ showAlternativeFooter }) => {
-  useEffect(() => {
-    showAlternativeFooter();
-    window.scroll(0, 0);
-  }, []);
+  useEffect(() => showAlternativeFooter(), []);
+  useEffect(() => window.scroll(0, 0), []);
 
   return (
     <main>

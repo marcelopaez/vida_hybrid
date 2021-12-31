@@ -21,11 +21,19 @@
   margin-bottom: 20px;
 }
 
+.officesTitleExtraMargin {
+  padding-top: 50px;
+}
+
 .officesTitle,
 .officesSubtitle,
 .officesText {
   color: #fff;
   max-width: 500px;
+}
+
+.officesTextExtraMargin {
+  padding-bottom: 3rem;
 }
 
 .oficinasTitleMobile {
@@ -71,7 +79,7 @@
   left: 50%;
   transform: translateX(-50%);
   border: 1px solid $grayLighter13;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
 .officesReservationConfirmationModalX {
@@ -221,15 +229,26 @@
 }
 
 @media (min-width: 768px) {
+  .oficinasTitleMobile {
+    font-size: 4rem;
+  }
+
   .roomsDescriptionContent {
     margin: 50px 0 228px 0;
   }
 }
 
 @media (min-width: 992px) {
+  .officesContainerLargerOffices {
+    .leftSVGNavbar {
+      display: block;
+    }
+  }
+
   .officesContainerLargerOffices,
   .officesContainerLargerOfficesBlur {
     display: block;
+    margin-top: 200px;
   }
 
   .officesContainerMobileOffices,
@@ -239,7 +258,28 @@
 }
 
 @media (min-width: 1200px) {
+  .officesContainerLargerOfficesBlur {
+    .leftSVGNavbar {
+      display: block;
+    }
+  }
 }
 
 @media (min-width: 1400px) {
+  .officesContainerLargerOffices {
+    .leftSVGNavbar {
+      display: none;
+    }
+  }
+
+  .officesContainerLargerOfficesBlur {
+    .leftSVGNavbar {
+      display: none;
+    }
+  }
+
+  .officesContainerLargerOffices,
+  .officesContainerLargerOfficesBlur {
+    margin-top: 100px;
+  }
 }

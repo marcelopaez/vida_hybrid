@@ -4,7 +4,8 @@
   position: relative;
 }
 
-.alternativeFooter {
+.alternativeFooter,
+.alternativeFooterMobile {
   color: $grayDarker8;
   background-color: #f1f1f1;
   position: relative;
@@ -126,6 +127,10 @@
   align-items: center;
   flex-wrap: wrap;
 
+  a {
+    color: #000;
+  }
+
   p {
     margin: 15px;
     font-size: 14px !important;
@@ -154,11 +159,13 @@
 }
 
 @media (min-width: 300px) {
-  .footer {
+  .footer,
+  .alternativeFooter {
     display: none;
   }
 
-  .footerMobile {
+  .footerMobile,
+  .alternativeFooterMobile {
     display: block;
   }
 
@@ -232,14 +239,6 @@
 }
 
 @media (min-width: 768px) {
-  .footer {
-    display: block;
-  }
-
-  .footerMobile {
-    display: none;
-  }
-
   .footerColumn {
     margin: 4.4rem 0;
   }
@@ -276,6 +275,16 @@
 }
 
 @media (min-width: 992px) {
+  .footer,
+  .alternativeFooter {
+    display: block;
+  }
+
+  .footerMobile,
+  .alternativeFooterMobile {
+    display: none;
+  }
+
   .footerColumnLeft {
     margin-left: 4.7rem;
   }

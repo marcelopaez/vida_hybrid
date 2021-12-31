@@ -80,7 +80,7 @@ const AlternativeFooter = () => {
         </div>
       </div>
 
-      <div className="footerMobile">
+      <div className="alternativeFooterMobile">
         <div className="customContainer">
           <div className="footerTitlesSection">
             <p>Salas</p>

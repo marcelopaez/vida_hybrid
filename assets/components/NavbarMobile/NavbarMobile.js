@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import OrangeLogoSmall from '../../images/Logos/OrangeLogoSmall.svg';
+import GreenLogo from '../../images/Logos/GreenLogo.svg';
 
 const NavbarMobile = () => {
   return (
@@ -10,37 +11,44 @@ const NavbarMobile = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
       </div>
-      <Link to="/">
-        <img src={OrangeLogoSmall} alt="Vida" loading="lazy" width="150px" />
-      </Link>
+      <div className="navbarMobileOrangeLogo">
+        <Link to="/">
+          <img src={OrangeLogoSmall} alt="Vida" loading="lazy" width="150px" />
+        </Link>
+      </div>
+      <div className="navbarMobileGreenLogo">
+        <Link to="/">
+          <img src={GreenLogo} alt="Vida" loading="lazy" width="150px" />
+        </Link>
+      </div>
       <div className="collapse navbar-collapse" id="navbarMobileVida">
         <ul className="navbar-nav">
           <li className="nav-item align-middle">
-            <Link to="/planes" className="nav-link">
+            <Link to="/planes" className="nav-link" onClick={() => window.scroll(0, 0)}>
               Planes
             </Link>
           </li>
           <li className="nav-item align-middle">
-            <Link to="/salas" className="nav-link">
+            <Link to="/salas" className="nav-link" onClick={() => window.scroll(0, 0)}>
               Salas de Reunión
             </Link>
           </li>
           <li className="nav-item align-middle">
-            <Link to="/oficinas" className="nav-link">
+            <Link to="/oficinas" className="nav-link" onClick={() => window.scroll(0, 0)}>
               Oficinas
             </Link>
           </li>
           <li className="nav-item align-middle">
-            <Link to="/eventos" className="nav-link">
+            <Link to="/eventos" className="nav-link" onClick={() => window.scroll(0, 0)}>
               Eventos
             </Link>
           </li>
           <li className="nav-item align-middle">
-            <Link to="/comunidad" className="nav-link">
+            <Link to="/comunidad" className="nav-link" onClick={() => window.scroll(0, 0)}>
               Comunidad
             </Link>
           </li>
-          <li className="nav-item align-middle d-flex justify-content-center loginButtonMobile">
+          <li className="nav-item align-middle d-flex justify-content-center loginButtonMobile" onClick={() => window.scroll(0, 0)}>
             <Link to="/login" className="nav-link boldFont orangeBackground navItemLogin">
               Iniciar Sesión
             </Link>

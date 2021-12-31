@@ -14,8 +14,11 @@
 }
 
 .actualPlanSVG {
-  margin: 200px 0 43px 0;
-  margin-right: 2rem;
+  margin: 200px 2rem 43px 0;
+}
+
+.actualPlanSVGExtraMargin {
+  margin: 50px 2rem 43px 0;
 }
 
 .consultSelectPlanes {
@@ -28,6 +31,10 @@
 
 .actualPlanTitle {
   padding: 200px 0 43px 0;
+}
+
+.actualPlanTitleExtraMargin {
+  padding: 50px 0 43px 0;
 }
 
 .actualPlanTitle,
@@ -91,6 +98,10 @@
   color: $secondary;
 }
 
+.actualPlanButtonExtraMargin {
+  margin-bottom: 3rem;
+}
+
 .choosePlanContainer {
   display: flex;
   align-items: center;
@@ -102,6 +113,17 @@
   color: $secondary;
   font-size: 2.25rem;
   margin-bottom: 30px;
+}
+
+.choosePlanContainer {
+  .customContainer {
+    .carousel-root {
+      width: 50% !important;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .choosePlanTitleMobile {
@@ -161,7 +183,6 @@
 
 .actualPlanTitleMobile {
   color: #fff;
-  font-size: 2rem;
 }
 
 .creditsContainer {
@@ -223,6 +244,10 @@
 @media (min-width: 300px) {
   .plansContainerLargerPlans {
     display: none;
+
+    .leftSVGNavbar {
+      display: none;
+    }
   }
 
   .plansContainerMobilePlans {
@@ -230,7 +255,11 @@
   }
 
   .marginNavbar {
-    margin: 16.5rem 0 0 0;
+    margin: 5rem 0 0 0;
+  }
+
+  .actualPlanTitleMobile {
+    font-size: 2rem;
   }
 
   .filtersSection {
@@ -245,16 +274,13 @@
 }
 
 @media (min-width: 576px) {
-  .marginNavbar {
-    margin: 6rem 0 0 0;
+  .actualPlanTitleMobile {
+    font-size: 4rem;
+    margin-left: 15px;
   }
 }
 
 @media (min-width: 768px) {
-  .marginNavbar {
-    margin: 7.5rem 0 0 0;
-  }
-
   .filtersSection {
     flex-direction: row;
     align-items: center;
@@ -264,8 +290,15 @@
 }
 
 @media (min-width: 992px) {
+  .salasContainerLarger {
+    .leftSVGNavbar {
+      display: block;
+    }
+  }
+
   .plansContainerLargerPlans {
     display: block;
+    margin-top: 200px;
   }
 
   .plansContainerMobilePlans {
@@ -281,6 +314,20 @@
 }
 
 @media (min-width: 1400px) {
+  .salasContainerLarger {
+    .leftSVGNavbar {
+      display: none;
+    }
+  }
+
+  .plansContainerLargerPlans {
+    margin-top: 200px;
+
+    .leftSVGNavbar {
+      display: none;
+    }
+  }
+
   .filtersSection {
     justify-content: flex-start;
   }
