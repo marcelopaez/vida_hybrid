@@ -1,14 +1,17 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Navbar from '../../components/Navbar';
 import NavbarMobile from '../../components/NavbarMobile';
 import OrangePlan from '../../components/OrangePlan';
 import BackgroundImage from '../../images/Backgrounds/PlanesBackground.jpg';
 import ChoosePlan from '../../images/Backgrounds/ChoosePlan.jpg';
 import PlanesBackground from '../../images/Backgrounds/PlanesBackground.jpg';
+import PlanesBackground2 from '../../images/Backgrounds/HomeBackground.jpg';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import PreviousArrow from '../../images/Icons/PreviousArrow.svg';
-import NextArrow from '../../images/Icons/NextArrow.svg';
+import PreviousArrow from '../../images/Icons/PreviousArrowWhite.svg';
+import NextArrow from '../../images/Icons/NextArrowWhite.svg';
+import PreviousArrowGray from '../../images/Icons/PreviousArrow.svg';
+import NextArrowGray from '../../images/Icons/NextArrow.svg';
 
 const Planes = ({ hideAlternativeFooter }) => {
   useEffect(() => hideAlternativeFooter(), []);
@@ -17,33 +20,99 @@ const Planes = ({ hideAlternativeFooter }) => {
   const queryType = useRef(null);
   const queryTypeMobile = useRef(null);
 
+  const [planToShow, setPlanToShow] = useState(0);
+
   return (
     <main className="plansGeneralContainerPlans">
-      <div className="navbarLarger">
-        <div className="background" style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover' }}>
+      <div className="navbarLarger" style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="background" style={{ backgroundImage: `${planToShow === 0 ? `url(${PlanesBackground})` : planToShow === 1 ? `url(${PlanesBackground2})` : planToShow === 2 ? `url(${PlanesBackground})` : planToShow === 3 ? `url(${PlanesBackground2})` : `url(${PlanesBackground})`}`, backgroundSize: 'cover' }}>
           <div className="leftSVGNavbar">
             <div className="planesHeaderContent">
-              <div className="d-flex align-items-center">
-                <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#fff" />
-                  <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#fff" />
-                  <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#fff" />
-                  <path d="M46.8663 46.6618H62.0001C62.0001 38.4274 55.1655 31.6461 46.8663 31.6461H31.7324C31.7324 40.042 38.5671 46.6618 46.8663 46.6618Z" fill="#fff" />
-                </svg>
-                <p className="actualPlanTitle extraBoldFont">Eter</p>
+              <div className="d-flex align-items-center w-75">
+                <Carousel
+                  infiniteLoop
+                  showThumbs={false}
+                  showStatus={false}
+                  showIndicators={false}
+                  showArrows
+                  centerMode={true}
+                  selectedItem={2}
+                  centerSlidePercentage={100}
+                  onChange={(index, argument) => setPlanToShow(index)}
+                  renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
+                    hasPrev && (
+                      <button onClick={clickHandler} className="carouselArrowPrevious">
+                        <img src={PreviousArrow} />
+                      </button>
+                    )
+                  }
+                  renderArrowNext={(clickHandler, hasNext, labelNext) =>
+                    hasNext && (
+                      <button onClick={clickHandler} className="carouselArrowNext">
+                        <img src={NextArrow} />
+                      </button>
+                    )
+                  }>
+                  <div>
+                    <svg width="84" height="84" className="actualPlanSVG" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.8253 63.4214V83.4019C31.8686 83.4019 40.9631 74.3784 40.9631 63.4214V43.4408C29.9198 43.4408 20.8253 52.2494 20.8253 63.4214Z" fill="white" />
+                      <path d="M43.1284 20.8825V40.8631C54.1717 40.8631 63.2662 31.8396 63.2662 20.8825V0.901917C52.2229 0.901917 43.1284 9.9254 43.1284 20.8825Z" fill="white" />
+                      <path d="M21.0418 21.7423H0.904053C0.904053 32.6994 9.99854 41.7229 21.0418 41.7229H41.1796C41.1796 30.7658 32.0852 21.7423 21.0418 21.7423Z" fill="white" />
+                      <path d="M63.2662 62.9923H83.404C83.404 52.0352 74.3095 43.0117 63.2662 43.0117H43.1284C43.1284 54.1836 52.2229 62.9923 63.2662 62.9923Z" fill="white" />
+                    </svg>
+                    <p className="actualPlanTitle extraBoldFont">Eter</p>
+                  </div>
+                  <div>
+                    <svg width="83" height="86" className="actualPlanSVG" viewBox="0 0 83 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.8122 8.43523L2.16766 0.89679C-1.99936 11.6093 3.35824 23.7105 14.2719 27.8765L33.718 35.4149C37.885 24.7024 32.5274 12.6012 21.8122 8.43523Z" fill="white" />
+                      <path d="M69.4355 40.9693L49.9894 33.4308C45.8224 44.1434 51.18 56.4429 61.8952 60.4105L81.3413 67.949C85.5083 57.2364 80.1507 45.1353 69.4355 40.9693Z" fill="white" />
+                      <path d="M40.2658 58.4273L20.8197 50.8889C16.6527 61.6014 22.0103 73.7025 32.9239 77.8685L52.37 85.407C56.5371 74.6944 51.1795 62.3949 40.2658 58.4273Z" fill="white" />
+                    </svg>
+                    <p className="actualPlanTitle extraBoldFont">Aire</p>
+                  </div>
+                  <div>
+                    <svg width="68" height="84" className="actualPlanSVG" viewBox="0 0 68 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M33.9605 0.153137C43.5064 10.3224 51.4159 18.2928 58.7799 26.813C71.5988 41.3797 70.7806 60.6188 57.689 73.8113C44.8701 86.4541 23.869 86.4541 10.7774 73.8113C-2.31415 60.8936 -3.13238 41.3797 9.41373 26.813C16.505 18.2928 24.6873 10.3224 33.9605 0.153137Z" fill="white" />
+                    </svg>
+                    <p className="actualPlanTitle extraBoldFont">Agua</p>
+                  </div>
+                  <div>
+                    <svg width="80" height="90" className="actualPlanSVG" viewBox="0 0 80 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M34.4316 45.1519V89.9777C59.2311 89.9777 79.1729 69.9982 79.1729 45.1519V0.32605C54.3735 0.32605 34.4316 20.3056 34.4316 45.1519Z" fill="white" />
+                      <path d="M27.7847 62.3137V89.9776C12.4449 89.9776 0.172974 77.6826 0.172974 62.3137V34.9059C15.2572 34.9059 27.7847 47.201 27.7847 62.3137Z" fill="white" />
+                    </svg>
+                    <p className="actualPlanTitle extraBoldFont">Fuego</p>
+                  </div>
+                  <div>
+                    <svg width="84" height="83" className="actualPlanSVG" viewBox="0 0 84 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.595947 43.3733C1.42095 65.3733 19.5709 82.9733 41.8459 82.9733C64.6709 82.9733 83.0959 64.8233 83.0959 41.9983V0.748267C83.0959 0.748267 83.0959 0.748267 82.8209 0.748267C59.9959 0.748267 41.5709 19.1733 41.5709 41.9983V42.2733C41.5709 42.2733 41.5709 42.2733 41.5709 41.9983C41.5709 19.1733 23.4209 0.473267 0.595947 0.473267V43.3733Z" fill="white" />
+                    </svg>
+                    <p className="actualPlanTitle extraBoldFont">Tierra</p>
+                  </div>
+                </Carousel>
               </div>
-              <select className="mdb-select md-form consultSelectPlanes" id="consultSelect" defaultValue="Plan" ref={queryType}>
-                <option value="Plan">Plan</option>
-                <option value="Eter">Eter</option>
-                <option value="Aire">Aire</option>
-                <option value="Agua">Agua</option>
-                <option value="Fuego">Fuego</option>
-                <option value="Tierra">Tierra</option>
-              </select>
-              <p className="actualPlanText">
-                5 créditos Vida. <br /> 3 Hs. en salas de reunión.
-              </p>
-              <p className="actualPlanPrice extraBoldFont">$3800</p>
+              {planToShow === 0 ? (
+                <p className="actualPlanText">
+                  5 créditos Vida. <br /> 3 Hs. en salas de reunión.
+                </p>
+              ) : planToShow === 1 ? (
+                <p className="actualPlanText">
+                  10 créditos Vida. <br /> 6 Hs. en salas de reunión.
+                </p>
+              ) : planToShow === 2 ? (
+                <p className="actualPlanText">
+                  15 créditos Vida. <br /> 9 Hs. en salas de reunión.
+                </p>
+              ) : planToShow === 3 ? (
+                <p className="actualPlanText">
+                  20 créditos Vida. <br /> 12 Hs. en salas de reunión.
+                </p>
+              ) : (
+                <p className="actualPlanText">
+                  25 créditos Vida. <br /> 15 Hs. en salas de reunión.
+                </p>
+              )}
+              <p className="actualPlanPrice extraBoldFont">{planToShow === 0 ? '$3000' : planToShow === 1 ? '$4000' : planToShow === 2 ? '$5000' : planToShow === 3 ? '$6000' : '$7000'}</p>
               <button className="actualPlanButton boldFont">Suscribite</button>
             </div>
           </div>
@@ -68,66 +137,110 @@ const Planes = ({ hideAlternativeFooter }) => {
       </div>
 
       <div className="plansContainerLargerPlans">
-        <div className="leftSVGNavbar" style={{ marginTop: '-100px', backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover' }}>
+        <div className="leftSVGNavbar" style={{ marginTop: '-100px', backgroundImage: `${planToShow === 0 ? `url(${PlanesBackground})` : planToShow === 1 ? `url(${PlanesBackground2})` : planToShow === 2 ? `url(${PlanesBackground})` : planToShow === 3 ? `url(${PlanesBackground2})` : `url(${PlanesBackground})`}`, backgroundSize: 'cover' }}>
           <div className="planesHeaderContent">
-            <div className="d-flex align-items-center">
-              <svg width="62" height="62" className="actualPlanSVG actualPlanSVGExtraMargin" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#fff" />
-                <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#fff" />
-                <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#fff" />
-                <path d="M46.8663 46.6618H62.0001C62.0001 38.4274 55.1655 31.6461 46.8663 31.6461H31.7324C31.7324 40.042 38.5671 46.6618 46.8663 46.6618Z" fill="#fff" />
-              </svg>
-              <p className="actualPlanTitle actualPlanTitleExtraMargin extraBoldFont">Eter</p>
+            <div className="d-flex align-items-center w-75">
+              <Carousel
+                infiniteLoop
+                showThumbs={false}
+                showStatus={false}
+                showIndicators={false}
+                showArrows
+                centerMode={true}
+                selectedItem={2}
+                centerSlidePercentage={100}
+                onChange={(index, argument) => setPlanToShow(index)}
+                renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
+                  hasPrev && (
+                    <button onClick={clickHandler} className="carouselArrowPrevious">
+                      <img src={PreviousArrow} />
+                    </button>
+                  )
+                }
+                renderArrowNext={(clickHandler, hasNext, labelNext) =>
+                  hasNext && (
+                    <button onClick={clickHandler} className="carouselArrowNext">
+                      <img src={NextArrow} />
+                    </button>
+                  )
+                }>
+                <div>
+                  <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#fff" />
+                    <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#fff" />
+                    <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#fff" />
+                    <path d="M46.8663 46.6618H62.0001C62.0001 38.4274 55.1655 31.6461 46.8663 31.6461H31.7324C31.7324 40.042 38.5671 46.6618 46.8663 46.6618Z" fill="#fff" />
+                  </svg>
+                  <p className="actualPlanTitle extraBoldFont">Eter</p>
+                </div>
+                <div>
+                  <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.8122 8.43523L2.16766 0.89679C-1.99936 11.6093 3.35824 23.7105 14.2719 27.8765L33.718 35.4149C37.885 24.7024 32.5274 12.6012 21.8122 8.43523Z" fill="white" />
+                    <path d="M69.4355 40.9693L49.9894 33.4308C45.8224 44.1434 51.18 56.4429 61.8952 60.4105L81.3413 67.949C85.5083 57.2364 80.1507 45.1353 69.4355 40.9693Z" fill="white" />
+                    <path d="M40.2658 58.4273L20.8197 50.8889C16.6527 61.6014 22.0103 73.7025 32.9239 77.8685L52.37 85.407C56.5371 74.6944 51.1795 62.3949 40.2658 58.4273Z" fill="white" />
+                  </svg>
+                  <p className="actualPlanTitle extraBoldFont">Aire</p>
+                </div>
+                <div>
+                  <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M33.9605 0.153137C43.5064 10.3224 51.4159 18.2928 58.7799 26.813C71.5988 41.3797 70.7806 60.6188 57.689 73.8113C44.8701 86.4541 23.869 86.4541 10.7774 73.8113C-2.31415 60.8936 -3.13238 41.3797 9.41373 26.813C16.505 18.2928 24.6873 10.3224 33.9605 0.153137Z" fill="white" />
+                  </svg>
+                  <p className="actualPlanTitle extraBoldFont">Agua</p>
+                </div>
+                <div>
+                  <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34.4316 45.1519V89.9777C59.2311 89.9777 79.1729 69.9982 79.1729 45.1519V0.32605C54.3735 0.32605 34.4316 20.3056 34.4316 45.1519Z" fill="white" />
+                    <path d="M27.7847 62.3137V89.9776C12.4449 89.9776 0.172974 77.6826 0.172974 62.3137V34.9059C15.2572 34.9059 27.7847 47.201 27.7847 62.3137Z" fill="white" />
+                  </svg>
+                  <p className="actualPlanTitle extraBoldFont">Fuego</p>
+                </div>
+                <div>
+                  <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.595947 43.3733C1.42095 65.3733 19.5709 82.9733 41.8459 82.9733C64.6709 82.9733 83.0959 64.8233 83.0959 41.9983V0.748267C83.0959 0.748267 83.0959 0.748267 82.8209 0.748267C59.9959 0.748267 41.5709 19.1733 41.5709 41.9983V42.2733C41.5709 42.2733 41.5709 42.2733 41.5709 41.9983C41.5709 19.1733 23.4209 0.473267 0.595947 0.473267V43.3733Z" fill="white" />
+                  </svg>
+                  <p className="actualPlanTitle extraBoldFont">Tierra</p>
+                </div>
+              </Carousel>
             </div>
-            <select className="mdb-select md-form consultSelectPlanes" id="consultSelect" defaultValue="Plan" ref={queryType}>
+            {/* <select className="mdb-select md-form consultSelectPlanes" id="consultSelect" defaultValue="Plan" ref={queryType}>
               <option value="Plan">Plan</option>
               <option value="Eter">Eter</option>
               <option value="Aire">Aire</option>
               <option value="Agua">Agua</option>
               <option value="Fuego">Fuego</option>
               <option value="Tierra">Tierra</option>
-            </select>
-            <p className="actualPlanText">
-              5 créditos Vida. <br /> 3 Hs. en salas de reunión.
-            </p>
-            <p className="actualPlanPrice extraBoldFont">$3800</p>
+            </select> */}
+            {planToShow === 0 ? (
+              <p className="actualPlanText">
+                5 créditos Vida. <br /> 3 Hs. en salas de reunión.
+              </p>
+            ) : planToShow === 1 ? (
+              <p className="actualPlanText">
+                10 créditos Vida. <br /> 6 Hs. en salas de reunión.
+              </p>
+            ) : planToShow === 2 ? (
+              <p className="actualPlanText">
+                15 créditos Vida. <br /> 9 Hs. en salas de reunión.
+              </p>
+            ) : planToShow === 3 ? (
+              <p className="actualPlanText">
+                20 créditos Vida. <br /> 12 Hs. en salas de reunión.
+              </p>
+            ) : (
+              <p className="actualPlanText">
+                25 créditos Vida. <br /> 15 Hs. en salas de reunión.
+              </p>
+            )}
+            <p className="actualPlanPrice extraBoldFont">{planToShow === 0 ? '$3000' : planToShow === 1 ? '$4000' : planToShow === 2 ? '$5000' : planToShow === 3 ? '$6000' : '$7000'}</p>
             <button className="actualPlanButton actualPlanButtonExtraMargin boldFont">Suscribite</button>
           </div>
         </div>
-        <div className="choosePlanContainer">
+        {/* <div className="choosePlanContainer">
           <div className="choosePlanTitle boldFont">¡Elegí el plan que más se adapte a vos!</div>
           <div className="customContainer">
-            <Carousel
-              infiniteLoop
-              showThumbs={false}
-              showStatus={false}
-              showIndicators
-              showArrows
-              centerMode={true}
-              selectedItem={2}
-              centerSlidePercentage={100}
-              renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
-                hasPrev && (
-                  <button onClick={clickHandler} className="carouselArrowPrevious">
-                    <img src={PreviousArrow} />
-                  </button>
-                )
-              }
-              renderArrowNext={(clickHandler, hasNext, labelNext) =>
-                hasNext && (
-                  <button onClick={clickHandler} className="carouselArrowNext">
-                    <img src={NextArrow} />
-                  </button>
-                )
-              }>
-              <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
-              <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
-              <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
-              <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
-              <img className="choosePlanImage" src={ChoosePlan} alt="Plan" />
-            </Carousel>
+
           </div>
-        </div>
+        </div> */}
 
         <div className="plansContainerPlans">
           <OrangePlan
@@ -238,7 +351,7 @@ const Planes = ({ hideAlternativeFooter }) => {
               infiniteLoop
               showThumbs={false}
               showStatus={false}
-              showIndicators
+              showIndicators={false}
               showArrows
               centerMode={true}
               selectedItem={2}
@@ -246,14 +359,14 @@ const Planes = ({ hideAlternativeFooter }) => {
               renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
                 hasPrev && (
                   <button onClick={clickHandler} className="carouselArrowPrevious">
-                    <img src={PreviousArrow} />
+                    <img src={PreviousArrowGray} />
                   </button>
                 )
               }
               renderArrowNext={(clickHandler, hasNext, labelNext) =>
                 hasNext && (
                   <button onClick={clickHandler} className="carouselArrowNext">
-                    <img src={NextArrow} />
+                    <img src={NextArrowGray} />
                   </button>
                 )
               }>

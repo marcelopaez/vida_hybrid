@@ -5,9 +5,9 @@ import NavbarLogin from '../../components/NavbarLogin';
 import NavbarLoginMobile from '../../components/NavbarLoginMobile';
 import BackgroundSVGLogin from '../../images/SVGs/BackgroundSVGLogin.svg';
 
-const Login = ({ hideAlternativeFooter }) => {
+const Login = ({ showAlternativeFooter }) => {
   useEffect(() => {
-    hideAlternativeFooter();
+    showAlternativeFooter();
     window.scroll(0, 0);
   }, []);
 

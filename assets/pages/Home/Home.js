@@ -19,8 +19,6 @@ import Comunidad1 from '../../images/Backgrounds/Comunidad1.jpg';
 import ExampleRatingPhoto from '../../images/ExampleRatingPhoto.jpg';
 import YellowStar from '../../images/StarYellow.svg';
 import GrayStar from '../../images/StarGray.svg';
-import PreviousArrow from '../../images/Icons/PreviousArrow.svg';
-import NextArrow from '../../images/Icons/NextArrow.svg';
 import Partner1 from '../../images/Partners/Partner1.svg';
 import Partner2 from '../../images/Partners/Partner2.svg';
 import Partner3 from '../../images/Partners/Partner3.svg';
@@ -56,12 +54,16 @@ const Home = () => {
   const [showServicesEspacios, setShowServicesEspacios] = useState(false);
   const [showServicesServicios, setShowServicesServicios] = useState(false);
 
+  const [showCarousel, setShowCarousel] = useState(false);
+
+  useEffect(() => setTimeout(() => setShowCarousel(true), 1000)), [];
+
   const carouselSettings = {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
-    autoplay: true,
+    autoPlay: true,
     arrows: false,
   };
 
@@ -2276,54 +2278,32 @@ const Home = () => {
         <div className="customContainer">
           <p className="partnersTitle extraBoldFont">NUESTROS PARTNERS</p>
           <div className="partnersLogos">
-            <Carousel
-              infiniteLoop
-              showThumbs={false}
-              showArrows
-              centerMode
-              centerSlidePercentage={20}
-              autoplay
-              selectedItem={5}
-              showIndicators={false}
-              showStatus={false}
-              renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
-                hasPrev && (
-                  <button onClick={clickHandler} className="carouselArrowPrevious">
-                    <img src={PreviousArrow} />
-                  </button>
-                )
-              }
-              renderArrowNext={(clickHandler, hasNext, labelNext) =>
-                hasNext && (
-                  <button onClick={clickHandler} className="carouselArrowNext">
-                    <img src={NextArrow} />
-                  </button>
-                )
-              }>
-              <img src={Partner1} alt="AnkaLoo" />
-              <img src={Partner2} alt="Aliaga" />
-              <img src={Partner3} alt="Marangoni" />
-              <img src={Partner4} alt="Argentis" />
-              <img src={Partner5} alt="Awla" />
-              <img src={Partner6} alt="Bodego" />
-              <img src={Partner7} alt="Cervetti" />
-              <img src={Partner8} alt="Grupo Gauss" />
-              <img src={Partner9} alt="Big Capital" />
-              <img src={Partner10} alt="Molinos" />
-              <img src={Partner11} alt="Weiv" />
-              <img src={Partner12} alt="GNorte" />
-              <img src={Partner13} alt="Boceto" />
-              <img src={Partner14} alt="The Ludwe" />
-              <img src={Partner15} alt="NeWaves" />
-              <img src={Partner16} alt="Oliver" />
-              <img src={Partner17} alt="SocialBits" />
-              <img src={Partner18} alt="SimpleState" />
-              <img src={Partner19} alt="Solvo" />
-              <img src={Partner20} alt="Tempel" />
-              <img src={Partner21} alt="Pipncia" />
-              <img src={Partner22} alt="Trading Club CBA" />
-            </Carousel>
-            <Slider {...carouselSettings}></Slider>
+            {showCarousel && (
+              <Carousel autoPlay={true} interval={1500} infiniteLoop={true} showThumbs={false} showArrows={false} centerMode centerSlidePercentage={20} selectedItem={5} showIndicators={false} showStatus={false} useKeyboardArrows={true}>
+                <img src={Partner1} alt="AnkaLoo" />
+                <img src={Partner2} alt="Aliaga" />
+                <img src={Partner3} alt="Marangoni" />
+                <img src={Partner4} alt="Argentis" />
+                <img src={Partner5} alt="Awla" />
+                <img src={Partner6} alt="Bodego" />
+                <img src={Partner7} alt="Cervetti" />
+                <img src={Partner8} alt="Grupo Gauss" />
+                <img src={Partner9} alt="Big Capital" />
+                <img src={Partner10} alt="Molinos" />
+                <img src={Partner11} alt="Weiv" />
+                <img src={Partner12} alt="GNorte" />
+                <img src={Partner13} alt="Boceto" />
+                <img src={Partner14} alt="The Ludwe" />
+                <img src={Partner15} alt="NeWaves" />
+                <img src={Partner16} alt="Oliver" />
+                <img src={Partner17} alt="SocialBits" />
+                <img src={Partner18} alt="SimpleState" />
+                <img src={Partner19} alt="Solvo" />
+                <img src={Partner20} alt="Tempel" />
+                <img src={Partner21} alt="Pipncia" />
+                <img src={Partner22} alt="Trading Club CBA" />
+              </Carousel>
+            )}
           </div>
         </div>
       </div>
@@ -2332,30 +2312,7 @@ const Home = () => {
         <div className="customContainer">
           <p className="partnersTitle extraBoldFont">NUESTROS PARTNERS</p>
           <div className="partnersLogos">
-            <Carousel
-              infiniteLoop
-              showThumbs={false}
-              showArrows
-              centerMode
-              centerSlidePercentage={60}
-              autoplay
-              selectedItem={5}
-              showIndicators={false}
-              showStatus={false}
-              renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
-                hasPrev && (
-                  <button onClick={clickHandler} className="carouselArrowPrevious">
-                    <img src={PreviousArrow} />
-                  </button>
-                )
-              }
-              renderArrowNext={(clickHandler, hasNext, labelNext) =>
-                hasNext && (
-                  <button onClick={clickHandler} className="carouselArrowNext">
-                    <img src={NextArrow} />
-                  </button>
-                )
-              }>
+            <Carousel autoPlay={true} interval={1500} infiniteLoop={true} showThumbs={false} showArrows={false} centerMode centerSlidePercentage={60} selectedItem={5} showIndicators={false} showStatus={false}>
               <img src={Partner1} alt="AnkaLoo" />
               <img src={Partner2} alt="Aliaga" />
               <img src={Partner3} alt="Marangoni" />
@@ -2379,7 +2336,6 @@ const Home = () => {
               <img src={Partner21} alt="Pipncia" />
               <img src={Partner22} alt="Trading Club CBA" />
             </Carousel>
-            <Slider {...carouselSettings}></Slider>
           </div>
         </div>
       </div>
@@ -2388,30 +2344,7 @@ const Home = () => {
         <div className="customContainer">
           <p className="partnersTitle extraBoldFont">NUESTROS PARTNERS</p>
           <div className="partnersLogos">
-            <Carousel
-              infiniteLoop
-              showThumbs={false}
-              showArrows
-              centerMode
-              centerSlidePercentage={100}
-              autoplay
-              selectedItem={5}
-              showIndicators={false}
-              showStatus={false}
-              renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
-                hasPrev && (
-                  <button onClick={clickHandler} className="carouselArrowPrevious">
-                    <img src={PreviousArrow} />
-                  </button>
-                )
-              }
-              renderArrowNext={(clickHandler, hasNext, labelNext) =>
-                hasNext && (
-                  <button onClick={clickHandler} className="carouselArrowNext">
-                    <img src={NextArrow} />
-                  </button>
-                )
-              }>
+            <Carousel autoPlay={true} interval={2000} infiniteLoop={true} showThumbs={false} showArrows={false} centerMode centerSlidePercentage={100} selectedItem={5} showIndicators={false} showStatus={false}>
               <img src={Partner1} alt="AnkaLoo" />
               <img src={Partner2} alt="Aliaga" />
               <img src={Partner3} alt="Marangoni" />

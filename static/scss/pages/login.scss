@@ -5,10 +5,10 @@
 }
 
 .inputIconOrange {
-  color: $secondary !important;
+  color: $grayDarker8 !important;
 
   &.active {
-    color: $grayDarker8 !important;
+    color: $secondary !important;
   }
 }
 
@@ -21,7 +21,7 @@
   width: 100%;
   margin-bottom: 20px;
   font-size: 1.1rem;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 .loginButton:hover {
@@ -117,10 +117,10 @@
 .consultRegisterBirthday,
 .consultRegisterPhone,
 .consultRegisterJob {
-  color: $secondary !important;
+  color: $grayDarker8 !important;
 
   &.active {
-    color: $grayDarker8 !important;
+    color: $secondary !important;
   }
 }
 
@@ -134,10 +134,11 @@
 #consultRegisterBirthday,
 #consultRegisterPhone,
 #consultRegisterJob {
-  border-bottom: 1px solid $secondary !important;
+  border-bottom: 1px solid $grayDarker8 !important;
 
   &:focus {
-    border-bottom: 1px solid $grayDarker8 !important;
+    border-bottom: 1px solid $secondary !important;
+    box-shadow: 0 1px 0 0 $secondary !important;
   }
 }
 

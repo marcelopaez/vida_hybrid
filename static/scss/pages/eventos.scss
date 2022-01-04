@@ -204,10 +204,10 @@
 .eventsEmailLarger,
 .eventsNameMobile,
 .eventsEmailMobile {
-  color: $secondary !important;
+  color: $grayDarker8 !important;
 
   &.active {
-    color: $grayDarker8 !important;
+    color: $secondary !important;
   }
 }
 
@@ -215,10 +215,11 @@
 #eventsEmailLarger,
 #eventsNameMobile,
 #eventsEmailMobile {
-  border-bottom: 1px solid $secondary !important;
+  border-bottom: 1px solid $grayDarker8 !important;
 
   &:focus {
-    border-bottom: 1px solid $grayDarker8 !important;
+    border-bottom: 1px solid $secondary !important;
+    box-shadow: 0 1px 0 0 $secondary !important;
   }
 }
 

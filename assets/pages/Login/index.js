@@ -1,9 +1,9 @@
 import Login from './Login';
 import { connect } from 'react-redux';
-import { hideAlternativeFooter } from '../../api/general';
+import { showAlternativeFooter } from '../../api/general';
 
 const mapDispatchToProps = (dispatch) => ({
-  hideAlternativeFooter: () => hideAlternativeFooter(dispatch),
+  showAlternativeFooter: () => showAlternativeFooter(dispatch),
 });
 
 export default connect(null, mapDispatchToProps)(Login);

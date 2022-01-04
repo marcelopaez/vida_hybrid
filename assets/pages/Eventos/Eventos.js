@@ -21,7 +21,7 @@ const Eventos = ({ hideAlternativeFooter }) => {
 
   return (
     <main>
-      <div className="navbarLarger">
+      <div className="navbarLarger" style={{ position: 'relative', overflow: 'hidden' }}>
         <div className="background" style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover' }}>
           <div className="leftSVGNavbar">
             <div className="eventsHeaderContent">

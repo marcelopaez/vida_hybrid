@@ -29,7 +29,7 @@ const Oficinas = ({ showAlternativeFooter }) => {
           <p className="officesReservationConfirmationModalContent">El equipo de Vida Cowork se pondrá en contacto con vos para brindarte más información sobre las oficinas privadas</p>
         </div>
       )} */}
-      <div className="navbarLarger">
+      <div className="navbarLarger" style={{ position: 'relative', overflow: 'hidden' }}>
         <div className="background" style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover' }}>
           <div className="leftSVGNavbar">
             <div className="officesHeaderContent">

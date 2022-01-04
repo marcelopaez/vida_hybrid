@@ -31,6 +31,12 @@
   max-width: 500px;
 }
 
+.roomTitleCarousel {
+  margin: 0;
+  color: #fff;
+  font-size: 4rem;
+}
+
 .roomTitleExtraMargin {
   padding: 50px 0 40px 0;
   margin-bottom: 0;
@@ -77,11 +83,6 @@
 .chooseRoomContainerMobile {
   padding-bottom: 66px;
   background: #fff;
-}
-
-.chooseRoomTitle {
-  color: $secondary;
-  font-size: 2.25rem;
 }
 
 .chooseRoomTitleMobile {

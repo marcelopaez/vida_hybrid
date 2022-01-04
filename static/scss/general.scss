@@ -44,6 +44,10 @@ html {
   font-weight: 800 !important;
 }
 
+.mdb-select {
+  font-family: 'Merriweather Sans', sans-serif !important;
+}
+
 .carouselArrow {
   border: none;
   background: none;
@@ -89,7 +93,7 @@ html {
   position: absolute;
   top: 3px;
   right: 0;
-  color: $secondary;
+  color: $grayDarker8;
 }
 
 .floatButton {
