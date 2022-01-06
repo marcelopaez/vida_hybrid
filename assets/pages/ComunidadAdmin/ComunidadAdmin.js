@@ -24,9 +24,9 @@ const ComunidadAdmin = () => {
       <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
         <SideMenuAdmin />
       </div>
-      <div className="col-lg-10 col-md-9 col-sm-12 p-3">
+      <div className="col-lg-10 col-md-9 col-sm-12 px-3 mb-3">
         <div className="row generalContentBody">
-          <div className="col-lg-8 col-md-12 col-sm-12">
+          <div className="col-xl-9 col-lg-12 col-md-12 col-sm-12">
             <p className="comunidadAdminNoticeTitle extraBoldFont">Enviar comunicado</p>
             <div className="comunidadAdminNoticeReceiver">
               <p className="comunidadAdminNoticeReceiverText">Enviar a: </p>
@@ -55,7 +55,7 @@ const ComunidadAdmin = () => {
             <p className="comunidadAdminArticlesTitle boldFont">Notas o lo que se quiera destacar, por ejemplo, eventos</p>
             <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} admin={true} />
           </div>
-          <div className="col-lg-4 col-md-12 col-sm-12">
+          <div className="col-xl-3 col-lg-12 col-md-12 col-sm-12">
             <div className="comunidadAdminRightSide">
               <p className="comunidadAdminRightSideTitle boldFont">Cumpleaños del día</p>
               <div className="comunidadAdminRightSideBirthdayContainer">

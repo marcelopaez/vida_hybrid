@@ -36,9 +36,9 @@ const CrearReservaAdmin = () => {
       <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
         <SideMenuAdmin />
       </div>
-      <div className="col-lg-10 col-md-9 col-sm-12 p-3">
+      <div className="col-lg-10 col-md-9 col-sm-12 px-3 mb-3 backgroundAdmin">
         <div className="row generalContentBody">
-          <div className="col-lg-8 col-md-12 col-sm-12" style={{ position: 'relative' }}>
+          <div className="col-xl-9 col-lg-12 col-md-12 col-sm-12" style={{ position: 'relative' }}>
             <FullCalendar
               plugins={[timeGridPlugin, interactionPlugin]}
               initialView="timeGridWeek"
@@ -57,7 +57,7 @@ const CrearReservaAdmin = () => {
               eventContent={renderEventContent}
             />
           </div>
-          <div className="col-lg-4 col-md-12 col-sm-12">
+          <div className="col-xl-3 col-lg-12 col-md-12 col-sm-12">
             <div className="crearReservaUsuarioRightSide">
               <p className="crearReservaUsuarioRightSideMyReservationsTitle">Reservas realizadas / Reservas para el dia de hoy</p>
               <div className="table-responsive crearReservaUsuarioRightSideMyReservationsTable">

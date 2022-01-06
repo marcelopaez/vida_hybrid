@@ -9,12 +9,49 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media (min-width: 300px) {
+  .comunidadBeneficiosUsuarioBenefitsContainer {
+    width: 100%;
+
+    .carousel-root {
+      .carousel {
+        .slider-wrapper {
+          .slide {
+            &.selected {
+              .benefitAdminContainer {
+                position: relative;
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 576px) {
+  .comunidadBeneficiosUsuarioBenefitsContainer {
+    .carousel-root {
+      .carousel {
+        .slider-wrapper {
+          .slide {
+            &.selected {
+              .benefitAdminContainer {
+                position: relative;
+                left: 10%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -24,7 +61,41 @@
 }
 
 @media (min-width: 1200px) {
+  .comunidadBeneficiosUsuarioBenefitsContainer {
+    width: 50%;
+
+    .carousel-root {
+      .carousel {
+        .slider-wrapper {
+          .slide {
+            &.selected {
+              .benefitAdminContainer {
+                position: relative;
+                left: 5%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1400px) {
+  .comunidadBeneficiosUsuarioBenefitsContainer {
+    .carousel-root {
+      .carousel {
+        .slider-wrapper {
+          .slide {
+            &.selected {
+              .benefitAdminContainer {
+                position: relative;
+                left: 20%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

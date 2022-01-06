@@ -34,7 +34,6 @@ const Salas = ({ hideAlternativeFooter }) => {
                   showIndicators={false}
                   showArrows
                   centerMode={true}
-                  selectedItem={2}
                   centerSlidePercentage={100}
                   onChange={(index, argument) => setCarouselRoomToShow(index)}
                   renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
@@ -591,7 +590,6 @@ const Salas = ({ hideAlternativeFooter }) => {
                 showIndicators={false}
                 showArrows
                 centerMode={true}
-                selectedItem={2}
                 centerSlidePercentage={100}
                 onChange={(index, argument) => setCarouselRoomToShow(index)}
                 renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
@@ -1280,7 +1278,6 @@ const Salas = ({ hideAlternativeFooter }) => {
               showIndicators={false}
               showArrows
               centerMode={true}
-              selectedItem={2}
               centerSlidePercentage={100}
               renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
                 hasPrev && (

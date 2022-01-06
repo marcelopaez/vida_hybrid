@@ -24,7 +24,7 @@ const ComunidadUsuario = () => {
         <SideMenu />
       </div>
 
-      <div className="col-lg-10 col-md-9 col-sm-12 p-5">
+      <div className="col-lg-10 col-md-9 col-sm-12 px-5 mb-5">
         <div className="generalAdminHeaderMoreMargin">
           <div className="generalAdminHeaderLeft">
             <p className="generalAdminHeaderLeftFirstText boldFont">EVENTO</p>

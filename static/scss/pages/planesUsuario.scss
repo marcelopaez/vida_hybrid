@@ -81,20 +81,19 @@
   border: none;
   border-radius: 10px;
   padding: 10px;
-  margin: 15px;
   width: 100%;
 }
 
 .planesUsuarioTitle {
   font-size: 2.25rem;
   color: $grayDarker10;
-  margin: 40px 0 65px 0;
+  margin: 0 0 30px 0;
 }
 
 .plansPlanesUsuarioSection {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -104,16 +103,14 @@
   justify-content: center;
   flex-direction: column;
   background: #f8f9fc;
-  padding: 50px;
+  padding: 0 50px;
   border-radius: 10px;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .actualPlanPlanesUsuarioSVG {
   position: absolute;
-  top: -20px;
+  top: -30px;
 }
 
 .actualPlanPlanesUsuarioTitle {
@@ -265,11 +262,11 @@
   }
 
   .creditsRightBlockTitle {
-    padding: 30px 70px 50px 70px;
+    padding: 30px 40px 0 40px;
   }
 
   .creditsRightBlockSubtitle {
-    margin: 0 70px 45px 70px;
+    margin: 0 40px;
   }
 
   .actualPlanPlanesUsuario {
@@ -278,8 +275,13 @@
 }
 
 @media (min-width: 576px) {
+  .creditsLeftBlockPlanesUsuario,
+  .creditsRightBlockPlanesUsuario {
+    height: 550px;
+  }
+
   .actualPlanPlanesUsuario {
-    width: 550px;
+    width: 300px;
   }
 }
 
@@ -294,7 +296,7 @@
 
   .creditsLeftBlockPlanesUsuario,
   .creditsRightBlockPlanesUsuario {
-    height: 420px;
+    height: 500px;
   }
 
   .creditsLeftBlockPlanesUsuario,
@@ -304,38 +306,31 @@
 }
 
 @media (min-width: 992px) {
-  .creditsLeftBlockPlanesUsuario,
-  .creditsRightBlockPlanesUsuario {
-    height: 350px;
-  }
-
   .creditsRightBlockTitle {
-    padding: 30px 20px 50px 20px;
+    padding: 30px 20px 0 20px;
   }
 
   .creditsRightBlockSubtitle {
-    margin: 0 20px 45px 20px;
+    margin: 0 20px;
   }
 }
 
 @media (min-width: 1200px) {
-  .creditsLeftBlockPlanesUsuario,
-  .creditsRightBlockPlanesUsuario {
-    height: 600px;
-  }
-
   .creditsRightBlockTitle {
-    padding: 30px 70px 50px 70px;
+    padding: 30px 40px 0 40px;
   }
 
   .creditsRightBlockSubtitle {
-    margin: 0 70px 45px 70px;
+    margin: 0 40px;
   }
 }
 
 @media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
   .creditsLeftBlockPlanesUsuario,
   .creditsRightBlockPlanesUsuario {
-    height: 500px;
+    height: 325px;
   }
 }

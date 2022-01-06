@@ -19,9 +19,9 @@ const ComunidadBeneficiosAdmin = () => {
       <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
         <SideMenuAdmin />
       </div>
-      <div className="col-lg-10 col-md-9 col-sm-12 p-3">
+      <div className="col-lg-10 col-md-9 col-sm-12 px-3 mb-3">
         <div className="row generalContentBody">
-          <div className="col-lg-8 col-md-12 col-sm-12">
+          <div className="col-xl-9 col-lg-12 col-md-12 col-sm-12">
             <p className="comunidadBeneficiosAdminTitle boldFont">Beneficios</p>
             <div className="comunidadBeneficiosAdminBenefitsContainer">
               <BenefitAdmin image={Comunidad1} title={'Beneficio 1'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} admin={true} />
@@ -30,7 +30,7 @@ const ComunidadBeneficiosAdmin = () => {
               <BenefitAdmin image={Comunidad1} title={'Beneficio 4'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} admin={true} />
             </div>
           </div>
-          <div className="col-lg-4 col-md-12 col-sm-12">
+          <div className="col-xl-3 col-lg-12 col-md-12 col-sm-12">
             <div className="comunidadBeneficiosAdminRightSide">
               <p className="comunidadBeneficiosAdminRightSideTitle boldFont">Cumpleaños del día</p>
               <div className="comunidadBeneficiosAdminRightSideBirthdayContainer">

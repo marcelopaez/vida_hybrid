@@ -157,6 +157,10 @@ html {
   height: 50vw;
 }
 
+.backgroundAdmin {
+  background-color: $grayLigther14;
+}
+
 .generalContentAdminBody,
 .generalContentAdminBodyBlur {
   padding: 0 90px 0 90px;
@@ -184,6 +188,13 @@ html {
 
 .fc .fc-button-primary {
   background: $primary !important;
+}
+
+.page-link {
+  &.controlClientesAdminPagination,
+  &.clientesAdminPagination {
+    color: #fff !important;
+  }
 }
 
 @media (min-width: 300px) {

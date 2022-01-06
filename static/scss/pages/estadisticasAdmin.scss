@@ -1,42 +1,51 @@
-.planesAdminTitle {
+.estadisticasAdminTitle {
   font-size: 1.5rem;
   color: $grayLighter7;
 }
 
-.planesAdminPlanesContainer {
+.estadisticasAdminPlanesContainer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.planesAdminPlan {
-  background: #fff;
+.estadisticasAdminPlan {
   border-radius: 10px;
   color: $grayLighter7;
   text-align: center;
 }
 
-.planesAdminPlanTitle {
+.estadisticasAdminPlanTitle {
   font-size: 1.1rem;
   margin: 15px 0;
+  color: $grayDarker20;
 }
 
-.planesAdminPlanQuantity {
+.estadisticasAdminPlanQuantity {
   font-size: 2.25rem;
   margin: 40px 0 0 0;
+  color: $grayDarker10;
 }
 
-.planesAdminPlanDetail {
+.estadisticasAdminPlanDetail {
   font-size: 1.1rem;
+  color: $grayLighter7;
 }
 
-.planesAdminPlanesDetailsContainer {
+.estadisticasAdminPlanSeparator {
+  border-left: 1px solid $grayLighter7;
+  height: 100px;
+  background-color: $grayLighter7;
+  margin: 0 43px;
+}
+
+.estadisticasAdminPlanesDetailsContainer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.planesAdminPlanesDetailsElement {
+.estadisticasAdminPlanesDetailsElement {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,14 +53,14 @@
   margin: 0 50px;
 }
 
-.planesAdminPlanesDetailsTitle {
-  color: $grayLighter7;
+.estadisticasAdminPlanesDetailsTitle {
+  color: $grayDarker10;
   margin: 25px 0;
   text-align: center;
   max-width: 240px;
 }
 
-.planesAdminPlanesDetailsImage {
+.estadisticasAdminPlanesDetailsImage {
   width: 140px;
   height: 140px;
   background-color: $grayLighter5;
@@ -59,26 +68,26 @@
   margin-bottom: 15px;
 }
 
-.planesAdminPlanesDetailsInfo {
+.estadisticasAdminPlanesDetailsInfo {
   display: flex;
   align-items: center;
 }
 
-.planesAdminPlanesDetailsTableOffice {
+.estadisticasAdminPlanesDetailsTableOffice {
   color: $grayLighter7;
 }
 
-.planesAdminPlanesDetailsTableStatus {
+.estadisticasAdminPlanesDetailsTableStatus {
   color: $grayLighter7;
 }
 
-.planesAdminDailyReservationsTitle {
+.estadisticasAdminDailyReservationsTitle {
   font-size: 1.5rem;
   color: $grayLighter7;
   margin: 45px 0;
 }
 
-.planesAdminDailyReservationsContainer {
+.estadisticasAdminDailyReservationsContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,46 +95,46 @@
   color: $grayLighter7;
 }
 
-.planesAdminDailyReservationsElement {
+.estadisticasAdminDailyReservationsElement {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.planesAdminDailyReservationsElementTitle {
+.estadisticasAdminDailyReservationsElementTitle {
   font-size: 1.1rem;
   margin-bottom: 35px;
 }
 
-.planesAdminDailyReservationsElementNumber {
+.estadisticasAdminDailyReservationsElementNumber {
   font-size: 2.25rem;
   margin-bottom: 5px;
 }
 
-.planesAdminDailyReservationsElementDetail {
+.estadisticasAdminDailyReservationsElementDetail {
   font-size: 14px;
   margin-bottom: 50px;
 }
 
-.planesAdminDailyReservationsSeparator {
+.estadisticasAdminDailyReservationsSeparator {
   border: 1px solid $grayLighter7;
   height: 75px;
 }
 
-.planesAdminNumbersTitle {
+.estadisticasAdminNumbersTitle {
   font-size: 2.25rem;
   margin: 40px 0;
   color: $grayLighter7;
 }
 
-.planesAdminGeneralNumbersContainer {
+.estadisticasAdminGeneralNumbersContainer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.planesAdminGeneralNumbers {
+.estadisticasAdminGeneralNumbers {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -138,32 +147,32 @@
   }
 }
 
-.planesAdminGeneralNumbersSeparator {
+.estadisticasAdminGeneralNumbersSeparator {
   border: 1px solid $grayLighter7;
   height: 75px;
   margin-right: 20px;
 }
 
-.planesAdminGeneralNumbersTitle {
+.estadisticasAdminGeneralNumbersTitle {
   font-size: 1.1rem;
   margin: 0 0 15px 0;
 }
 
-.planesAdminGeneralNumbersAmount {
+.estadisticasAdminGeneralNumbersAmount {
   font-size: 1.5rem;
 }
 
-.planesAdminRightSide {
+.estadisticasAdminRightSide {
   color: $grayLighter7;
   height: 100%;
 }
 
-.planesAdminRightSideTitle {
+.estadisticasAdminRightSideTitle {
   font-size: 2.25rem;
   padding: 100px 0 40px 30px;
 }
 
-.planesAdminRightSideDetail {
+.estadisticasAdminRightSideDetail {
   background: #fff;
   border-radius: 10px;
   margin: 0 30px;
@@ -173,103 +182,98 @@
   flex-direction: column;
 }
 
-.planesAdminRightSideDetailTitle {
+.estadisticasAdminRightSideDetailTitle {
   font-size: 1.1rem;
   margin: 15px 0;
 }
 
-.planesAdminRightSideDetailSeparator {
+.estadisticasAdminRightSideDetailSeparator {
   border: 1px solid $grayLighter10;
   width: 100%;
 }
 
-.planesAdminRightSideDetailNumber {
+.estadisticasAdminRightSideDetailNumber {
   font-size: 2.25rem;
   margin: 40px 0 0 0;
 }
 
-.planesAdminRightSideDetailText {
+.estadisticasAdminRightSideDetailText {
   font-size: 1.1rem;
 }
 
 @media (min-width: 300px) {
-  .planesAdminTitle {
+  .estadisticasAdminTitle {
     margin: 40px 0;
   }
 
-  .planesAdminPlanesContainer {
+  .estadisticasAdminPlanesContainer {
     justify-content: center;
   }
 
-  .planesAdminPlan {
-    padding: 20px 30px;
-    margin: 5px;
+  .estadisticasAdminPlan {
+    padding: 20px 0;
   }
 
-  .planesAdminPlanesDetailsContainer {
+  .estadisticasAdminPlanesDetailsContainer {
     justify-content: center;
   }
 
-  .planesAdminGeneralNumbers {
+  .estadisticasAdminGeneralNumbers {
     padding: 20px;
     margin: 10px;
   }
 
-  .planesAdminDailyReservationsElement {
+  .estadisticasAdminDailyReservationsElement {
     margin: 10px;
   }
 
-  .planesAdminDailyReservationsSeparator {
+  .estadisticasAdminDailyReservationsSeparator {
     display: none;
   }
 
-  .planesAdminPlanesDetailsTableOfficesAvailability {
+  .estadisticasAdminPlanesDetailsTableOfficesAvailability {
     width: 100%;
   }
 }
 
 @media (min-width: 576px) {
-  .planesAdminTitle {
+  .estadisticasAdminTitle {
     margin: 40px 0 40px 70px;
   }
 
-  .planesAdminPlanesContainer {
+  .estadisticasAdminPlanesContainer {
     justify-content: initial;
   }
 
-  .planesAdminPlan {
-    padding: 50px 30px;
-    margin: 10px;
+  .estadisticasAdminPlan {
+    padding: 50px 0;
   }
 
-  .planesAdminGeneralNumbers {
+  .estadisticasAdminGeneralNumbers {
     padding: 20px 100px 20px 30px;
     margin: 40px;
   }
 
-  .planesAdminDailyReservationsElement {
+  .estadisticasAdminDailyReservationsElement {
     margin: unset;
   }
 
-  .planesAdminDailyReservationsSeparator {
+  .estadisticasAdminDailyReservationsSeparator {
     display: block;
     margin: 0 20px;
   }
 
-  .planesAdminPlanesDetailsTableOfficesAvailability {
+  .estadisticasAdminPlanesDetailsTableOfficesAvailability {
     width: 300px;
   }
 }
 
 @media (min-width: 768px) {
-  .planesAdminPlan {
-    margin: 20px;
-  }
 }
 
 @media (min-width: 992px) {
-  .planesAdminPlanesDetailsContainer {
-    justify-content: space-between;
+  .estadisticasAdminPlanesDetailsContainer {
+    justify-content: flex-start;
   }
 }
 
@@ -277,7 +281,7 @@
 }
 
 @media (min-width: 1400px) {
-  .planesAdminDailyReservationsSeparator {
+  .estadisticasAdminDailyReservationsSeparator {
     margin: 0 100px;
   }
 }

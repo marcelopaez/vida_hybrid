@@ -14,11 +14,11 @@ const PlanesUsuario = () => {
       <div className="navbarAdminMobile">
         <NavbarAdminMobile />
       </div>
-      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
+      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu" style={{ height: '1224px' }}>
         <SideMenu />
       </div>
 
-      <div className="col-lg-10 col-md-9 col-sm-12 bg-white p-0">
+      <div className="col-lg-10 col-md-9 col-sm-12 bg-white px-3">
         <div className="planesUsuarioLarger">
           <div className="generalContentAdminBody">
             <div className="creditsBlocksContainerPlanesUsuario">
@@ -48,22 +48,21 @@ const PlanesUsuario = () => {
 
             <p className="planesUsuarioTitle extraBoldFont">Planes</p>
 
-            <div className="actualPlanPlanesUsuario">
-              <svg className="actualPlanPlanesUsuarioSVG" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#00AF62" />
-                <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#00AF62" />
-                <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#00AF62" />
-                <path d="M46.8663 46.6618H62.0001C62.0001 38.4274 55.1655 31.6461 46.8663 31.6461H31.7324C31.7324 40.042 38.5671 46.6618 46.8663 46.6618Z" fill="#00AF62" />
-              </svg>
-
-              <p className="actualPlanPlanesUsuarioTitle extraBoldFont">Estás suscrito al plan Eter</p>
-              <div className="actualPlanPlanesUsuarioSeparator"></div>
-              <p className="actualPlanPlanesUsuarioDescription1 boldFont">1 día a la semana</p>
-              <p className="actualPlanPlanesUsuarioDescription2">PART: Incluye 3 Hs. en salas de reunión</p>
-              <button className="actualPlanPlanesUsuarioButton">Ver detalle</button>
-            </div>
-
             <div className="plansPlanesUsuarioSection">
+              <div className="actualPlanPlanesUsuario">
+                <svg className="actualPlanPlanesUsuarioSVG" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#00AF62" />
+                  <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#00AF62" />
+                  <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#00AF62" />
+                  <path d="M46.8663 46.6618H62.0001C62.0001 38.4274 55.1655 31.6461 46.8663 31.6461H31.7324C31.7324 40.042 38.5671 46.6618 46.8663 46.6618Z" fill="#00AF62" />
+                </svg>
+
+                <p className="actualPlanPlanesUsuarioTitle extraBoldFont">Estás suscrito al plan Eter</p>
+                <div className="actualPlanPlanesUsuarioSeparator"></div>
+                <p className="actualPlanPlanesUsuarioDescription1 boldFont">1 día a la semana</p>
+                <p className="actualPlanPlanesUsuarioDescription2">PART: Incluye 3 Hs. en salas de reunión</p>
+                <button className="actualPlanPlanesUsuarioButton">Ver detalle</button>
+              </div>
               <div className="otherPlanPlanesUsuario">
                 <svg className="otherPlanPlanesUsuarioSVG">
                   <path d="M13.0501 4.32912L1.77159 0C-0.620814 6.1519 2.45514 13.1013 8.72097 15.4937L19.8855 19.8228C22.2779 13.6709 19.202 6.72152 13.0501 4.32912Z" fill="#00AF62" />
@@ -108,7 +107,7 @@ const PlanesUsuario = () => {
               </div>
             </div>
           </div>
-          <div className="generalAdminFooter">
+          <div className="generalAdminFooterVariant2">
             <div className="generalAdminFooterLeft">
               <p className="generalAdminFooterLeftFirstText boldFont">Reservá ya</p>
               <div className="generalAdminFooterLeftSeparator"></div>

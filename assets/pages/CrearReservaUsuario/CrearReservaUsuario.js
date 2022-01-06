@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import SideMenu from '../../components/SideMenu';
 import NavbarAdmin from '../../components/NavbarAdmin';
 import NavbarAdminMobile from '../../components/NavbarAdminMobile';
@@ -15,6 +15,8 @@ const CrearReservaUsuario = () => {
   const [showMeetingsRoomModal, setShowMeetingsRoomModal] = useState(false);
   const [showSharedPlaceModal, setShowSharedPlaceModal] = useState(false);
   const [showFinalStep, setShowFinalStep] = useState(false);
+  const reservationHourMorning = useRef(null);
+  const reservationHourAfternoon = useRef(null);
 
   const handleDateClick = (arg, selectedOptionEvent) => {
     console.log(arg.dateStr);
@@ -45,10 +47,10 @@ const CrearReservaUsuario = () => {
       <div className="navbarAdminMobile">
         <NavbarAdminMobile />
       </div>
-      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
+      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu" style={{ height: '1224px' }}>
         <SideMenu />
       </div>
-      <div className="col-lg-10 col-md-9 col-sm-12 p-3">
+      <div className="col-lg-10 col-md-9 col-sm-12 px-3" style={{ height: '1024px' }}>
         <div className="row generalContentBody">
           <div className="col-lg-8 col-md-12 col-sm-12" style={{ position: 'relative' }}>
             <div className="d-flex align-items-center">
@@ -96,8 +98,10 @@ const CrearReservaUsuario = () => {
             )}
             {selectedOptionEvent !== 'meetingsRoom' && (
               <FullCalendar
+                // plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+                // initialView="timeGridWeek"
                 plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-                initialView="timeGridWeek"
+                initialView="dayGridMonth"
                 dateClick={(selectedOptionEvent) => handleDateClick(selectedOptionEvent)}
                 events={[
                   { title: 'Reserva 1', date: '2021-12-23' },
@@ -179,8 +183,21 @@ const CrearReservaUsuario = () => {
                 </div>
                 <div className="crearReservaUsuarioNewEventAvailabilityContainer">
                   <p className="crearReservaUsuarioNewEventAvailabilityTitle boldFont">Te quedan 3 créditos</p>
-                  <o className="crearReservaUsuarioNewEventAvailabilityOption">Por la mañana (00 a 00)</o>
-                  <o className="crearReservaUsuarioNewEventAvailabilityOption">Por la tarde (00 a 00)</o>
+                  {/* <p className="crearReservaUsuarioNewEventAvailabilityOption">Por la mañana (00 a 00)</p>
+                  <p className="crearReservaUsuarioNewEventAvailabilityOption">Por la tarde (00 a 00)</p> */}
+
+                  <div className="form-check sharedPlaceHourOption">
+                    <input type="radio" className="form-check-input" id="morningSharedPlace" name="reservationHour" ref={reservationHourMorning} />
+                    <label className="form-check-label lightFont" htmlFor="morningSharedPlace">
+                      Por la mañana (00 a 00)
+                    </label>
+                  </div>
+                  <div className="form-check sharedPlaceHourOption">
+                    <input type="radio" className="form-check-input" id="afternoonSharedPlace" name="reservationHour" ref={reservationHourAfternoon} />
+                    <label className="form-check-label lightFont" htmlFor="afternoonSharedPlace">
+                      Por la tarde (00 a 00)
+                    </label>
+                  </div>
                 </div>
                 <button
                   className="crearReservaUsuarioModalNewEventButton"
@@ -308,7 +325,7 @@ const CrearReservaUsuario = () => {
             </div>
           </div>
         </div>
-        <div className="generalAdminFooter">
+        <div className="generalAdminFooterVariant1">
           <div className="generalAdminFooterLeft">
             <p className="generalAdminFooterLeftFirstText boldFont">Reservá ya</p>
             <div className="generalAdminFooterLeftSeparator"></div>

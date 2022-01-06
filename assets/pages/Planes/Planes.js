@@ -36,7 +36,6 @@ const Planes = ({ hideAlternativeFooter }) => {
                   showIndicators={false}
                   showArrows
                   centerMode={true}
-                  selectedItem={2}
                   centerSlidePercentage={100}
                   onChange={(index, argument) => setPlanToShow(index)}
                   renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
@@ -147,7 +146,6 @@ const Planes = ({ hideAlternativeFooter }) => {
                 showIndicators={false}
                 showArrows
                 centerMode={true}
-                selectedItem={2}
                 centerSlidePercentage={100}
                 onChange={(index, argument) => setPlanToShow(index)}
                 renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
@@ -354,7 +352,6 @@ const Planes = ({ hideAlternativeFooter }) => {
               showIndicators={false}
               showArrows
               centerMode={true}
-              selectedItem={2}
               centerSlidePercentage={100}
               renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
                 hasPrev && (

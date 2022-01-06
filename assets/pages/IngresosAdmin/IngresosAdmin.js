@@ -18,7 +18,7 @@ const IngresosAdmin = () => {
       <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
         <SideMenu />
       </div>
-      <div className="col-lg-10 col-md-9 col-sm-12 p-3">
+      <div className="col-lg-10 col-md-9 col-sm-12 px-3 mb-3">
         <div className="generalContentBody">
           <h1 className="sectionTitle">Planes</h1>
           <div className="plansContainer">

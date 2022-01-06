@@ -12,9 +12,9 @@ import ContratoUsuario from '../../pages/ContratoUsuario';
 import ComunidadUsuario from '../../pages/ComunidadUsuario';
 import ComunidadBeneficiosUsuario from '../../pages/ComunidadBeneficiosUsuario';
 
-import ReservasAdmin from '../../pages/ReservasAdmin';
-import ClientesAdmin from '../../pages/ClientesAdmin';
-import PlanesAdmin from '../../pages/PlanesAdmin';
+import ControlClientesAdmin from '../../pages/ControlClientesAdmin';
+import ContratosAdmin from '../../pages/ContratosAdmin';
+import EstadisticasAdmin from '../../pages/EstadisticasAdmin';
 import ComunidadAdmin from '../../pages/ComunidadAdmin';
 import ComunidadBeneficiosAdmin from '../../pages/ComunidadBeneficiosAdmin';
 import CrearReservaAdmin from '../../pages/CrearReservaAdmin';
@@ -48,9 +48,9 @@ const App = ({ showAlternativeFooter }) => {
         <Route exact path="/comunidadUsuario" component={ComunidadUsuario} />
         <Route exact path="/comunidadBeneficiosUsuario" component={ComunidadBeneficiosUsuario} />
         {/* Admin */}
-        <Route exact path="/controlClientes" component={ReservasAdmin} />
-        <Route exact path="/clientesAdmin" component={ClientesAdmin} />
-        <Route exact path="/planesAdmin" component={PlanesAdmin} />
+        <Route exact path="/controlClientesAdmin" component={ControlClientesAdmin} />
+        <Route exact path="/contratosAdmin" component={ContratosAdmin} />
+        <Route exact path="/estadisticasAdmin" component={EstadisticasAdmin} />
         <Route exact path="/comunidadAdmin" component={ComunidadAdmin} />
         <Route exact path="/comunidadBeneficiosAdmin" component={ComunidadBeneficiosAdmin} />
         <Route exact path="/crearReservaAdmin" component={CrearReservaAdmin} />

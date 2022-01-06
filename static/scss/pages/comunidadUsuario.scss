@@ -52,6 +52,25 @@
 @media (min-width: 1400px) {
   .comunidadUsuarioArticlesContainerLarger {
     display: block;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .carousel-root {
+      .carousel {
+        .slider-wrapper {
+          .slide {
+            &.selected {
+              .benefitAdminContainer {
+                position: relative;
+                left: 20%;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .comunidadUsuarioArticlesContainerMobile,

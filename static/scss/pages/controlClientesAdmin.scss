@@ -1,110 +1,110 @@
-.reservasAdminTitle {
+.controlClientesAdminTitle {
   color: $primaryDarker;
   font-size: 3rem;
-  margin: 35px 0 40px 0;
+  margin: 0 0 40px 0;
 }
 
-.reservasAdminSearch {
+.controlClientesAdminSearch {
   position: relative;
   width: 270px;
 }
 
-.reservasAdminInput {
+.controlClientesAdminInput {
   padding-left: 50px;
   width: 100%;
 }
 
-.reservasAdminSearchSVG {
+.controlClientesAdminSearchSVG {
   position: absolute;
   left: 10px;
   margin: 5px;
 }
 
-.reservasAdminFilterLogo {
+.controlClientesAdminFilterLogo {
   margin-right: 22px;
 }
 
-.reservasAdminFilterButtonsContainer {
+.controlClientesAdminFilterButtonsContainer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.reservasAdminFilterButton {
+.controlClientesAdminFilterButton {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: $primaryLighter2;
   color: #fff;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   margin: 10px 15px;
 }
 
-.reservasAdminTable {
+.controlClientesAdminTable {
   margin-top: 50px;
   border-radius: 15px;
 }
 
-.reservasAdminPrimaryColorDarkerRow {
+.controlClientesAdminPrimaryColorDarkerRow {
   background-color: $primaryDarker;
 }
 
-.reservasAdminRowHover {
+.controlClientesAdminRowHover {
   text-align: center;
   font-size: 1.1rem;
   color: $grayDarker2;
 }
 
-.reservasAdminCancelButton {
+.controlClientesAdminCancelButton {
   background-color: transparent;
   border: none;
   color: $grayDarker2;
 }
 
 .page-link {
-  &.reservasAdminPagination {
+  &.controlClientesAdminPagination {
     background-color: $primary !important;
   }
 }
 
-.reservasAdminRowHover:hover .reservasAdminCancelButton {
+.controlClientesAdminRowHover:hover .controlClientesAdminCancelButton {
   background-color: #fff;
   border-radius: 10px;
   color: $primaryDarker;
   padding: 10px;
 }
 
-.reservasAdminRowHover:hover {
+.controlClientesAdminRowHover:hover {
   background-color: $primaryLighter2;
   color: #fff;
 }
 
-.reservasAdminAvailabilityTitle {
+.controlClientesAdminAvailabilityTitle {
   font-size: 1.5rem;
   color: $grayDarker10;
   margin: 115px 0 20px 0;
 }
 
-.reservasAdminRoomsContainer {
+.controlClientesAdminRoomsContainer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.reservasAdminRoomContainer {
+.controlClientesAdminRoomContainer {
   padding: 20px 50px;
   background-color: #fff;
   border-radius: 10px;
 }
 
-.reservasAdminRoomContainerTitle {
+.controlClientesAdminRoomContainerTitle {
   font-size: 1.5rem;
   color: $grayDarker10;
   margin: 0 0 30px 0;
 }
 
-.reservasAdminRoomContainerImage {
+.controlClientesAdminRoomContainerImage {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -114,20 +114,20 @@
   transform: translateX(-50%);
 }
 
-.reservasAdminRoomContainerDataContainer {
+.controlClientesAdminRoomContainerDataContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.reservasAdminRoomContainerData {
+.controlClientesAdminRoomContainerData {
   display: flex;
   align-items: center;
   margin: 50px 5px 0 5px;
 }
 
-.reservasAdminRoomContainerDataImage {
+.controlClientesAdminRoomContainerDataImage {
   width: 25px;
   height: 25px;
   background-color: $primaryLighter2;
@@ -135,13 +135,13 @@
   margin-right: 10px;
 }
 
-.reservasAdminRoomContainerDataText {
+.controlClientesAdminRoomContainerDataText {
   font-size: 1.1rem;
   margin: 0;
 }
 
 @media (min-width: 300px) {
-  .reservasAdminRoomsContainer {
+  .controlClientesAdminRoomsContainer {
     justify-content: center;
   }
 }
@@ -153,7 +153,7 @@
 }
 
 @media (min-width: 992px) {
-  .reservasAdminRoomsContainer {
+  .controlClientesAdminRoomsContainer {
     justify-content: initial;
   }
 }

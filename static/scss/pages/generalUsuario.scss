@@ -10,7 +10,7 @@
 .generalAdminTitle {
   font-size: 3rem;
   color: $grayDarker10;
-  padding: 60px 0 84px 0;
+  padding: 0 0 84px 0;
 }
 
 .generalAdminTitleMobile {
@@ -105,7 +105,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: -16px;
+  margin: 0 -16px;
 }
 
 .generalAdminHeaderMoreMargin {
@@ -113,7 +113,7 @@
   color: #fff;
   display: flex;
   align-items: center;
-  margin: -48px;
+  margin: 0 -48px;
 }
 
 .generalAdminFooter {
@@ -122,7 +122,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 200px -15px 0 -15px;
+  margin: 230px -15px 0 -15px;
+}
+
+.generalAdminFooterVariant1 {
+  @extend .generalAdminFooter;
+  margin: 100px -15px 0 -15px !important;
+}
+
+.generalAdminFooterVariant2 {
+  @extend .generalAdminFooter;
+  margin: 180px -15px 0 -15px !important;
 }
 
 .generalAdminFooterMoreMargin {
