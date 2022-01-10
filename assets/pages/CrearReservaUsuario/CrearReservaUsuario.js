@@ -7,9 +7,13 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import esLocale from '@fullcalendar/core/locales/es';
+import { setMonthFirstLetterUppercase } from '../../utils/generalFunctions';
 
 const CrearReservaUsuario = () => {
-  useEffect(() => window.scroll(0, 0), []);
+  useEffect(() => {
+    window.scroll(0, 0);
+    setMonthFirstLetterUppercase();
+  }, []);
 
   const [selectedOptionEvent, setSelectedOptionEvent] = useState('meetingsRoom');
   const [showMeetingsRoomModal, setShowMeetingsRoomModal] = useState(false);
