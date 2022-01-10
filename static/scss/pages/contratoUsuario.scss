@@ -199,6 +199,11 @@
 }
 
 @media (min-width: 768px) {
+  .sideMenuContratoUsuario,
+  .panelContentContratoUsuario {
+    height: 1900px;
+  }
+
   .contratoUsuarioMobile {
     display: none;
   }
@@ -209,6 +214,11 @@
 }
 
 @media (min-width: 992px) {
+  .sideMenuContratoUsuario,
+  .panelContentContratoUsuario {
+    height: 1650px;
+  }
+
   .contratoUsuarioContractLeft {
     flex: 1;
   }
@@ -224,7 +234,15 @@
 }
 
 @media (min-width: 1200px) {
+  .sideMenuContratoUsuario,
+  .panelContentContratoUsuario {
+    height: 1350px;
+  }
 }
 
 @media (min-width: 1400px) {
+  .sideMenuContratoUsuario,
+  .panelContentContratoUsuario {
+    height: 1150px;
+  }
 }

@@ -14,10 +14,10 @@ const EstadisticasAdmin = () => {
       <div className="navbarAdminMobile">
         <NavbarAdminMobile />
       </div>
-      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
+      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu sideMenuEstadisticasAdmin">
         <SideMenuAdmin />
       </div>
-      <div className="col-lg-10 col-md-9 col-sm-12 px-3 mb-3 backgroundAdmin">
+      <div className="col-lg-10 col-md-9 col-sm-12 px-3 backgroundAdmin panelContentEstadisticasAdmin">
         <div className="row generalContentBody">
           <div className="col-xl-9 col-lg-12 col-md-12 col-sm-12">
             <p className="estadisticasAdminTitle extraBoldFont">Planes</p>
@@ -61,7 +61,7 @@ const EstadisticasAdmin = () => {
                 <p className="estadisticasAdminPlanDetail lightFont">Personas suscritas</p>
               </div>
             </div>
-            <div className="row">
+            <div className="row bg-white">
               <div className="col-lg-6 col-md-12 col-sm-12 d-flex flex-column">
                 <div className="d-flex justify-content-center">
                   <div className="estadisticasAdminPlanesDetailsContainer">

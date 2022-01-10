@@ -6,9 +6,13 @@
 }
 
 .creditsLeftBlockPlanesUsuario {
-  background: #e7e8ed;
+  background: $grayLighter15;
   border-radius: 10px;
   position: relative;
+
+  .progress {
+    background-color: $grayLighter15 !important;
+  }
 }
 
 .creditsLeftBlockTitle {
@@ -148,7 +152,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: #e7e8ed;
+  background: $grayLighter15;
   border-radius: 10px;
   padding: 25px;
   margin: 30px 15px;
@@ -286,6 +290,11 @@
 }
 
 @media (min-width: 768px) {
+  .sideMenuPlanesUsuario,
+  .panelContentPlanesUsuario {
+    height: 3650px;
+  }
+
   .planesUsuarioLarger {
     display: block;
   }
@@ -306,6 +315,11 @@
 }
 
 @media (min-width: 992px) {
+  .sideMenuPlanesUsuario,
+  .panelContentPlanesUsuario {
+    height: 2700px;
+  }
+
   .creditsRightBlockTitle {
     padding: 30px 20px 0 20px;
   }
@@ -316,6 +330,11 @@
 }
 
 @media (min-width: 1200px) {
+  .sideMenuPlanesUsuario,
+  .panelContentPlanesUsuario {
+    height: 1750px;
+  }
+
   .creditsRightBlockTitle {
     padding: 30px 40px 0 40px;
   }
@@ -332,5 +351,12 @@
   .creditsLeftBlockPlanesUsuario,
   .creditsRightBlockPlanesUsuario {
     height: 325px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .sideMenuPlanesUsuario,
+  .panelContentPlanesUsuario {
+    height: 1024px;
   }
 }

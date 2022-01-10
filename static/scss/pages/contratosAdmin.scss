@@ -123,6 +123,8 @@
 }
 
 .progress {
+  border-radius: 0.5rem !important;
+
   &.contratosAdminRightSideProgressBar {
     height: unset !important;
   }
@@ -179,13 +181,25 @@
 }
 
 @media (min-width: 768px) {
+  .sideMenuContratosAdmin,
+  .panelContentContratosAdmin {
+    height: 2100px;
+  }
 }
 
 @media (min-width: 992px) {
 }
 
 @media (min-width: 1200px) {
+  .sideMenuContratosAdmin,
+  .panelContentContratosAdmin {
+    height: 1650px;
+  }
 }
 
 @media (min-width: 1400px) {
+  .sideMenuContratosAdmin,
+  .panelContentContratosAdmin {
+    height: 1500px;
+  }
 }

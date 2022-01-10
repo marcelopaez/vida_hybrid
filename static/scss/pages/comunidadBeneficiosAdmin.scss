@@ -67,6 +67,10 @@
 }
 
 @media (min-width: 768px) {
+  .sideMenuComunidadBeneficiosAdmin,
+  .panelContentComunidadBeneficiosAdmin {
+    height: 2700px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -76,6 +80,10 @@
 }
 
 @media (min-width: 1200px) {
+  .sideMenuComunidadBeneficiosAdmin,
+  .panelContentComunidadBeneficiosAdmin {
+    height: 2050px;
+  }
 }
 
 @media (min-width: 1400px) {

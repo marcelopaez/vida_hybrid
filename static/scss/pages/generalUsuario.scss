@@ -108,40 +108,16 @@
   margin: 0 -16px;
 }
 
-.generalAdminHeaderMoreMargin {
-  background: $grayDarker12;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  margin: 0 -48px;
-}
-
 .generalAdminFooter {
   background: $primary;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 230px -15px 0 -15px;
-}
-
-// .generalAdminFooterVariant1 {
-//   @extend .generalAdminFooter;
-//   margin: 100px -15px 0 -15px !important;
-// }
-
-// .generalAdminFooterVariant2 {
-//   @extend .generalAdminFooter;
-//   margin: 180px -15px 0 -15px !important;
-// }
-
-.generalAdminFooterMoreMargin {
-  background: $primary;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 200px -48px 0 -48px;
+  margin: 0 0 0 -15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .generalAdminFooterLeft,
@@ -420,6 +396,10 @@
   position: relative;
 }
 
+.panelContentGeneralUsuario {
+  position: relative;
+}
+
 @media (min-width: 300px) {
   .navbarAdminLarger {
     display: none;
@@ -453,10 +433,6 @@
     display: none;
   }
 
-  .generalAdminHeaderMoreMargin {
-    justify-content: center;
-  }
-
   .generalAdminHeaderLeft {
     flex-direction: column;
   }
@@ -464,10 +440,6 @@
   .generalAdminHeaderLeftFirstText,
   .generalAdminHeaderSecondText {
     margin: 0;
-  }
-
-  .generalAdminFooterMoreMargin {
-    flex-direction: column;
   }
 
   .generalAdminFooterLeft {
@@ -499,10 +471,6 @@
     display: flex;
   }
 
-  .generalAdminHeaderMoreMargin {
-    justify-content: space-between;
-  }
-
   .generalAdminHeaderLeft {
     flex-direction: row;
   }
@@ -529,16 +497,17 @@
 }
 
 @media (min-width: 768px) {
+  .sideMenuGeneralUsuario,
+  .panelContentGeneralUsuario {
+    height: 1650px;
+  }
+
   .generalAdminLarger {
     display: block;
   }
 
   .generalAdminMobile {
     display: none;
-  }
-
-  .generalAdminFooterMoreMargin {
-    flex-direction: row;
   }
 }
 
@@ -562,6 +531,11 @@
 }
 
 @media (min-width: 1200px) {
+  .sideMenuGeneralUsuario,
+  .panelContentGeneralUsuario {
+    height: 1024px;
+  }
+
   .blocksContainerGeneralAdmin {
     flex-wrap: nowrap;
   }

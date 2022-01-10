@@ -41,15 +41,32 @@
 }
 
 @media (min-width: 768px) {
+  .sideMenuComunidadUsuario,
+  .panelContentComunidadUsuario {
+    height: 4700px;
+  }
 }
 
 @media (min-width: 992px) {
+  .sideMenuComunidadUsuario,
+  .panelContentComunidadUsuario {
+    height: 4300px;
+  }
 }
 
 @media (min-width: 1200px) {
+  .sideMenuComunidadUsuario,
+  .panelContentComunidadUsuario {
+    height: 3150px;
+  }
 }
 
 @media (min-width: 1400px) {
+  .sideMenuComunidadUsuario,
+  .panelContentComunidadUsuario {
+    height: 2650px;
+  }
+
   .comunidadUsuarioArticlesContainerLarger {
     display: block;
     width: 50%;

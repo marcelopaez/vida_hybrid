@@ -38,10 +38,10 @@ const GeneralUsuario = () => {
       <div className="navbarAdminMobile">
         <NavbarAdminMobile />
       </div>
-      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
+      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu sideMenuGeneralUsuario">
         <SideMenu />
       </div>
-      <div className="col-lg-10 col-md-9 col-sm-12 bg-white px-3 panelContent">
+      <div className="col-lg-10 col-md-9 col-sm-12 bg-white px-3 panelContentGeneralUsuario">
         <div className="generalAdminLarger">
           <div className={`${sharedSpace || meetingsRoom || finalReservationStep ? 'generalContentAdminBodyBlur' : 'generalContentAdminBody'}`}>
             <p className="generalAdminTitle extraBoldFont">No te quedes sin lugar, reservá</p>

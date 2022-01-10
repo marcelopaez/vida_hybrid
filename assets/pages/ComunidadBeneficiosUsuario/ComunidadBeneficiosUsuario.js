@@ -19,10 +19,10 @@ const ComunidadBeneficiosUsuario = () => {
       <div className="navbarAdminMobile">
         <NavbarAdminMobile />
       </div>
-      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
+      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu sideMenuComunidadBeneficiosUsuario">
         <SideMenu />
       </div>
-      <div className="col-lg-10 col-md-9 col-sm-12 px-3 mb-3">
+      <div className="col-lg-10 col-md-9 col-sm-12 px-3 mb-3 panelContentComunidadBeneficiosUsuario">
         <div className="generalAdminHeader">
           <div className="generalAdminHeaderLeft">
             <p className="generalAdminHeaderLeftFirstText boldFont">EVENTO</p>

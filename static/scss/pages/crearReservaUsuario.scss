@@ -260,12 +260,24 @@
 }
 
 @media (min-width: 768px) {
+  .sideMenuCrearReservaUsuario,
+  .panelContentCrearReservaUsuario {
+    height: 1900px;
+  }
 }
 
 @media (min-width: 992px) {
+  .sideMenuCrearReservaUsuario,
+  .panelContentCrearReservaUsuario {
+    height: 1300px;
+  }
 }
 
 @media (min-width: 1200px) {
+  .sideMenuCrearReservaUsuario,
+  .panelContentCrearReservaUsuario {
+    height: 1200px;
+  }
 }
 
 @media (min-width: 1400px) {

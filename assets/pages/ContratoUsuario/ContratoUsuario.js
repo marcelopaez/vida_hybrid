@@ -16,11 +16,11 @@ const ContratoUsuario = () => {
       <div className="navbarAdminMobile">
         <NavbarAdminMobile />
       </div>
-      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu" style={{ height: '1024px' }}>
+      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu sideMenuContratoUsuario">
         <SideMenu />
       </div>
 
-      <div className="col-lg-10 col-md-9 col-sm-12 bg-white px-3" style={{ height: '1024px' }}>
+      <div className="col-lg-10 col-md-9 col-sm-12 bg-white px-3 panelContentContratoUsuario">
         <div className={`${signContract ? 'generalContentBodyBlur' : 'generalContentBody'}`}>
           <div className="contratoUsuarioContractContainer">
             <p className="contratoUsuarioTitle extraBoldFont">Contrato</p>

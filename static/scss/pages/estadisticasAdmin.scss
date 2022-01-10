@@ -250,8 +250,8 @@
   }
 
   .estadisticasAdminGeneralNumbers {
-    padding: 20px 100px 20px 30px;
-    margin: 40px;
+    padding: 20px 70px 20px 30px;
+    margin: 20px;
   }
 
   .estadisticasAdminDailyReservationsElement {
@@ -269,16 +269,40 @@
 }
 
 @media (min-width: 768px) {
+  .sideMenuEstadisticasAdmin,
+  .panelContentEstadisticasAdmin {
+    height: 3800px;
+  }
 }
 
 @media (min-width: 992px) {
+  .sideMenuEstadisticasAdmin,
+  .panelContentEstadisticasAdmin {
+    height: 2850px;
+  }
 }
 
 @media (min-width: 1200px) {
+  .sideMenuEstadisticasAdmin,
+  .panelContentEstadisticasAdmin {
+    height: 2350px;
+  }
 }
 
 @media (min-width: 1400px) {
+  .sideMenuEstadisticasAdmin,
+  .panelContentEstadisticasAdmin {
+    height: 2450px;
+  }
+
   .estadisticasAdminDailyReservationsSeparator {
     margin: 0 100px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .sideMenuEstadisticasAdmin,
+  .panelContentEstadisticasAdmin {
+    height: 2150px;
   }
 }

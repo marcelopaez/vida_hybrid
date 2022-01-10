@@ -58,8 +58,10 @@
 
 .controlClientesAdminCancelButton {
   background-color: transparent;
-  border: none;
+  border-radius: 10px;
   color: $grayDarker2;
+  padding: 10px;
+  border: none;
 }
 
 .page-link {
@@ -151,9 +153,18 @@
 }
 
 @media (min-width: 768px) {
+  .sideMenuControlClientesAdmin,
+  .panelContentControlClientesAdmin {
+    height: 2650px;
+  }
 }
 
 @media (min-width: 992px) {
+  .sideMenuControlClientesAdmin,
+  .panelContentControlClientesAdmin {
+    height: 1850px;
+  }
+
   .controlClientesAdminRoomsContainer {
     justify-content: initial;
   }
@@ -163,4 +174,11 @@
 }
 
 @media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+  .sideMenuControlClientesAdmin,
+  .panelContentControlClientesAdmin {
+    height: 1450px;
+  }
 }

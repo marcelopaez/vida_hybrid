@@ -20,12 +20,12 @@ const ComunidadUsuario = () => {
       <div className="navbarAdminMobile">
         <NavbarAdminMobile />
       </div>
-      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
+      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu sideMenuComunidadUsuario">
         <SideMenu />
       </div>
 
-      <div className="col-lg-10 col-md-9 col-sm-12 px-5 mb-5">
-        <div className="generalAdminHeaderMoreMargin">
+      <div className="col-lg-10 col-md-9 col-sm-12 px-3 panelContentComunidadUsuario">
+        <div className="generalAdminHeader">
           <div className="generalAdminHeaderLeft">
             <p className="generalAdminHeaderLeftFirstText boldFont">EVENTO</p>
             <div className="generalAdminHeaderLeftSeparator"></div>
@@ -155,11 +155,11 @@ const ComunidadUsuario = () => {
             </div>
           </div>
         </div>
-        <div className="generalAdminFooterMoreMargin">
+        <div className="generalAdminFooter">
           <div className="generalAdminFooterLeft">
             <p className="generalAdminFooterLeftFirstText boldFont">Reservá ya</p>
             <div className="generalAdminFooterLeftSeparator"></div>
-            <p className="generalAdminFooterSecondText">¿Necesitás un espacio ahora mismo? Reservá la próxima sala disponible</p>
+            <p className="generalAdminFooterSecondext">¿Necesitás un espacio ahora mismo? Reservá la próxima sala disponible</p>
           </div>
           <div className="generalAdminFooterRight">
             <button className="generalAdminFooterRightButton">Reservá</button>

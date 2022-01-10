@@ -55,9 +55,17 @@
 }
 
 @media (min-width: 768px) {
+  .sideMenuComunidadBeneficiosUsuario,
+  .panelContentComunidadBeneficiosUsuario {
+    height: 1150px;
+  }
 }
 
 @media (min-width: 992px) {
+  .sideMenuComunidadBeneficiosUsuario,
+  .panelContentComunidadBeneficiosUsuario {
+    height: 1024px;
+  }
 }
 
 @media (min-width: 1200px) {

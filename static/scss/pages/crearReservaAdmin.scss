@@ -38,13 +38,29 @@
 }
 
 @media (min-width: 768px) {
+  .sideMenuCrearReservaAdmin,
+  .panelContentCrearReservaAdmin {
+    height: 1100px;
+  }
 }
 
 @media (min-width: 992px) {
+  .sideMenuCrearReservaAdmin,
+  .panelContentCrearReservaAdmin {
+    height: 1300px;
+  }
 }
 
 @media (min-width: 1200px) {
+  .sideMenuCrearReservaAdmin,
+  .panelContentCrearReservaAdmin {
+    height: 800px;
+  }
 }
 
 @media (min-width: 1400px) {
+  .sideMenuCrearReservaAdmin,
+  .panelContentCrearReservaAdmin {
+    height: 1000px;
+  }
 }

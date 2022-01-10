@@ -83,6 +83,10 @@
     font-size: 2.25rem;
   }
 
+  .comunidadAdminRightSide {
+    margin-top: 50px;
+  }
+
   .comunidadAdminRightSideBirthdayContainer {
     align-items: center;
     justify-content: center;
@@ -101,16 +105,37 @@
 }
 
 @media (min-width: 768px) {
+  .sideMenuComunidadAdmin,
+  .panelContentComunidadAdmin {
+    height: 3200px;
+  }
 }
 
 @media (min-width: 992px) {
+  .sideMenuComunidadAdmin,
+  .panelContentComunidadAdmin {
+    height: 2550px;
+  }
+
   .comunidadAdminRightSideBirthdayButtonContainer {
     justify-content: flex-end;
   }
 }
 
 @media (min-width: 1200px) {
+  .sideMenuComunidadAdmin,
+  .panelContentComunidadAdmin {
+    height: 2000px;
+  }
+
+  .comunidadAdminRightSide {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 1400px) {
+  .sideMenuComunidadAdmin,
+  .panelContentComunidadAdmin {
+    height: 1850px;
+  }
 }

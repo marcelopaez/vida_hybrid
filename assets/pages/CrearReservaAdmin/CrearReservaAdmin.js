@@ -33,10 +33,10 @@ const CrearReservaAdmin = () => {
       <div className="navbarAdminMobile">
         <NavbarAdminMobile />
       </div>
-      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu">
+      <div className="col-lg-2 col-md-3 col-sm-12 sideMenu sideMenuCrearReservaAdmin">
         <SideMenuAdmin />
       </div>
-      <div className="col-lg-10 col-md-9 col-sm-12 px-3 mb-3 backgroundAdmin">
+      <div className="col-lg-10 col-md-9 col-sm-12 px-3 backgroundAdmin panelContentCrearReservaAdmin">
         <div className="row generalContentBody">
           <div className="col-xl-9 col-lg-12 col-md-12 col-sm-12" style={{ position: 'relative' }}>
             <FullCalendar
@@ -104,16 +104,6 @@ const CrearReservaAdmin = () => {
                 </table>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="generalAdminFooter">
-          <div className="generalAdminFooterLeft">
-            <p className="generalAdminFooterLeftFirstText boldFont">Reservá ya</p>
-            <div className="generalAdminFooterLeftSeparator"></div>
-            <p className="generalAdminFooterSecondText">¿Necesitás un espacio ahora mismo? Reservá la próxima sala disponible</p>
-          </div>
-          <div className="generalAdminFooterRight">
-            <button className="generalAdminFooterRightButton">Reservá</button>
           </div>
         </div>
       </div>
