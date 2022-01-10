@@ -58,6 +58,10 @@ const Home = () => {
 
   useEffect(() => setTimeout(() => setShowCarousel(true), 1000)), [];
 
+  useEffect(() => {
+    if (window.document.documentURI.includes('#comunidad')) document.getElementById('comunidad').scrollIntoView();
+  }, []);
+
   const carouselSettings = {
     infinite: true,
     slidesToShow: 1,
@@ -134,6 +138,7 @@ const Home = () => {
             description={'Vení 1 día a la semana'}
             price={'3800'}
             background={true}
+            link={'Eter'}
           />
           <Plan
             svg={
@@ -147,6 +152,7 @@ const Home = () => {
             description={'Enfocate 2 días a la semana'}
             price={'4600'}
             background={true}
+            link={'Aire'}
           />
           <Plan
             svg={
@@ -158,6 +164,7 @@ const Home = () => {
             description={'Trabajá 3 veces por semana, descansá 2'}
             price={'6500'}
             background={true}
+            link={'Agua'}
           />
           <Plan
             svg={
@@ -170,6 +177,7 @@ const Home = () => {
             description={'Un día de franco! 4 veces a la semana'}
             price={'7400'}
             background={true}
+            link={'Fuego'}
           />
           <Plan
             svg={
@@ -181,6 +189,7 @@ const Home = () => {
             description={'Vení 5 días a la semana'}
             price={'3800'}
             background={true}
+            link={'Tierra'}
           />
         </div>
       </div>
@@ -201,6 +210,7 @@ const Home = () => {
             title={'Plan Eter'}
             description={'Vení 1 día a la semana'}
             price={'3800'}
+            link={'Eter'}
           />
           <PlanHorizontal
             svg={
@@ -213,6 +223,7 @@ const Home = () => {
             title={'Plan Aire'}
             description={'Enfocate 2 días a la semana'}
             price={'4600'}
+            link={'Aire'}
           />
           <PlanHorizontal
             svg={
@@ -223,6 +234,7 @@ const Home = () => {
             title={'Plan Agua'}
             description={'Trabajá 3 veces por semana, descansá 2'}
             price={'6500'}
+            link={'Agua'}
           />
           <PlanHorizontal
             svg={
@@ -234,6 +246,7 @@ const Home = () => {
             title={'Plan Fuego'}
             description={'Un día de franco! 4 veces a la semana'}
             price={'7400'}
+            link={'Fuego'}
           />
           <PlanHorizontal
             svg={
@@ -244,6 +257,7 @@ const Home = () => {
             title={'Plan Tierra'}
             description={'Vení 5 días a la semana'}
             price={'8800'}
+            link={'Tierra'}
           />
         </div>
       </div>
@@ -1743,7 +1757,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="communityContainer">
+      <div className="communityContainer" id="comunidad">
         <div className="customContainer">
           <p className="communityTitle extraBoldFont">COMUNIDAD</p>
 
@@ -1776,11 +1790,7 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12" style={{ position: 'relative' }}>
               <ComunidadCard image={Comunidad1} title={'Título noticia, artículo, evento'} content={'Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} />
-              <div>
-                <Link to="/comunidad">
-                  <button className="communitySeeMoreButton boldFont">Ver más</button>
-                </Link>
-              </div>
+              <div></div>
             </div>
           </div>
         </div>

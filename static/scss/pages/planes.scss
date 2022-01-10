@@ -21,6 +21,13 @@
   margin: 0;
 }
 
+.actualPlanHeaderLarger {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+
 .actualPlanTitleContainer {
   padding: 200px 0 43px 0;
 }
@@ -35,6 +42,10 @@
 .actualPlanButton,
 .actualPlanSVG {
   color: #fff;
+}
+
+.actualPlanSVG {
+  overflow: visible;
 }
 
 .actualPlanTitle {
@@ -175,6 +186,7 @@
 
 .actualPlanTitleMobile {
   color: #fff;
+  margin: 0;
 }
 
 .creditsContainer {
@@ -254,6 +266,10 @@
     font-size: 2rem;
   }
 
+  .actualPlanSVG {
+    display: none;
+  }
+
   .filtersSection {
     flex-direction: column;
     align-items: center;
@@ -266,13 +282,32 @@
 }
 
 @media (min-width: 576px) {
+  .actualPlanHeaderMobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   .actualPlanTitleMobile {
     font-size: 4rem;
-    margin-left: 15px;
+    margin-top: 15px;
+  }
+
+  .actualPlanSVG {
+    display: block;
   }
 }
 
 @media (min-width: 768px) {
+  .actualPlanHeaderMobile {
+    flex-direction: row;
+  }
+
+  .actualPlanTitleMobile {
+    margin: 0 0 0 30px;
+  }
+
   .filtersSection {
     flex-direction: row;
     align-items: center;

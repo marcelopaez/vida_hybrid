@@ -43,7 +43,7 @@ const Navbar = () => {
           )
         ) : (
           <Link className="navbar-brand" to="/">
-            <img src={GreenLogo} alt="Vida" className="logo" />
+            <img src={GreenLogo} alt="Vida" className="logo" onClick={() => window.scroll(0, 0)} />
           </Link>
         )}
         <div className="collapse navbar-collapse" id="navbarVida" style={{ padding: '15px 0' }}>
@@ -69,9 +69,9 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item align-middle">
-              <Link to="/comunidad" className="nav-link navbarOption">
+              <a href="/app#comunidad" className="nav-link navbarOption">
                 Comunidad
-              </Link>
+              </a>
             </li>
             <li className="nav-item align-middle">
               <Link to="/login" className="nav-link boldFont navbarLoginOption nav-item-login">

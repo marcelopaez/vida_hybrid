@@ -22,6 +22,32 @@ const Planes = ({ hideAlternativeFooter }) => {
 
   const [planToShow, setPlanToShow] = useState(0);
 
+  useEffect(() => {
+    if (window.document.documentURI.includes('#')) {
+      const selectedPlan = window.document.documentURI.split('#')[1];
+      window.scroll(0, 0);
+      switch (selectedPlan) {
+        case 'Eter':
+          setPlanToShow(0);
+          return;
+        case 'Aire':
+          setPlanToShow(1);
+          return;
+        case 'Agua':
+          setPlanToShow(2);
+          return;
+        case 'Fuego':
+          setPlanToShow(3);
+          return;
+        case 'Tierra':
+          setPlanToShow(4);
+          return;
+        default:
+          return;
+      }
+    }
+  }, []);
+
   return (
     <main className="plansGeneralContainerPlans">
       <div className="navbarLarger" style={{ position: 'relative', overflow: 'hidden' }}>
@@ -35,6 +61,7 @@ const Planes = ({ hideAlternativeFooter }) => {
                   showStatus={false}
                   showIndicators={false}
                   showArrows
+                  selectedItem={planToShow}
                   centerMode={true}
                   centerSlidePercentage={100}
                   onChange={(index, argument) => setPlanToShow(index)}
@@ -52,42 +79,52 @@ const Planes = ({ hideAlternativeFooter }) => {
                       </button>
                     )
                   }>
-                  <div>
-                    <svg width="84" height="84" className="actualPlanSVG" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.8253 63.4214V83.4019C31.8686 83.4019 40.9631 74.3784 40.9631 63.4214V43.4408C29.9198 43.4408 20.8253 52.2494 20.8253 63.4214Z" fill="white" />
-                      <path d="M43.1284 20.8825V40.8631C54.1717 40.8631 63.2662 31.8396 63.2662 20.8825V0.901917C52.2229 0.901917 43.1284 9.9254 43.1284 20.8825Z" fill="white" />
-                      <path d="M21.0418 21.7423H0.904053C0.904053 32.6994 9.99854 41.7229 21.0418 41.7229H41.1796C41.1796 30.7658 32.0852 21.7423 21.0418 21.7423Z" fill="white" />
-                      <path d="M63.2662 62.9923H83.404C83.404 52.0352 74.3095 43.0117 63.2662 43.0117H43.1284C43.1284 54.1836 52.2229 62.9923 63.2662 62.9923Z" fill="white" />
-                    </svg>
-                    <p className="actualPlanTitle extraBoldFont">Eter</p>
-                  </div>
-                  <div>
-                    <svg width="83" height="86" className="actualPlanSVG" viewBox="0 0 83 86" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21.8122 8.43523L2.16766 0.89679C-1.99936 11.6093 3.35824 23.7105 14.2719 27.8765L33.718 35.4149C37.885 24.7024 32.5274 12.6012 21.8122 8.43523Z" fill="white" />
-                      <path d="M69.4355 40.9693L49.9894 33.4308C45.8224 44.1434 51.18 56.4429 61.8952 60.4105L81.3413 67.949C85.5083 57.2364 80.1507 45.1353 69.4355 40.9693Z" fill="white" />
-                      <path d="M40.2658 58.4273L20.8197 50.8889C16.6527 61.6014 22.0103 73.7025 32.9239 77.8685L52.37 85.407C56.5371 74.6944 51.1795 62.3949 40.2658 58.4273Z" fill="white" />
-                    </svg>
-                    <p className="actualPlanTitle extraBoldFont">Aire</p>
-                  </div>
-                  <div>
-                    <svg width="68" height="84" className="actualPlanSVG" viewBox="0 0 68 84" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M33.9605 0.153137C43.5064 10.3224 51.4159 18.2928 58.7799 26.813C71.5988 41.3797 70.7806 60.6188 57.689 73.8113C44.8701 86.4541 23.869 86.4541 10.7774 73.8113C-2.31415 60.8936 -3.13238 41.3797 9.41373 26.813C16.505 18.2928 24.6873 10.3224 33.9605 0.153137Z" fill="white" />
-                    </svg>
-                    <p className="actualPlanTitle extraBoldFont">Agua</p>
-                  </div>
-                  <div>
-                    <svg width="80" height="90" className="actualPlanSVG" viewBox="0 0 80 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M34.4316 45.1519V89.9777C59.2311 89.9777 79.1729 69.9982 79.1729 45.1519V0.32605C54.3735 0.32605 34.4316 20.3056 34.4316 45.1519Z" fill="white" />
-                      <path d="M27.7847 62.3137V89.9776C12.4449 89.9776 0.172974 77.6826 0.172974 62.3137V34.9059C15.2572 34.9059 27.7847 47.201 27.7847 62.3137Z" fill="white" />
-                    </svg>
-                    <p className="actualPlanTitle extraBoldFont">Fuego</p>
-                  </div>
-                  <div>
-                    <svg width="84" height="83" className="actualPlanSVG" viewBox="0 0 84 83" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.595947 43.3733C1.42095 65.3733 19.5709 82.9733 41.8459 82.9733C64.6709 82.9733 83.0959 64.8233 83.0959 41.9983V0.748267C83.0959 0.748267 83.0959 0.748267 82.8209 0.748267C59.9959 0.748267 41.5709 19.1733 41.5709 41.9983V42.2733C41.5709 42.2733 41.5709 42.2733 41.5709 41.9983C41.5709 19.1733 23.4209 0.473267 0.595947 0.473267V43.3733Z" fill="white" />
-                    </svg>
-                    <p className="actualPlanTitle extraBoldFont">Tierra</p>
-                  </div>
+                  {planToShow === 0 && (
+                    <div className="actualPlanHeaderLarger">
+                      <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#fff" />
+                        <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#fff" />
+                        <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#fff" />
+                        <path d="M46.8663 46.6618H62.0001C62.0001 38.4274 55.1655 31.6461 46.8663 31.6461H31.7324C31.7324 40.042 38.5671 46.6618 46.8663 46.6618Z" fill="#fff" />
+                      </svg>
+                      <p className="actualPlanTitle extraBoldFont">Eter</p>
+                    </div>
+                  )}
+                  {planToShow === 1 && (
+                    <div className="actualPlanHeaderLarger">
+                      <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.8122 8.43523L2.16766 0.89679C-1.99936 11.6093 3.35824 23.7105 14.2719 27.8765L33.718 35.4149C37.885 24.7024 32.5274 12.6012 21.8122 8.43523Z" fill="white" />
+                        <path d="M69.4355 40.9693L49.9894 33.4308C45.8224 44.1434 51.18 56.4429 61.8952 60.4105L81.3413 67.949C85.5083 57.2364 80.1507 45.1353 69.4355 40.9693Z" fill="white" />
+                        <path d="M40.2658 58.4273L20.8197 50.8889C16.6527 61.6014 22.0103 73.7025 32.9239 77.8685L52.37 85.407C56.5371 74.6944 51.1795 62.3949 40.2658 58.4273Z" fill="white" />
+                      </svg>
+                      <p className="actualPlanTitle extraBoldFont">Aire</p>
+                    </div>
+                  )}
+                  {planToShow === 2 && (
+                    <div className="actualPlanHeaderLarger">
+                      <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M33.9605 0.153137C43.5064 10.3224 51.4159 18.2928 58.7799 26.813C71.5988 41.3797 70.7806 60.6188 57.689 73.8113C44.8701 86.4541 23.869 86.4541 10.7774 73.8113C-2.31415 60.8936 -3.13238 41.3797 9.41373 26.813C16.505 18.2928 24.6873 10.3224 33.9605 0.153137Z" fill="white" />
+                      </svg>
+                      <p className="actualPlanTitle extraBoldFont">Agua</p>
+                    </div>
+                  )}
+                  {planToShow === 3 && (
+                    <div className="actualPlanHeaderLarger">
+                      <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34.4316 45.1519V89.9777C59.2311 89.9777 79.1729 69.9982 79.1729 45.1519V0.32605C54.3735 0.32605 34.4316 20.3056 34.4316 45.1519Z" fill="white" />
+                        <path d="M27.7847 62.3137V89.9776C12.4449 89.9776 0.172974 77.6826 0.172974 62.3137V34.9059C15.2572 34.9059 27.7847 47.201 27.7847 62.3137Z" fill="white" />
+                      </svg>
+                      <p className="actualPlanTitle extraBoldFont">Fuego</p>
+                    </div>
+                  )}
+                  {planToShow === 4 && (
+                    <div className="actualPlanHeaderLarger">
+                      <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.595947 43.3733C1.42095 65.3733 19.5709 82.9733 41.8459 82.9733C64.6709 82.9733 83.0959 64.8233 83.0959 41.9983V0.748267C83.0959 0.748267 83.0959 0.748267 82.8209 0.748267C59.9959 0.748267 41.5709 19.1733 41.5709 41.9983V42.2733C41.5709 42.2733 41.5709 42.2733 41.5709 41.9983C41.5709 19.1733 23.4209 0.473267 0.595947 0.473267V43.3733Z" fill="white" />
+                      </svg>
+                      <p className="actualPlanTitle extraBoldFont">Tierra</p>
+                    </div>
+                  )}
                 </Carousel>
               </div>
               {planToShow === 0 ? (
@@ -145,6 +182,7 @@ const Planes = ({ hideAlternativeFooter }) => {
                 showStatus={false}
                 showIndicators={false}
                 showArrows
+                selectedItem={planToShow}
                 centerMode={true}
                 centerSlidePercentage={100}
                 onChange={(index, argument) => setPlanToShow(index)}
@@ -162,52 +200,54 @@ const Planes = ({ hideAlternativeFooter }) => {
                     </button>
                   )
                 }>
-                <div>
-                  <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#fff" />
-                    <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#fff" />
-                    <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#fff" />
-                    <path d="M46.8663 46.6618H62.0001C62.0001 38.4274 55.1655 31.6461 46.8663 31.6461H31.7324C31.7324 40.042 38.5671 46.6618 46.8663 46.6618Z" fill="#fff" />
-                  </svg>
-                  <p className="actualPlanTitle extraBoldFont">Eter</p>
-                </div>
-                <div>
-                  <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21.8122 8.43523L2.16766 0.89679C-1.99936 11.6093 3.35824 23.7105 14.2719 27.8765L33.718 35.4149C37.885 24.7024 32.5274 12.6012 21.8122 8.43523Z" fill="white" />
-                    <path d="M69.4355 40.9693L49.9894 33.4308C45.8224 44.1434 51.18 56.4429 61.8952 60.4105L81.3413 67.949C85.5083 57.2364 80.1507 45.1353 69.4355 40.9693Z" fill="white" />
-                    <path d="M40.2658 58.4273L20.8197 50.8889C16.6527 61.6014 22.0103 73.7025 32.9239 77.8685L52.37 85.407C56.5371 74.6944 51.1795 62.3949 40.2658 58.4273Z" fill="white" />
-                  </svg>
-                  <p className="actualPlanTitle extraBoldFont">Aire</p>
-                </div>
-                <div>
-                  <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M33.9605 0.153137C43.5064 10.3224 51.4159 18.2928 58.7799 26.813C71.5988 41.3797 70.7806 60.6188 57.689 73.8113C44.8701 86.4541 23.869 86.4541 10.7774 73.8113C-2.31415 60.8936 -3.13238 41.3797 9.41373 26.813C16.505 18.2928 24.6873 10.3224 33.9605 0.153137Z" fill="white" />
-                  </svg>
-                  <p className="actualPlanTitle extraBoldFont">Agua</p>
-                </div>
-                <div>
-                  <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M34.4316 45.1519V89.9777C59.2311 89.9777 79.1729 69.9982 79.1729 45.1519V0.32605C54.3735 0.32605 34.4316 20.3056 34.4316 45.1519Z" fill="white" />
-                    <path d="M27.7847 62.3137V89.9776C12.4449 89.9776 0.172974 77.6826 0.172974 62.3137V34.9059C15.2572 34.9059 27.7847 47.201 27.7847 62.3137Z" fill="white" />
-                  </svg>
-                  <p className="actualPlanTitle extraBoldFont">Fuego</p>
-                </div>
-                <div>
-                  <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.595947 43.3733C1.42095 65.3733 19.5709 82.9733 41.8459 82.9733C64.6709 82.9733 83.0959 64.8233 83.0959 41.9983V0.748267C83.0959 0.748267 83.0959 0.748267 82.8209 0.748267C59.9959 0.748267 41.5709 19.1733 41.5709 41.9983V42.2733C41.5709 42.2733 41.5709 42.2733 41.5709 41.9983C41.5709 19.1733 23.4209 0.473267 0.595947 0.473267V43.3733Z" fill="white" />
-                  </svg>
-                  <p className="actualPlanTitle extraBoldFont">Tierra</p>
-                </div>
+                {planToShow === 0 && (
+                  <div className="actualPlanHeaderLarger">
+                    <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#fff" />
+                      <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#fff" />
+                      <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#fff" />
+                      <path d="M46.8663 46.6618H62.0001C62.0001 38.4274 55.1655 31.6461 46.8663 31.6461H31.7324C31.7324 40.042 38.5671 46.6618 46.8663 46.6618Z" fill="#fff" />
+                    </svg>
+                    <p className="actualPlanTitle extraBoldFont">Eter</p>
+                  </div>
+                )}
+                {planToShow === 1 && (
+                  <div className="actualPlanHeaderLarger">
+                    <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.8122 8.43523L2.16766 0.89679C-1.99936 11.6093 3.35824 23.7105 14.2719 27.8765L33.718 35.4149C37.885 24.7024 32.5274 12.6012 21.8122 8.43523Z" fill="white" />
+                      <path d="M69.4355 40.9693L49.9894 33.4308C45.8224 44.1434 51.18 56.4429 61.8952 60.4105L81.3413 67.949C85.5083 57.2364 80.1507 45.1353 69.4355 40.9693Z" fill="white" />
+                      <path d="M40.2658 58.4273L20.8197 50.8889C16.6527 61.6014 22.0103 73.7025 32.9239 77.8685L52.37 85.407C56.5371 74.6944 51.1795 62.3949 40.2658 58.4273Z" fill="white" />
+                    </svg>
+                    <p className="actualPlanTitle extraBoldFont">Aire</p>
+                  </div>
+                )}
+                {planToShow === 2 && (
+                  <div className="actualPlanHeaderLarger">
+                    <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M33.9605 0.153137C43.5064 10.3224 51.4159 18.2928 58.7799 26.813C71.5988 41.3797 70.7806 60.6188 57.689 73.8113C44.8701 86.4541 23.869 86.4541 10.7774 73.8113C-2.31415 60.8936 -3.13238 41.3797 9.41373 26.813C16.505 18.2928 24.6873 10.3224 33.9605 0.153137Z" fill="white" />
+                    </svg>
+                    <p className="actualPlanTitle extraBoldFont">Agua</p>
+                  </div>
+                )}
+                {planToShow === 3 && (
+                  <div className="actualPlanHeaderLarger">
+                    <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M34.4316 45.1519V89.9777C59.2311 89.9777 79.1729 69.9982 79.1729 45.1519V0.32605C54.3735 0.32605 34.4316 20.3056 34.4316 45.1519Z" fill="white" />
+                      <path d="M27.7847 62.3137V89.9776C12.4449 89.9776 0.172974 77.6826 0.172974 62.3137V34.9059C15.2572 34.9059 27.7847 47.201 27.7847 62.3137Z" fill="white" />
+                    </svg>
+                    <p className="actualPlanTitle extraBoldFont">Fuego</p>
+                  </div>
+                )}
+                {planToShow === 4 && (
+                  <div className="actualPlanHeaderLarger">
+                    <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.595947 43.3733C1.42095 65.3733 19.5709 82.9733 41.8459 82.9733C64.6709 82.9733 83.0959 64.8233 83.0959 41.9983V0.748267C83.0959 0.748267 83.0959 0.748267 82.8209 0.748267C59.9959 0.748267 41.5709 19.1733 41.5709 41.9983V42.2733C41.5709 42.2733 41.5709 42.2733 41.5709 41.9983C41.5709 19.1733 23.4209 0.473267 0.595947 0.473267V43.3733Z" fill="white" />
+                    </svg>
+                    <p className="actualPlanTitle extraBoldFont">Tierra</p>
+                  </div>
+                )}
               </Carousel>
             </div>
-            {/* <select className="mdb-select md-form consultSelectPlanes" id="consultSelect" defaultValue="Plan" ref={queryType}>
-              <option value="Plan">Plan</option>
-              <option value="Eter">Eter</option>
-              <option value="Aire">Aire</option>
-              <option value="Agua">Agua</option>
-              <option value="Fuego">Fuego</option>
-              <option value="Tierra">Tierra</option>
-            </select> */}
             {planToShow === 0 ? (
               <p className="actualPlanText">
                 5 créditos Vida. <br /> 3 Hs. en salas de reunión.
@@ -233,12 +273,6 @@ const Planes = ({ hideAlternativeFooter }) => {
             <button className="actualPlanButton actualPlanButtonExtraMargin boldFont">Suscribite</button>
           </div>
         </div>
-        {/* <div className="choosePlanContainer">
-          <div className="choosePlanTitle boldFont">¡Elegí el plan que más se adapte a vos!</div>
-          <div className="customContainer">
-
-          </div>
-        </div> */}
 
         <div className="plansContainerPlans">
           <OrangePlan
@@ -253,6 +287,7 @@ const Planes = ({ hideAlternativeFooter }) => {
             title={'Plan Eter'}
             price={'3800'}
             time={'3'}
+            link={'Eter'}
           />
           <OrangePlan
             svg={
@@ -265,6 +300,7 @@ const Planes = ({ hideAlternativeFooter }) => {
             title={'Plan Aire'}
             price={'4600'}
             time={'4'}
+            link={'Aire'}
           />
           <OrangePlan
             svg={
@@ -275,6 +311,7 @@ const Planes = ({ hideAlternativeFooter }) => {
             title={'Plan Agua'}
             price={'6500'}
             time={'5'}
+            link={'Agua'}
           />
           <OrangePlan
             svg={
@@ -286,6 +323,7 @@ const Planes = ({ hideAlternativeFooter }) => {
             title={'Plan Fuego'}
             price={'7400'}
             time={'6'}
+            link={'Fuego'}
           />
           <OrangePlan
             svg={
@@ -296,6 +334,7 @@ const Planes = ({ hideAlternativeFooter }) => {
             title={'Plan Tierra'}
             price={'8800'}
             time={'7'}
+            link={'Tierra'}
           />
         </div>
 
@@ -310,13 +349,48 @@ const Planes = ({ hideAlternativeFooter }) => {
       <div className="plansContainerMobilePlans">
         <div className="actualPlanHeaderPlansMobileBackground" style={{ backgroundImage: `url(${PlanesBackground})` }}>
           <div className="semiCircleHeaderMobileColumn">
-            <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#fff" />
-              <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#fff" />
-              <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#fff" />
-              <path d="M46.8663 46.6618H62.0001C62.0001 38.4274 55.1655 31.6461 46.8663 31.6461H31.7324C31.7324 40.042 38.5671 46.6618 46.8663 46.6618Z" fill="#fff" />
-            </svg>
-            <p className="actualPlanTitleMobile extraBoldFont">Eter</p>
+            {planToShow === 0 ? (
+              <div className="actualPlanHeaderMobile">
+                <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#fff" />
+                  <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#fff" />
+                  <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#fff" />
+                  <path d="M46.8663 46.6618H62.0001C62.0001 38.4274 55.1655 31.6461 46.8663 31.6461H31.7324C31.7324 40.042 38.5671 46.6618 46.8663 46.6618Z" fill="#fff" />
+                </svg>
+                <p className="actualPlanTitleMobile extraBoldFont">Eter</p>
+              </div>
+            ) : planToShow === 1 ? (
+              <div className="actualPlanHeaderMobile">
+                <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.8122 8.43523L2.16766 0.89679C-1.99936 11.6093 3.35824 23.7105 14.2719 27.8765L33.718 35.4149C37.885 24.7024 32.5274 12.6012 21.8122 8.43523Z" fill="white" />
+                  <path d="M69.4355 40.9693L49.9894 33.4308C45.8224 44.1434 51.18 56.4429 61.8952 60.4105L81.3413 67.949C85.5083 57.2364 80.1507 45.1353 69.4355 40.9693Z" fill="white" />
+                  <path d="M40.2658 58.4273L20.8197 50.8889C16.6527 61.6014 22.0103 73.7025 32.9239 77.8685L52.37 85.407C56.5371 74.6944 51.1795 62.3949 40.2658 58.4273Z" fill="white" />
+                </svg>
+                <p className="actualPlanTitleMobile extraBoldFont">Aire</p>
+              </div>
+            ) : planToShow === 2 ? (
+              <div className="actualPlanHeaderMobile">
+                <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M33.9605 0.153137C43.5064 10.3224 51.4159 18.2928 58.7799 26.813C71.5988 41.3797 70.7806 60.6188 57.689 73.8113C44.8701 86.4541 23.869 86.4541 10.7774 73.8113C-2.31415 60.8936 -3.13238 41.3797 9.41373 26.813C16.505 18.2928 24.6873 10.3224 33.9605 0.153137Z" fill="white" />
+                </svg>
+                <p className="actualPlanTitleMobile extraBoldFont">Agua</p>
+              </div>
+            ) : planToShow === 3 ? (
+              <div className="actualPlanHeaderMobile">
+                <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M34.4316 45.1519V89.9777C59.2311 89.9777 79.1729 69.9982 79.1729 45.1519V0.32605C54.3735 0.32605 34.4316 20.3056 34.4316 45.1519Z" fill="white" />
+                  <path d="M27.7847 62.3137V89.9776C12.4449 89.9776 0.172974 77.6826 0.172974 62.3137V34.9059C15.2572 34.9059 27.7847 47.201 27.7847 62.3137Z" fill="white" />
+                </svg>
+                <p className="actualPlanTitleMobile extraBoldFont">Fuego</p>
+              </div>
+            ) : (
+              <div className="actualPlanHeaderMobile">
+                <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.595947 43.3733C1.42095 65.3733 19.5709 82.9733 41.8459 82.9733C64.6709 82.9733 83.0959 64.8233 83.0959 41.9983V0.748267C83.0959 0.748267 83.0959 0.748267 82.8209 0.748267C59.9959 0.748267 41.5709 19.1733 41.5709 41.9983V42.2733C41.5709 42.2733 41.5709 42.2733 41.5709 41.9983C41.5709 19.1733 23.4209 0.473267 0.595947 0.473267V43.3733Z" fill="white" />
+                </svg>
+                <p className="actualPlanTitleMobile extraBoldFont">Tierra</p>
+              </div>
+            )}
           </div>
         </div>
         <div className="customContainer">
@@ -351,6 +425,7 @@ const Planes = ({ hideAlternativeFooter }) => {
               showStatus={false}
               showIndicators={false}
               showArrows
+              selectedItem={planToShow}
               centerMode={true}
               centerSlidePercentage={100}
               renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
