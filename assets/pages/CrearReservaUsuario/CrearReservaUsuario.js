@@ -17,6 +17,8 @@ const CrearReservaUsuario = () => {
   const [showFinalStep, setShowFinalStep] = useState(false);
   const reservationHourMorning = useRef(null);
   const reservationHourAfternoon = useRef(null);
+  const documentReservation = useRef(null);
+  const emailReservation = useRef(null);
 
   const handleDateClick = (arg, selectedOptionEvent) => {
     console.log(arg.dateStr);
@@ -176,6 +178,20 @@ const CrearReservaUsuario = () => {
                 </div>
                 <hr />
                 <div className="crearReservaUsuarioModalNewEventOptionsContainer">
+                  <div className="md-form input-with-pre-icon">
+                    <i className="fas fa-envelope input-prefix inputIconGreen"></i>
+                    <input type="number" id="userReservationDocument" className="form-control userReservationDocument" ref={documentReservation} />
+                    <label htmlFor="userReservationDocument" className="userReservationDocument">
+                      DNI
+                    </label>
+                  </div>
+                  <div className="md-form input-with-pre-icon">
+                    <i className="fas fa-envelope input-prefix inputIconGreen"></i>
+                    <input type="email" id="userReservationMail" className="form-control userReservationMail" ref={emailReservation} />
+                    <label htmlFor="userReservationMail" className="userReservationMail">
+                      E-mail
+                    </label>
+                  </div>
                   <div className="crearReservaUsuarioModalNewEventOptionContainer">
                     <p className="crearReservaUsuarioModalNewEventOptionTitle boldFont">SUM</p>
                     <p className="crearReservaUsuarioModalNewEventOptionSubtitle">Hay disponibilidad de lugar</p>
@@ -183,8 +199,6 @@ const CrearReservaUsuario = () => {
                 </div>
                 <div className="crearReservaUsuarioNewEventAvailabilityContainer">
                   <p className="crearReservaUsuarioNewEventAvailabilityTitle boldFont">Te quedan 3 créditos</p>
-                  {/* <p className="crearReservaUsuarioNewEventAvailabilityOption">Por la mañana (00 a 00)</p>
-                  <p className="crearReservaUsuarioNewEventAvailabilityOption">Por la tarde (00 a 00)</p> */}
 
                   <div className="form-check sharedPlaceHourOption">
                     <input type="radio" className="form-check-input" id="morningSharedPlace" name="reservationHour" ref={reservationHourMorning} />
@@ -325,7 +339,7 @@ const CrearReservaUsuario = () => {
             </div>
           </div>
         </div>
-        <div className="generalAdminFooterVariant1">
+        <div className="generalAdminFooter">
           <div className="generalAdminFooterLeft">
             <p className="generalAdminFooterLeftFirstText boldFont">Reservá ya</p>
             <div className="generalAdminFooterLeftSeparator"></div>

@@ -44,6 +44,36 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 0 10px;
+}
+
+.userReservationDocument,
+.userReservationMail {
+  color: $grayDarker8 !important;
+
+  &.active {
+    color: $primary !important;
+  }
+}
+
+#userReservationDocument,
+#userReservationMail {
+  border-bottom: 1px solid $grayDarker8 !important;
+
+  &:focus {
+    border-bottom: 1px solid $primary !important;
+    box-shadow: 0 1px 0 0 $primary !important;
+  }
+}
+
+.inputIconGreen {
+  &.input-prefix {
+    color: $grayDarker8 !important;
+  }
+
+  &.active {
+    color: $primary !important;
+  }
 }
 
 .crearReservaUsuarioModalNewEventOptionContainer {

@@ -107,7 +107,7 @@ const PlanesUsuario = () => {
               </div>
             </div>
           </div>
-          <div className="generalAdminFooterVariant2">
+          <div className="generalAdminFooter">
             <div className="generalAdminFooterLeft">
               <p className="generalAdminFooterLeftFirstText boldFont">Reservá ya</p>
               <div className="generalAdminFooterLeftSeparator"></div>

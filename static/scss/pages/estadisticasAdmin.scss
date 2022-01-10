@@ -36,11 +36,12 @@
   border-left: 1px solid $grayLighter7;
   height: 100px;
   background-color: $grayLighter7;
-  margin: 0 43px;
+  margin: 0 35px;
 }
 
 .estadisticasAdminPlanesDetailsContainer {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -74,11 +75,11 @@
 }
 
 .estadisticasAdminPlanesDetailsTableOffice {
-  color: $grayLighter7;
+  color: $grayDarker3;
 }
 
 .estadisticasAdminPlanesDetailsTableStatus {
-  color: $grayLighter7;
+  color: $grayDarker10;
 }
 
 .estadisticasAdminDailyReservationsTitle {
@@ -105,16 +106,19 @@
 .estadisticasAdminDailyReservationsElementTitle {
   font-size: 1.1rem;
   margin-bottom: 35px;
+  color: $grayDarker20;
 }
 
 .estadisticasAdminDailyReservationsElementNumber {
   font-size: 2.25rem;
   margin-bottom: 5px;
+  color: $grayDarker10;
 }
 
 .estadisticasAdminDailyReservationsElementDetail {
   font-size: 14px;
   margin-bottom: 50px;
+  color: $grayDarker21;
 }
 
 .estadisticasAdminDailyReservationsSeparator {
@@ -214,10 +218,6 @@
     padding: 20px 0;
   }
 
-  .estadisticasAdminPlanesDetailsContainer {
-    justify-content: center;
-  }
-
   .estadisticasAdminGeneralNumbers {
     padding: 20px;
     margin: 10px;
@@ -272,9 +272,6 @@
 }
 
 @media (min-width: 992px) {
-  .estadisticasAdminPlanesDetailsContainer {
-    justify-content: flex-start;
-  }
 }
 
 @media (min-width: 1200px) {

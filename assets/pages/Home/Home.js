@@ -2156,7 +2156,7 @@ const Home = () => {
               <hr className="consultSeparator" />
               <div className="md-form input-with-pre-icon consultDataContainer">
                 <i className="fas fa-envelope input-prefix"></i>
-                <input type="text" id="consultEmail" className="form-control consultEmail" />
+                <input type="email" id="consultEmail" className="form-control consultEmail" />
                 <label htmlFor="consultEmail" className="consultEmailLabel">
                   E-mail
                 </label>
@@ -2181,7 +2181,7 @@ const Home = () => {
                 <hr className="consultSeparator" />
                 <div className="md-form input-with-pre-icon">
                   <i className="fas fa-envelope input-prefix"></i>
-                  <input type="text" id="consultEmail" className="form-control consultEmail" />
+                  <input type="email" id="consultEmail" className="form-control consultEmail" />
                   <label htmlFor="consultEmail" className="consultEmailLabel">
                     E-mail
                   </label>
@@ -2251,7 +2251,7 @@ const Home = () => {
               <hr className="consultSeparator" />
               <div className="md-form input-with-pre-icon">
                 <i className="fas fa-envelope input-prefix"></i>
-                <input type="text" id="consultEmail" className="form-control" />
+                <input type="email" id="consultEmail" className="form-control" />
                 <label htmlFor="consultEmail" className="consultEmailLabel">
                   E-mail
                 </label>

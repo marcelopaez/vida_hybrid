@@ -52,7 +52,7 @@ const Login = ({ showAlternativeFooter }) => {
             <div className="col-lg-3 offset-lg-3 col-md-4 offset-md-2 col-sm-12">
               <div className="md-form input-with-pre-icon">
                 <i className="fas fa-envelope input-prefix inputIconOrange"></i>
-                <input type="text" id="consultEmailLogin" className="form-control consultEmailLogin" ref={emailLogin} />
+                <input type="email" id="consultEmailLogin" className="form-control consultEmailLogin" ref={emailLogin} />
                 <label htmlFor="consultEmailLogin" className="consultEmailLogin">
                   E-mail
                 </label>
@@ -97,7 +97,7 @@ const Login = ({ showAlternativeFooter }) => {
               <div className="col-lg-3 offset-lg-3 col-md-4 offset-md-2 col-sm-12">
                 <div className="md-form input-with-pre-icon">
                   <i className="fas fa-envelope input-prefix inputIconOrange"></i>
-                  <input type="text" id="consultEmailRegister" className="form-control consultEmailRegister" ref={emailRegister} />
+                  <input type="email" id="consultEmailRegister" className="form-control consultEmailRegister" ref={emailRegister} />
                   <label htmlFor="consultEmailRegister" className="consultEmailRegister">
                     E-mail
                   </label>

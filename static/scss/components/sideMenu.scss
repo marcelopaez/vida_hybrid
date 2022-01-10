@@ -36,15 +36,18 @@
 }
 
 @media (min-width: 768px) {
-  .sideMenu {
-    padding: 0 0 50% 0;
-  }
+  // .sideMenu {
+  //   padding: 0 0 50% 0;
+  // }
 }
 
 @media (min-width: 992px) {
 }
 
 @media (min-width: 1200px) {
+  .sideMenu {
+    height: 1024px;
+  }
 }
 
 @media (min-width: 1400px) {

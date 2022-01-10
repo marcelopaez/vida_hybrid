@@ -127,7 +127,7 @@ const ContratoUsuario = () => {
             </div>
           </div>
         </div>
-        <div className="generalAdminFooterVariant1">
+        <div className="generalAdminFooter">
           <div className="generalAdminFooterLeft">
             <p className="generalAdminFooterLeftFirstText boldFont">Reservá ya</p>
             <div className="generalAdminFooterLeftSeparator"></div>

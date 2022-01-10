@@ -125,15 +125,15 @@
   margin: 230px -15px 0 -15px;
 }
 
-.generalAdminFooterVariant1 {
-  @extend .generalAdminFooter;
-  margin: 100px -15px 0 -15px !important;
-}
+// .generalAdminFooterVariant1 {
+//   @extend .generalAdminFooter;
+//   margin: 100px -15px 0 -15px !important;
+// }
 
-.generalAdminFooterVariant2 {
-  @extend .generalAdminFooter;
-  margin: 180px -15px 0 -15px !important;
-}
+// .generalAdminFooterVariant2 {
+//   @extend .generalAdminFooter;
+//   margin: 180px -15px 0 -15px !important;
+// }
 
 .generalAdminFooterMoreMargin {
   background: $primary;

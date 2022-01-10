@@ -61,57 +61,65 @@ const EstadisticasAdmin = () => {
                 <p className="estadisticasAdminPlanDetail lightFont">Personas suscritas</p>
               </div>
             </div>
-            <div className="estadisticasAdminPlanesDetailsContainer">
-              <div className="estadisticasAdminPlanesDetailsElement">
-                <p className="estadisticasAdminPlanesDetailsTitle boldFont">Pendiente pago</p>
-                <div className="estadisticasAdminPlanesDetailsImage"></div>
-                <div className="estadisticasAdminPlanesDetailsInfo"></div>
-                <p>Referencias</p>
+            <div className="row">
+              <div className="col-lg-6 col-md-12 col-sm-12 d-flex flex-column">
+                <div className="d-flex justify-content-center">
+                  <div className="estadisticasAdminPlanesDetailsContainer">
+                    <div className="estadisticasAdminPlanesDetailsElement">
+                      <p className="estadisticasAdminPlanesDetailsTitle boldFont">Pendiente pago</p>
+                      <div className="estadisticasAdminPlanesDetailsImage"></div>
+                      <div className="estadisticasAdminPlanesDetailsInfo"></div>
+                      <p>Referencias</p>
+                    </div>
+                    <div className="estadisticasAdminPlanesDetailsElement">
+                      <p className="estadisticasAdminPlanesDetailsTitle boldFont">Planes pagos</p>
+                      <div className="estadisticasAdminPlanesDetailsImage"></div>
+                      <div className="estadisticasAdminPlanesDetailsInfo"></div>
+                      <p>Referencias</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="estadisticasAdminPlanesDetailsElement">
+                  <p className="estadisticasAdminPlanesDetailsTitle boldFont">Disponibilidad oficinas</p>
+                  <div className="table-responsive">
+                    <table className="table planesAdminPlanesDetailsTableOfficesAvailability">
+                      <tbody>
+                        <tr>
+                          <td className="estadisticasAdminPlanesDetailsTableOffice">Oficina 1</td>
+                          <td className="estadisticasAdminPlanesDetailsTableStatus extraBoldFont">Disponible</td>
+                        </tr>
+                        <tr>
+                          <td className="estadisticasAdminPlanesDetailsTableOffice">Oficina 2</td>
+                          <td className="estadisticasAdminPlanesDetailsTableStatus extraBoldFont">Ocupada</td>
+                        </tr>
+                        <tr>
+                          <td className="estadisticasAdminPlanesDetailsTableOffice">Oficina 3</td>
+                          <td className="estadisticasAdminPlanesDetailsTableStatus extraBoldFont">Disponible</td>
+                        </tr>
+                        <tr>
+                          <td className="estadisticasAdminPlanesDetailsTableOffice">Oficina 4</td>
+                          <td className="estadisticasAdminPlanesDetailsTableStatus extraBoldFont">Disponible</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
-              <div className="estadisticasAdminPlanesDetailsElement">
-                <p className="estadisticasAdminPlanesDetailsTitle boldFont">Planes pagos</p>
-                <div className="estadisticasAdminPlanesDetailsImage"></div>
-                <div className="estadisticasAdminPlanesDetailsInfo"></div>
-                <p>Referencias</p>
-              </div>
-            </div>
-            <div className="estadisticasAdminPlanesDetailsContainer">
-              <div className="estadisticasAdminPlanesDetailsElement">
-                <p className="estadisticasAdminPlanesDetailsTitle boldFont">Horas más solicitadas en salas de reunión</p>
-                <div className="estadisticasAdminPlanesDetailsImage"></div>
-                <div className="estadisticasAdminPlanesDetailsInfo"></div>
-                <p>Referencias</p>
-              </div>
-              <div className="estadisticasAdminPlanesDetailsElement">
-                <p className="estadisticasAdminPlanesDetailsTitle boldFont">Turnos más solicitados en espacio compartido</p>
-                <div className="estadisticasAdminPlanesDetailsImage"></div>
-                <div className="estadisticasAdminPlanesDetailsInfo"></div>
-                <p>Referencias</p>
-              </div>
-            </div>
-            <div className="estadisticasAdminPlanesDetailsElement">
-              <p className="estadisticasAdminPlanesDetailsTitle boldFont">Disponibilidad oficinas</p>
-              <div className="table-responsive">
-                <table className="table planesAdminPlanesDetailsTableOfficesAvailability">
-                  <tbody>
-                    <tr>
-                      <td className="estadisticasAdminPlanesDetailsTableOffice">Oficina 1</td>
-                      <td className="estadisticasAdminPlanesDetailsTableStatus extraBoldFont">Disponible</td>
-                    </tr>
-                    <tr>
-                      <td className="estadisticasAdminPlanesDetailsTableOffice">Oficina 2</td>
-                      <td className="estadisticasAdminPlanesDetailsTableStatus extraBoldFont">Ocupada</td>
-                    </tr>
-                    <tr>
-                      <td className="estadisticasAdminPlanesDetailsTableOffice">Oficina 3</td>
-                      <td className="estadisticasAdminPlanesDetailsTableStatus extraBoldFont">Disponible</td>
-                    </tr>
-                    <tr>
-                      <td className="estadisticasAdminPlanesDetailsTableOffice">Oficina 4</td>
-                      <td className="estadisticasAdminPlanesDetailsTableStatus extraBoldFont">Disponible</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div className="col-lg-6 col-md-12 col-sm-12">
+                <div className="estadisticasAdminPlanesDetailsContainer">
+                  <div className="estadisticasAdminPlanesDetailsElement">
+                    <p className="estadisticasAdminPlanesDetailsTitle boldFont">Horas más solicitadas en salas de reunión</p>
+                    <div className="estadisticasAdminPlanesDetailsImage"></div>
+                    <div className="estadisticasAdminPlanesDetailsInfo"></div>
+                    <p>Referencias</p>
+                  </div>
+                  <div className="estadisticasAdminPlanesDetailsElement">
+                    <p className="estadisticasAdminPlanesDetailsTitle boldFont">Turnos más solicitados en espacio compartido</p>
+                    <div className="estadisticasAdminPlanesDetailsImage"></div>
+                    <div className="estadisticasAdminPlanesDetailsInfo"></div>
+                    <p>Referencias</p>
+                  </div>
+                </div>
               </div>
             </div>
             <p className="estadisticasAdminDailyReservationsTitle boldFont">Reservas de jornadas</p>

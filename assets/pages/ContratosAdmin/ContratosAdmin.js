@@ -29,7 +29,7 @@ const ContratosAdmin = () => {
           <div className="col-xl-9 col-lg-12 col-md-12 col-sm-12">
             <h1 className="contratosAdminTitle extraBoldFont">Clientes</h1>
             <div className="contratosAdminSearch">
-              <input type="text" className="form-control clientesAdminInput" ref={clientSelected} />
+              <input type="text" className="form-control contratosAdminInput" ref={clientSelected} />
               <svg width="23" height="23" viewBox="0 0 23 23" className="contratosAdminSearchSVG" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22 22L17.2779 17.2695L22 22ZM19.8947 10.9474C19.8947 13.3204 18.9521 15.5962 17.2741 17.2741C15.5962 18.9521 13.3204 19.8947 10.9474 19.8947C8.57438 19.8947 6.29858 18.9521 4.62062 17.2741C2.94267 15.5962 2 13.3204 2 10.9474C2 8.57438 2.94267 6.29858 4.62062 4.62062C6.29858 2.94267 8.57438 2 10.9474 2C13.3204 2 15.5962 2.94267 17.2741 4.62062C18.9521 6.29858 19.8947 8.57438 19.8947 10.9474V10.9474Z" stroke="#7D7C7A" strokeWidth="2.42105" strokeLinecap="round" />
               </svg>
@@ -156,7 +156,7 @@ const ContratosAdmin = () => {
                 </select>
               </div>
             </div>
-            <div className="table-responsive clientesAdminTable">
+            <div className="table-responsive contratosAdminTable">
               <table className="table">
                 <thead className="contratosAdminTableHead">
                   <tr>
@@ -220,23 +220,23 @@ const ContratosAdmin = () => {
               <nav>
                 <ul className="pagination">
                   <li className="page-item ">
-                    <a className="page-link clientesAdminPagination" tabIndex="-1">
+                    <a className="page-link contratosAdminPagination" tabIndex="-1">
                       Anterior
                     </a>
                   </li>
                   <li className="page-item">
-                    <a className="page-link clientesAdminPagination">1</a>
+                    <a className="page-link contratosAdminPagination">1</a>
                   </li>
                   <li className="page-item active">
-                    <a className="page-link clientesAdminPagination">
+                    <a className="page-link contratosAdminPagination">
                       2 <span className="sr-only">(current)</span>
                     </a>
                   </li>
                   <li className="page-item">
-                    <a className="page-link clientesAdminPagination">3</a>
+                    <a className="page-link contratosAdminPagination">3</a>
                   </li>
                   <li className="page-item ">
-                    <a className="page-link clientesAdminPagination">Siguiente</a>
+                    <a className="page-link contratosAdminPagination">Siguiente</a>
                   </li>
                 </ul>
               </nav>
@@ -269,11 +269,11 @@ const ContratosAdmin = () => {
               <div className="contratosAdminRightSideAvailableTime">
                 <p className="contratosAdminRightSideAvailableTimeTitle">Horas disponibles en salas</p>
                 <div className="progress">
-                  <div className="progress-bar clientesAdminRightSideProgressBar" role="progressbar" style={{ width: '75%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div className="progress-bar contratosAdminRightSideProgressBar" role="progressbar" style={{ width: '75%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <p className="contratosAdminRightSideAvailableTimeTitle">Horas disponibles en salas</p>
                 <div className="progress">
-                  <div className="progress-bar clientesAdminRightSideProgressBar" role="progressbar" style={{ width: '75%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div className="progress-bar contratosAdminRightSideProgressBar" role="progressbar" style={{ width: '75%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
 
