@@ -69,9 +69,9 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item align-middle">
-              <a href="/app#comunidad" className="nav-link navbarOption">
+              <Link to="/app#comunidad" className="nav-link navbarOption">
                 Comunidad
-              </a>
+              </Link>
             </li>
             <li className="nav-item align-middle">
               <Link to="/login" className="nav-link boldFont navbarLoginOption nav-item-login">

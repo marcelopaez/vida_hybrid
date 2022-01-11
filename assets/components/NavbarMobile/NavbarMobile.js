@@ -13,7 +13,7 @@ const NavbarMobile = () => {
       </div>
       <div className="navbarMobileOrangeLogo">
         <Link to="/">
-          <img src={OrangeLogoSmall} alt="Vida" loading="lazy" width="150px" />
+          <img src={OrangeLogoSmall} alt="Vida" loading="lazy" width="150px" onClick={() => window.scroll(0, 0)} />
         </Link>
       </div>
       <div className="navbarMobileGreenLogo">
@@ -44,7 +44,7 @@ const NavbarMobile = () => {
             </Link>
           </li>
           <li className="nav-item align-middle">
-            <Link to="/comunidad" className="nav-link" onClick={() => window.scroll(0, 0)}>
+            <Link to="/#comunidad" className="nav-link" onClick={() => window.scroll(0, 0)}>
               Comunidad
             </Link>
           </li>

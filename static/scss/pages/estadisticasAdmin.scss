@@ -234,6 +234,10 @@
   .estadisticasAdminPlanesDetailsTableOfficesAvailability {
     width: 100%;
   }
+
+  .estadisticasAdminGeneralNumbersContainer {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 576px) {
@@ -279,6 +283,10 @@
   .sideMenuEstadisticasAdmin,
   .panelContentEstadisticasAdmin {
     height: 2850px;
+  }
+
+  .estadisticasAdminGeneralNumbersContainer {
+    justify-content: flex-start;
   }
 }
 

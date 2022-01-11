@@ -36,7 +36,7 @@ const NavbarLoginMobile = () => {
             </Link>
           </li>
           <li className="nav-item align-middle">
-            <Link to="/comunidad" className="nav-link navbarItemLogin">
+            <Link to="/#comunidad" className="nav-link navbarItemLogin">
               Comunidad
             </Link>
           </li>

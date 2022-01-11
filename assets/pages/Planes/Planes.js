@@ -351,7 +351,7 @@ const Planes = ({ hideAlternativeFooter }) => {
           <div className="semiCircleHeaderMobileColumn">
             {planToShow === 0 ? (
               <div className="actualPlanHeaderMobile">
-                <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="62" height="62" className="actualPlanSVG" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14.9712 46.9843V62C23.2704 62 30.1051 55.2187 30.1051 46.9843V31.9686C21.8058 31.9686 14.9712 38.5885 14.9712 46.9843Z" fill="#fff" />
                   <path d="M31.7324 15.0157V30.0314C40.0316 30.0314 46.8663 23.2501 46.8663 15.0157V0C38.5671 0 31.7324 6.78128 31.7324 15.0157Z" fill="#fff" />
                   <path d="M15.1339 15.6619H0C0 23.8963 6.83465 30.6776 15.1339 30.6776H30.2677C30.2677 22.4431 23.4331 15.6619 15.1339 15.6619Z" fill="#fff" />
